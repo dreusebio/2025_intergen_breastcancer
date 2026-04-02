@@ -121,13 +121,21 @@ cd bgw_wgbs_comethyl
 ```bash
 # install pixi
 curl -fsSL https://pixi.sh/install.sh | bash
+```
 
+```bash
 export PIXI_HOME=/path/to/your/pixi_home
 export PIXI_CACHE_DIR=/scratch/$USER/pixi-cache
 unset RATTLER_CACHE_DIR
 unset XDG_CACHE_HOME
 ```
 #### (cluster users e.g UC Davis Hive)
+
+```bash
+# install pixi
+curl -fsSL https://pixi.sh/install.sh | bash
+```
+
 ```bash
 # install pixi
 curl -fsSL https://pixi.sh/install.sh | bash
