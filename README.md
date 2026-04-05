@@ -124,8 +124,8 @@ curl -fsSL https://pixi.sh/install.sh | bash
 ```
 
 ```bash
-export PIXI_HOME=/path/to/your/pixi_home
-export PIXI_CACHE_DIR=/scratch/$USER/pixi-cache
+export PIXI_HOME="$HOME/.pixi"
+export PIXI_CACHE_DIR="$HOME/.pixi/cache"
 unset RATTLER_CACHE_DIR
 unset XDG_CACHE_HOME
 ```
