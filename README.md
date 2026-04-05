@@ -124,10 +124,21 @@ curl -fsSL https://pixi.sh/install.sh | bash
 ```
 
 ```bash
+# Pixi environment setup (cross-platform safe)
+
 export PIXI_HOME="$HOME/.pixi"
-export PIXI_CACHE_DIR="$HOME/.pixi/cache"
+
+if [[ -d "/scratch" ]]; then
+  export PIXI_CACHE_DIR="/scratch/$USER/pixi-cache"
+else
+  export PIXI_CACHE_DIR="$HOME/.pixi/cache"
+fi
+
 unset RATTLER_CACHE_DIR
 unset XDG_CACHE_HOME
+
+# Ensure pixi is on PATH
+export PATH="$HOME/.pixi/bin:$PATH"
 ```
 #### (cluster users e.g UC Davis Hive)
 
@@ -137,9 +148,6 @@ curl -fsSL https://pixi.sh/install.sh | bash
 ```
 
 ```bash
-# install pixi
-curl -fsSL https://pixi.sh/install.sh | bash
-
 export PIXI_HOME=/quobyte/lasallegrp/George/.pixi
 export PIXI_CACHE_DIR=/tmp/$USER/pixi-cache
 unset RATTLER_CACHE_DIR
