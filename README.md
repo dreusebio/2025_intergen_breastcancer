@@ -1,4 +1,4 @@
-# bgw_wgbs_comethyl
+# Intergen_breastcancer_wgbs_comethyl
 
 Bioinformatics analysis of prenatal family and community exposures and their association with postnatal DNA methylation signatures related to child metabolic health.
 
