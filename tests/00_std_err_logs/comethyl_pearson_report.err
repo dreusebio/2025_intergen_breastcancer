@@ -1256,3 +1256,4 @@ Starting Script 12b
 [Enrichr] Warning: could not set Enrichr site at load time: invalid 'pattern' argument
 Error: annotation_dir_v1 not found: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/12_annotation/v1_all_pcs
 Execution halted
+/var/spool/slurmd/job11605663/slurm_script: line 51: cd: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/reproducibility/pixi: No such file or directory

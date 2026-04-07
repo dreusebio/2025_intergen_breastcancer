@@ -1,7 +1,7 @@
 #!/usr/bin/env Rscript
 
 # ============================================================
-# MultiQC (text outputs) -> merged QC table
+# MultiQC (text outputs) -> merged QC table.
 # depending with files in the multiqc, you can adjust these or rename
 #    - req_files <- c(
 #   "mqc_bismark_alignment_1.txt",

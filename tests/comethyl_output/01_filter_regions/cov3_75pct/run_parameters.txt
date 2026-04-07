@@ -1,6 +1,6 @@
-project_root: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests
-input_rds: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/00_cpg_extraction/Unfiltered_BSseq.rds
+project_root: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests
+input_rds: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/comethyl_output/00_cpg_extraction/Unfiltered_BSseq.rds
 cov: 3
 per_sample: 0.75
-output_dir: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/comethyl_output/01_filter_regions/cov3_75pct
-date: 2026-03-31 12:29:30.794245
+output_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/comethyl_output/01_filter_regions/cov3_75pct
+date: 2026-04-06 16:56:26.833458

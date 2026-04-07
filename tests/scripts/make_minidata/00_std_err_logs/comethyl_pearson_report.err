@@ -1,0 +1,11 @@
+[2026-04-06T15:51:57.639] error: *** JOB 11601488 ON hive-dc-7-6-46 CANCELLED AT 2026-04-06T15:51:57 DUE TO JOB REQUEUE ***
+Traceback (most recent call last):
+  File "/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/scripts/make_minidata/00_make_comethyl_minidata.py", line 411, in <module>
+    main()
+  File "/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/scripts/make_minidata/00_make_comethyl_minidata.py", line 375, in main
+    "output_bytes": output_path.stat().st_size,
+                    ^^^^^^^^^^^^^^^^^^
+  File "/quobyte/lasallegrp/home/George/anaconda3/lib/python3.12/pathlib.py", line 840, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/data/processed/job/cytosine_reports/4022_merged_name_sorted.deduplicated.bismark.cov.gz.CpG_report.txt.gz'

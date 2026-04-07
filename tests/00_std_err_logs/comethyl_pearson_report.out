@@ -838,4 +838,62 @@ JobId=11504870 JobName=Cometh_BGW
    StdIn=/dev/null
    StdOut=/quobyte/lasallegrp/projects/bgw_wgbs_comethyl/tests/00_std_err_logs/comethyl_pearson_report.out
    TresPerTask=cpu=4
+   MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 11605663 prolog ###############
+SLURM_NODELIST: hive-dc-7-6-30
+############### Job 11605663 prolog ###############
+hive-dc-7-6-30
+Mon Apr  6 04:38:47 PM PDT 2026
+
+############### Job 11605663 summary from hive-dc-7-6-30 ###############
+Name                : Cometh_CHDS_intergen
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-6-30
+Cores               : 4
+GPUs                : 0
+State               : FAILED
+ExitCode            : 1:0
+Submit              : 2026-04-06T16:37:09
+Start               : 2026-04-06T16:37:11
+End                 : 2026-04-06T16:38:58
+Reserved walltime   : 23:00:00
+Used walltime       : 00:01:47
+Used CPU time       : 00:00:01
+% User (Computation):  0.00%
+% System (I/O)      :  0.00%
+Mem reserved        : 200G
+Max Mem used        : 48.34M (hive-dc-7-6-30)
+Max Disk Write      : 0.00  (hive-dc-7-6-30)
+Max Disk Read       : 0.00  (hive-dc-7-6-30)
+
+############### Job 11605663 info ###############
+JobId=11605663 JobName=Cometh_CHDS_intergen
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8041 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0
+   RunTime=00:01:47 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-04-06T16:37:09 EligibleTime=2026-04-06T16:37:09
+   AccrueTime=2026-04-06T16:37:09
+   StartTime=2026-04-06T16:37:11 EndTime=2026-04-06T16:38:58 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-04-06T16:37:11 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-8-18:1925198
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-6-30
+   BatchHost=hive-dc-7-6-30
+   NumNodes=1 NumCPUs=4 NumTasks=1 CPUs/Task=4 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=4,mem=200G,node=1,billing=4
+   AllocTRES=cpu=4,mem=200G,node=1,billing=4
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=4 MinMemoryNode=200G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=4
    MailUser=gekuodza@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT
