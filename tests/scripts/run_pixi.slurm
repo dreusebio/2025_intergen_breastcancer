@@ -90,6 +90,7 @@ pixi run Rscript /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comet
   --input_bs /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/comethyl_output/01_filter_regions/cov3_75pct/Filtered_BSseq.rds \
   --input_regions /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/comethyl_output/02_filter_regions/cov3_75pct/covMin4_methSD0p08/Filtered_Regions.txt
 
+#sylvia run up to here
 # Script 04
 pixi run Rscript /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/scripts/comethyl_scripts/04_pcs_and_trait_diagnostics.R \
   --project_root /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests \

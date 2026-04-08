@@ -119,7 +119,7 @@ Rscript /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/scripts/comethyl_scripts/
   --softpower_v2 /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/comethyl_output/06_soft_power/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/SoftPower_pearson.rds \
   --module_cor pearson \
   --deep_split 4 \
-  --min_module_size 50 \
+  --min_module_size 75 \
   --merge_cut_height 0.20 \
   --threads 59
 

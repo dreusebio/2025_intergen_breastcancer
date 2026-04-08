@@ -70,4 +70,2766 @@ JobId=11601531 JobName=Cometh_Intergen_CHDS
    StdIn=/dev/null
    StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
    TresPerTask=cpu=50
-   MailUser=gekuodza@ucdavis.edu,smholesinger@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT
+   MailUser=gekuodza@ucdavis.edu,smholesinger@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 11609171 prolog ###############
+SLURM_NODELIST: hive-dc-7-6-46
+############### Job 11609171 prolog ###############
+hive-dc-7-6-46
+Mon Apr  6 10:36:12 PM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+Allowing parallel execution with up to 4 working processes.
+[1] "4069" "4113" "4132" "4127" "4029" "4063"
+
+############### Job 11609171 summary from hive-dc-7-6-46 ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-6-46
+Cores               : 80
+GPUs                : 0
+State               : FAILED
+ExitCode            : 1:0
+Submit              : 2026-04-06T22:36:11
+Start               : 2026-04-06T22:36:11
+End                 : 2026-04-06T22:43:56
+Reserved walltime   : 23:00:00
+Used walltime       : 00:07:45
+Used CPU time       : 00:06:43
+% User (Computation): 85.10%
+% System (I/O)      : 14.90%
+Mem reserved        : 1200G
+Max Mem used        : 53.97G (hive-dc-7-6-46)
+Max Disk Write      : 372.47M (hive-dc-7-6-46)
+Max Disk Read       : 6.12G (hive-dc-7-6-46)
+
+############### Job 11609171 info ###############
+JobId=11609171 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8045 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0
+   RunTime=00:07:45 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-04-06T22:36:11 EligibleTime=2026-04-06T22:36:11
+   AccrueTime=2026-04-06T22:36:11
+   StartTime=2026-04-06T22:36:11 EndTime=2026-04-06T22:43:56 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-04-06T22:36:11 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-8-18:1892005
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-6-46
+   BatchHost=hive-dc-7-6-46
+   NumNodes=1 NumCPUs=80 NumTasks=1 CPUs/Task=80 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=80,mem=1200G,node=1,billing=80
+   AllocTRES=cpu=80,mem=1200G,node=1,billing=80
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=80 MinMemoryNode=1200G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=80
+   MailUser=gekuodza@ucdavis.edu,smholesinger@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 11609265 prolog ###############
+SLURM_NODELIST: hive-dc-7-6-46
+############### Job 11609265 prolog ###############
+hive-dc-7-6-46
+Mon Apr  6 11:00:32 PM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+Allowing parallel execution with up to 4 working processes.
+[1] "4084" "4136" "4169" "4025" "4023" "4134"
+Allowing parallel execution with up to 40 working processes.
+ pickSoftThreshold: calculating connectivity for given powers... 
+   Power SFT.R.sq  slope truncated.R.sq  mean.k. median.k.   max.k.  Density
+1      1 0.005010 154.00          1.000 2.33e+05  2.33e+05 2.33e+05 5.00e-01
+2      2 0.000933  32.60          1.000 1.17e+05  1.17e+05 1.18e+05 2.52e-01
+3      3 0.000169  -9.14          1.000 5.94e+04  5.94e+04 5.98e+04 1.28e-01
+4      4 0.003220 -29.80          1.000 3.03e+04  3.03e+04 3.06e+04 6.51e-02
+5      5 0.007020 -34.60          0.999 1.56e+04  1.56e+04 1.57e+04 3.34e-02
+6      6 0.007140 -28.30          0.997 8.04e+03  8.04e+03 8.16e+03 1.73e-02
+7      7 0.017100  39.20          0.995 4.18e+03  4.18e+03 4.26e+03 8.99e-03
+8      8 0.083000  79.00          0.985 2.19e+03  2.19e+03 2.24e+03 4.70e-03
+9      9 0.131000  83.00          0.905 1.15e+03  1.15e+03 1.19e+03 2.48e-03
+10    10 0.066100  49.30          0.842 6.10e+02  6.10e+02 6.33e+02 1.31e-03
+11    11 0.037300  30.80          0.800 3.25e+02  3.25e+02 3.41e+02 6.98e-04
+12    12 0.002840   7.02          0.780 1.74e+02  1.74e+02 1.85e+02 3.74e-04
+13    13 0.000237   1.68          0.749 9.38e+01  9.38e+01 1.01e+02 2.02e-04
+14    14 0.005110   6.31          0.736 5.08e+01  5.08e+01 5.58e+01 1.09e-04
+15    15 0.011500  -6.82          0.658 2.77e+01  2.77e+01 3.17e+01 5.95e-05
+16    16 0.158000 -17.50          0.483 1.52e+01  1.51e+01 1.88e+01 3.26e-05
+17    17 0.337000 -17.90          0.358 8.35e+00  8.34e+00 1.17e+01 1.79e-05
+18    18 0.654000 -16.30          0.574 4.62e+00  4.61e+00 7.64e+00 9.93e-06
+19    19 0.932000 -15.00          0.940 2.57e+00  2.57e+00 5.32e+00 5.52e-06
+20    20 0.946000 -11.20          0.960 1.44e+00  1.43e+00 3.94e+00 3.09e-06
+   Centralization Heterogeneity
+1        1.13e-03      0.000525
+2        1.13e-03      0.001050
+3        8.65e-04      0.001570
+4        6.09e-04      0.002110
+5        4.04e-04      0.002680
+6        2.58e-04      0.003270
+7        1.66e-04      0.003910
+8        1.08e-04      0.004580
+9        7.07e-05      0.005310
+10       4.99e-05      0.006090
+11       3.45e-05      0.006930
+12       2.35e-05      0.007830
+13       1.59e-05      0.008820
+14       1.06e-05      0.009910
+15       8.67e-06      0.011200
+16       7.80e-06      0.012700
+17       7.11e-06      0.014900
+18       6.48e-06      0.018100
+19       5.90e-06      0.023500
+20       5.37e-06      0.032600
+ pickSoftThreshold: calculating connectivity for given powers... 
+   Power SFT.R.sq  slope truncated.R.sq  mean.k. median.k.   max.k.  Density
+1      1  0.00724   3.09          0.847 2.36e+05  2.37e+05 256000.0 5.07e-01
+2      2  0.17000  -8.38          0.937 1.21e+05  1.21e+05 146000.0 2.60e-01
+3      3  0.48700 -11.90          0.978 6.25e+04  6.27e+04  85200.0 1.34e-01
+4      4  0.67100 -12.30          0.991 3.26e+04  3.25e+04  50700.0 7.00e-02
+5      5  0.76500 -11.30          0.995 1.72e+04  1.70e+04  30700.0 3.69e-02
+6      6  0.82600 -10.30          0.995 9.11e+03  8.94e+03  18900.0 1.96e-02
+7      7  0.86100  -9.37          0.996 4.88e+03  4.73e+03  11800.0 1.05e-02
+8      8  0.88600  -8.45          0.997 2.64e+03  2.52e+03   7460.0 5.66e-03
+9      9  0.90000  -7.75          0.997 1.44e+03  1.35e+03   4770.0 3.09e-03
+10    10  0.90400  -7.23          0.996 7.88e+02  7.31e+02   3090.0 1.69e-03
+11    11  0.90800  -6.79          0.997 4.37e+02  3.98e+02   2020.0 9.38e-04
+12    12  0.91700  -6.29          0.998 2.44e+02  2.19e+02   1340.0 5.24e-04
+13    13  0.92300  -5.86          0.998 1.37e+02  1.21e+02    896.0 2.95e-04
+14    14  0.92800  -5.49          0.999 7.78e+01  6.69e+01    605.0 1.67e-04
+15    15  0.93100  -5.18          0.999 4.45e+01  3.73e+01    412.0 9.56e-05
+16    16  0.93300  -4.90          0.999 2.57e+01  2.09e+01    284.0 5.51e-05
+17    17  0.93300  -4.65          0.998 1.49e+01  1.18e+01    197.0 3.21e-05
+18    18  0.93400  -4.39          0.998 8.76e+00  6.69e+00    138.0 1.88e-05
+19    19  0.93100  -4.14          0.991 5.18e+00  3.81e+00     97.6 1.11e-05
+20    20  0.93200  -3.90          0.987 3.09e+00  2.18e+00     69.5 6.64e-06
+   Centralization Heterogeneity
+1        0.043900        0.0270
+2        0.054000        0.0534
+3        0.048900        0.0797
+4        0.039000        0.1060
+5        0.029200        0.1340
+6        0.021100        0.1630
+7        0.014900        0.1940
+8        0.010400        0.2260
+9        0.007170        0.2610
+10       0.004950        0.2970
+11       0.003410        0.3370
+12       0.002350        0.3800
+13       0.001630        0.4260
+14       0.001130        0.4770
+15       0.000791        0.5310
+16       0.000555        0.5920
+17       0.000392        0.6580
+18       0.000278        0.7310
+19       0.000199        0.8120
+20       0.000143        0.9020
+Allowing parallel execution with up to 40 working processes.
+ Calculating module eigengenes block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Projective K-means:
+   ..k-means clustering..
+   ..merging smaller clusters...
+Block sizes:
+gBlocks
+    1     2     3     4     5     6     7     8     9    10    11    12    13 
+39893 37728 37101 36347 35151 34508 34196 34192 31525 30946 30662 30451 26930 
+   14 
+25767 
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 2 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 3 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 4 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 5 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 6 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 7 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 8 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 9 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 10 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 11 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 12 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 13 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 14 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+       Calculating new MEs...
+ Calculating module eigengenes block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Projective K-means:
+   ..k-means clustering..
+   ..merging smaller clusters...
+Block sizes:
+gBlocks
+    1     2     3     4     5     6     7     8     9    10    11    12 
+39996 39984 39974 39970 39970 39958 39905 39895 39850 39798 39772 26325 
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 2727 genes from module 1 because their KME is too low.
+     ..removing 447 genes from module 2 because their KME is too low.
+ ..Working on block 2 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 6167 genes from module 1 because their KME is too low.
+     ..removing 4432 genes from module 2 because their KME is too low.
+ ..Working on block 3 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 34076 genes from module 1 because their KME is too low.
+     ..removing 12 genes from module 5 because their KME is too low.
+     ..removing 7 genes from module 6 because their KME is too low.
+     ..removing 6 genes from module 7 because their KME is too low.
+     ..removing 4 genes from module 8 because their KME is too low.
+     ..removing 1 genes from module 9 because their KME is too low.
+     ..removing 6 genes from module 11 because their KME is too low.
+     ..removing 4 genes from module 12 because their KME is too low.
+     ..removing 4 genes from module 13 because their KME is too low.
+     ..removing 6 genes from module 17 because their KME is too low.
+     ..removing 1 genes from module 19 because their KME is too low.
+     ..removing 2 genes from module 21 because their KME is too low.
+     ..removing 3 genes from module 33 because their KME is too low.
+ ..Working on block 4 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 34655 genes from module 1 because their KME is too low.
+     ..removing 42 genes from module 2 because their KME is too low.
+ ..Working on block 5 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 29989 genes from module 1 because their KME is too low.
+     ..removing 1961 genes from module 2 because their KME is too low.
+ ..Working on block 6 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 8175 genes from module 2 because their KME is too low.
+     ..removing 1434 genes from module 4 because their KME is too low.
+     ..removing 991 genes from module 5 because their KME is too low.
+     ..removing 13 genes from module 9 because their KME is too low.
+     ..removing 49 genes from module 11 because their KME is too low.
+     ..removing 14 genes from module 12 because their KME is too low.
+     ..removing 85 genes from module 13 because their KME is too low.
+     ..removing 5 genes from module 15 because their KME is too low.
+     ..removing 4 genes from module 16 because their KME is too low.
+     ..removing 1 genes from module 18 because their KME is too low.
+     ..removing 30 genes from module 19 because their KME is too low.
+     ..removing 4 genes from module 20 because their KME is too low.
+     ..removing 8 genes from module 21 because their KME is too low.
+     ..removing 40 genes from module 24 because their KME is too low.
+     ..removing 2 genes from module 27 because their KME is too low.
+     ..removing 5 genes from module 29 because their KME is too low.
+     ..removing 4 genes from module 30 because their KME is too low.
+     ..removing 3 genes from module 40 because their KME is too low.
+     ..removing 17 genes from module 41 because their KME is too low.
+     ..removing 13 genes from module 45 because their KME is too low.
+     ..removing 6 genes from module 51 because their KME is too low.
+     ..removing 12 genes from module 53 because their KME is too low.
+     ..removing 2 genes from module 54 because their KME is too low.
+     ..removing 1 genes from module 58 because their KME is too low.
+     ..removing 2 genes from module 62 because their KME is too low.
+     ..removing 4 genes from module 70 because their KME is too low.
+     ..removing 2 genes from module 71 because their KME is too low.
+     ..removing 2 genes from module 72 because their KME is too low.
+     ..removing 1 genes from module 74 because their KME is too low.
+     ..removing 1 genes from module 75 because their KME is too low.
+     ..removing 3 genes from module 76 because their KME is too low.
+     ..removing 1 genes from module 78 because their KME is too low.
+     ..removing 3 genes from module 81 because their KME is too low.
+     ..removing 1 genes from module 82 because their KME is too low.
+     ..removing 3 genes from module 87 because their KME is too low.
+     ..removing 1 genes from module 90 because their KME is too low.
+     ..removing 1 genes from module 92 because their KME is too low.
+     ..removing 1 genes from module 95 because their KME is too low.
+     ..removing 1 genes from module 99 because their KME is too low.
+     ..removing 1 genes from module 101 because their KME is too low.
+     ..removing 5 genes from module 104 because their KME is too low.
+     ..removing 6 genes from module 109 because their KME is too low.
+     ..removing 2 genes from module 111 because their KME is too low.
+     ..removing 4 genes from module 113 because their KME is too low.
+     ..removing 1 genes from module 116 because their KME is too low.
+     ..removing 1 genes from module 118 because their KME is too low.
+     ..removing 2 genes from module 120 because their KME is too low.
+     ..removing 1 genes from module 125 because their KME is too low.
+     ..removing 2 genes from module 129 because their KME is too low.
+     ..removing 2 genes from module 133 because their KME is too low.
+     ..removing 5 genes from module 135 because their KME is too low.
+     ..removing 1 genes from module 139 because their KME is too low.
+     ..removing 1 genes from module 143 because their KME is too low.
+     ..removing 1 genes from module 160 because their KME is too low.
+     ..removing 1 genes from module 162 because their KME is too low.
+     ..removing 1 genes from module 174 because their KME is too low.
+     ..removing 1 genes from module 184 because their KME is too low.
+     ..removing 1 genes from module 189 because their KME is too low.
+     ..removing 1 genes from module 193 because their KME is too low.
+     ..removing 1 genes from module 202 because their KME is too low.
+     ..removing 1 genes from module 205 because their KME is too low.
+     ..removing 2 genes from module 209 because their KME is too low.
+     ..removing 1 genes from module 212 because their KME is too low.
+     ..removing 1 genes from module 215 because their KME is too low.
+     ..removing 1 genes from module 226 because their KME is too low.
+     ..removing 1 genes from module 238 because their KME is too low.
+     ..removing 1 genes from module 242 because their KME is too low.
+     ..removing 1 genes from module 263 because their KME is too low.
+     ..removing 1 genes from module 270 because their KME is too low.
+     ..removing 1 genes from module 273 because their KME is too low.
+     ..removing 1 genes from module 276 because their KME is too low.
+     ..removing 1 genes from module 280 because their KME is too low.
+     ..removing 1 genes from module 283 because their KME is too low.
+     ..removing 1 genes from module 313 because their KME is too low.
+ ..Working on block 7 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 28151 genes from module 1 because their KME is too low.
+     ..removing 654 genes from module 4 because their KME is too low.
+     ..removing 65 genes from module 6 because their KME is too low.
+     ..removing 3 genes from module 8 because their KME is too low.
+     ..removing 40 genes from module 9 because their KME is too low.
+     ..removing 2 genes from module 12 because their KME is too low.
+     ..removing 5 genes from module 14 because their KME is too low.
+     ..removing 7 genes from module 15 because their KME is too low.
+     ..removing 3 genes from module 19 because their KME is too low.
+     ..removing 6 genes from module 20 because their KME is too low.
+     ..removing 8 genes from module 21 because their KME is too low.
+     ..removing 1 genes from module 29 because their KME is too low.
+     ..removing 1 genes from module 30 because their KME is too low.
+ ..Working on block 8 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 10054 genes from module 1 because their KME is too low.
+     ..removing 1263 genes from module 2 because their KME is too low.
+ ..Working on block 9 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 20634 genes from module 1 because their KME is too low.
+ ..Working on block 10 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 17421 genes from module 1 because their KME is too low.
+     ..removing 11181 genes from module 2 because their KME is too low.
+     ..removing 75 genes from module 4 because their KME is too low.
+     ..removing 3 genes from module 7 because their KME is too low.
+     ..removing 12 genes from module 9 because their KME is too low.
+     ..removing 1 genes from module 11 because their KME is too low.
+     ..removing 2 genes from module 18 because their KME is too low.
+     ..removing 6 genes from module 19 because their KME is too low.
+     ..removing 1 genes from module 28 because their KME is too low.
+     ..removing 1 genes from module 29 because their KME is too low.
+     ..removing 3 genes from module 31 because their KME is too low.
+     ..removing 1 genes from module 36 because their KME is too low.
+     ..removing 1 genes from module 39 because their KME is too low.
+     ..removing 2 genes from module 43 because their KME is too low.
+ ..Working on block 11 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 25880 genes from module 1 because their KME is too low.
+ ..Working on block 12 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 301 genes from module 3 because their KME is too low.
+     ..removing 187 genes from module 5 because their KME is too low.
+     ..removing 374 genes from module 6 because their KME is too low.
+     ..removing 148 genes from module 7 because their KME is too low.
+     ..removing 127 genes from module 9 because their KME is too low.
+     ..removing 57 genes from module 12 because their KME is too low.
+     ..removing 56 genes from module 13 because their KME is too low.
+     ..removing 58 genes from module 14 because their KME is too low.
+     ..removing 59 genes from module 15 because their KME is too low.
+     ..removing 73 genes from module 16 because their KME is too low.
+     ..removing 58 genes from module 17 because their KME is too low.
+     ..removing 51 genes from module 19 because their KME is too low.
+     ..removing 38 genes from module 20 because their KME is too low.
+     ..removing 30 genes from module 21 because their KME is too low.
+     ..removing 40 genes from module 22 because their KME is too low.
+     ..removing 36 genes from module 23 because their KME is too low.
+     ..removing 17 genes from module 24 because their KME is too low.
+     ..removing 37 genes from module 25 because their KME is too low.
+     ..removing 29 genes from module 26 because their KME is too low.
+     ..removing 14 genes from module 27 because their KME is too low.
+     ..removing 25 genes from module 28 because their KME is too low.
+     ..removing 31 genes from module 29 because their KME is too low.
+     ..removing 21 genes from module 30 because their KME is too low.
+     ..removing 22 genes from module 32 because their KME is too low.
+     ..removing 33 genes from module 33 because their KME is too low.
+     ..removing 25 genes from module 34 because their KME is too low.
+     ..removing 25 genes from module 36 because their KME is too low.
+     ..removing 7 genes from module 37 because their KME is too low.
+     ..removing 27 genes from module 40 because their KME is too low.
+     ..removing 13 genes from module 41 because their KME is too low.
+     ..removing 19 genes from module 42 because their KME is too low.
+     ..removing 15 genes from module 44 because their KME is too low.
+     ..removing 9 genes from module 50 because their KME is too low.
+     ..removing 15 genes from module 52 because their KME is too low.
+     ..removing 16 genes from module 54 because their KME is too low.
+     ..removing 18 genes from module 55 because their KME is too low.
+     ..removing 5 genes from module 56 because their KME is too low.
+     ..removing 10 genes from module 57 because their KME is too low.
+     ..removing 11 genes from module 59 because their KME is too low.
+     ..removing 18 genes from module 64 because their KME is too low.
+     ..removing 13 genes from module 65 because their KME is too low.
+     ..removing 13 genes from module 69 because their KME is too low.
+     ..removing 11 genes from module 71 because their KME is too low.
+     ..removing 11 genes from module 74 because their KME is too low.
+     ..removing 15 genes from module 76 because their KME is too low.
+     ..removing 15 genes from module 77 because their KME is too low.
+     ..removing 11 genes from module 82 because their KME is too low.
+     ..removing 9 genes from module 83 because their KME is too low.
+     ..removing 4 genes from module 84 because their KME is too low.
+     ..removing 8 genes from module 93 because their KME is too low.
+     ..removing 5 genes from module 106 because their KME is too low.
+     ..removing 5 genes from module 117 because their KME is too low.
+     ..removing 3 genes from module 119 because their KME is too low.
+     ..removing 5 genes from module 138 because their KME is too low.
+     ..removing 9 genes from module 144 because their KME is too low.
+     ..removing 9 genes from module 145 because their KME is too low.
+     ..removing 7 genes from module 146 because their KME is too low.
+     ..removing 9 genes from module 150 because their KME is too low.
+     ..removing 5 genes from module 154 because their KME is too low.
+     ..removing 5 genes from module 159 because their KME is too low.
+     ..removing 4 genes from module 160 because their KME is too low.
+     ..removing 9 genes from module 166 because their KME is too low.
+     ..removing 5 genes from module 167 because their KME is too low.
+     ..removing 9 genes from module 168 because their KME is too low.
+     ..removing 7 genes from module 169 because their KME is too low.
+     ..removing 8 genes from module 172 because their KME is too low.
+     ..removing 6 genes from module 180 because their KME is too low.
+     ..removing 5 genes from module 194 because their KME is too low.
+     ..removing 6 genes from module 195 because their KME is too low.
+     ..removing 2 genes from module 196 because their KME is too low.
+     ..removing 4 genes from module 197 because their KME is too low.
+     ..removing 4 genes from module 198 because their KME is too low.
+     ..removing 2 genes from module 201 because their KME is too low.
+     ..removing 11 genes from module 212 because their KME is too low.
+     ..removing 3 genes from module 213 because their KME is too low.
+     ..removing 4 genes from module 218 because their KME is too low.
+     ..removing 4 genes from module 219 because their KME is too low.
+     ..removing 6 genes from module 220 because their KME is too low.
+     ..removing 4 genes from module 221 because their KME is too low.
+     ..removing 2 genes from module 222 because their KME is too low.
+     ..removing 4 genes from module 223 because their KME is too low.
+     ..removing 5 genes from module 224 because their KME is too low.
+     ..removing 7 genes from module 225 because their KME is too low.
+     ..removing 6 genes from module 226 because their KME is too low.
+     ..removing 5 genes from module 228 because their KME is too low.
+     ..removing 1 genes from module 229 because their KME is too low.
+     ..removing 5 genes from module 232 because their KME is too low.
+     ..removing 5 genes from module 242 because their KME is too low.
+     ..removing 7 genes from module 254 because their KME is too low.
+     ..removing 1 genes from module 255 because their KME is too low.
+     ..removing 8 genes from module 256 because their KME is too low.
+     ..removing 3 genes from module 257 because their KME is too low.
+     ..removing 6 genes from module 258 because their KME is too low.
+     ..removing 1 genes from module 260 because their KME is too low.
+     ..removing 1 genes from module 270 because their KME is too low.
+     ..removing 3 genes from module 272 because their KME is too low.
+     ..removing 4 genes from module 280 because their KME is too low.
+     ..removing 1 genes from module 294 because their KME is too low.
+     ..removing 5 genes from module 295 because their KME is too low.
+     ..removing 2 genes from module 296 because their KME is too low.
+     ..removing 2 genes from module 298 because their KME is too low.
+     ..removing 1 genes from module 299 because their KME is too low.
+     ..removing 1 genes from module 302 because their KME is too low.
+     ..removing 3 genes from module 303 because their KME is too low.
+     ..removing 5 genes from module 304 because their KME is too low.
+     ..removing 3 genes from module 306 because their KME is too low.
+     ..removing 4 genes from module 311 because their KME is too low.
+     ..removing 3 genes from module 314 because their KME is too low.
+     ..removing 3 genes from module 336 because their KME is too low.
+     ..removing 4 genes from module 337 because their KME is too low.
+     ..removing 1 genes from module 339 because their KME is too low.
+     ..removing 2 genes from module 340 because their KME is too low.
+     ..removing 3 genes from module 347 because their KME is too low.
+     ..removing 2 genes from module 353 because their KME is too low.
+     ..removing 1 genes from module 359 because their KME is too low.
+     ..removing 4 genes from module 387 because their KME is too low.
+     ..removing 6 genes from module 388 because their KME is too low.
+     ..removing 4 genes from module 389 because their KME is too low.
+     ..removing 4 genes from module 390 because their KME is too low.
+     ..removing 6 genes from module 393 because their KME is too low.
+     ..removing 3 genes from module 396 because their KME is too low.
+     ..removing 1 genes from module 398 because their KME is too low.
+     ..removing 7 genes from module 399 because their KME is too low.
+     ..removing 3 genes from module 401 because their KME is too low.
+     ..removing 2 genes from module 410 because their KME is too low.
+     ..removing 2 genes from module 417 because their KME is too low.
+     ..removing 2 genes from module 419 because their KME is too low.
+     ..removing 1 genes from module 420 because their KME is too low.
+     ..removing 2 genes from module 429 because their KME is too low.
+     ..removing 1 genes from module 433 because their KME is too low.
+     ..removing 3 genes from module 436 because their KME is too low.
+     ..removing 1 genes from module 437 because their KME is too low.
+     ..removing 3 genes from module 438 because their KME is too low.
+     ..removing 1 genes from module 441 because their KME is too low.
+     ..removing 2 genes from module 444 because their KME is too low.
+     ..removing 2 genes from module 445 because their KME is too low.
+     ..removing 3 genes from module 448 because their KME is too low.
+     ..removing 2 genes from module 467 because their KME is too low.
+     ..removing 2 genes from module 469 because their KME is too low.
+     ..removing 3 genes from module 471 because their KME is too low.
+     ..removing 1 genes from module 475 because their KME is too low.
+     ..removing 4 genes from module 476 because their KME is too low.
+     ..removing 4 genes from module 478 because their KME is too low.
+     ..removing 4 genes from module 479 because their KME is too low.
+     ..removing 1 genes from module 482 because their KME is too low.
+     ..removing 2 genes from module 493 because their KME is too low.
+     ..removing 1 genes from module 502 because their KME is too low.
+     ..removing 2 genes from module 507 because their KME is too low.
+     ..removing 1 genes from module 511 because their KME is too low.
+     ..removing 2 genes from module 522 because their KME is too low.
+     ..removing 1 genes from module 531 because their KME is too low.
+     ..removing 3 genes from module 537 because their KME is too low.
+     ..removing 6 genes from module 541 because their KME is too low.
+     ..removing 2 genes from module 543 because their KME is too low.
+     ..removing 2 genes from module 545 because their KME is too low.
+     ..removing 1 genes from module 547 because their KME is too low.
+     ..removing 1 genes from module 548 because their KME is too low.
+     ..removing 3 genes from module 550 because their KME is too low.
+     ..removing 1 genes from module 556 because their KME is too low.
+     ..removing 2 genes from module 557 because their KME is too low.
+     ..removing 1 genes from module 562 because their KME is too low.
+     ..removing 1 genes from module 564 because their KME is too low.
+     ..removing 1 genes from module 572 because their KME is too low.
+     ..removing 1 genes from module 585 because their KME is too low.
+     ..removing 1 genes from module 587 because their KME is too low.
+     ..removing 1 genes from module 593 because their KME is too low.
+     ..removing 1 genes from module 600 because their KME is too low.
+     ..removing 1 genes from module 601 because their KME is too low.
+     ..removing 1 genes from module 603 because their KME is too low.
+     ..removing 2 genes from module 604 because their KME is too low.
+     ..removing 3 genes from module 607 because their KME is too low.
+     ..removing 2 genes from module 608 because their KME is too low.
+     ..removing 2 genes from module 609 because their KME is too low.
+     ..removing 1 genes from module 611 because their KME is too low.
+     ..removing 1 genes from module 630 because their KME is too low.
+     ..removing 1 genes from module 631 because their KME is too low.
+     ..removing 1 genes from module 632 because their KME is too low.
+     ..removing 1 genes from module 634 because their KME is too low.
+     ..removing 2 genes from module 635 because their KME is too low.
+     ..removing 2 genes from module 637 because their KME is too low.
+     ..removing 1 genes from module 640 because their KME is too low.
+     ..removing 1 genes from module 643 because their KME is too low.
+     ..removing 1 genes from module 644 because their KME is too low.
+     ..removing 1 genes from module 654 because their KME is too low.
+     ..removing 1 genes from module 656 because their KME is too low.
+     ..removing 1 genes from module 659 because their KME is too low.
+     ..removing 2 genes from module 661 because their KME is too low.
+     ..removing 3 genes from module 668 because their KME is too low.
+     ..removing 1 genes from module 686 because their KME is too low.
+     ..removing 1 genes from module 687 because their KME is too low.
+     ..removing 3 genes from module 690 because their KME is too low.
+     ..removing 1 genes from module 692 because their KME is too low.
+     ..removing 2 genes from module 693 because their KME is too low.
+     ..removing 2 genes from module 695 because their KME is too low.
+     ..removing 1 genes from module 696 because their KME is too low.
+     ..removing 1 genes from module 701 because their KME is too low.
+     ..removing 2 genes from module 702 because their KME is too low.
+     ..removing 2 genes from module 704 because their KME is too low.
+     ..removing 1 genes from module 713 because their KME is too low.
+     ..removing 1 genes from module 724 because their KME is too low.
+     ..removing 1 genes from module 727 because their KME is too low.
+     ..removing 1 genes from module 728 because their KME is too low.
+     ..removing 1 genes from module 731 because their KME is too low.
+     ..removing 3 genes from module 735 because their KME is too low.
+     ..removing 2 genes from module 736 because their KME is too low.
+     ..removing 2 genes from module 742 because their KME is too low.
+     ..removing 3 genes from module 747 because their KME is too low.
+     ..removing 1 genes from module 764 because their KME is too low.
+     ..removing 1 genes from module 767 because their KME is too low.
+     ..removing 1 genes from module 773 because their KME is too low.
+     ..removing 1 genes from module 774 because their KME is too low.
+     ..removing 1 genes from module 777 because their KME is too low.
+     ..removing 1 genes from module 778 because their KME is too low.
+     ..removing 1 genes from module 779 because their KME is too low.
+     ..removing 2 genes from module 786 because their KME is too low.
+     ..removing 1 genes from module 787 because their KME is too low.
+     ..removing 1 genes from module 790 because their KME is too low.
+     ..removing 1 genes from module 792 because their KME is too low.
+     ..removing 3 genes from module 800 because their KME is too low.
+     ..removing 1 genes from module 813 because their KME is too low.
+     ..removing 1 genes from module 816 because their KME is too low.
+     ..removing 1 genes from module 827 because their KME is too low.
+     ..removing 1 genes from module 832 because their KME is too low.
+     ..removing 2 genes from module 835 because their KME is too low.
+     ..removing 3 genes from module 840 because their KME is too low.
+     ..removing 3 genes from module 843 because their KME is too low.
+     ..removing 1 genes from module 844 because their KME is too low.
+     ..removing 1 genes from module 845 because their KME is too low.
+     ..removing 1 genes from module 848 because their KME is too low.
+     ..removing 1 genes from module 855 because their KME is too low.
+     ..removing 1 genes from module 869 because their KME is too low.
+     ..removing 1 genes from module 878 because their KME is too low.
+     ..removing 1 genes from module 886 because their KME is too low.
+     ..removing 1 genes from module 890 because their KME is too low.
+     ..removing 1 genes from module 895 because their KME is too low.
+     ..removing 1 genes from module 896 because their KME is too low.
+     ..removing 1 genes from module 899 because their KME is too low.
+     ..removing 1 genes from module 905 because their KME is too low.
+     ..removing 1 genes from module 908 because their KME is too low.
+     ..removing 1 genes from module 919 because their KME is too low.
+     ..removing 1 genes from module 922 because their KME is too low.
+     ..removing 1 genes from module 934 because their KME is too low.
+     ..removing 1 genes from module 938 because their KME is too low.
+     ..removing 1 genes from module 941 because their KME is too low.
+     ..removing 1 genes from module 947 because their KME is too low.
+     ..removing 1 genes from module 951 because their KME is too low.
+     ..removing 1 genes from module 953 because their KME is too low.
+     ..removing 1 genes from module 954 because their KME is too low.
+     ..removing 1 genes from module 987 because their KME is too low.
+     ..removing 1 genes from module 1011 because their KME is too low.
+     ..removing 1 genes from module 1019 because their KME is too low.
+     ..removing 1 genes from module 1028 because their KME is too low.
+     ..removing 1 genes from module 1034 because their KME is too low.
+     ..removing 1 genes from module 1050 because their KME is too low.
+     ..removing 1 genes from module 1060 because their KME is too low.
+     ..removing 1 genes from module 1061 because their KME is too low.
+     ..removing 1 genes from module 1064 because their KME is too low.
+     ..removing 1 genes from module 1081 because their KME is too low.
+     ..removing 1 genes from module 1083 because their KME is too low.
+     ..removing 1 genes from module 1084 because their KME is too low.
+     ..removing 1 genes from module 1110 because their KME is too low.
+  ..reassigning 35 genes from module 1 to modules with higher KME.
+  ..reassigning 2 genes from module 2 to modules with higher KME.
+  ..reassigning 15 genes from module 3 to modules with higher KME.
+  ..reassigning 24 genes from module 4 to modules with higher KME.
+  ..reassigning 35 genes from module 5 to modules with higher KME.
+  ..reassigning 5 genes from module 59 to modules with higher KME.
+  ..reassigning 16 genes from module 65 to modules with higher KME.
+  ..reassigning 1 genes from module 66 to modules with higher KME.
+  ..reassigning 1 genes from module 67 to modules with higher KME.
+  ..reassigning 10 genes from module 69 to modules with higher KME.
+  ..reassigning 1 genes from module 73 to modules with higher KME.
+  ..reassigning 1 genes from module 174 to modules with higher KME.
+  ..reassigning 16 genes from module 331 to modules with higher KME.
+  ..reassigning 1 genes from module 335 to modules with higher KME.
+  ..reassigning 25 genes from module 433 to modules with higher KME.
+  ..reassigning 1 genes from module 434 to modules with higher KME.
+  ..reassigning 70 genes from module 435 to modules with higher KME.
+  ..reassigning 2 genes from module 436 to modules with higher KME.
+  ..reassigning 13 genes from module 437 to modules with higher KME.
+  ..reassigning 13 genes from module 438 to modules with higher KME.
+  ..reassigning 7 genes from module 472 to modules with higher KME.
+  ..reassigning 2 genes from module 477 to modules with higher KME.
+  ..reassigning 1 genes from module 517 to modules with higher KME.
+  ..reassigning 1 genes from module 556 to modules with higher KME.
+  ..reassigning 1 genes from module 970 to modules with higher KME.
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+       Calculating new MEs...
+
+############### Job 11609265 summary from hive-dc-7-6-46 ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-6-46
+Cores               : 80
+GPUs                : 0
+State               : FAILED
+ExitCode            : 1:0
+Submit              : 2026-04-06T23:00:31
+Start               : 2026-04-06T23:00:32
+End                 : 2026-04-07T06:28:17
+Reserved walltime   :    23:00:00
+Used walltime       :    07:27:45
+Used CPU time       : 15-22:18:58
+% User (Computation): 96.00%
+% System (I/O)      :  4.00%
+Mem reserved        : 1200G
+Max Mem used        : 460.43G (hive-dc-7-6-46)
+Max Disk Write      : 1.37G (hive-dc-7-6-46)
+Max Disk Read       : 3.61G (hive-dc-7-6-46)
+
+############### Job 11609265 info ###############
+JobId=11609265 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8045 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0
+   RunTime=07:27:45 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-04-06T23:00:31 EligibleTime=2026-04-06T23:00:31
+   AccrueTime=2026-04-06T23:00:31
+   StartTime=2026-04-06T23:00:32 EndTime=2026-04-07T06:28:17 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-04-06T23:00:32 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-8-18:1892005
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-6-46
+   BatchHost=hive-dc-7-6-46
+   NumNodes=1 NumCPUs=80 NumTasks=1 CPUs/Task=80 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=80,mem=1200G,node=1,billing=80
+   AllocTRES=cpu=80,mem=1200G,node=1,billing=80
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=80 MinMemoryNode=1200G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=80
+   MailUser=gekuodza@ucdavis.edu,smholesinger@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 11611797 prolog ###############
+SLURM_NODELIST: hive-dc-7-6-46
+############### Job 11611797 prolog ###############
+hive-dc-7-6-46
+Tue Apr  7 09:13:07 AM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+Allowing parallel execution with up to 40 working processes.
+ Calculating module eigengenes block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Projective K-means:
+   ..k-means clustering..
+   ..merging smaller clusters...
+Block sizes:
+gBlocks
+    1     2     3     4     5     6     7     8     9    10    11    12    13 
+39893 37728 37101 36347 35151 34508 34196 34192 31525 30946 30662 30451 26930 
+   14 
+25767 
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 1
+ ..Working on block 2 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 2
+ ..Working on block 3 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 3
+ ..Working on block 4 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 5 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 5
+ ..Working on block 6 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 7 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 8 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 8
+ ..Working on block 9 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 9
+ ..Working on block 10 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 11 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 11
+ ..Working on block 12 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 12
+ ..Working on block 13 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 13
+ ..Working on block 14 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 14
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+       Calculating new MEs...
+ Calculating module eigengenes block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Projective K-means:
+   ..k-means clustering..
+   ..merging smaller clusters...
+Block sizes:
+gBlocks
+    1     2     3     4     5     6     7     8     9    10    11    12 
+39996 39984 39974 39970 39970 39958 39905 39895 39850 39798 39772 26325 
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 2727 genes from module 1 because their KME is too low.
+     ..removing 447 genes from module 2 because their KME is too low.
+ ..Working on block 2 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 6167 genes from module 1 because their KME is too low.
+     ..removing 4432 genes from module 2 because their KME is too low.
+ ..Working on block 3 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 21 genes from module 3 because their KME is too low.
+     ..removing 12 genes from module 4 because their KME is too low.
+     ..removing 1 genes from module 5 because their KME is too low.
+     ..removing 5 genes from module 6 because their KME is too low.
+     ..removing 1 genes from module 7 because their KME is too low.
+ ..Working on block 4 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 34868 genes from module 1 because their KME is too low.
+ ..Working on block 5 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 27788 genes from module 1 because their KME is too low.
+ ..Working on block 6 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 10618 genes from module 1 because their KME is too low.
+     ..removing 1230 genes from module 6 because their KME is too low.
+     ..removing 68 genes from module 12 because their KME is too low.
+     ..removing 14 genes from module 18 because their KME is too low.
+     ..removing 32 genes from module 19 because their KME is too low.
+     ..removing 4 genes from module 24 because their KME is too low.
+     ..removing 5 genes from module 37 because their KME is too low.
+ ..Working on block 7 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 24 genes from module 7 because their KME is too low.
+     ..removing 22 genes from module 8 because their KME is too low.
+     ..removing 3 genes from module 11 because their KME is too low.
+ ..Working on block 8 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 10054 genes from module 1 because their KME is too low.
+     ..removing 1263 genes from module 2 because their KME is too low.
+ ..Working on block 9 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 20634 genes from module 1 because their KME is too low.
+ ..Working on block 10 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 17575 genes from module 1 because their KME is too low.
+     ..removing 10191 genes from module 2 because their KME is too low.
+ ..Working on block 11 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 25880 genes from module 1 because their KME is too low.
+ ..Working on block 12 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 373 genes from module 4 because their KME is too low.
+     ..removing 597 genes from module 5 because their KME is too low.
+     ..removing 558 genes from module 6 because their KME is too low.
+     ..removing 247 genes from module 7 because their KME is too low.
+     ..removing 208 genes from module 12 because their KME is too low.
+     ..removing 201 genes from module 13 because their KME is too low.
+     ..removing 219 genes from module 14 because their KME is too low.
+     ..removing 86 genes from module 18 because their KME is too low.
+     ..removing 98 genes from module 19 because their KME is too low.
+     ..removing 106 genes from module 20 because their KME is too low.
+     ..removing 92 genes from module 21 because their KME is too low.
+     ..removing 70 genes from module 22 because their KME is too low.
+     ..removing 71 genes from module 24 because their KME is too low.
+     ..removing 77 genes from module 26 because their KME is too low.
+     ..removing 91 genes from module 27 because their KME is too low.
+     ..removing 78 genes from module 30 because their KME is too low.
+     ..removing 50 genes from module 31 because their KME is too low.
+     ..removing 68 genes from module 36 because their KME is too low.
+     ..removing 57 genes from module 37 because their KME is too low.
+     ..removing 34 genes from module 38 because their KME is too low.
+     ..removing 51 genes from module 40 because their KME is too low.
+     ..removing 46 genes from module 42 because their KME is too low.
+     ..removing 40 genes from module 43 because their KME is too low.
+     ..removing 36 genes from module 45 because their KME is too low.
+     ..removing 30 genes from module 46 because their KME is too low.
+     ..removing 39 genes from module 51 because their KME is too low.
+     ..removing 21 genes from module 53 because their KME is too low.
+     ..removing 38 genes from module 54 because their KME is too low.
+     ..removing 18 genes from module 55 because their KME is too low.
+     ..removing 33 genes from module 56 because their KME is too low.
+     ..removing 29 genes from module 57 because their KME is too low.
+     ..removing 25 genes from module 58 because their KME is too low.
+     ..removing 22 genes from module 77 because their KME is too low.
+     ..removing 16 genes from module 88 because their KME is too low.
+     ..removing 20 genes from module 89 because their KME is too low.
+     ..removing 11 genes from module 101 because their KME is too low.
+     ..removing 18 genes from module 106 because their KME is too low.
+     ..removing 13 genes from module 114 because their KME is too low.
+  ..reassigning 25 genes from module 1 to modules with higher KME.
+  ..reassigning 2 genes from module 2 to modules with higher KME.
+  ..reassigning 4 genes from module 3 to modules with higher KME.
+  ..reassigning 12 genes from module 4 to modules with higher KME.
+  ..reassigning 1 genes from module 14 to modules with higher KME.
+  ..reassigning 3 genes from module 16 to modules with higher KME.
+  ..reassigning 1 genes from module 17 to modules with higher KME.
+  ..reassigning 4 genes from module 18 to modules with higher KME.
+  ..reassigning 18 genes from module 28 to modules with higher KME.
+  ..reassigning 50 genes from module 30 to modules with higher KME.
+  ..reassigning 1 genes from module 31 to modules with higher KME.
+  ..reassigning 1 genes from module 32 to modules with higher KME.
+  ..reassigning 1 genes from module 33 to modules with higher KME.
+  ..reassigning 2 genes from module 34 to modules with higher KME.
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+       Calculating new MEs...
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+[1] "4084" "4136" "4169" "4025" "4023" "4134"
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+[1] "4084" "4136" "4169" "4025" "4023" "4134"
+Allowing parallel execution with up to 127 working processes.
+[1] "4084" "4136" "4169" "4025" "4023" "4134"
+Loaded sample_info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+sample_info dimensions: 173 x 47
+No sample_id_col provided.
+[2026-04-07 12:48:23] Starting annotation for variant: v1_all_pcs 
+[2026-04-07 12:48:23] modules_path: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.rds 
+[2026-04-07 12:48:23] pipeline_root: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output 
+[2026-04-07 12:48:23] step_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation 
+[2026-04-07 12:48:23] cpg_label: cov3_75pct 
+[2026-04-07 12:48:23] region_label: covMin10_methSD0p07 
+[2026-04-07 12:48:23] variant_name: v1_all_pcs 
+[2026-04-07 12:48:23] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-04-07 12:48:23] genome: hg38 
+[2026-04-07 12:48:23] annotation_mode: auto 
+[2026-04-07 12:48:23] sample_info rows: 173; cols: 47 
+[2026-04-07 12:48:23] sample_id_col: (not provided) 
+[2026-04-07 12:48:26] Loaded regions: 465397 
+[2026-04-07 12:48:26] Unique modules: 5 
+[2026-04-07 12:48:57] Annotated regions rows: 465397 
+[2026-04-07 12:49:32] Module gene list rows: 21211 
+[2026-04-07 12:49:32] Module summary rows: 5 
+[2026-04-07 12:49:32] Background genes: 21191 
+[2026-04-07 12:49:32] Finished annotation for variant: v1_all_pcs 
+[2026-04-07 12:49:32] Starting annotation for variant: v2_exclude_protected_pcs 
+[2026-04-07 12:49:32] modules_path: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.rds 
+[2026-04-07 12:49:32] pipeline_root: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output 
+[2026-04-07 12:49:32] step_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation 
+[2026-04-07 12:49:32] cpg_label: cov3_75pct 
+[2026-04-07 12:49:32] region_label: covMin10_methSD0p07 
+[2026-04-07 12:49:32] variant_name: v2_exclude_protected_pcs 
+[2026-04-07 12:49:32] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-04-07 12:49:32] genome: hg38 
+[2026-04-07 12:49:32] annotation_mode: auto 
+[2026-04-07 12:49:32] sample_info rows: 173; cols: 47 
+[2026-04-07 12:49:32] sample_id_col: (not provided) 
+[2026-04-07 12:49:33] Loaded regions: 465397 
+[2026-04-07 12:49:33] Unique modules: 62 
+[2026-04-07 12:49:43] Annotated regions rows: 465397 
+[2026-04-07 12:50:07] Module gene list rows: 61073 
+[2026-04-07 12:50:07] Module summary rows: 62 
+[2026-04-07 12:50:07] Background genes: 21191 
+[2026-04-07 12:50:07] Finished annotation for variant: v2_exclude_protected_pcs 
+
+############### Job 11611797 summary from hive-dc-7-6-46 ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-6-46
+Cores               : 80
+GPUs                : 0
+State               : FAILED
+ExitCode            : 1:0
+Submit              : 2026-04-07T09:12:41
+Start               : 2026-04-07T09:13:06
+End                 : 2026-04-07T12:50:23
+Reserved walltime   :   23:00:00
+Used walltime       :   03:37:17
+Used CPU time       : 5-13:05:44
+% User (Computation): 99.28%
+% System (I/O)      :  0.72%
+Mem reserved        : 1200G
+Max Mem used        : 50.00G (hive-dc-7-6-46)
+Max Disk Write      : 1.32G (hive-dc-7-6-46)
+Max Disk Read       : 3.41G (hive-dc-7-6-46)
+
+############### Job 11611797 info ###############
+JobId=11611797 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8045 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0
+   RunTime=03:37:17 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-04-07T09:12:41 EligibleTime=2026-04-07T09:12:41
+   AccrueTime=2026-04-07T09:12:41
+   StartTime=2026-04-07T09:13:06 EndTime=2026-04-07T12:50:23 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-04-07T09:13:06 Scheduler=Backfill
+   Partition=high AllocNode:Sid=hive-dc-7-8-18:1892005
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-6-46
+   BatchHost=hive-dc-7-6-46
+   NumNodes=1 NumCPUs=80 NumTasks=1 CPUs/Task=80 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=80,mem=1200G,node=1,billing=80
+   AllocTRES=cpu=80,mem=1200G,node=1,billing=80
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=80 MinMemoryNode=1200G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=80
+   MailUser=gekuodza@ucdavis.edu,smholesinger@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 11612948 prolog ###############
+SLURM_NODELIST: hive-dc-7-6-46
+############### Job 11612948 prolog ###############
+hive-dc-7-6-46
+Tue Apr  7 01:36:52 PM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+Allowing parallel execution with up to 40 working processes.
+ Calculating module eigengenes block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Projective K-means:
+   ..k-means clustering..
+   ..merging smaller clusters...
+Block sizes:
+gBlocks
+    1     2     3     4     5     6     7     8     9    10    11    12    13 
+39893 37728 37101 36347 35151 34508 34196 34192 31525 30946 30662 30451 26930 
+   14 
+25767 
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 1
+ ..Working on block 2 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 2
+ ..Working on block 3 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 3
+ ..Working on block 4 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 5 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 5
+ ..Working on block 6 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 7 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 8 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 8
+ ..Working on block 9 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 9
+ ..Working on block 10 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 11 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 12 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 12
+ ..Working on block 13 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 13
+ ..Working on block 14 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 14
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+       Calculating new MEs...
+ Calculating module eigengenes block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Projective K-means:
+   ..k-means clustering..
+   ..merging smaller clusters...
+Block sizes:
+gBlocks
+    1     2     3     4     5     6     7     8     9    10    11    12 
+39996 39984 39974 39970 39970 39958 39905 39895 39850 39798 39772 26325 
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 2727 genes from module 1 because their KME is too low.
+     ..removing 447 genes from module 2 because their KME is too low.
+ ..Working on block 2 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 6167 genes from module 1 because their KME is too low.
+     ..removing 4432 genes from module 2 because their KME is too low.
+ ..Working on block 3 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 35028 genes from module 1 because their KME is too low.
+     ..removing 1850 genes from module 2 because their KME is too low.
+     ..removing 4 genes from module 3 because their KME is too low.
+     ..removing 2 genes from module 4 because their KME is too low.
+ ..Working on block 4 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 34911 genes from module 1 because their KME is too low.
+ ..Working on block 5 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 32638 genes from module 1 because their KME is too low.
+ ..Working on block 6 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 10900 genes from module 1 because their KME is too low.
+     ..removing 1564 genes from module 6 because their KME is too low.
+     ..removing 76 genes from module 12 because their KME is too low.
+     ..removing 43 genes from module 13 because their KME is too low.
+     ..removing 14 genes from module 16 because their KME is too low.
+     ..removing 4 genes from module 20 because their KME is too low.
+     ..removing 8 genes from module 21 because their KME is too low.
+     ..removing 5 genes from module 23 because their KME is too low.
+     ..removing 6 genes from module 24 because their KME is too low.
+     ..removing 1 genes from module 25 because their KME is too low.
+ ..Working on block 7 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 730 genes from module 2 because their KME is too low.
+     ..removing 346 genes from module 4 because their KME is too low.
+ ..Working on block 8 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 10054 genes from module 1 because their KME is too low.
+     ..removing 1263 genes from module 2 because their KME is too low.
+ ..Working on block 9 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 20634 genes from module 1 because their KME is too low.
+ ..Working on block 10 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 17575 genes from module 1 because their KME is too low.
+     ..removing 12948 genes from module 2 because their KME is too low.
+     ..removing 205 genes from module 3 because their KME is too low.
+ ..Working on block 11 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 25880 genes from module 1 because their KME is too low.
+ ..Working on block 12 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 376 genes from module 4 because their KME is too low.
+     ..removing 313 genes from module 5 because their KME is too low.
+     ..removing 530 genes from module 6 because their KME is too low.
+     ..removing 442 genes from module 10 because their KME is too low.
+     ..removing 219 genes from module 12 because their KME is too low.
+     ..removing 252 genes from module 13 because their KME is too low.
+     ..removing 209 genes from module 14 because their KME is too low.
+     ..removing 198 genes from module 16 because their KME is too low.
+     ..removing 179 genes from module 17 because their KME is too low.
+     ..removing 103 genes from module 20 because their KME is too low.
+     ..removing 104 genes from module 21 because their KME is too low.
+     ..removing 69 genes from module 22 because their KME is too low.
+     ..removing 71 genes from module 25 because their KME is too low.
+     ..removing 77 genes from module 27 because their KME is too low.
+     ..removing 79 genes from module 28 because their KME is too low.
+     ..removing 52 genes from module 30 because their KME is too low.
+     ..removing 68 genes from module 35 because their KME is too low.
+     ..removing 57 genes from module 36 because their KME is too low.
+     ..removing 60 genes from module 38 because their KME is too low.
+     ..removing 34 genes from module 39 because their KME is too low.
+     ..removing 57 genes from module 41 because their KME is too low.
+     ..removing 37 genes from module 42 because their KME is too low.
+     ..removing 46 genes from module 43 because their KME is too low.
+     ..removing 39 genes from module 45 because their KME is too low.
+     ..removing 40 genes from module 46 because their KME is too low.
+     ..removing 30 genes from module 47 because their KME is too low.
+     ..removing 39 genes from module 53 because their KME is too low.
+     ..removing 24 genes from module 55 because their KME is too low.
+     ..removing 36 genes from module 56 because their KME is too low.
+     ..removing 39 genes from module 59 because their KME is too low.
+     ..removing 15 genes from module 62 because their KME is too low.
+     ..removing 33 genes from module 63 because their KME is too low.
+     ..removing 29 genes from module 64 because their KME is too low.
+     ..removing 25 genes from module 65 because their KME is too low.
+     ..removing 33 genes from module 67 because their KME is too low.
+     ..removing 16 genes from module 75 because their KME is too low.
+     ..removing 22 genes from module 80 because their KME is too low.
+     ..removing 22 genes from module 83 because their KME is too low.
+     ..removing 23 genes from module 89 because their KME is too low.
+     ..removing 16 genes from module 92 because their KME is too low.
+     ..removing 20 genes from module 93 because their KME is too low.
+     ..removing 25 genes from module 94 because their KME is too low.
+     ..removing 18 genes from module 101 because their KME is too low.
+     ..removing 11 genes from module 102 because their KME is too low.
+     ..removing 13 genes from module 108 because their KME is too low.
+     ..removing 15 genes from module 120 because their KME is too low.
+     ..removing 8 genes from module 126 because their KME is too low.
+  ..reassigning 22 genes from module 1 to modules with higher KME.
+  ..reassigning 2 genes from module 2 to modules with higher KME.
+  ..reassigning 11 genes from module 3 to modules with higher KME.
+  ..reassigning 12 genes from module 4 to modules with higher KME.
+  ..reassigning 5 genes from module 5 to modules with higher KME.
+  ..reassigning 2 genes from module 10 to modules with higher KME.
+  ..reassigning 5 genes from module 11 to modules with higher KME.
+  ..reassigning 1 genes from module 12 to modules with higher KME.
+  ..reassigning 4 genes from module 13 to modules with higher KME.
+  ..reassigning 17 genes from module 25 to modules with higher KME.
+  ..reassigning 50 genes from module 27 to modules with higher KME.
+  ..reassigning 1 genes from module 28 to modules with higher KME.
+  ..reassigning 1 genes from module 29 to modules with higher KME.
+  ..reassigning 1 genes from module 30 to modules with higher KME.
+  ..reassigning 2 genes from module 32 to modules with higher KME.
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+       Calculating new MEs...
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+[1] "4084" "4136" "4169" "4025" "4023" "4134"
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+[1] "4084" "4136" "4169" "4025" "4023" "4134"
+Allowing parallel execution with up to 127 working processes.
+[1] "4084" "4136" "4169" "4025" "4023" "4134"
+Loaded sample_info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+sample_info dimensions: 173 x 47
+No sample_id_col provided.
+[2026-04-07 17:19:24] Starting annotation for variant: v1_all_pcs 
+[2026-04-07 17:19:24] modules_path: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.rds 
+[2026-04-07 17:19:24] pipeline_root: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output 
+[2026-04-07 17:19:24] step_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation 
+[2026-04-07 17:19:24] cpg_label: cov3_75pct 
+[2026-04-07 17:19:24] region_label: covMin10_methSD0p07 
+[2026-04-07 17:19:24] variant_name: v1_all_pcs 
+[2026-04-07 17:19:24] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-04-07 17:19:24] genome: hg38 
+[2026-04-07 17:19:24] annotation_mode: auto 
+[2026-04-07 17:19:24] sample_info rows: 173; cols: 47 
+[2026-04-07 17:19:24] sample_id_col: (not provided) 
+[2026-04-07 17:19:26] Loaded regions: 465397 
+[2026-04-07 17:19:26] Unique modules: 7 
+[2026-04-07 17:19:39] Annotated regions rows: 465397 
+[2026-04-07 17:20:12] Module gene list rows: 21215 
+[2026-04-07 17:20:12] Module summary rows: 7 
+[2026-04-07 17:20:12] Background genes: 21191 
+[2026-04-07 17:20:13] Finished annotation for variant: v1_all_pcs 
+[2026-04-07 17:20:13] Starting annotation for variant: v2_exclude_protected_pcs 
+[2026-04-07 17:20:13] modules_path: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.rds 
+[2026-04-07 17:20:13] pipeline_root: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output 
+[2026-04-07 17:20:13] step_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation 
+[2026-04-07 17:20:13] cpg_label: cov3_75pct 
+[2026-04-07 17:20:13] region_label: covMin10_methSD0p07 
+[2026-04-07 17:20:13] variant_name: v2_exclude_protected_pcs 
+[2026-04-07 17:20:13] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-04-07 17:20:13] genome: hg38 
+[2026-04-07 17:20:13] annotation_mode: auto 
+[2026-04-07 17:20:13] sample_info rows: 173; cols: 47 
+[2026-04-07 17:20:13] sample_id_col: (not provided) 
+[2026-04-07 17:20:14] Loaded regions: 465397 
+[2026-04-07 17:20:14] Unique modules: 68 
+[2026-04-07 17:20:23] Annotated regions rows: 465397 
+[2026-04-07 17:20:47] Module gene list rows: 62547 
+[2026-04-07 17:20:47] Module summary rows: 68 
+[2026-04-07 17:20:47] Background genes: 21191 
+[2026-04-07 17:20:47] Finished annotation for variant: v2_exclude_protected_pcs 
+project_root: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+annotation_dir_v1: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+annotation_dir_v2: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+do_kegg: TRUE
+do_go: TRUE
+do_reactome: TRUE
+do_enrichr: TRUE
+organism: hsa
+plot_p_col: pvalue
+plot_top_n: 10
+plot_sig_cutoff: 0.05
+[2026-04-07 17:21:13] Starting enrichment for variant: v1_all_pcs 
+[2026-04-07 17:21:13] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-04-07 17:21:13] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-04-07 17:21:13] do_kegg: TRUE | do_go: TRUE | do_reactome: TRUE | do_enrichr: TRUE 
+[2026-04-07 17:21:13] plot_p_col: pvalue 
+[2026-04-07 17:21:13] selection_mode: stats_file_plus_trait_list 
+[2026-04-07 17:21:13] selected modules count: 5 
+[2026-04-07 17:21:13] selected modules: brown, green, turquoise, blue, red 
+[2026-04-07 17:21:13] Enrichr background mode disabled. 
+[2026-04-07 17:21:13] Module brown: genes=6 
+[2026-04-07 17:22:13] Module green: genes=2 
+[2026-04-07 17:22:57] Module turquoise: genes=9 
+[2026-04-07 17:23:40] Module blue: genes=2 
+[2026-04-07 17:24:23] Module red: genes=2 
+[2026-04-07 17:25:08] Finished enrichment for variant: v1_all_pcs 
+[2026-04-07 17:25:13] Starting enrichment for variant: v2_exclude_protected_pcs 
+[2026-04-07 17:25:13] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-04-07 17:25:13] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-04-07 17:25:13] do_kegg: TRUE | do_go: TRUE | do_reactome: TRUE | do_enrichr: TRUE 
+[2026-04-07 17:25:13] plot_p_col: pvalue 
+[2026-04-07 17:25:13] selection_mode: stats_file_plus_trait_list 
+[2026-04-07 17:25:13] selected modules count: 58 
+[2026-04-07 17:25:13] selected modules: lightgreen, lightpink4, darkmagenta, lightcyan, blue, purple, sienna3, darkgrey, royalblue, skyblue3, cyan, paleturquoise, ivory, saddlebrown, darkolivegreen, yellow, coral2, bisque4, orangered4, thistle1, skyblue2, yellowgreen, skyblue, honeydew1, grey60, palevioletred3, navajowhite2, maroon, mediumpurple3, darkseagreen4, darkorange2, plum2, white, darkslateblue, antiquewhite4, darkgreen, salmon4, coral1, midnightblue, magenta, greenyellow, lightyellow, darkred, plum1, green, tan, yellow4, brown, skyblue1, turquoise, salmon, pink, darkorange, darkturquoise, plum, red, black, steelblue 
+[2026-04-07 17:25:14] Enrichr background mode disabled. 
+[2026-04-07 17:25:14] Module lightgreen: genes=40 
+[2026-04-07 17:26:03] Module lightpink4: genes=18 
+[2026-04-07 17:26:49] Module darkmagenta: genes=24 
+[2026-04-07 17:27:35] Module lightcyan: genes=42 
+[2026-04-07 17:28:21] Module blue: genes=9295 
+[2026-04-07 17:29:19] Module purple: genes=331 
+[2026-04-07 17:30:06] Module sienna3: genes=21 
+[2026-04-07 17:30:52] Module darkgrey: genes=21 
+[2026-04-07 17:31:36] Module royalblue: genes=42 
+[2026-04-07 17:32:24] Module skyblue3: genes=28 
+[2026-04-07 17:33:09] Module cyan: genes=45 
+[2026-04-07 17:33:56] Module paleturquoise: genes=27 
+[2026-04-07 17:34:43] Module ivory: genes=23 
+[2026-04-07 17:35:29] Module saddlebrown: genes=26 
+[2026-04-07 17:36:16] Module darkolivegreen: genes=35 
+[2026-04-07 17:37:03] Module yellow: genes=6360 
+[2026-04-07 17:37:57] Module coral2: genes=15 
+[2026-04-07 17:38:43] Module bisque4: genes=10 
+[2026-04-07 17:39:31] Module orangered4: genes=24 
+[2026-04-07 17:40:15] Module thistle1: genes=24 
+[2026-04-07 17:41:00] Module skyblue2: genes=11 
+[2026-04-07 17:41:45] Module yellowgreen: genes=17 
+[2026-04-07 17:42:32] Module skyblue: genes=8 
+[2026-04-07 17:43:17] Module honeydew1: genes=11 
+
+############### Job 11612948 summary from hive-dc-7-6-46 ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-6-46
+Cores               : 80
+GPUs                : 0
+State               : CANCELLED,CANCELLED by 2224567
+ExitCode            : 0:0
+Submit              : 2026-04-07T13:36:50
+Start               : 2026-04-07T13:36:52
+End                 : 2026-04-07T17:43:19
+Reserved walltime   :   23:00:00
+Used walltime       :   04:06:27
+Used CPU time       : 5-15:24:52
+% User (Computation): 99.23%
+% System (I/O)      :  0.77%
+Mem reserved        : 1200G
+Max Mem used        : 47.99G (hive-dc-7-6-46)
+Max Disk Write      : 22.03G (hive-dc-7-6-46)
+Max Disk Read       : 24.30G (hive-dc-7-6-46)
+
+############### Job 11612948 info ###############
+JobId=11612948 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8043 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:15
+   RunTime=04:06:26 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-04-07T13:36:50 EligibleTime=2026-04-07T13:36:50
+   AccrueTime=2026-04-07T13:36:50
+   StartTime=2026-04-07T13:36:52 EndTime=2026-04-07T17:43:18 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-04-07T13:36:52 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-8-18:1892005
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-6-46
+   BatchHost=hive-dc-7-6-46
+   NumNodes=1 NumCPUs=80 NumTasks=1 CPUs/Task=80 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=80,mem=1200G,node=1,billing=80
+   AllocTRES=cpu=80,mem=1200G,node=1,billing=80
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=80 MinMemoryNode=1200G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=80
+   MailUser=gekuodza@ucdavis.edu,smholesinger@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 11622695 prolog ###############
+SLURM_NODELIST: hive-dc-7-8-42
+############### Job 11622695 prolog ###############
+hive-dc-7-8-42
+Tue Apr  7 05:44:18 PM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+Allowing parallel execution with up to 40 working processes.
+ Calculating module eigengenes block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Projective K-means:
+   ..k-means clustering..
+   ..merging smaller clusters...
+Block sizes:
+gBlocks
+    1     2     3     4     5     6     7     8     9    10    11    12    13 
+39893 37728 37101 36347 35151 34508 34196 34192 31525 30946 30662 30451 26930 
+   14 
+25767 
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 1
+ ..Working on block 2 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 2
+ ..Working on block 3 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 3
+ ..Working on block 4 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 5 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 5
+ ..Working on block 6 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 6
+ ..Working on block 7 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 8 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 8
+ ..Working on block 9 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 9
+ ..Working on block 10 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 10
+ ..Working on block 11 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 11
+ ..Working on block 12 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 12
+ ..Working on block 13 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 13
+ ..Working on block 14 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 14
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.2
+       Calculating new MEs...
+ Calculating module eigengenes block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Projective K-means:
+   ..k-means clustering..
+   ..merging smaller clusters...
+Block sizes:
+gBlocks
+    1     2     3     4     5     6     7     8     9    10    11    12 
+39996 39984 39974 39970 39970 39958 39905 39895 39850 39798 39772 26325 
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 2727 genes from module 1 because their KME is too low.
+     ..removing 447 genes from module 2 because their KME is too low.
+ ..Working on block 2 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 6167 genes from module 1 because their KME is too low.
+     ..removing 4432 genes from module 2 because their KME is too low.
+ ..Working on block 3 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ No significant modules detected in block 3
+ ..Working on block 4 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 34911 genes from module 1 because their KME is too low.
+ ..Working on block 5 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 32638 genes from module 1 because their KME is too low.
+ ..Working on block 6 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 10919 genes from module 1 because their KME is too low.
+     ..removing 14 genes from module 15 because their KME is too low.
+     ..removing 4 genes from module 16 because their KME is too low.
+     ..removing 5 genes from module 18 because their KME is too low.
+ ..Working on block 7 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ No significant modules detected in block 7
+ ..Working on block 8 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 10054 genes from module 1 because their KME is too low.
+     ..removing 1263 genes from module 2 because their KME is too low.
+ ..Working on block 9 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 20634 genes from module 1 because their KME is too low.
+ ..Working on block 10 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 17575 genes from module 1 because their KME is too low.
+     ..removing 13320 genes from module 2 because their KME is too low.
+ ..Working on block 11 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 25880 genes from module 1 because their KME is too low.
+ ..Working on block 12 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 920 genes from module 3 because their KME is too low.
+     ..removing 961 genes from module 4 because their KME is too low.
+     ..removing 463 genes from module 6 because their KME is too low.
+     ..removing 409 genes from module 7 because their KME is too low.
+     ..removing 420 genes from module 11 because their KME is too low.
+     ..removing 302 genes from module 13 because their KME is too low.
+     ..removing 270 genes from module 15 because their KME is too low.
+     ..removing 186 genes from module 17 because their KME is too low.
+     ..removing 86 genes from module 19 because their KME is too low.
+     ..removing 115 genes from module 20 because their KME is too low.
+     ..removing 116 genes from module 24 because their KME is too low.
+     ..removing 106 genes from module 25 because their KME is too low.
+     ..removing 70 genes from module 26 because their KME is too low.
+     ..removing 72 genes from module 28 because their KME is too low.
+     ..removing 77 genes from module 29 because their KME is too low.
+     ..removing 78 genes from module 34 because their KME is too low.
+     ..removing 68 genes from module 35 because their KME is too low.
+     ..removing 57 genes from module 36 because their KME is too low.
+     ..removing 35 genes from module 37 because their KME is too low.
+     ..removing 41 genes from module 38 because their KME is too low.
+     ..removing 47 genes from module 39 because their KME is too low.
+     ..removing 46 genes from module 41 because their KME is too low.
+     ..removing 40 genes from module 43 because their KME is too low.
+     ..removing 26 genes from module 45 because their KME is too low.
+     ..removing 39 genes from module 50 because their KME is too low.
+     ..removing 33 genes from module 53 because their KME is too low.
+     ..removing 24 genes from module 54 because their KME is too low.
+     ..removing 29 genes from module 55 because their KME is too low.
+     ..removing 22 genes from module 61 because their KME is too low.
+     ..removing 16 genes from module 65 because their KME is too low.
+     ..removing 18 genes from module 69 because their KME is too low.
+  ..reassigning 19 genes from module 1 to modules with higher KME.
+  ..reassigning 2 genes from module 2 to modules with higher KME.
+  ..reassigning 3 genes from module 3 to modules with higher KME.
+  ..reassigning 12 genes from module 4 to modules with higher KME.
+  ..reassigning 2 genes from module 5 to modules with higher KME.
+  ..reassigning 5 genes from module 6 to modules with higher KME.
+  ..reassigning 1 genes from module 7 to modules with higher KME.
+  ..reassigning 3 genes from module 8 to modules with higher KME.
+  ..reassigning 17 genes from module 12 to modules with higher KME.
+  ..reassigning 49 genes from module 14 to modules with higher KME.
+  ..reassigning 1 genes from module 15 to modules with higher KME.
+  ..reassigning 1 genes from module 16 to modules with higher KME.
+  ..reassigning 1 genes from module 17 to modules with higher KME.
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.2
+       Calculating new MEs...
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+[1] "4084" "4136" "4169" "4025" "4023" "4134"
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+[1] "4084" "4136" "4169" "4025" "4023" "4134"
+Allowing parallel execution with up to 127 working processes.
+[1] "4084" "4136" "4169" "4025" "4023" "4134"
+Loaded sample_info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+sample_info dimensions: 173 x 47
+No sample_id_col provided.
+[2026-04-07 23:14:41] Starting annotation for variant: v1_all_pcs 
+[2026-04-07 23:14:41] modules_path: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.rds 
+[2026-04-07 23:14:41] pipeline_root: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output 
+[2026-04-07 23:14:41] step_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation 
+[2026-04-07 23:14:41] cpg_label: cov3_75pct 
+[2026-04-07 23:14:41] region_label: covMin10_methSD0p07 
+[2026-04-07 23:14:41] variant_name: v1_all_pcs 
+[2026-04-07 23:14:41] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-04-07 23:14:41] genome: hg38 
+[2026-04-07 23:14:41] annotation_mode: auto 
+[2026-04-07 23:14:41] sample_info rows: 173; cols: 47 
+[2026-04-07 23:14:41] sample_id_col: (not provided) 
+[2026-04-07 23:14:44] Loaded regions: 465397 
+[2026-04-07 23:14:44] Unique modules: 3 
+[2026-04-07 23:15:00] Annotated regions rows: 465397 
+[2026-04-07 23:15:41] Module gene list rows: 21202 
+[2026-04-07 23:15:41] Module summary rows: 3 
+[2026-04-07 23:15:41] Background genes: 21191 
+[2026-04-07 23:15:41] Finished annotation for variant: v1_all_pcs 
+[2026-04-07 23:15:41] Starting annotation for variant: v2_exclude_protected_pcs 
+[2026-04-07 23:15:41] modules_path: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.rds 
+[2026-04-07 23:15:41] pipeline_root: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output 
+[2026-04-07 23:15:41] step_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation 
+[2026-04-07 23:15:41] cpg_label: cov3_75pct 
+[2026-04-07 23:15:41] region_label: covMin10_methSD0p07 
+[2026-04-07 23:15:41] variant_name: v2_exclude_protected_pcs 
+[2026-04-07 23:15:41] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-04-07 23:15:41] genome: hg38 
+[2026-04-07 23:15:41] annotation_mode: auto 
+[2026-04-07 23:15:41] sample_info rows: 173; cols: 47 
+[2026-04-07 23:15:41] sample_id_col: (not provided) 
+[2026-04-07 23:15:42] Loaded regions: 465397 
+[2026-04-07 23:15:42] Unique modules: 35 
+[2026-04-07 23:15:56] Annotated regions rows: 465397 
+[2026-04-07 23:16:24] Module gene list rows: 59874 
+[2026-04-07 23:16:24] Module summary rows: 35 
+[2026-04-07 23:16:24] Background genes: 21191 
+[2026-04-07 23:16:24] Finished annotation for variant: v2_exclude_protected_pcs 
+project_root: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+annotation_dir_v1: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+annotation_dir_v2: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+do_kegg: TRUE
+do_go: TRUE
+do_reactome: TRUE
+do_enrichr: TRUE
+organism: hsa
+plot_p_col: pvalue
+plot_top_n: 10
+plot_sig_cutoff: 0.05
+[2026-04-07 23:16:56] Starting enrichment for variant: v1_all_pcs 
+[2026-04-07 23:16:56] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-04-07 23:16:56] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-04-07 23:16:56] do_kegg: TRUE | do_go: TRUE | do_reactome: TRUE | do_enrichr: TRUE 
+[2026-04-07 23:16:56] plot_p_col: pvalue 
+[2026-04-07 23:16:56] selection_mode: stats_file_plus_trait_list 
+[2026-04-07 23:16:56] selected modules count: 2 
+[2026-04-07 23:16:56] selected modules: blue, turquoise 
+[2026-04-07 23:16:56] Enrichr background mode disabled. 
+[2026-04-07 23:16:56] Module blue: genes=2 
+[2026-04-07 23:18:03] Module turquoise: genes=9 
+[2026-04-07 23:18:54] Finished enrichment for variant: v1_all_pcs 
+[2026-04-07 23:18:59] Starting enrichment for variant: v2_exclude_protected_pcs 
+[2026-04-07 23:18:59] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-04-07 23:18:59] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-04-07 23:18:59] do_kegg: TRUE | do_go: TRUE | do_reactome: TRUE | do_enrichr: TRUE 
+[2026-04-07 23:18:59] plot_p_col: pvalue 
+[2026-04-07 23:18:59] selection_mode: stats_file_plus_trait_list 
+[2026-04-07 23:18:59] selected modules count: 31 
+[2026-04-07 23:18:59] selected modules: red, darkred, darkturquoise, green, tan, blue, darkolivegreen, grey60, darkorange, lightcyan, lightyellow, pink, yellow, darkgreen, magenta, paleturquoise, skyblue, darkgrey, lightgreen, salmon, midnightblue, darkmagenta, black, orange, cyan, brown, turquoise, violet, purple, royalblue, white 
+[2026-04-07 23:18:59] Enrichr background mode disabled. 
+[2026-04-07 23:18:59] Module red: genes=337 
+[2026-04-07 23:19:56] Module darkred: genes=26 
+[2026-04-07 23:20:45] Module darkturquoise: genes=23 
+[2026-04-07 23:21:34] Module green: genes=1594 
+[2026-04-07 23:22:33] Module tan: genes=38 
+[2026-04-07 23:23:22] Module blue: genes=9294 
+[2026-04-07 23:24:33] Module darkolivegreen: genes=2 
+[2026-04-07 23:25:23] Module grey60: genes=21 
+[2026-04-07 23:26:12] Module darkorange: genes=29 
+[2026-04-07 23:27:02] Module lightcyan: genes=42 
+[2026-04-07 23:27:58] Module lightyellow: genes=34 
+[2026-04-07 23:28:48] Module pink: genes=49 
+[2026-04-07 23:29:37] Module yellow: genes=6360 
+[2026-04-07 23:30:39] Module darkgreen: genes=25 
+[2026-04-07 23:31:29] Module magenta: genes=42 
+[2026-04-07 23:32:18] Module paleturquoise: genes=20 
+[2026-04-07 23:33:07] Module skyblue: genes=18 
+[2026-04-07 23:34:03] Module darkgrey: genes=17 
+[2026-04-07 23:34:53] Module lightgreen: genes=20 
+[2026-04-07 23:35:44] Module salmon: genes=20 
+[2026-04-07 23:36:33] Module midnightblue: genes=36 
+[2026-04-07 23:37:23] Module darkmagenta: genes=1 
+[2026-04-07 23:38:09] Module black: genes=365 
+[2026-04-07 23:39:00] Module orange: genes=30 
+[2026-04-07 23:39:49] Module cyan: genes=49 
+[2026-04-07 23:40:40] Module brown: genes=8241 
+[2026-04-07 23:41:44] Module turquoise: genes=13151 
+[2026-04-07 23:42:53] Module violet: genes=5 
+[2026-04-07 23:43:41] Module purple: genes=59 
+[2026-04-07 23:44:34] Module royalblue: genes=10 
+[2026-04-07 23:45:23] Module white: genes=24 
+[2026-04-07 23:46:24] Finished enrichment for variant: v2_exclude_protected_pcs 
+
+Script 12b complete: Enrichment finished
+Fatal error: cannot open file '/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/comethyl_scripts/13A_core_regulatory_state_overlap.R': No such file or directory
+
+############### Job 11622695 summary from hive-dc-7-8-42 ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-8-42
+Cores               : 80
+GPUs                : 0
+State               : FAILED
+ExitCode            : 2:0
+Submit              : 2026-04-07T17:44:17
+Start               : 2026-04-07T17:44:18
+End                 : 2026-04-07T23:46:26
+Reserved walltime   :    23:00:00
+Used walltime       :    06:02:08
+Used CPU time       : 10-17:35:44
+% User (Computation): 99.56%
+% System (I/O)      :  0.44%
+Mem reserved        : 1200G
+Max Mem used        : 51.43G (hive-dc-7-8-42)
+Max Disk Write      : 26.06G (hive-dc-7-8-42)
+Max Disk Read       : 28.37G (hive-dc-7-8-42)
+
+############### Job 11622695 info ###############
+JobId=11622695 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8043 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=2:0
+   RunTime=06:02:08 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-04-07T17:44:17 EligibleTime=2026-04-07T17:44:17
+   AccrueTime=2026-04-07T17:44:17
+   StartTime=2026-04-07T17:44:18 EndTime=2026-04-07T23:46:26 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-04-07T17:44:18 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-8-18:1892005
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-8-42
+   BatchHost=hive-dc-7-8-42
+   NumNodes=1 NumCPUs=80 NumTasks=1 CPUs/Task=80 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=80,mem=1200G,node=1,billing=80
+   AllocTRES=cpu=80,mem=1200G,node=1,billing=80
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=80 MinMemoryNode=1200G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=80
+   MailUser=gekuodza@ucdavis.edu,smholesinger@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 11630986 prolog ###############
+SLURM_NODELIST: hive-dc-7-8-42
+############### Job 11630986 prolog ###############
+hive-dc-7-8-42
+Tue Apr  7 11:46:28 PM PDT 2026
+
+############### Job 11630986 summary from hive-dc-7-8-42 ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-8-42
+Cores               : 80
+GPUs                : 0
+State               : FAILED
+ExitCode            : 2:0
+Submit              : 2026-04-07T18:44:54
+Start               : 2026-04-07T23:46:27
+End                 : 2026-04-07T23:46:31
+Reserved walltime   : 23:00:00
+Used walltime       : 00:00:04
+Used CPU time       : 00:00:00
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 1200G
+Max Mem used        : 964.00K (hive-dc-7-8-42)
+Max Disk Write      : 0.00  (hive-dc-7-8-42)
+Max Disk Read       : 0.00  (hive-dc-7-8-42)
+
+############### Job 11630986 info ###############
+JobId=11630986 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8075 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=2:0
+   RunTime=00:00:04 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-04-07T18:44:54 EligibleTime=2026-04-07T18:44:54
+   AccrueTime=2026-04-07T18:44:54
+   StartTime=2026-04-07T23:46:27 EndTime=2026-04-07T23:46:31 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-04-07T23:46:27 Scheduler=Backfill
+   Partition=high AllocNode:Sid=hive-dc-7-8-18:1892005
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-8-42
+   BatchHost=hive-dc-7-8-42
+   NumNodes=1 NumCPUs=80 NumTasks=1 CPUs/Task=80 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=80,mem=1200G,node=1,billing=80
+   AllocTRES=cpu=80,mem=1200G,node=1,billing=80
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=80 MinMemoryNode=1200G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=80
+   MailUser=gekuodza@ucdavis.edu,smholesinger@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 11655559 prolog ###############
+SLURM_NODELIST: hive-dc-7-8-50
+############### Job 11655559 prolog ###############
+hive-dc-7-8-50
+Wed Apr  8 12:59:49 AM PDT 2026
+
+############### Job 11655559 summary from hive-dc-7-8-50 ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-8-50
+Cores               : 80
+GPUs                : 0
+State               : FAILED
+ExitCode            : 2:0
+Submit              : 2026-04-08T00:59:47
+Start               : 2026-04-08T00:59:49
+End                 : 2026-04-08T00:59:55
+Reserved walltime   : 23:00:00
+Used walltime       : 00:00:06
+Used CPU time       : 00:00:00
+% User (Computation): --
+% System (I/O)      : --
+Mem reserved        : 1200G
+Max Mem used        : 48.54M (hive-dc-7-8-50)
+Max Disk Write      : 0.00  (hive-dc-7-8-50)
+Max Disk Read       : 0.00  (hive-dc-7-8-50)
+
+############### Job 11655559 info ###############
+JobId=11655559 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8045 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=2:0
+   RunTime=00:00:06 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-04-08T00:59:47 EligibleTime=2026-04-08T00:59:47
+   AccrueTime=2026-04-08T00:59:47
+   StartTime=2026-04-08T00:59:49 EndTime=2026-04-08T00:59:55 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-04-08T00:59:49 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-8-18:1925198
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-8-50
+   BatchHost=hive-dc-7-8-50
+   NumNodes=1 NumCPUs=80 NumTasks=1 CPUs/Task=80 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=80,mem=1200G,node=1,billing=80
+   AllocTRES=cpu=80,mem=1200G,node=1,billing=80
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=80 MinMemoryNode=1200G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=80
+   MailUser=gekuodza@ucdavis.edu,smholesinger@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 11674679 prolog ###############
+SLURM_NODELIST: hive-dc-7-8-42
+############### Job 11674679 prolog ###############
+hive-dc-7-8-42
+Wed Apr  8 09:17:09 AM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+Allowing parallel execution with up to 40 working processes.
+ Calculating module eigengenes block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Projective K-means:

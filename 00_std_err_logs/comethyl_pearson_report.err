@@ -133,3 +133,2844 @@ Script 05 complete: methylation adjustment finished
 Starting Script 06
 Error: input_v2 not found: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds
 Execution halted
+
+
+Starting Script 02
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/02_filter_regions/cov3_75pct/covMin10_methSD0p07
+Loaded unfiltered regions: 2408422
+[getRegions] Filtering regions for at least 10 reads in all samples and methylation SD of at least 7%
+[getRegions] Creating new Region IDs
+[getRegions] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/02_filter_regions/cov3_75pct/covMin10_methSD0p07/Filtered_Regions.txt
+Filtered regions: 465397
+Saved filtered regions: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/02_filter_regions/cov3_75pct/covMin10_methSD0p07/Filtered_Regions.txt
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/02_filter_regions/cov3_75pct/covMin10_methSD0p07/RegionStats_UNFILTERED.pdf
+[plotRegionStats] Plotting histograms of region statistics
+[plotRegionStats] Limiting x-axis to values in bottom 99% for width, n, covMin, and covMean
+[plotRegionStats] Saving plots as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/02_filter_regions/cov3_75pct/covMin10_methSD0p07/RegionStats_FILTERED.pdf
+Saved separate plots:
+ - /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/02_filter_regions/cov3_75pct/covMin10_methSD0p07/RegionStats_UNFILTERED.pdf
+ - /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/02_filter_regions/cov3_75pct/covMin10_methSD0p07/RegionStats_FILTERED.pdf
+[plotRegionStatsCompare2] Building combined QC plot
+[plotRegionStatsCompare2] Saving: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/02_filter_regions/cov3_75pct/covMin10_methSD0p07/RegionStats_FilterEffect_COMBINED.pdf
+Warning message:
+In geom_vline(data = thr, aes(xintercept = x), linetype = "dashed",  :
+  Ignoring unknown parameters: `inherit.aes`
+Saved combined plot: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/02_filter_regions/cov3_75pct/covMin10_methSD0p07/RegionStats_FilterEffect_COMBINED.pdf
+Script 02 complete: region filtering and QC plots complete
+Output folder: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/02_filter_regions/cov3_75pct/covMin10_methSD0p07
+Regions after filtering: 465397
+Starting Script 03
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/03_region_methylation/cov3_75pct/covMin10_methSD0p07
+Loaded filtered regions: 465397
+Loaded BSseq object successfully
+[getRegionMeth] Calculating region methylation from BSseq object
+[getRegionMeth] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/03_region_methylation/cov3_75pct/covMin10_methSD0p07/Region_Methylation.rds
+Saved region methylation RDS: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/03_region_methylation/cov3_75pct/covMin10_methSD0p07/Region_Methylation.rds
+Script 03 complete: region methylation calculated
+Starting Script 04
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin10_methSD0p07
+Loaded methylation matrix: 465397 regions x 173 samples
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+After alignment: 465397 regions x 173 samples
+Numeric trait columns retained for diagnostics: 41
+[readTraitFile] Loaded 40 traits from: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 40, found = 34, missing = 6
+[resolveTraits] technical_traits: requested = 3, found = 0, missing = 3
+Using protected traits in SVA model matrix: aakid, ddtq1, ddtq2, ddtq3, ddtq4, ddtT1, ddtT2, ddtT3, ddeq1, ddeq2, ddeq3, ddeq4, ddeT1, ddeT2, ddeT3, ICE60edu1_q1, ICE60edu1_q2, ICE60edu1_q3, ICE60edu1_q4, ICE60rac1_q1, ICE60rac1_q2, ICE60rac1_q3, ICE60rac1_q4, ICE60inc1_q1, ICE60inc1_q2, ICE60inc1_q3, ICE60inc1_q4, ICE60incxrac1_q1, ICE60incxrac1_q2, ICE60incxrac1_q3, ICE60incxrac1_q4, agemenarche_adol, youngmen_adol, oldmen_adol
+[getPCs_generic] Determining number of PCs using sva::num.sv
+[getPCs_generic] NAs detected in model matrix; centering and replacing with 0
+Error in solve.default(t(mod) %*% mod) : 
+  system is computationally singular: reciprocal condition number = 1.50738e-18
+Calls: getPCs_generic -> <Anonymous> -> solve -> solve.default
+Execution halted
+
+
+Starting Script 04
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin10_methSD0p07
+Loaded methylation matrix: 465397 regions x 173 samples
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+After alignment: 465397 regions x 173 samples
+Numeric trait columns retained for diagnostics: 45
+[readTraitFile] Loaded 23 traits from: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 23, found = 23, missing = 0
+[resolveTraits] technical_traits: requested = 3, found = 0, missing = 3
+Using protected traits in SVA model matrix: aakid, ddt, ddtT2, ddtT3, dde, ddeT1, ddeT2, op_ddt, ICE60edu1_q1, ICE60edu1_q2, ICE60edu1_q3, ICE60rac1_q1, ICE60rac1_q2, ICE60rac1_q4, ICE60inc1_q1, ICE60inc1_q4, ICE60incxrac1_q1, ICE60incxrac1_q2, ICE60incxrac1_q4, breastcaF1, breastcaF0, youngmen_adol, oldmen_adol
+[getPCs_generic] Determining number of PCs using sva::num.sv
+[getPCs_generic] NAs detected in model matrix; centering and replacing with 0
+[getPCs_generic] num.sv selected 26 PCs as surrogate variables
+PC matrix dimensions: 173 samples x 26 PCs
+Surrogate variables (num.sv): PC_1 through PC_26
+Saved variance explained plot: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin10_methSD0p07/Variance_Explained_Top20_PCs.pdf
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin10_methSD0p07/PC_Trait_Correlation_Stats_Pearson.tsv
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin10_methSD0p07/PC_Trait_Correlation_Stats_Bicor.tsv
+[plotMEtraitCor_pub] corType = bicor
+[plotMEtraitCor_pub] autoSize -> width=6.66, height=6.18 (nX=26,nY=23)
+[plotMEtraitCor_pub] corType = bicor
+[plotMEtraitCor_pub] autoSize -> width=6.66, height=9.54 (nX=26,nY=44)
+[plotMEtraitCor_pub] corType = bicor
+[plotMEtraitCor_pub] autoSize -> width=6.66, height=9.70 (nX=26,nY=45)
+[plotTraitDendrogramFromPC] Saved: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin10_methSD0p07/Trait_Dendrogram_From_PC_Associations.pdf
+Surrogate variables identified by num.sv: 26 (PC_1 through PC_26)
+Consensus Script 04 complete: PC derivation and diagnostics finished
+Output folder: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin10_methSD0p07
+------------------------------------------------------------
+[LATENT STRUCTURE SUMMARY]
+------------------------------------------------------------
+Samples: 173
+Selected latent factors for adjustment (num.sv): 26
+
+Returned adjustment matrix: 173 x 26 (samples x selected PCs)
+
+Variance captured by selected PCs: 25.7%
+
+Starting Script 05
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin10_methSD0p07
+After alignment: meth = 465397 regions x 173 samples; PCs = 173 samples x 26 PCs
+[readTraitFile] Loaded 23 traits from: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 23, found = 23, missing = 0
+[resolveTraits] technical_traits: requested = 3, found = 0, missing = 3
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Adjusted_Region_Methylation_allPCs.rds
+✓ v1 complete: adjusted using all PCs (n = 26)
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds
+✓ v2 complete: removed 20 protected-associated PCs; used 6 PCs
+Skipping v3 (run_v3 = FALSE)
+Script 05 complete: methylation adjustment finished
+Starting Script 06
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07
+
+==============================
+Running soft power for variant: v1_all_pcs
+Correlation method: pearson
+==============================
+
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 19, fit = 0.932 and mean connectivity = 2.6
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/SoftPower_pearson.rds
+[plotSoftPower] Plotting scale-free topology fit and mean connectivity by soft power threshold
+[plotSoftPower] Saving plots as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/SoftPower_pearson_Plots.pdf
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Sample_Dendrogram_pearson.pdf
+✓ Sample dendrogram saved: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Sample_Dendrogram_pearson.pdf
+✓ Finished soft-power run for: v1_all_pcs
+  RDS: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/SoftPower_pearson.rds
+  PDF: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/SoftPower_pearson_Plots.pdf
+
+==============================
+Running soft power for variant: v2_exclude_protected_pcs
+Correlation method: pearson
+==============================
+
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 6, fit = 0.826 and mean connectivity = 9112.7
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/SoftPower_pearson.rds
+[plotSoftPower] Plotting scale-free topology fit and mean connectivity by soft power threshold
+[plotSoftPower] Saving plots as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/SoftPower_pearson_Plots.pdf
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Sample_Dendrogram_pearson.pdf
+✓ Sample dendrogram saved: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Sample_Dendrogram_pearson.pdf
+✓ Finished soft-power run for: v2_exclude_protected_pcs
+  RDS: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/SoftPower_pearson.rds
+  PDF: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/SoftPower_pearson_Plots.pdf
+Script 06 complete: soft power finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07
+Starting Script 07
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07
+Loaded regions: 465397 rows
+
+==============================
+Running module detection for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] methylation dimensions: 173 regions x 465397 samples
+[v1_all_pcs] using powerEstimate = 19
+[v1_all_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.bed
+✓ Finished variant: v1_all_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.bed
+
+==============================
+Running module detection for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] methylation dimensions: 173 regions x 465397 samples
+[v2_exclude_protected_pcs] using powerEstimate = 6
+[v2_exclude_protected_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+Error in rect(trafo1$x, trafo1$y, trafo2$x, trafo2$y, col = as.character(C[,  : 
+  invalid color name 'pink4.2'
+Calls: plotRegionDendro ... plotOrderedColors -> .plotOrderedColorSubplot -> rect
+In addition: Warning messages:
+1: In labels2colors(allLabels) :
+  labels2colors: Number of labels exceeds number of avilable colors. Some colors will be repeated 4 times.
+2: In labels2colors(c(1:nNewColors)) :
+  labels2colors: Number of labels exceeds number of avilable colors. Some colors will be repeated 3 times.
+Execution halted
+
+
+Starting Script 07
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07
+Loaded regions: 465397 rows
+
+==============================
+Running module detection for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] methylation dimensions: 173 regions x 465397 samples
+[v1_all_pcs] using powerEstimate = 19
+[v1_all_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.bed
+✓ Finished variant: v1_all_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.bed
+
+==============================
+Running module detection for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] methylation dimensions: 173 regions x 465397 samples
+[v2_exclude_protected_pcs] using powerEstimate = 6
+[v2_exclude_protected_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.bed
+✓ Finished variant: v2_exclude_protected_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.bed
+Script 07 complete: module detection finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07
+Starting Script 08
+Loaded sample_info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+colData dimensions: 173 samples x 46 traits
+colData_num dimensions: 173 samples x 46 numeric traits
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07
+
+==============================
+Running module/sample diagnostics for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] No MEgrey column found (5 real MEs remaining)
+[v1_all_pcs] Sample alignment to metadata: 173 overlapping samples retained from 173 ME samples and 173 metadata samples
+[v1_all_pcs] MEs used: 173 samples x 5 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Module_ME_Dendrogram.pdf
+[v1_all_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Module_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Module_Correlation_Stats.tsv
+[v1_all_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Sample_ME_Dendrogram.pdf
+[v1_all_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Sample_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Sample_ME_Heatmap.pdf
+[v1_all_pcs] Saved sample x module eigengene heatmap
+Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+
+==============================
+Running module/sample diagnostics for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] No MEgrey column found (62 real MEs remaining)
+[v2_exclude_protected_pcs] Sample alignment to metadata: 173 overlapping samples retained from 173 ME samples and 173 metadata samples
+[v2_exclude_protected_pcs] MEs used: 173 samples x 62 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Module_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Module_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Module_Correlation_Stats.tsv
+[v2_exclude_protected_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Sample_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Sample_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Sample_ME_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample x module eigengene heatmap
+Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+Script 08 complete: module and sample diagnostics finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07
+Starting Script 09a
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+
+==============================
+Running ME-trait analysis for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] MEs dimensions: 173 samples x 5 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v1_all_pcs] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/RtmplpUFUx/file3c2add4c29f7e4.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+
+==============================
+Running ME-trait analysis for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] MEs dimensions: 173 samples x 62 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v2_exclude_protected_pcs] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/RtmplpUFUx/file3c2add4528cf8.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+Script 09a complete: core ME-trait finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07
+Starting Script 09b
+Variants to process: 2
+
+==============================
+Running 09b for variant: v1_all_pcs
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/01_ids_and_batch_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/01_ids_and_batch_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '01_ids_and_batch_variables' for variant 'v1_all_pcs'
+  Traits found: 2 / 4
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/01_ids_and_batch_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_body_size_outcomes_F1/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_body_size_outcomes_F1/ME_Trait_Heatmap_TOP.pdf
+Done set '03_body_size_outcomes_F1' for variant 'v1_all_pcs'
+  Traits found: 7 / 9
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_body_size_outcomes_F1
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_organochlorine_exposures_ddt_dde/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_organochlorine_exposures_ddt_dde/ME_Trait_Heatmap_TOP.pdf
+Done set '04_organochlorine_exposures_ddt_dde' for variant 'v1_all_pcs'
+  Traits found: 24 / 24
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_organochlorine_exposures_ddt_dde
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/05_neighborhood_context_ice_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/05_neighborhood_context_ice_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '05_neighborhood_context_ice_variables' for variant 'v1_all_pcs'
+  Traits found: 23 / 23
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/05_neighborhood_context_ice_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/06_puberty_and_menarche_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/06_puberty_and_menarche_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '06_puberty_and_menarche_variables' for variant 'v1_all_pcs'
+  Traits found: 5 / 5
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/06_puberty_and_menarche_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/07_breast_cancer_outcomes/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/07_breast_cancer_outcomes/ME_Trait_Heatmap_TOP.pdf
+Done set '07_breast_cancer_outcomes' for variant 'v1_all_pcs'
+  Traits found: 2 / 2
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/07_breast_cancer_outcomes
+Finished variant: v1_all_pcs
+
+==============================
+Running 09b for variant: v2_exclude_protected_pcs
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/01_ids_and_batch_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/01_ids_and_batch_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '01_ids_and_batch_variables' for variant 'v2_exclude_protected_pcs'
+  Traits found: 2 / 4
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/01_ids_and_batch_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_body_size_outcomes_F1/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_body_size_outcomes_F1/ME_Trait_Heatmap_TOP.pdf
+Done set '03_body_size_outcomes_F1' for variant 'v2_exclude_protected_pcs'
+  Traits found: 7 / 9
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_body_size_outcomes_F1
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_organochlorine_exposures_ddt_dde/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_organochlorine_exposures_ddt_dde/ME_Trait_Heatmap_TOP.pdf
+Done set '04_organochlorine_exposures_ddt_dde' for variant 'v2_exclude_protected_pcs'
+  Traits found: 24 / 24
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_organochlorine_exposures_ddt_dde
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/05_neighborhood_context_ice_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/05_neighborhood_context_ice_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '05_neighborhood_context_ice_variables' for variant 'v2_exclude_protected_pcs'
+  Traits found: 23 / 23
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/05_neighborhood_context_ice_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/06_puberty_and_menarche_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/06_puberty_and_menarche_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '06_puberty_and_menarche_variables' for variant 'v2_exclude_protected_pcs'
+  Traits found: 5 / 5
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/06_puberty_and_menarche_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/07_breast_cancer_outcomes/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/07_breast_cancer_outcomes/ME_Trait_Heatmap_TOP.pdf
+Done set '07_breast_cancer_outcomes' for variant 'v2_exclude_protected_pcs'
+  Traits found: 2 / 2
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/07_breast_cancer_outcomes
+Finished variant: v2_exclude_protected_pcs
+Script 09a complete: Presentation ME-trait finished
+Outputs saved under: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation
+Starting Script 10
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin10_methSD0p07
+
+==============================
+Running circos/module summaries for variant: v1_all_pcs
+==============================
+
+✓ Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+
+==============================
+Running circos/module summaries for variant: v2_exclude_protected_pcs
+==============================
+
+✓ Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+Warning messages:
+1: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"chr"` instead of `.data$chr` 
+2: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"start"` instead of `.data$start` 
+3: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"end"` instead of `.data$end` 
+4: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"module"` instead of `.data$module` 
+Script 10 complete: Circos plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin10_methSD0p07
+Starting Script 11
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+Samples in common: 173
+Modules available: 5
+Traits available: 46
+[01_ids_and_batch_variables] Pairs to plot: 1
+✓ Done set: 01_ids_and_batch_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/01_ids_and_batch_variables
+[03_body_size_outcomes_F1] Pairs to plot: 3
+✓ Done set: 03_body_size_outcomes_F1
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_body_size_outcomes_F1
+[04_organochlorine_exposures_ddt_dde] Pairs to plot: 7
+✓ Done set: 04_organochlorine_exposures_ddt_dde
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_organochlorine_exposures_ddt_dde
+[05_neighborhood_context_ice_variables] Pairs to plot: 7
+✓ Done set: 05_neighborhood_context_ice_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/05_neighborhood_context_ice_variables
+[06_puberty_and_menarche_variables] Pairs to plot: 2
+✓ Done set: 06_puberty_and_menarche_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/06_puberty_and_menarche_variables
+Skipping set 07_breast_cancer_outcomes: no module-trait pairs left after filtering.
+Script 10 complete: ME-trait pair plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+Starting Script 11
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+Samples in common: 173
+Modules available: 62
+Traits available: 46
+[01_ids_and_batch_variables] Pairs to plot: 9
+✓ Done set: 01_ids_and_batch_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/01_ids_and_batch_variables
+[03_body_size_outcomes_F1] Pairs to plot: 31
+✓ Done set: 03_body_size_outcomes_F1
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_body_size_outcomes_F1
+[04_organochlorine_exposures_ddt_dde] Pairs to plot: 50
+✓ Done set: 04_organochlorine_exposures_ddt_dde
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_organochlorine_exposures_ddt_dde
+[05_neighborhood_context_ice_variables] Pairs to plot: 50
+✓ Done set: 05_neighborhood_context_ice_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/05_neighborhood_context_ice_variables
+[06_puberty_and_menarche_variables] Pairs to plot: 24
+✓ Done set: 06_puberty_and_menarche_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/06_puberty_and_menarche_variables
+[07_breast_cancer_outcomes] Pairs to plot: 4
+✓ Done set: 07_breast_cancer_outcomes
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/07_breast_cancer_outcomes
+There were 50 or more warnings (use warnings() to see the first 50)
+Script 10 complete: ME-trait pair plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+Starting Script 12a
+[annotate] Trying comethyl::annotateModule()
+[annotateModule] Excluding regions in grey (unassigned) module
+[annotateModule] Using the hg38 genome assembly for annotations
+[annotateModule] Adding genes to regions using GREAT v4.0.4 with the basalPlusExt rule
+[annotate] GREAT-based annotation failed: error in evaluating the argument 'y' in selecting a method for function 'merge': error in evaluating the argument 'x' in selecting a method for function 'as.data.frame': unused argument (type = 1)
+[annotate] Falling back to offline nearest-gene annotation.
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[annotate] Trying comethyl::annotateModule()
+[annotateModule] Excluding regions in grey (unassigned) module
+[annotateModule] Using the hg38 genome assembly for annotations
+[annotateModule] Adding genes to regions using GREAT v4.0.4 with the basalPlusExt rule
+[annotate] GREAT-based annotation failed: GREAT encountered a user error (message from GREAT web server):
+Line 128497: The second field (chromStart) must be a non-negative
+integer (not 1.3e+07). Input data: 'chr16 1.3e+07 13000205
+/chr16:1.3e+07-13000205'
+[annotate] Falling back to offline nearest-gene annotation.
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+Script 12a complete: Annotate Modules finished
+Starting Script 12b
+Error: trait_list_file not found: /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/config/presentation_sets/heatmap_primary_traits.txt
+Execution halted
+
+
+Starting Script 07
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07
+Loaded regions: 465397 rows
+
+==============================
+Running module detection for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] methylation dimensions: 173 regions x 465397 samples
+[v1_all_pcs] using powerEstimate = 19
+[v1_all_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.bed
+✓ Finished variant: v1_all_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.bed
+
+==============================
+Running module detection for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] methylation dimensions: 173 regions x 465397 samples
+[v2_exclude_protected_pcs] using powerEstimate = 6
+[v2_exclude_protected_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.bed
+✓ Finished variant: v2_exclude_protected_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.bed
+Script 07 complete: module detection finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07
+Starting Script 08
+Loaded sample_info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+colData dimensions: 173 samples x 46 traits
+colData_num dimensions: 173 samples x 46 numeric traits
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07
+
+==============================
+Running module/sample diagnostics for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] No MEgrey column found (7 real MEs remaining)
+[v1_all_pcs] Sample alignment to metadata: 173 overlapping samples retained from 173 ME samples and 173 metadata samples
+[v1_all_pcs] MEs used: 173 samples x 7 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Module_ME_Dendrogram.pdf
+[v1_all_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Module_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Module_Correlation_Stats.tsv
+[v1_all_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Sample_ME_Dendrogram.pdf
+[v1_all_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Sample_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Sample_ME_Heatmap.pdf
+[v1_all_pcs] Saved sample x module eigengene heatmap
+Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+
+==============================
+Running module/sample diagnostics for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] No MEgrey column found (68 real MEs remaining)
+[v2_exclude_protected_pcs] Sample alignment to metadata: 173 overlapping samples retained from 173 ME samples and 173 metadata samples
+[v2_exclude_protected_pcs] MEs used: 173 samples x 68 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Module_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Module_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Module_Correlation_Stats.tsv
+[v2_exclude_protected_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Sample_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Sample_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Sample_ME_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample x module eigengene heatmap
+Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+Script 08 complete: module and sample diagnostics finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07
+Starting Script 09a
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+
+==============================
+Running ME-trait analysis for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] MEs dimensions: 173 samples x 7 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v1_all_pcs] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/RtmpkvRtxY/file2d43b3186a2b99.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+
+==============================
+Running ME-trait analysis for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] MEs dimensions: 173 samples x 68 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v2_exclude_protected_pcs] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/RtmpkvRtxY/file2d43b363da8443.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+Script 09a complete: core ME-trait finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07
+Starting Script 09b
+Variants to process: 2
+
+==============================
+Running 09b for variant: v1_all_pcs
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/01_ids_and_batch_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/01_ids_and_batch_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '01_ids_and_batch_variables' for variant 'v1_all_pcs'
+  Traits found: 2 / 4
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/01_ids_and_batch_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_body_size_outcomes_F1/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_body_size_outcomes_F1/ME_Trait_Heatmap_TOP.pdf
+Done set '03_body_size_outcomes_F1' for variant 'v1_all_pcs'
+  Traits found: 7 / 9
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_body_size_outcomes_F1
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_organochlorine_exposures_ddt_dde/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_organochlorine_exposures_ddt_dde/ME_Trait_Heatmap_TOP.pdf
+Done set '04_organochlorine_exposures_ddt_dde' for variant 'v1_all_pcs'
+  Traits found: 24 / 24
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_organochlorine_exposures_ddt_dde
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/05_neighborhood_context_ice_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/05_neighborhood_context_ice_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '05_neighborhood_context_ice_variables' for variant 'v1_all_pcs'
+  Traits found: 23 / 23
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/05_neighborhood_context_ice_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/06_puberty_and_menarche_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/06_puberty_and_menarche_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '06_puberty_and_menarche_variables' for variant 'v1_all_pcs'
+  Traits found: 5 / 5
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/06_puberty_and_menarche_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/07_breast_cancer_outcomes/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/07_breast_cancer_outcomes/ME_Trait_Heatmap_TOP.pdf
+Done set '07_breast_cancer_outcomes' for variant 'v1_all_pcs'
+  Traits found: 2 / 2
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/07_breast_cancer_outcomes
+Finished variant: v1_all_pcs
+
+==============================
+Running 09b for variant: v2_exclude_protected_pcs
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/01_ids_and_batch_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/01_ids_and_batch_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '01_ids_and_batch_variables' for variant 'v2_exclude_protected_pcs'
+  Traits found: 2 / 4
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/01_ids_and_batch_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_body_size_outcomes_F1/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_body_size_outcomes_F1/ME_Trait_Heatmap_TOP.pdf
+Done set '03_body_size_outcomes_F1' for variant 'v2_exclude_protected_pcs'
+  Traits found: 7 / 9
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_body_size_outcomes_F1
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_organochlorine_exposures_ddt_dde/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_organochlorine_exposures_ddt_dde/ME_Trait_Heatmap_TOP.pdf
+Done set '04_organochlorine_exposures_ddt_dde' for variant 'v2_exclude_protected_pcs'
+  Traits found: 24 / 24
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_organochlorine_exposures_ddt_dde
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/05_neighborhood_context_ice_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/05_neighborhood_context_ice_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '05_neighborhood_context_ice_variables' for variant 'v2_exclude_protected_pcs'
+  Traits found: 23 / 23
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/05_neighborhood_context_ice_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/06_puberty_and_menarche_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/06_puberty_and_menarche_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '06_puberty_and_menarche_variables' for variant 'v2_exclude_protected_pcs'
+  Traits found: 5 / 5
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/06_puberty_and_menarche_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/07_breast_cancer_outcomes/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/07_breast_cancer_outcomes/ME_Trait_Heatmap_TOP.pdf
+Done set '07_breast_cancer_outcomes' for variant 'v2_exclude_protected_pcs'
+  Traits found: 2 / 2
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/07_breast_cancer_outcomes
+Finished variant: v2_exclude_protected_pcs
+Script 09a complete: Presentation ME-trait finished
+Outputs saved under: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation
+Starting Script 10
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin10_methSD0p07
+
+==============================
+Running circos/module summaries for variant: v1_all_pcs
+==============================
+
+✓ Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+
+==============================
+Running circos/module summaries for variant: v2_exclude_protected_pcs
+==============================
+
+✓ Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+Warning messages:
+1: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"chr"` instead of `.data$chr` 
+2: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"start"` instead of `.data$start` 
+3: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"end"` instead of `.data$end` 
+4: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"module"` instead of `.data$module` 
+Script 10 complete: Circos plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin10_methSD0p07
+Starting Script 11
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+Samples in common: 173
+Modules available: 7
+Traits available: 46
+[01_ids_and_batch_variables] Pairs to plot: 1
+✓ Done set: 01_ids_and_batch_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/01_ids_and_batch_variables
+[03_body_size_outcomes_F1] Pairs to plot: 3
+✓ Done set: 03_body_size_outcomes_F1
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_body_size_outcomes_F1
+[04_organochlorine_exposures_ddt_dde] Pairs to plot: 7
+✓ Done set: 04_organochlorine_exposures_ddt_dde
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_organochlorine_exposures_ddt_dde
+[05_neighborhood_context_ice_variables] Pairs to plot: 13
+✓ Done set: 05_neighborhood_context_ice_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/05_neighborhood_context_ice_variables
+[06_puberty_and_menarche_variables] Pairs to plot: 2
+✓ Done set: 06_puberty_and_menarche_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/06_puberty_and_menarche_variables
+Skipping set 07_breast_cancer_outcomes: no module-trait pairs left after filtering.
+Script 10 complete: ME-trait pair plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+Starting Script 11
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+Samples in common: 173
+Modules available: 68
+Traits available: 46
+[01_ids_and_batch_variables] Pairs to plot: 12
+✓ Done set: 01_ids_and_batch_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/01_ids_and_batch_variables
+[03_body_size_outcomes_F1] Pairs to plot: 33
+✓ Done set: 03_body_size_outcomes_F1
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_body_size_outcomes_F1
+[04_organochlorine_exposures_ddt_dde] Pairs to plot: 50
+✓ Done set: 04_organochlorine_exposures_ddt_dde
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_organochlorine_exposures_ddt_dde
+[05_neighborhood_context_ice_variables] Pairs to plot: 50
+✓ Done set: 05_neighborhood_context_ice_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/05_neighborhood_context_ice_variables
+[06_puberty_and_menarche_variables] Pairs to plot: 27
+✓ Done set: 06_puberty_and_menarche_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/06_puberty_and_menarche_variables
+[07_breast_cancer_outcomes] Pairs to plot: 5
+✓ Done set: 07_breast_cancer_outcomes
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/07_breast_cancer_outcomes
+There were 50 or more warnings (use warnings() to see the first 50)
+Script 10 complete: ME-trait pair plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+Starting Script 12a
+[annotate] Trying comethyl::annotateModule()
+[annotateModule] Excluding regions in grey (unassigned) module
+[annotateModule] Using the hg38 genome assembly for annotations
+[annotateModule] Adding genes to regions using GREAT v4.0.4 with the basalPlusExt rule
+[annotate] GREAT-based annotation failed: error in evaluating the argument 'y' in selecting a method for function 'merge': error in evaluating the argument 'x' in selecting a method for function 'as.data.frame': unused argument (type = 1)
+[annotate] Falling back to offline nearest-gene annotation.
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[annotate] Trying comethyl::annotateModule()
+[annotateModule] Excluding regions in grey (unassigned) module
+[annotateModule] Using the hg38 genome assembly for annotations
+[annotateModule] Adding genes to regions using GREAT v4.0.4 with the basalPlusExt rule
+[annotate] GREAT-based annotation failed: GREAT encountered a user error (message from GREAT web server):
+Line 131890: The second field (chromStart) must be a non-negative
+integer (not 1.3e+07). Input data: 'chr16 1.3e+07 13000205
+/chr16:1.3e+07-13000205'
+[annotate] Falling back to offline nearest-gene annotation.
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+Script 12a complete: Annotate Modules finished
+Starting Script 12b
+Warning message:
+In value[[3L]](cond) :
+  Could not validate Enrichr DBs; using requested list as-is. Reason: Could not resolve hostname [maayanlab.cloud]:
+Could not resolve host: maayanlab.cloud
+
+--- Enriching module: brown (6 genes) ---
+[brown] KEGG...
+[KEGG] Done: 5 pathways saved
+[brown] GO...
+[GO BP] Done: 8 terms saved
+[GO MF] Done: 9 terms saved
+[brown] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[brown] Enrichr...
+[foreground] input n=6 -> cleaned unique n=6
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: brown
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: brown
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: brown
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: brown
+
+--- Enriching module: green (2 genes) ---
+[green] KEGG...
+[green] GO...
+[GO BP] Done: 49 terms saved
+[GO MF] Done: 9 terms saved
+[GO CC] Done: 5 terms saved
+[green] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[green] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: green
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: green
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: green
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: green
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: green
+
+--- Enriching module: turquoise (9 genes) ---
+[turquoise] KEGG...
+[turquoise] GO...
+[turquoise] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[turquoise] Enrichr...
+[foreground] input n=9 -> cleaned unique n=9
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: turquoise
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: turquoise
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: turquoise
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: turquoise
+
+--- Enriching module: blue (2 genes) ---
+[blue] KEGG...
+[KEGG] Done: 1 pathways saved
+[blue] GO...
+[GO BP] Done: 54 terms saved
+[GO MF] Done: 24 terms saved
+[GO CC] Done: 12 terms saved
+[blue] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[blue] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: blue
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: blue
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: blue
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: blue
+
+--- Enriching module: red (2 genes) ---
+[red] KEGG...
+[KEGG] Done: 3 pathways saved
+[red] GO...
+[GO BP] Done: 13 terms saved
+[GO MF] Done: 3 terms saved
+[GO CC] Done: 7 terms saved
+[red] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[red] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: red
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: red
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: red
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: red
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: red
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_KEGG_top10_pvalue0.05.pdf
+[plot] Saved: Summary_GO_BP_top10_pvalue0.05.pdf
+[plot] Saved: Summary_GO_MF_top10_pvalue0.05.pdf
+[plot] Saved: Summary_GO_CC_top10_pvalue0.05.pdf
+[plot] No data to plot for: Top Reactome Pathways per Module
+[plot_enrichr] No data for DB: GO_Biological_Process_2025
+[plot_enrichr] No data for DB: GO_Molecular_Function_2025
+[plot_enrichr] No data for DB: GO_Cellular_Component_2025
+[plot_enrichr] No data for DB: KEGG_2021_Human
+There were 41 warnings (use warnings() to see them)
+
+--- Enriching module: lightgreen (40 genes) ---
+[lightgreen] KEGG...
+[KEGG] Done: 9 pathways saved
+[lightgreen] GO...
+[GO BP] Done: 84 terms saved
+[GO MF] Done: 42 terms saved
+[GO CC] Done: 19 terms saved
+[lightgreen] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[lightgreen] Enrichr...
+[foreground] input n=40 -> cleaned unique n=40
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightgreen
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: lightgreen
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: lightgreen
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: lightgreen
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: lightgreen
+
+--- Enriching module: lightpink4 (18 genes) ---
+[lightpink4] KEGG...
+[KEGG] Done: 109 pathways saved
+[lightpink4] GO...
+[GO BP] Done: 149 terms saved
+[GO MF] Done: 11 terms saved
+[GO CC] Done: 5 terms saved
+[lightpink4] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[lightpink4] Enrichr...
+[foreground] input n=18 -> cleaned unique n=18
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightpink4
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: lightpink4
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: lightpink4
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: lightpink4
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: lightpink4
+
+--- Enriching module: darkmagenta (24 genes) ---
+[darkmagenta] KEGG...
+[KEGG] Done: 13 pathways saved
+[darkmagenta] GO...
+[GO BP] Done: 295 terms saved
+[GO MF] Done: 47 terms saved
+[GO CC] Done: 38 terms saved
+[darkmagenta] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[darkmagenta] Enrichr...
+[foreground] input n=24 -> cleaned unique n=24
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkmagenta
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: darkmagenta
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: darkmagenta
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: darkmagenta
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: darkmagenta
+
+--- Enriching module: lightcyan (42 genes) ---
+[lightcyan] KEGG...
+[KEGG] Done: 15 pathways saved
+[lightcyan] GO...
+[GO BP] Done: 416 terms saved
+[GO MF] Done: 72 terms saved
+[GO CC] Done: 70 terms saved
+[lightcyan] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[lightcyan] Enrichr...
+[foreground] input n=42 -> cleaned unique n=42
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightcyan
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: lightcyan
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: lightcyan
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: lightcyan
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: lightcyan
+
+--- Enriching module: blue (9295 genes) ---
+[blue] KEGG...
+[KEGG] Done: 351 pathways saved
+[blue] GO...
+[GO BP] Done: 6369 terms saved
+[GO MF] Done: 1250 terms saved
+[GO CC] Done: 758 terms saved
+[blue] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[blue] Enrichr...
+[foreground] input n=9295 -> cleaned unique n=9295
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: blue
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: blue
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: blue
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: blue
+
+--- Enriching module: purple (331 genes) ---
+[purple] KEGG...
+[KEGG] Done: 206 pathways saved
+[purple] GO...
+[GO BP] Done: 2542 terms saved
+[GO MF] Done: 432 terms saved
+[GO CC] Done: 265 terms saved
+[purple] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[purple] Enrichr...
+[foreground] input n=331 -> cleaned unique n=331
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: purple
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: purple
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: purple
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: purple
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: purple
+
+--- Enriching module: sienna3 (21 genes) ---
+[sienna3] KEGG...
+[KEGG] Done: 21 pathways saved
+[sienna3] GO...
+[GO BP] Done: 227 terms saved
+[GO MF] Done: 37 terms saved
+[GO CC] Done: 40 terms saved
+[sienna3] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[sienna3] Enrichr...
+[foreground] input n=21 -> cleaned unique n=21
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: sienna3
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: sienna3
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: sienna3
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: sienna3
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: sienna3
+
+--- Enriching module: darkgrey (21 genes) ---
+[darkgrey] KEGG...
+[KEGG] Done: 16 pathways saved
+[darkgrey] GO...
+[GO BP] Done: 268 terms saved
+[GO MF] Done: 56 terms saved
+[GO CC] Done: 24 terms saved
+[darkgrey] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[darkgrey] Enrichr...
+[foreground] input n=21 -> cleaned unique n=21
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkgrey
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: darkgrey
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: darkgrey
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: darkgrey
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: darkgrey
+
+--- Enriching module: royalblue (42 genes) ---
+[royalblue] KEGG...
+[KEGG] Done: 39 pathways saved
+[royalblue] GO...
+[GO BP] Done: 611 terms saved
+[GO MF] Done: 70 terms saved
+[GO CC] Done: 34 terms saved
+[royalblue] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[royalblue] Enrichr...
+[foreground] input n=42 -> cleaned unique n=42
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: royalblue
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: royalblue
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: royalblue
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: royalblue
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: royalblue
+
+--- Enriching module: skyblue3 (28 genes) ---
+[skyblue3] KEGG...
+[KEGG] Done: 29 pathways saved
+[skyblue3] GO...
+[GO BP] Done: 772 terms saved
+[GO MF] Done: 59 terms saved
+[GO CC] Done: 75 terms saved
+[skyblue3] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[skyblue3] Enrichr...
+[foreground] input n=28 -> cleaned unique n=28
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: skyblue3
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: skyblue3
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: skyblue3
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: skyblue3
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: skyblue3
+
+--- Enriching module: cyan (45 genes) ---
+[cyan] KEGG...
+[KEGG] Done: 49 pathways saved
+[cyan] GO...
+[GO BP] Done: 478 terms saved
+[GO MF] Done: 93 terms saved
+[GO CC] Done: 66 terms saved
+[cyan] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[cyan] Enrichr...
+[foreground] input n=45 -> cleaned unique n=45
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: cyan
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: cyan
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: cyan
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: cyan
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: cyan
+
+--- Enriching module: paleturquoise (27 genes) ---
+[paleturquoise] KEGG...
+[KEGG] Done: 37 pathways saved
+[paleturquoise] GO...
+[GO BP] Done: 510 terms saved
+[GO MF] Done: 54 terms saved
+[GO CC] Done: 51 terms saved
+[paleturquoise] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[paleturquoise] Enrichr...
+[foreground] input n=27 -> cleaned unique n=27
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: paleturquoise
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: paleturquoise
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: paleturquoise
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: paleturquoise
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: paleturquoise
+
+--- Enriching module: ivory (23 genes) ---
+[ivory] KEGG...
+[KEGG] Done: 14 pathways saved
+[ivory] GO...
+[GO BP] Done: 318 terms saved
+[GO MF] Done: 49 terms saved
+[GO CC] Done: 47 terms saved
+[ivory] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[ivory] Enrichr...
+[foreground] input n=23 -> cleaned unique n=23
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: ivory
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: ivory
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: ivory
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: ivory
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: ivory
+
+--- Enriching module: saddlebrown (26 genes) ---
+[saddlebrown] KEGG...
+[KEGG] Done: 24 pathways saved
+[saddlebrown] GO...
+[GO BP] Done: 387 terms saved
+[GO MF] Done: 72 terms saved
+[GO CC] Done: 60 terms saved
+[saddlebrown] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[saddlebrown] Enrichr...
+[foreground] input n=26 -> cleaned unique n=26
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: saddlebrown
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: saddlebrown
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: saddlebrown
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: saddlebrown
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: saddlebrown
+
+--- Enriching module: darkolivegreen (35 genes) ---
+[darkolivegreen] KEGG...
+[KEGG] Done: 63 pathways saved
+[darkolivegreen] GO...
+[GO BP] Done: 1110 terms saved
+[GO MF] Done: 92 terms saved
+[GO CC] Done: 58 terms saved
+[darkolivegreen] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[darkolivegreen] Enrichr...
+[foreground] input n=35 -> cleaned unique n=35
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkolivegreen
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: darkolivegreen
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: darkolivegreen
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: darkolivegreen
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: darkolivegreen
+
+--- Enriching module: yellow (6360 genes) ---
+[yellow] KEGG...
+[KEGG] Done: 350 pathways saved
+[yellow] GO...
+[GO BP] Done: 6256 terms saved
+[GO MF] Done: 1220 terms saved
+[GO CC] Done: 731 terms saved
+[yellow] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[yellow] Enrichr...
+[foreground] input n=6360 -> cleaned unique n=6360
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellow
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: yellow
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: yellow
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: yellow
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: yellow
+
+--- Enriching module: coral2 (15 genes) ---
+[coral2] KEGG...
+[KEGG] Done: 3 pathways saved
+[coral2] GO...
+[GO BP] Done: 55 terms saved
+[GO MF] Done: 24 terms saved
+[GO CC] Done: 4 terms saved
+[coral2] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[coral2] Enrichr...
+[foreground] input n=15 -> cleaned unique n=15
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: coral2
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: coral2
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: coral2
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: coral2
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: coral2
+
+--- Enriching module: bisque4 (10 genes) ---
+[bisque4] KEGG...
+[KEGG] Done: 14 pathways saved
+[bisque4] GO...
+[GO BP] Done: 251 terms saved
+[GO MF] Done: 38 terms saved
+[GO CC] Done: 64 terms saved
+[bisque4] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[bisque4] Enrichr...
+[foreground] input n=10 -> cleaned unique n=10
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: bisque4
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: bisque4
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: bisque4
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: bisque4
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: bisque4
+
+--- Enriching module: orangered4 (24 genes) ---
+[orangered4] KEGG...
+[KEGG] Done: 1 pathways saved
+[orangered4] GO...
+[GO BP] Done: 48 terms saved
+[GO MF] Done: 15 terms saved
+[GO CC] Done: 12 terms saved
+[orangered4] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[orangered4] Enrichr...
+[foreground] input n=24 -> cleaned unique n=24
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: orangered4
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: orangered4
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: orangered4
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: orangered4
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: orangered4
+
+--- Enriching module: thistle1 (24 genes) ---
+[thistle1] KEGG...
+[KEGG] Done: 18 pathways saved
+[thistle1] GO...
+[GO BP] Done: 338 terms saved
+[GO MF] Done: 33 terms saved
+[GO CC] Done: 50 terms saved
+[thistle1] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[thistle1] Enrichr...
+[foreground] input n=24 -> cleaned unique n=24
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: thistle1
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: thistle1
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: thistle1
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: thistle1
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: thistle1
+
+--- Enriching module: skyblue2 (11 genes) ---
+[skyblue2] KEGG...
+[KEGG] Done: 8 pathways saved
+[skyblue2] GO...
+[GO BP] Done: 67 terms saved
+[GO MF] Done: 13 terms saved
+[GO CC] Done: 27 terms saved
+[skyblue2] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[skyblue2] Enrichr...
+[foreground] input n=11 -> cleaned unique n=11
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: skyblue2
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: skyblue2
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: skyblue2
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: skyblue2
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: skyblue2
+
+--- Enriching module: yellowgreen (17 genes) ---
+[yellowgreen] KEGG...
+[KEGG] Done: 3 pathways saved
+[yellowgreen] GO...
+[GO BP] Done: 185 terms saved
+[GO MF] Done: 20 terms saved
+[GO CC] Done: 5 terms saved
+[yellowgreen] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[yellowgreen] Enrichr...
+[foreground] input n=17 -> cleaned unique n=17
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellowgreen
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: yellowgreen
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: yellowgreen
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: yellowgreen
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: yellowgreen
+
+--- Enriching module: skyblue (8 genes) ---
+[skyblue] KEGG...
+[KEGG] Done: 2 pathways saved
+[skyblue] GO...
+[GO BP] Done: 107 terms saved
+[GO MF] Done: 31 terms saved
+[GO CC] Done: 11 terms saved
+[skyblue] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[skyblue] Enrichr...
+[foreground] input n=8 -> cleaned unique n=8
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: skyblue
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: skyblue
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: skyblue
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: skyblue
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: skyblue
+
+--- Enriching module: honeydew1 (11 genes) ---
+[honeydew1] KEGG...
+[2026-04-07T17:43:18.176] error: *** JOB 11612948 ON hive-dc-7-6-46 CANCELLED AT 2026-04-07T17:43:18 DUE to SIGNAL Terminated ***
+
+
+Starting Script 07
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07
+Loaded regions: 465397 rows
+
+==============================
+Running module detection for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] methylation dimensions: 173 regions x 465397 samples
+[v1_all_pcs] using powerEstimate = 19
+[v1_all_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.bed
+✓ Finished variant: v1_all_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.bed
+
+==============================
+Running module detection for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] methylation dimensions: 173 regions x 465397 samples
+[v2_exclude_protected_pcs] using powerEstimate = 6
+[v2_exclude_protected_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.bed
+✓ Finished variant: v2_exclude_protected_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.bed
+Script 07 complete: module detection finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07
+Starting Script 08
+Loaded sample_info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+colData dimensions: 173 samples x 46 traits
+colData_num dimensions: 173 samples x 46 numeric traits
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07
+
+==============================
+Running module/sample diagnostics for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] No MEgrey column found (3 real MEs remaining)
+[v1_all_pcs] Sample alignment to metadata: 173 overlapping samples retained from 173 ME samples and 173 metadata samples
+[v1_all_pcs] MEs used: 173 samples x 3 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Module_ME_Dendrogram.pdf
+[v1_all_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Module_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Module_Correlation_Stats.tsv
+[v1_all_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Sample_ME_Dendrogram.pdf
+[v1_all_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Sample_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Sample_ME_Heatmap.pdf
+[v1_all_pcs] Saved sample x module eigengene heatmap
+Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+
+==============================
+Running module/sample diagnostics for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] No MEgrey column found (35 real MEs remaining)
+[v2_exclude_protected_pcs] Sample alignment to metadata: 173 overlapping samples retained from 173 ME samples and 173 metadata samples
+[v2_exclude_protected_pcs] MEs used: 173 samples x 35 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Module_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Module_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Module_Correlation_Stats.tsv
+[v2_exclude_protected_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Sample_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Sample_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Sample_ME_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample x module eigengene heatmap
+Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+Script 08 complete: module and sample diagnostics finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07
+Starting Script 09a
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+
+==============================
+Running ME-trait analysis for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] MEs dimensions: 173 samples x 3 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v1_all_pcs] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/Rtmpa0XY3E/file3804da23f2b101.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+
+==============================
+Running ME-trait analysis for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] MEs dimensions: 173 samples x 35 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v2_exclude_protected_pcs] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/Rtmpa0XY3E/file3804da32120eb.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+Script 09a complete: core ME-trait finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07
+Starting Script 09b
+Variants to process: 2
+
+==============================
+Running 09b for variant: v1_all_pcs
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/01_ids_and_batch_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/01_ids_and_batch_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '01_ids_and_batch_variables' for variant 'v1_all_pcs'
+  Traits found: 2 / 4
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/01_ids_and_batch_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_body_size_outcomes_F1/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_body_size_outcomes_F1/ME_Trait_Heatmap_TOP.pdf
+Done set '03_body_size_outcomes_F1' for variant 'v1_all_pcs'
+  Traits found: 7 / 9
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_body_size_outcomes_F1
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_organochlorine_exposures_ddt_dde/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_organochlorine_exposures_ddt_dde/ME_Trait_Heatmap_TOP.pdf
+Done set '04_organochlorine_exposures_ddt_dde' for variant 'v1_all_pcs'
+  Traits found: 24 / 24
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_organochlorine_exposures_ddt_dde
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/05_neighborhood_context_ice_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/05_neighborhood_context_ice_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '05_neighborhood_context_ice_variables' for variant 'v1_all_pcs'
+  Traits found: 23 / 23
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/05_neighborhood_context_ice_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/06_puberty_and_menarche_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/06_puberty_and_menarche_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '06_puberty_and_menarche_variables' for variant 'v1_all_pcs'
+  Traits found: 5 / 5
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/06_puberty_and_menarche_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/07_breast_cancer_outcomes/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/07_breast_cancer_outcomes/ME_Trait_Heatmap_TOP.pdf
+Done set '07_breast_cancer_outcomes' for variant 'v1_all_pcs'
+  Traits found: 2 / 2
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/07_breast_cancer_outcomes
+Finished variant: v1_all_pcs
+
+==============================
+Running 09b for variant: v2_exclude_protected_pcs
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/01_ids_and_batch_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/01_ids_and_batch_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '01_ids_and_batch_variables' for variant 'v2_exclude_protected_pcs'
+  Traits found: 2 / 4
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/01_ids_and_batch_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_body_size_outcomes_F1/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_body_size_outcomes_F1/ME_Trait_Heatmap_TOP.pdf
+Done set '03_body_size_outcomes_F1' for variant 'v2_exclude_protected_pcs'
+  Traits found: 7 / 9
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_body_size_outcomes_F1
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_organochlorine_exposures_ddt_dde/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_organochlorine_exposures_ddt_dde/ME_Trait_Heatmap_TOP.pdf
+Done set '04_organochlorine_exposures_ddt_dde' for variant 'v2_exclude_protected_pcs'
+  Traits found: 24 / 24
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_organochlorine_exposures_ddt_dde
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/05_neighborhood_context_ice_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/05_neighborhood_context_ice_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '05_neighborhood_context_ice_variables' for variant 'v2_exclude_protected_pcs'
+  Traits found: 23 / 23
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/05_neighborhood_context_ice_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/06_puberty_and_menarche_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/06_puberty_and_menarche_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '06_puberty_and_menarche_variables' for variant 'v2_exclude_protected_pcs'
+  Traits found: 5 / 5
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/06_puberty_and_menarche_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/07_breast_cancer_outcomes/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/07_breast_cancer_outcomes/ME_Trait_Heatmap_TOP.pdf
+Done set '07_breast_cancer_outcomes' for variant 'v2_exclude_protected_pcs'
+  Traits found: 2 / 2
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/07_breast_cancer_outcomes
+Finished variant: v2_exclude_protected_pcs
+Script 09a complete: Presentation ME-trait finished
+Outputs saved under: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation
+Starting Script 10
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin10_methSD0p07
+
+==============================
+Running circos/module summaries for variant: v1_all_pcs
+==============================
+
+✓ Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+
+==============================
+Running circos/module summaries for variant: v2_exclude_protected_pcs
+==============================
+
+✓ Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+Warning messages:
+1: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"chr"` instead of `.data$chr` 
+2: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"start"` instead of `.data$start` 
+3: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"end"` instead of `.data$end` 
+4: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"module"` instead of `.data$module` 
+Script 10 complete: Circos plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin10_methSD0p07
+Starting Script 11
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+Samples in common: 173
+Modules available: 3
+Traits available: 46
+[01_ids_and_batch_variables] Pairs to plot: 1
+✓ Done set: 01_ids_and_batch_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/01_ids_and_batch_variables
+[03_body_size_outcomes_F1] Pairs to plot: 3
+✓ Done set: 03_body_size_outcomes_F1
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_body_size_outcomes_F1
+[04_organochlorine_exposures_ddt_dde] Pairs to plot: 7
+✓ Done set: 04_organochlorine_exposures_ddt_dde
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_organochlorine_exposures_ddt_dde
+[05_neighborhood_context_ice_variables] Pairs to plot: 6
+✓ Done set: 05_neighborhood_context_ice_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/05_neighborhood_context_ice_variables
+[06_puberty_and_menarche_variables] Pairs to plot: 2
+✓ Done set: 06_puberty_and_menarche_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/06_puberty_and_menarche_variables
+Skipping set 07_breast_cancer_outcomes: no module-trait pairs left after filtering.
+Script 10 complete: ME-trait pair plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+Starting Script 11
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+Samples in common: 173
+Modules available: 35
+Traits available: 46
+[01_ids_and_batch_variables] Pairs to plot: 4
+✓ Done set: 01_ids_and_batch_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/01_ids_and_batch_variables
+[03_body_size_outcomes_F1] Pairs to plot: 25
+✓ Done set: 03_body_size_outcomes_F1
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_body_size_outcomes_F1
+[04_organochlorine_exposures_ddt_dde] Pairs to plot: 50
+✓ Done set: 04_organochlorine_exposures_ddt_dde
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_organochlorine_exposures_ddt_dde
+[05_neighborhood_context_ice_variables] Pairs to plot: 50
+✓ Done set: 05_neighborhood_context_ice_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/05_neighborhood_context_ice_variables
+[06_puberty_and_menarche_variables] Pairs to plot: 20
+✓ Done set: 06_puberty_and_menarche_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/06_puberty_and_menarche_variables
+[07_breast_cancer_outcomes] Pairs to plot: 3
+✓ Done set: 07_breast_cancer_outcomes
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/07_breast_cancer_outcomes
+There were 50 or more warnings (use warnings() to see the first 50)
+Script 10 complete: ME-trait pair plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+Starting Script 12a
+[annotate] Trying comethyl::annotateModule()
+[annotateModule] Excluding regions in grey (unassigned) module
+[annotateModule] Using the hg38 genome assembly for annotations
+[annotateModule] Adding genes to regions using GREAT v4.0.4 with the basalPlusExt rule
+[annotate] GREAT-based annotation failed: error in evaluating the argument 'y' in selecting a method for function 'merge': error in evaluating the argument 'x' in selecting a method for function 'as.data.frame': unused argument (type = 1)
+[annotate] Falling back to offline nearest-gene annotation.
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[annotate] Trying comethyl::annotateModule()
+[annotateModule] Excluding regions in grey (unassigned) module
+[annotateModule] Using the hg38 genome assembly for annotations
+[annotateModule] Adding genes to regions using GREAT v4.0.4 with the basalPlusExt rule
+[annotate] GREAT-based annotation failed: GREAT encountered a user error (message from GREAT web server):
+Line 127453: The second field (chromStart) must be a non-negative
+integer (not 1.3e+07). Input data: 'chr16 1.3e+07 13000205
+/chr16:1.3e+07-13000205'
+[annotate] Falling back to offline nearest-gene annotation.
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+Script 12a complete: Annotate Modules finished
+Starting Script 12b
+
+--- Enriching module: blue (2 genes) ---
+[blue] KEGG...
+[KEGG] Done: 1 pathways saved
+[blue] GO...
+[GO BP] Done: 54 terms saved
+[GO MF] Done: 24 terms saved
+[GO CC] Done: 12 terms saved
+[blue] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[blue] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: blue
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: blue
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: blue
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: blue
+
+--- Enriching module: turquoise (9 genes) ---
+[turquoise] KEGG...
+[turquoise] GO...
+[turquoise] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[turquoise] Enrichr...
+[foreground] input n=9 -> cleaned unique n=9
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: turquoise
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: turquoise
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: turquoise
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: turquoise
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_KEGG_top10_pvalue0.05.pdf
+[plot] Saved: Summary_GO_BP_top10_pvalue0.05.pdf
+[plot] Saved: Summary_GO_MF_top10_pvalue0.05.pdf
+[plot] Saved: Summary_GO_CC_top10_pvalue0.05.pdf
+[plot] No data to plot for: Top Reactome Pathways per Module
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top10_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top10_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top10_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top10_pvalue0.05.pdf
+There were 50 or more warnings (use warnings() to see the first 50)
+
+--- Enriching module: red (337 genes) ---
+[red] KEGG...
+[KEGG] Done: 209 pathways saved
+[red] GO...
+[GO BP] Done: 2569 terms saved
+[GO MF] Done: 438 terms saved
+[GO CC] Done: 266 terms saved
+[red] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[red] Enrichr...
+[foreground] input n=337 -> cleaned unique n=337
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: red
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: red
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: red
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: red
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: red
+
+--- Enriching module: darkred (26 genes) ---
+[darkred] KEGG...
+[KEGG] Done: 24 pathways saved
+[darkred] GO...
+[GO BP] Done: 387 terms saved
+[GO MF] Done: 72 terms saved
+[GO CC] Done: 60 terms saved
+[darkred] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[darkred] Enrichr...
+[foreground] input n=26 -> cleaned unique n=26
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkred
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: darkred
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: darkred
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: darkred
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: darkred
+
+--- Enriching module: darkturquoise (23 genes) ---
+[darkturquoise] KEGG...
+[KEGG] Done: 22 pathways saved
+[darkturquoise] GO...
+[GO BP] Done: 240 terms saved
+[GO MF] Done: 43 terms saved
+[GO CC] Done: 45 terms saved
+[darkturquoise] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[darkturquoise] Enrichr...
+[foreground] input n=23 -> cleaned unique n=23
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkturquoise
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: darkturquoise
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: darkturquoise
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: darkturquoise
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: darkturquoise
+
+--- Enriching module: green (1594 genes) ---
+[green] KEGG...
+[KEGG] Done: 314 pathways saved
+[green] GO...
+[GO BP] Done: 4789 terms saved
+[GO MF] Done: 829 terms saved
+[GO CC] Done: 532 terms saved
+[green] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[green] Enrichr...
+[foreground] input n=1594 -> cleaned unique n=1594
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: green
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: green
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: green
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: green
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: green
+
+--- Enriching module: tan (38 genes) ---
+[tan] KEGG...
+[KEGG] Done: 8 pathways saved
+[tan] GO...
+[GO BP] Done: 53 terms saved
+[GO MF] Done: 22 terms saved
+[GO CC] Done: 19 terms saved
+[tan] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[tan] Enrichr...
+[foreground] input n=38 -> cleaned unique n=38
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: tan
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: tan
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: tan
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: tan
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: tan
+
+--- Enriching module: blue (9294 genes) ---
+[blue] KEGG...
+[KEGG] Done: 351 pathways saved
+[blue] GO...
+[GO BP] Done: 6369 terms saved
+[GO MF] Done: 1250 terms saved
+[GO CC] Done: 758 terms saved
+[blue] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[blue] Enrichr...
+[foreground] input n=9294 -> cleaned unique n=9294
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: blue
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: blue
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: blue
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: blue
+
+--- Enriching module: darkolivegreen (2 genes) ---
+[darkolivegreen] KEGG...
+[KEGG] Done: 1 pathways saved
+[darkolivegreen] GO...
+[GO BP] Done: 31 terms saved
+[GO MF] Done: 20 terms saved
+[darkolivegreen] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[darkolivegreen] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkolivegreen
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: darkolivegreen
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: darkolivegreen
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: darkolivegreen
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: darkolivegreen
+
+--- Enriching module: grey60 (21 genes) ---
+[grey60] KEGG...
+[KEGG] Done: 16 pathways saved
+[grey60] GO...
+[GO BP] Done: 268 terms saved
+[GO MF] Done: 56 terms saved
+[GO CC] Done: 24 terms saved
+[grey60] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[grey60] Enrichr...
+[foreground] input n=21 -> cleaned unique n=21
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: grey60
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: grey60
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: grey60
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: grey60
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: grey60
+
+--- Enriching module: darkorange (29 genes) ---
+[darkorange] KEGG...
+[KEGG] Done: 17 pathways saved
+[darkorange] GO...
+[GO BP] Done: 368 terms saved
+[GO MF] Done: 58 terms saved
+[GO CC] Done: 53 terms saved
+[darkorange] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[darkorange] Enrichr...
+[foreground] input n=29 -> cleaned unique n=29
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkorange
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: darkorange
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: darkorange
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: darkorange
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: darkorange
+
+--- Enriching module: lightcyan (42 genes) ---
+[lightcyan] KEGG...
+[KEGG] Done: 39 pathways saved
+[lightcyan] GO...
+[GO BP] Done: 611 terms saved
+[GO MF] Done: 70 terms saved
+[GO CC] Done: 34 terms saved
+[lightcyan] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[lightcyan] Enrichr...
+[foreground] input n=42 -> cleaned unique n=42
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightcyan
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: lightcyan
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: lightcyan
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: lightcyan
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: lightcyan
+
+--- Enriching module: lightyellow (34 genes) ---
+[lightyellow] KEGG...
+[KEGG] Done: 42 pathways saved
+[lightyellow] GO...
+[GO BP] Done: 540 terms saved
+[GO MF] Done: 57 terms saved
+[GO CC] Done: 56 terms saved
+[lightyellow] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[lightyellow] Enrichr...
+[foreground] input n=34 -> cleaned unique n=34
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightyellow
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: lightyellow
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: lightyellow
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: lightyellow
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: lightyellow
+
+--- Enriching module: pink (49 genes) ---
+[pink] KEGG...
+[KEGG] Done: 51 pathways saved
+[pink] GO...
+[GO BP] Done: 729 terms saved
+[GO MF] Done: 105 terms saved
+[GO CC] Done: 78 terms saved
+[pink] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[pink] Enrichr...
+[foreground] input n=49 -> cleaned unique n=49
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: pink
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: pink
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: pink
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: pink
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: pink
+
+--- Enriching module: yellow (6360 genes) ---
+[yellow] KEGG...
+[KEGG] Done: 350 pathways saved
+[yellow] GO...
+[GO BP] Done: 6256 terms saved
+[GO MF] Done: 1220 terms saved
+[GO CC] Done: 731 terms saved
+[yellow] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[yellow] Enrichr...
+[foreground] input n=6360 -> cleaned unique n=6360
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellow
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: yellow
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: yellow
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: yellow
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: yellow
+
+--- Enriching module: darkgreen (25 genes) ---
+[darkgreen] KEGG...
+[KEGG] Done: 13 pathways saved
+[darkgreen] GO...
+[GO BP] Done: 295 terms saved
+[GO MF] Done: 47 terms saved
+[GO CC] Done: 38 terms saved
+[darkgreen] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[darkgreen] Enrichr...
+[foreground] input n=25 -> cleaned unique n=25
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkgreen
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: darkgreen
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: darkgreen
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: darkgreen
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: darkgreen
+
+--- Enriching module: magenta (42 genes) ---
+[magenta] KEGG...
+[KEGG] Done: 18 pathways saved
+[magenta] GO...
+[GO BP] Done: 444 terms saved
+[GO MF] Done: 63 terms saved
+[GO CC] Done: 74 terms saved
+[magenta] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[magenta] Enrichr...
+[foreground] input n=42 -> cleaned unique n=42
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: magenta
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: magenta
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: magenta
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: magenta
+
+--- Enriching module: paleturquoise (20 genes) ---
+[paleturquoise] KEGG...
+[KEGG] Done: 12 pathways saved
+[paleturquoise] GO...
+[GO BP] Done: 267 terms saved
+[GO MF] Done: 37 terms saved
+[GO CC] Done: 20 terms saved
+[paleturquoise] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[paleturquoise] Enrichr...
+[foreground] input n=20 -> cleaned unique n=20
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: paleturquoise
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: paleturquoise
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: paleturquoise
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: paleturquoise
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: paleturquoise
+
+--- Enriching module: skyblue (18 genes) ---
+[skyblue] KEGG...
+[KEGG] Done: 18 pathways saved
+[skyblue] GO...
+[GO BP] Done: 123 terms saved
+[GO MF] Done: 31 terms saved
+[GO CC] Done: 28 terms saved
+[skyblue] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[skyblue] Enrichr...
+[foreground] input n=18 -> cleaned unique n=18
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: skyblue
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: skyblue
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: skyblue
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: skyblue
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: skyblue
+
+--- Enriching module: darkgrey (17 genes) ---
+[darkgrey] KEGG...
+[KEGG] Done: 3 pathways saved
+[darkgrey] GO...
+[GO BP] Done: 185 terms saved
+[GO MF] Done: 20 terms saved
+[GO CC] Done: 5 terms saved
+[darkgrey] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[darkgrey] Enrichr...
+[foreground] input n=17 -> cleaned unique n=17
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkgrey
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: darkgrey
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: darkgrey
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: darkgrey
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: darkgrey
+
+--- Enriching module: lightgreen (20 genes) ---
+[lightgreen] KEGG...
+[KEGG] Done: 10 pathways saved
+[lightgreen] GO...
+[GO BP] Done: 263 terms saved
+[GO MF] Done: 65 terms saved
+[GO CC] Done: 22 terms saved
+[lightgreen] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[lightgreen] Enrichr...
+[foreground] input n=20 -> cleaned unique n=20
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightgreen
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: lightgreen
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: lightgreen
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: lightgreen
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: lightgreen
+
+--- Enriching module: salmon (20 genes) ---
+[salmon] KEGG...
+[KEGG] Done: 3 pathways saved
+[salmon] GO...
+[GO BP] Done: 167 terms saved
+[GO MF] Done: 16 terms saved
+[GO CC] Done: 25 terms saved
+[salmon] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[salmon] Enrichr...
+[foreground] input n=20 -> cleaned unique n=20
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: salmon
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: salmon
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: salmon
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: salmon
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: salmon
+
+--- Enriching module: midnightblue (36 genes) ---
+[midnightblue] KEGG...
+[KEGG] Done: 13 pathways saved
+[midnightblue] GO...
+[GO BP] Done: 410 terms saved
+[GO MF] Done: 62 terms saved
+[GO CC] Done: 38 terms saved
+[midnightblue] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[midnightblue] Enrichr...
+[foreground] input n=36 -> cleaned unique n=36
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: midnightblue
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: midnightblue
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: midnightblue
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: midnightblue
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: midnightblue
+
+--- Enriching module: darkmagenta (1 genes) ---
+[darkmagenta] KEGG...
+[darkmagenta] GO...
+[darkmagenta] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[darkmagenta] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkmagenta
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: darkmagenta
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: darkmagenta
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: darkmagenta
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: darkmagenta
+
+--- Enriching module: black (365 genes) ---
+[black] KEGG...
+[KEGG] Done: 205 pathways saved
+[black] GO...
+[GO BP] Done: 2678 terms saved
+[GO MF] Done: 413 terms saved
+[GO CC] Done: 288 terms saved
+[black] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[black] Enrichr...
+[foreground] input n=365 -> cleaned unique n=365
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: black
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: black
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: black
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: black
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: black
+
+--- Enriching module: orange (30 genes) ---
+[orange] KEGG...
+[KEGG] Done: 12 pathways saved
+[orange] GO...
+[GO BP] Done: 356 terms saved
+[GO MF] Done: 59 terms saved
+[GO CC] Done: 79 terms saved
+[orange] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[orange] Enrichr...
+[foreground] input n=30 -> cleaned unique n=30
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: orange
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: orange
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: orange
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: orange
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: orange
+
+--- Enriching module: cyan (49 genes) ---
+[cyan] KEGG...
+[KEGG] Done: 62 pathways saved
+[cyan] GO...
+[GO BP] Done: 532 terms saved
+[GO MF] Done: 141 terms saved
+[GO CC] Done: 96 terms saved
+[cyan] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[cyan] Enrichr...
+[foreground] input n=49 -> cleaned unique n=49
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: cyan
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: cyan
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: cyan
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: cyan
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: cyan
+
+--- Enriching module: brown (8241 genes) ---
+[brown] KEGG...
+[KEGG] Done: 351 pathways saved
+[brown] GO...
+[GO BP] Done: 6324 terms saved
+[GO MF] Done: 1236 terms saved
+[GO CC] Done: 736 terms saved
+[brown] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[brown] Enrichr...
+[foreground] input n=8241 -> cleaned unique n=8241
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: brown
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: brown
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: brown
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: brown
+
+--- Enriching module: turquoise (13151 genes) ---
+[turquoise] KEGG...
+[KEGG] Done: 351 pathways saved
+[turquoise] GO...
+[GO BP] Done: 6370 terms saved
+[GO MF] Done: 1254 terms saved
+[GO CC] Done: 755 terms saved
+[turquoise] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[turquoise] Enrichr...
+[foreground] input n=13151 -> cleaned unique n=13151
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: turquoise
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: turquoise
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: turquoise
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: turquoise
+
+--- Enriching module: violet (5 genes) ---
+[violet] KEGG...
+[KEGG] Done: 9 pathways saved
+[violet] GO...
+[GO BP] Done: 90 terms saved
+[GO MF] Done: 16 terms saved
+[GO CC] Done: 28 terms saved
+[violet] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[violet] Enrichr...
+[foreground] input n=5 -> cleaned unique n=5
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: violet
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: violet
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: violet
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: violet
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: violet
+
+--- Enriching module: purple (59 genes) ---
+[purple] KEGG...
+[KEGG] Done: 61 pathways saved
+[purple] GO...
+[GO BP] Done: 636 terms saved
+[GO MF] Done: 102 terms saved
+[GO CC] Done: 85 terms saved
+[purple] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[purple] Enrichr...
+[foreground] input n=59 -> cleaned unique n=59
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: purple
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: purple
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: purple
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: purple
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: purple
+
+--- Enriching module: royalblue (10 genes) ---
+[royalblue] KEGG...
+[KEGG] Done: 3 pathways saved
+[royalblue] GO...
+[GO BP] Done: 123 terms saved
+[GO MF] Done: 33 terms saved
+[GO CC] Done: 25 terms saved
+[royalblue] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[royalblue] Enrichr...
+[foreground] input n=10 -> cleaned unique n=10
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: royalblue
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: royalblue
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: royalblue
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: royalblue
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: royalblue
+
+--- Enriching module: white (24 genes) ---
+[white] KEGG...
+[KEGG] Done: 1 pathways saved
+[white] GO...
+[GO BP] Done: 48 terms saved
+[GO MF] Done: 15 terms saved
+[GO CC] Done: 12 terms saved
+[white] Reactome...
+[Reactome] ReactomePA not installed; skipping. Install with: BiocManager::install('ReactomePA')
+[white] Enrichr...
+[foreground] input n=24 -> cleaned unique n=24
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: white
+[Enrichr] Failed attempt 1: invalid argument type — retrying in 2s
+[Enrichr] Attempt 2 of 5 for: white
+[Enrichr] Failed attempt 2: invalid argument type — retrying in 2s
+[Enrichr] Attempt 3 of 5 for: white
+[Enrichr] Failed attempt 3: invalid argument type — retrying in 2s
+[Enrichr] Attempt 4 of 5 for: white
+[Enrichr] Failed attempt 4: invalid argument type — retrying in 2s
+[Enrichr] Attempt 5 of 5 for: white
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_KEGG_top10_pvalue0.05.pdf
+[plot] Saved: Summary_GO_BP_top10_pvalue0.05.pdf
+[plot] Saved: Summary_GO_MF_top10_pvalue0.05.pdf
+[plot] Saved: Summary_GO_CC_top10_pvalue0.05.pdf
+[plot] No data to plot for: Top Reactome Pathways per Module
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top10_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top10_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top10_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top10_pvalue0.05.pdf
+There were 50 or more warnings (use warnings() to see the first 50)
+/home/gekuodza/.bashrc: line 34: syntax error near unexpected token `else'
+/home/gekuodza/.bashrc: line 34: syntax error near unexpected token `else'
+
+
+Starting Script 07
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07
+Loaded regions: 465397 rows
+
+==============================
+Running module detection for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] methylation dimensions: 173 regions x 465397 samples
+[v1_all_pcs] using powerEstimate = 19
+[v1_all_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation

@@ -58,17 +58,6 @@
 #     Summary_Enrichr_<db>_top<n>_<pcol><cutoff>.pdf
 #     run_log.txt
 #     run_parameters.txt
-#
-# NOTES ON P-VALUE CHOICE (--plot_p_col)
-#   p.adjust : BH-adjusted p-value — recommended for publication
-#   pvalue   : raw p-value — useful for exploratory analysis
-#   The choice is reflected in plot titles, legend labels, and file names
-#   so outputs from different runs are clearly distinguishable.
-#
-# NOTES ON SOURCE DISTINCTION
-#   clusterProfiler (KEGG/GO/Reactome) and Enrichr use different gene
-#   universes and statistical implementations. Plot titles and subtitles
-#   include the source tag so results are never conflated.
 # ============================================================
 
 message("Starting Script 12b")
@@ -426,9 +415,6 @@ run_reactome_clusterprofiler <- function(gene_symbols, out_prefix) {
 # ============================================================
 # 9) Summary dotplot helpers — shared style across all methods
 # ============================================================
-
-# Load per-module xlsx results and stack into one data frame.
-# Falls back gracefully if requested p column is not present.
 load_method_results <- function(out_dir, modules, file_suffix,
                                 p_col     = "p.adjust",
                                 count_col = "Count",
@@ -474,9 +460,6 @@ load_method_results <- function(out_dir, modules, file_suffix,
   all_data
 }
 
-# Shared dotplot builder used by all four methods.
-# source_tag and p_col_label appear in plot titles so results
-# from different tools and p-value choices are never conflated.
 make_enrichment_dotplot <- function(df,
                                     title,
                                     source_tag  = NULL,
@@ -550,8 +533,6 @@ make_enrichment_dotplot <- function(df,
   invisible(p)
 }
 
-# ---- Public summary plot functions ----
-
 plot_kegg_summary <- function(out_dir, modules,
                                p_col = "p.adjust", sig_cutoff = 0.05,
                                top_n = 10, plot_width = 14, plot_height = 10,
@@ -609,7 +590,6 @@ plot_enrichr_summary <- function(out_dir, modules, databases,
                                   p_col = "p.adjust", sig_cutoff = 0.05,
                                   top_n = 10, plot_width = 14, plot_height = 10,
                                   base_size = 13) {
-  # Map clusterProfiler-style p_col to Enrichr column names
   enrichr_p_col <- if (p_col == "p.adjust") "Adjusted.P.value" else "P.value"
   p_col_label   <- if (p_col == "p.adjust") "adj. p" else "raw p"
   p_col_safe    <- gsub("\\.", "", p_col)
@@ -666,26 +646,30 @@ plot_enrichr_summary <- function(out_dir, modules, databases,
 # 10) Enrichr helpers
 # ============================================================
 
-# Set enrichR options directly — avoids setEnrichrSite() internal gsub() failure
-# that occurs when enrichR.sites.base.address option is NULL in some enrichR versions
-if (requireNamespace("enrichR", quietly = TRUE)) {
-  options(enrichR.base.address       = "https://maayanlab.cloud/Enrichr/")
-  options(enrichR.sites.base.address = "https://maayanlab.cloud/")
-  options(enrichR.live               = TRUE)
+init_enrichr <- function() {
+  # Set all required enrichR options directly — mirrors what works interactively.
+  # Do NOT call setEnrichrSite(); it makes a live HTTP call that fails intermittently.
+  options(
+    enrichR.sites.base.address = "https://maayanlab.cloud/",
+    enrichR.base.address       = "https://maayanlab.cloud/Enrichr/",
+    speedrichr.base.address    = "https://maayanlab.cloud/speedrichr/api/",
+    enrichR.live               = TRUE,
+    enrichR.quiet              = TRUE,
+    modEnrichR.use             = TRUE,
+    enrichR.sites              = c("Enrichr", "FlyEnrichr", "WormEnrichr",
+                                   "YeastEnrichr", "FishEnrichr", "OxEnrichr")
+  )
 }
 
-validate_enrichr_dbs_safe <- function(dbs, site = "Enrichr") {
+validate_enrichr_dbs_safe <- function(dbs) {
   if (!requireNamespace("enrichR", quietly = TRUE)) {
     warning("enrichR package not installed; cannot validate Enrichr DBs.")
     return(list(ok = dbs, bad = character(0), avail = character(0)))
   }
 
   out <- tryCatch({
-    options(enrichR.base.address       = "https://maayanlab.cloud/Enrichr/")
-    options(enrichR.sites.base.address = "https://maayanlab.cloud/")
-    options(enrichR.live               = TRUE)
+    init_enrichr()
     Sys.sleep(0.5)
-
     avail       <- enrichR::listEnrichrDbs()
     avail_names <- as.character(avail$libraryName)
     list(ok    = intersect(dbs, avail_names),
@@ -719,9 +703,8 @@ run_enrichr_simple <- function(gene_symbols, out_prefix, dbs,
     if (length(background_genes) == 0) background_genes <- NULL
   }
 
-  options(enrichR.base.address       = "https://maayanlab.cloud/Enrichr/")
-  options(enrichR.sites.base.address = "https://maayanlab.cloud/")
-  options(enrichR.live               = TRUE)
+  # Properly initialize enrichR before each call
+  init_enrichr()
 
   res <- NULL; last_err <- NULL
 
@@ -730,7 +713,7 @@ run_enrichr_simple <- function(gene_symbols, out_prefix, dbs,
             " for: ", basename(out_prefix))
 
     res <- tryCatch({
-      if (!is.null(background_genes)) {
+      if (!is.null(background_genes) && length(background_genes) > 0) {
         enrichR::enrichr(genes = gene_symbols, databases = dbs,
                          background = background_genes)
       } else {
@@ -898,9 +881,9 @@ run_enrichment_for_variant <- function(annotation_dir,
     append_log(log_file, "Module ", m, ": genes=", length(gene_vec))
     message("\n--- Enriching module: ", m, " (", length(gene_vec), " genes) ---")
 
-    if (do_kegg)    { message("[", m, "] KEGG...");    run_kegg_clusterprofiler(gene_vec, out_prefix, organism) }
-    if (do_go)      { message("[", m, "] GO...");      run_go_clusterprofiler(gene_vec, out_prefix) }
-    if (do_reactome){ message("[", m, "] Reactome..."); run_reactome_clusterprofiler(gene_vec, out_prefix) }
+    if (do_kegg)     { message("[", m, "] KEGG...");     run_kegg_clusterprofiler(gene_vec, out_prefix, organism) }
+    if (do_go)       { message("[", m, "] GO...");       run_go_clusterprofiler(gene_vec, out_prefix) }
+    if (do_reactome) { message("[", m, "] Reactome..."); run_reactome_clusterprofiler(gene_vec, out_prefix) }
     if (do_enrichr) {
       message("[", m, "] Enrichr...")
       run_enrichr_simple(gene_vec, out_prefix, enrichr_dbs,
@@ -983,8 +966,7 @@ do_go       <- to_bool(get_arg("--do_go",       "true"),  default = TRUE)
 do_reactome <- to_bool(get_arg("--do_reactome", "true"),  default = TRUE)
 do_enrichr  <- to_bool(get_arg("--do_enrichr",  "false"), default = FALSE)
 
-enrichr_site <- trim_or_null(get_arg("--enrichr_site", "Enrichr"))
-enrichr_dbs  <- split_csv(get_arg(
+enrichr_dbs <- split_csv(get_arg(
   "--enrichr_dbs",
   "GO_Biological_Process_2025,GO_Cellular_Component_2025,GO_Molecular_Function_2025"
 ))
@@ -1029,7 +1011,7 @@ if (!is.null(module_list_file)) {
 }
 
 if (do_enrichr) {
-  db_check    <- validate_enrichr_dbs_safe(enrichr_dbs, site = enrichr_site)
+  db_check    <- validate_enrichr_dbs_safe(enrichr_dbs)
   if (length(db_check$bad) > 0)
     warning("Dropping invalid Enrichr DBs: ", paste(db_check$bad, collapse = ", "))
   enrichr_dbs <- db_check$ok
