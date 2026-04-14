@@ -57,6 +57,7 @@
 #     <module>_GO_BP/MF/CC.tsv / .xlsx / _dotplot.pdf
 #     <module>_Reactome.tsv / .xlsx / _dotplot.pdf
 #     <module>_enrichr.xlsx
+#     <module>_enrichr_<DB>.pdf          <- per-module per-database plotEnrich PDFs
 #     Summary_KEGG_top<n>_<pcol><cutoff>.pdf
 #     Summary_GO_BP/MF/CC_top<n>_<pcol><cutoff>.pdf
 #     Summary_Reactome_top<n>_<pcol><cutoff>.pdf
@@ -157,7 +158,6 @@ resolve_list_input <- function(path) {
   if (is.null(path)) return(NULL)
 
   if (file.exists(path) && !dir.exists(path)) {
-    # Single file — no extra output subfolder
     return(setNames(normalizePath(path), ""))
   }
 
@@ -227,9 +227,6 @@ load_annotation_files <- function(annotation_dir) {
 
 # ============================================================
 # 3) Output directory helper
-#
-#   list_stem: stem name from the list file (e.g. "brca_traits").
-#              If "" (single-file mode), no extra subfolder is added.
 # ============================================================
 derive_pipeline_dirs_from_annotation_dir <- function(annotation_dir,
                                                       project_root,
@@ -242,7 +239,6 @@ derive_pipeline_dirs_from_annotation_dir <- function(annotation_dir,
   pipeline_root <- file.path(project_root, "comethyl_output")
   step_dir      <- file.path(pipeline_root, step_name)
 
-  # If list_stem is non-empty, nest outputs one level deeper
   if (nzchar(list_stem)) {
     out_dir <- file.path(step_dir, cpg_label, region_label, variant_name, list_stem)
   } else {
@@ -779,6 +775,7 @@ run_enrichr_simple <- function(gene_symbols, out_prefix, dbs,
     return(invisible(NULL))
   }
 
+  # ---- Save combined Excel workbook ----
   wb <- openxlsx::createWorkbook(); wrote_any <- FALSE
 
   for (nm in names(res)) {
@@ -793,6 +790,32 @@ run_enrichr_simple <- function(gene_symbols, out_prefix, dbs,
   if (wrote_any) {
     openxlsx::saveWorkbook(wb, paste0(out_prefix, "_enrichr.xlsx"), overwrite = TRUE)
     message("[Enrichr] Saved: ", basename(out_prefix), "_enrichr.xlsx")
+
+    # ---- Per-database plotEnrich() PDFs ----
+    # Requires enrichR::plotEnrich(); mirrors the old plot_and_save() logic.
+    for (nm in names(res)) {
+      df <- res[[nm]]
+      if (is.null(df) || nrow(df) == 0) next
+
+      db_safe  <- substr(gsub("[^A-Za-z0-9]", "_", nm), 1, 60)
+      pdf_file <- paste0(out_prefix, "_enrichr_", db_safe, ".pdf")
+      mod_name <- basename(out_prefix)   # e.g. "skyblue2"
+
+      tryCatch({
+        grDevices::pdf(pdf_file, height = 7, width = 15)
+        print(
+          enrichR::plotEnrich(df, showTerms = 25, numChar = 75,
+                              y = "Count", orderBy = "P.value") +
+            ggplot2::ggtitle(paste(nm, "for", mod_name, "module"))
+        )
+        grDevices::dev.off()
+        message("[Enrichr] Plot saved: ", basename(pdf_file))
+      }, error = function(e) {
+        # Ensure graphics device is always closed on error
+        tryCatch(grDevices::dev.off(), error = function(e2) NULL)
+        message("[Enrichr] Plot failed for DB '", nm, "': ", conditionMessage(e))
+      })
+    }
   }
 
   Sys.sleep(sleep_time)
@@ -801,9 +824,6 @@ run_enrichr_simple <- function(gene_symbols, out_prefix, dbs,
 
 # ============================================================
 # 11) Per-variant enrichment runner
-#
-#   list_stem : stem name from the list .txt file (used to name the output subfolder).
-#               Pass "" when running in single-file mode (no extra subfolder).
 # ============================================================
 run_enrichment_for_variant <- function(annotation_dir,
                                        variant_label,
@@ -1007,11 +1027,11 @@ project_root      <- trim_or_null(get_arg("--project_root"))
 annotation_dir_v1 <- trim_or_null(get_arg("--annotation_dir_v1"))
 annotation_dir_v2 <- trim_or_null(get_arg("--annotation_dir_v2"))
 annotation_dir_v3 <- trim_or_null(get_arg("--annotation_dir_v3"))
-module_list_input <- trim_or_null(get_arg("--module_list_file"))   # file or directory
+module_list_input <- trim_or_null(get_arg("--module_list_file"))
 stats_file_v1     <- trim_or_null(get_arg("--stats_file_v1"))
 stats_file_v2     <- trim_or_null(get_arg("--stats_file_v2"))
 stats_file_v3     <- trim_or_null(get_arg("--stats_file_v3"))
-trait_list_input  <- trim_or_null(get_arg("--trait_list_file"))    # file or directory
+trait_list_input  <- trim_or_null(get_arg("--trait_list_file"))
 p_thresh          <- as.numeric(get_arg("--p_thresh", "0.05"))
 
 do_kegg     <- to_bool(get_arg("--do_kegg",     "true"),  default = TRUE)
@@ -1039,8 +1059,8 @@ plot_height     <- as.numeric(get_arg( "--plot_height",      "10"))
 # ============================================================
 # 13) Resolve list inputs into named vectors of file paths
 # ============================================================
-module_list_files <- resolve_list_input(module_list_input)  # named char vec or NULL
-trait_list_files  <- resolve_list_input(trait_list_input)   # named char vec or NULL
+module_list_files <- resolve_list_input(module_list_input)
+trait_list_files  <- resolve_list_input(trait_list_input)
 
 # ============================================================
 # 14) Validate top-level arguments
@@ -1057,7 +1077,6 @@ if (!plot_p_col %in% c("p.adjust", "pvalue"))
   stop("--plot_p_col must be 'p.adjust' or 'pvalue'", call. = FALSE)
 
 if (!is.null(module_list_files)) {
-  # module_list mode: files already validated by resolve_list_input
   if (!is.null(trait_list_files))
     message("Note: --module_list_file provided; --trait_list_file will be ignored.")
 } else {
@@ -1097,8 +1116,6 @@ cat("plot_sig_cutoff: ", plot_sig_cutoff, "\n", sep = "")
 # ============================================================
 # 15) Build the list of (stem, module_list_file, trait_list) combos to iterate
 # ============================================================
-
-# Each entry: list(stem, module_list_file, trait_list)
 run_configs <- list()
 
 if (!is.null(module_list_files)) {
