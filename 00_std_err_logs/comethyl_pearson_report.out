@@ -4675,4 +4675,164 @@ JobId=11722142 JobName=Cometh_Intergen_CHDS
    StdIn=/dev/null
    StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
    TresPerTask=cpu=59
-   MailUser=gekuodza@ucdavis.edu,smholesinger@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT
+   MailUser=gekuodza@ucdavis.edu,smholesinger@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 12245121 prolog ###############
+SLURM_NODELIST: hive-dc-7-6-50
+############### Job 12245121 prolog ###############
+hive-dc-7-6-50
+Wed Apr 15 04:02:39 PM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+Allowing parallel execution with up to 4 working processes.
+[1] "4084" "4136" "4169" "4025" "4023" "4134"
+Allowing parallel execution with up to 40 working processes.
+ pickSoftThreshold: calculating connectivity for given powers... 
+   Power SFT.R.sq   slope truncated.R.sq  mean.k. median.k.   max.k.  Density
+1      1 7.91e-03 203.000          1.000 2.33e+05  2.33e+05 2.33e+05 5.00e-01
+2      2 3.96e-02 229.000          1.000 1.17e+05  1.17e+05 1.18e+05 2.52e-01
+3      3 6.89e-02 205.000          1.000 5.94e+04  5.94e+04 5.98e+04 1.28e-01
+4      4 6.11e-02 143.000          0.999 3.03e+04  3.03e+04 3.06e+04 6.52e-02
+5      5 3.45e-02  83.900          0.999 1.56e+04  1.56e+04 1.58e+04 3.35e-02
+6      6 1.54e-02  44.800          0.997 8.06e+03  8.06e+03 8.19e+03 1.73e-02
+7      7 2.71e-02  51.000          0.989 4.20e+03  4.20e+03 4.28e+03 9.02e-03
+8      8 6.40e-02  67.800          0.969 2.20e+03  2.20e+03 2.25e+03 4.73e-03
+9      9 1.26e-01  80.000          0.883 1.16e+03  1.16e+03 1.19e+03 2.49e-03
+10    10 5.50e-02  43.400          0.840 6.15e+02  6.15e+02 6.39e+02 1.32e-03
+11    11 2.40e-02  23.600          0.807 3.28e+02  3.28e+02 3.45e+02 7.05e-04
+12    12 6.89e-03  10.500          0.775 1.76e+02  1.76e+02 1.87e+02 3.78e-04
+13    13 1.64e-06  -0.134          0.743 9.50e+01  9.50e+01 1.03e+02 2.04e-04
+14    14 1.60e-03   3.450          0.733 5.16e+01  5.16e+01 5.67e+01 1.11e-04
+15    15 1.08e-02  -6.610          0.677 2.81e+01  2.81e+01 3.23e+01 6.05e-05
+16    16 1.74e-01 -18.200          0.510 1.54e+01  1.54e+01 1.92e+01 3.32e-05
+17    17 2.89e-01 -16.500          0.387 8.53e+00  8.52e+00 1.20e+01 1.83e-05
+18    18 6.35e-01 -16.300          0.553 4.73e+00  4.72e+00 7.86e+00 1.02e-05
+19    19 9.33e-01 -15.100          0.940 2.64e+00  2.63e+00 5.49e+00 5.67e-06
+20    20 9.47e-01 -11.300          0.963 1.48e+00  1.48e+00 4.08e+00 3.18e-06
+   Centralization Heterogeneity
+1        1.13e-03      0.000517
+2        1.11e-03      0.001030
+3        8.35e-04      0.001550
+4        5.87e-04      0.002090
+5        3.98e-04      0.002650
+6        2.61e-04      0.003250
+7        1.74e-04      0.003880
+8        1.14e-04      0.004560
+9        7.46e-05      0.005290
+10       5.24e-05      0.006080
+11       3.61e-05      0.006920
+12       2.45e-05      0.007840
+13       1.65e-05      0.008840
+14       1.10e-05      0.009940
+15       8.87e-06      0.011200
+16       8.09e-06      0.012800
+17       7.38e-06      0.014900
+18       6.72e-06      0.018100
+19       6.13e-06      0.023300
+20       5.59e-06      0.032000
+ pickSoftThreshold: calculating connectivity for given powers... 
+   Power SFT.R.sq  slope truncated.R.sq  mean.k. median.k.   max.k.  Density
+1      1  0.00875   3.13          0.835 2.36e+05  2.37e+05 257000.0 5.08e-01
+2      2  0.17700  -8.00          0.932 1.21e+05  1.22e+05 147000.0 2.60e-01
+3      3  0.49400 -11.30          0.976 6.28e+04  6.30e+04  86700.0 1.35e-01
+4      4  0.67200 -11.60          0.990 3.29e+04  3.28e+04  52000.0 7.06e-02
+5      5  0.76600 -10.80          0.994 1.74e+04  1.72e+04  31800.0 3.73e-02
+6      6  0.82900  -9.78          0.995 9.26e+03  9.06e+03  19700.0 1.99e-02
+7      7  0.86600  -8.78          0.997 4.99e+03  4.81e+03  12400.0 1.07e-02
+8      8  0.88200  -8.06          0.996 2.71e+03  2.57e+03   7930.0 5.82e-03
+9      9  0.89100  -7.44          0.995 1.48e+03  1.39e+03   5120.0 3.19e-03
+10    10  0.90300  -6.80          0.996 8.20e+02  7.54e+02   3350.0 1.76e-03
+11    11  0.91200  -6.30          0.997 4.57e+02  4.13e+02   2220.0 9.83e-04
+12    12  0.91400  -5.94          0.997 2.57e+02  2.28e+02   1480.0 5.53e-04
+13    13  0.92100  -5.55          0.997 1.46e+02  1.27e+02   1000.0 3.14e-04
+14    14  0.92000  -5.29          0.998 8.35e+01  7.06e+01    682.0 1.79e-04
+15    15  0.92300  -4.98          0.998 4.82e+01  3.97e+01    470.0 1.04e-04
+16    16  0.92600  -4.71          0.999 2.81e+01  2.24e+01    327.0 6.04e-05
+17    17  0.92400  -4.49          0.998 1.65e+01  1.27e+01    229.0 3.55e-05
+18    18  0.92400  -4.26          0.998 9.79e+00  7.25e+00    162.0 2.10e-05
+19    19  0.92400  -4.04          0.999 5.86e+00  4.16e+00    116.0 1.26e-05
+20    20  0.92400  -3.79          0.991 3.54e+00  2.40e+00     83.1 7.60e-06
+   Centralization Heterogeneity
+1        0.045600        0.0287
+2        0.056400        0.0566
+3        0.051300        0.0846
+4        0.041200        0.1130
+5        0.031000        0.1430
+6        0.022500        0.1740
+7        0.016000        0.2070
+8        0.011200        0.2420
+9        0.007820        0.2790
+10       0.005440        0.3190
+11       0.003780        0.3620
+12       0.002630        0.4080
+13       0.001840        0.4590
+14       0.001290        0.5130
+15       0.000906        0.5730
+16       0.000642        0.6380
+17       0.000457        0.7100
+18       0.000327        0.7890
+19       0.000236        0.8760
+20       0.000171        0.9730
+
+############### Job 12245121 summary from hive-dc-7-6-50 ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-6-50
+Cores               : 59
+GPUs                : 0
+State               : FAILED
+ExitCode            : 127:0
+Submit              : 2026-04-15T16:02:38
+Start               : 2026-04-15T16:02:39
+End                 : 2026-04-15T17:40:59
+Reserved walltime   :   23:00:00
+Used walltime       :   01:38:20
+Used CPU time       : 2-03:29:37
+% User (Computation): 64.28%
+% System (I/O)      : 35.72%
+Mem reserved        : 700G
+Max Mem used        : 442.33G (hive-dc-7-6-50)
+Max Disk Write      : 1.29G (hive-dc-7-6-50)
+Max Disk Read       : 2.32G (hive-dc-7-6-50)
+
+############### Job 12245121 info ###############
+JobId=12245121 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8143 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=127:0
+   RunTime=01:38:20 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-04-15T16:02:38 EligibleTime=2026-04-15T16:02:38
+   AccrueTime=2026-04-15T16:02:38
+   StartTime=2026-04-15T16:02:39 EndTime=2026-04-15T17:40:59 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-04-15T16:02:39 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-8-26:290066
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-6-50
+   BatchHost=hive-dc-7-6-50
+   NumNodes=1 NumCPUs=59 NumTasks=1 CPUs/Task=59 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=59,mem=700G,node=1,billing=59
+   AllocTRES=cpu=59,mem=700G,node=1,billing=59
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=59 MinMemoryNode=700G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=59
+   MailUser=gekuodza@ucdavis.edu,smholesinger@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 12267048 prolog ###############
+SLURM_NODELIST: hive-dc-7-10-42
+############### Job 12267048 prolog ###############
+hive-dc-7-10-42
+Wed Apr 15 07:18:21 PM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+Allowing parallel execution with up to 40 working processes.
+ Calculating module eigengenes block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Projective K-means:
+   ..k-means clustering..

@@ -13,9 +13,14 @@
 # SELECTION MODES
 #   Provide either:
 #     --module_list_file  : explicit list of module names to enrich
+#                           (can be a single .txt file OR a directory of .txt files;
+#                            if a directory, each .txt is processed separately and
+#                            outputs are placed in a subfolder named after the file stem)
 #   OR:
 #     --trait_list_file + --stats_file_v1 (+ v2/v3)
 #       modules selected where trait in trait_list AND p <= p_thresh
+#       (can also be a single .txt file OR a directory of .txt files;
+#        same output-subfolder behaviour applies)
 #
 # REQUIRED INPUTS
 #   --project_root      : root directory of the project
@@ -24,9 +29,9 @@
 # OPTIONAL INPUTS
 #   --annotation_dir_v2       : v2 annotation folder
 #   --annotation_dir_v3       : v3 annotation folder
-#   --module_list_file        : text file with one module name per line
+#   --module_list_file        : text file (or directory of .txt files) with module names
 #   --stats_file_v1/v2/v3     : ME-trait stats TSV from Script 09a
-#   --trait_list_file         : text file with one trait per line
+#   --trait_list_file         : text file (or directory of .txt files) with trait names
 #   --p_thresh                : module selection p threshold [default = 0.05]
 #   --do_kegg                 : TRUE/FALSE [default = true]
 #   --do_go                   : TRUE/FALSE [default = true]
@@ -45,13 +50,14 @@
 #   --plot_height             : summary plot height in inches [default = 10]
 #
 # OUTPUTS
-#   project_root/comethyl_output/12b_enrichment/<cpg>/<region>/<variant>/
+#   project_root/comethyl_output/12b_enrichment/<cpg>/<region>/<variant>/[<list_stem>/]
 #     selected_modules.txt
 #     selected_modules_summary.tsv
 #     <module>_KEGG.tsv / .xlsx / _dotplot.pdf
 #     <module>_GO_BP/MF/CC.tsv / .xlsx / _dotplot.pdf
 #     <module>_Reactome.tsv / .xlsx / _dotplot.pdf
 #     <module>_enrichr.xlsx
+#     <module>_enrichr_<DB>.pdf          <- per-module per-database plotEnrich PDFs
 #     Summary_KEGG_top<n>_<pcol><cutoff>.pdf
 #     Summary_GO_BP/MF/CC_top<n>_<pcol><cutoff>.pdf
 #     Summary_Reactome_top<n>_<pcol><cutoff>.pdf
@@ -66,7 +72,7 @@ suppressPackageStartupMessages({
   library(dplyr)
   library(readxl)
   library(openxlsx)
-#   library(clusterProfiler)
+  library(clusterProfiler)
   library(org.Hs.eg.db)
   library(AnnotationDbi)
   library(ggplot2)
@@ -136,7 +142,38 @@ qc_gene_list <- function(x, label = "genes") {
 }
 
 # ============================================================
-# 2) Input readers
+# 2a) File-or-directory resolver
+#
+#   resolve_list_input(path) returns a named character vector:
+#     names  = file stem (used as output subfolder name, or "" for single-file mode)
+#     values = absolute path to the .txt file
+#
+#   Rules:
+#     - NULL input              -> returns NULL (caller handles "not provided")
+#     - path is a single .txt   -> returns c("" = path)  (no extra subfolder)
+#     - path is a directory     -> returns one entry per *.txt in that dir,
+#                                  named by tools::file_path_sans_ext(basename(...))
+# ============================================================
+resolve_list_input <- function(path) {
+  if (is.null(path)) return(NULL)
+
+  if (file.exists(path) && !dir.exists(path)) {
+    return(setNames(normalizePath(path), ""))
+  }
+
+  if (dir.exists(path)) {
+    txts <- sort(list.files(path, pattern = "\\.txt$", full.names = TRUE))
+    if (length(txts) == 0)
+      stop("Directory provided for list file contains no .txt files: ", path, call. = FALSE)
+    stems <- tools::file_path_sans_ext(basename(txts))
+    return(setNames(normalizePath(txts), stems))
+  }
+
+  stop("Path does not exist as a file or directory: ", path, call. = FALSE)
+}
+
+# ============================================================
+# 2b) Input readers
 # ============================================================
 read_module_list_file <- function(path) {
   x <- readLines(path, warn = FALSE)
@@ -193,14 +230,20 @@ load_annotation_files <- function(annotation_dir) {
 # ============================================================
 derive_pipeline_dirs_from_annotation_dir <- function(annotation_dir,
                                                       project_root,
-                                                      step_name) {
+                                                      step_name,
+                                                      list_stem = "") {
   variant_name  <- basename(annotation_dir)
   region_label  <- basename(dirname(annotation_dir))
   cpg_label     <- basename(dirname(dirname(annotation_dir)))
 
   pipeline_root <- file.path(project_root, "comethyl_output")
   step_dir      <- file.path(pipeline_root, step_name)
-  out_dir       <- file.path(step_dir, cpg_label, region_label, variant_name)
+
+  if (nzchar(list_stem)) {
+    out_dir <- file.path(step_dir, cpg_label, region_label, variant_name, list_stem)
+  } else {
+    out_dir <- file.path(step_dir, cpg_label, region_label, variant_name)
+  }
 
   dir.create(out_dir, recursive = TRUE, showWarnings = FALSE)
 
@@ -647,8 +690,6 @@ plot_enrichr_summary <- function(out_dir, modules, databases,
 # ============================================================
 
 init_enrichr <- function() {
-  # Set all required enrichR options directly — mirrors what works interactively.
-  # Do NOT call setEnrichrSite(); it makes a live HTTP call that fails intermittently.
   options(
     enrichR.sites.base.address = "https://maayanlab.cloud/",
     enrichR.base.address       = "https://maayanlab.cloud/Enrichr/",
@@ -703,7 +744,6 @@ run_enrichr_simple <- function(gene_symbols, out_prefix, dbs,
     if (length(background_genes) == 0) background_genes <- NULL
   }
 
-  # Properly initialize enrichR before each call
   init_enrichr()
 
   res <- NULL; last_err <- NULL
@@ -735,6 +775,7 @@ run_enrichr_simple <- function(gene_symbols, out_prefix, dbs,
     return(invisible(NULL))
   }
 
+  # ---- Save combined Excel workbook ----
   wb <- openxlsx::createWorkbook(); wrote_any <- FALSE
 
   for (nm in names(res)) {
@@ -749,6 +790,32 @@ run_enrichr_simple <- function(gene_symbols, out_prefix, dbs,
   if (wrote_any) {
     openxlsx::saveWorkbook(wb, paste0(out_prefix, "_enrichr.xlsx"), overwrite = TRUE)
     message("[Enrichr] Saved: ", basename(out_prefix), "_enrichr.xlsx")
+
+    # ---- Per-database plotEnrich() PDFs ----
+    # Requires enrichR::plotEnrich(); mirrors the old plot_and_save() logic.
+    for (nm in names(res)) {
+      df <- res[[nm]]
+      if (is.null(df) || nrow(df) == 0) next
+
+      db_safe  <- substr(gsub("[^A-Za-z0-9]", "_", nm), 1, 60)
+      pdf_file <- paste0(out_prefix, "_enrichr_", db_safe, ".pdf")
+      mod_name <- basename(out_prefix)   # e.g. "skyblue2"
+
+      tryCatch({
+        grDevices::pdf(pdf_file, height = 7, width = 15)
+        print(
+          enrichR::plotEnrich(df, showTerms = 25, numChar = 75,
+                              y = "Count", orderBy = "P.value") +
+            ggplot2::ggtitle(paste(nm, "for", mod_name, "module"))
+        )
+        grDevices::dev.off()
+        message("[Enrichr] Plot saved: ", basename(pdf_file))
+      }, error = function(e) {
+        # Ensure graphics device is always closed on error
+        tryCatch(grDevices::dev.off(), error = function(e2) NULL)
+        message("[Enrichr] Plot failed for DB '", nm, "': ", conditionMessage(e))
+      })
+    }
   }
 
   Sys.sleep(sleep_time)
@@ -779,7 +846,8 @@ run_enrichment_for_variant <- function(annotation_dir,
                                        plot_top_n             = 10,
                                        plot_sig_cutoff        = 0.05,
                                        plot_width             = 14,
-                                       plot_height            = 10) {
+                                       plot_height            = 10,
+                                       list_stem              = "") {
 
   validate_dir_exists(annotation_dir, paste0("annotation_dir_", variant_label))
 
@@ -789,8 +857,10 @@ run_enrichment_for_variant <- function(annotation_dir,
   background_genes <- files$background_genes
 
   dir_info <- derive_pipeline_dirs_from_annotation_dir(
-    annotation_dir = annotation_dir, project_root = project_root,
-    step_name = "12b_enrichment"
+    annotation_dir = annotation_dir,
+    project_root   = project_root,
+    step_name      = "12b_enrichment",
+    list_stem      = list_stem
   )
 
   out_dir     <- dir_info$out_dir
@@ -799,7 +869,8 @@ run_enrichment_for_variant <- function(annotation_dir,
   selected_modules_file         <- file.path(out_dir, "selected_modules.txt")
   selected_modules_summary_file <- file.path(out_dir, "selected_modules_summary.tsv")
 
-  append_log(log_file, "Starting enrichment for variant: ", variant_label)
+  append_log(log_file, "Starting enrichment for variant: ", variant_label,
+             if (nzchar(list_stem)) paste0(" / list: ", list_stem) else "")
   append_log(log_file, "annotation_dir: ", annotation_dir)
   append_log(log_file, "out_dir: ", out_dir)
   append_log(log_file, "do_kegg: ", do_kegg, " | do_go: ", do_go,
@@ -917,6 +988,7 @@ run_enrichment_for_variant <- function(annotation_dir,
     c(paste0("timestamp\t",              timestamp_now()),
       paste0("project_root\t",           ifelse(is.null(project_root), "", project_root)),
       paste0("variant_label\t",          variant_label),
+      paste0("list_stem\t",              list_stem),
       paste0("annotation_dir\t",         annotation_dir),
       paste0("out_dir\t",                out_dir),
       paste0("selection_mode\t",         selection_mode),
@@ -943,7 +1015,8 @@ run_enrichment_for_variant <- function(annotation_dir,
     params_file
   )
 
-  append_log(log_file, "Finished enrichment for variant: ", variant_label)
+  append_log(log_file, "Finished enrichment for variant: ", variant_label,
+             if (nzchar(list_stem)) paste0(" / list: ", list_stem) else "")
   invisible(list(selected_modules = selected_modules, out_dir = out_dir))
 }
 
@@ -954,11 +1027,11 @@ project_root      <- trim_or_null(get_arg("--project_root"))
 annotation_dir_v1 <- trim_or_null(get_arg("--annotation_dir_v1"))
 annotation_dir_v2 <- trim_or_null(get_arg("--annotation_dir_v2"))
 annotation_dir_v3 <- trim_or_null(get_arg("--annotation_dir_v3"))
-module_list_file  <- trim_or_null(get_arg("--module_list_file"))
+module_list_input <- trim_or_null(get_arg("--module_list_file"))
 stats_file_v1     <- trim_or_null(get_arg("--stats_file_v1"))
 stats_file_v2     <- trim_or_null(get_arg("--stats_file_v2"))
 stats_file_v3     <- trim_or_null(get_arg("--stats_file_v3"))
-trait_list_file   <- trim_or_null(get_arg("--trait_list_file"))
+trait_list_input  <- trim_or_null(get_arg("--trait_list_file"))
 p_thresh          <- as.numeric(get_arg("--p_thresh", "0.05"))
 
 do_kegg     <- to_bool(get_arg("--do_kegg",     "true"),  default = TRUE)
@@ -984,7 +1057,13 @@ plot_width      <- as.numeric(get_arg( "--plot_width",       "14"))
 plot_height     <- as.numeric(get_arg( "--plot_height",      "10"))
 
 # ============================================================
-# 13) Validate top-level arguments
+# 13) Resolve list inputs into named vectors of file paths
+# ============================================================
+module_list_files <- resolve_list_input(module_list_input)
+trait_list_files  <- resolve_list_input(trait_list_input)
+
+# ============================================================
+# 14) Validate top-level arguments
 # ============================================================
 stop_if_missing(project_root,      "--project_root")
 stop_if_missing(annotation_dir_v1, "--annotation_dir_v1")
@@ -997,13 +1076,13 @@ if (!is.null(annotation_dir_v3)) validate_dir_exists(annotation_dir_v3, "annotat
 if (!plot_p_col %in% c("p.adjust", "pvalue"))
   stop("--plot_p_col must be 'p.adjust' or 'pvalue'", call. = FALSE)
 
-if (!is.null(module_list_file)) {
-  validate_file_exists(module_list_file, "module_list_file")
+if (!is.null(module_list_files)) {
+  if (!is.null(trait_list_files))
+    message("Note: --module_list_file provided; --trait_list_file will be ignored.")
 } else {
-  if (is.null(trait_list_file))
+  if (is.null(trait_list_files))
     stop("Provide --module_list_file OR --trait_list_file with stats_file(s).", call. = FALSE)
-  validate_file_exists(trait_list_file, "trait_list_file")
-  validate_file_exists(stats_file_v1,   "stats_file_v1")
+  validate_file_exists(stats_file_v1, "stats_file_v1")
   if (!is.null(annotation_dir_v2) && is.null(stats_file_v2))
     stop("annotation_dir_v2 provided but stats_file_v2 missing.", call. = FALSE)
   if (!is.null(annotation_dir_v3) && is.null(stats_file_v3))
@@ -1021,9 +1100,6 @@ if (do_enrichr) {
 
 setwd(project_root)
 
-trait_list <- NULL
-if (!is.null(trait_list_file)) trait_list <- read_trait_list_file(trait_list_file)
-
 cat("project_root: ",      project_root,      "\n", sep = "")
 cat("annotation_dir_v1: ", annotation_dir_v1, "\n", sep = "")
 if (!is.null(annotation_dir_v2)) cat("annotation_dir_v2: ", annotation_dir_v2, "\n", sep = "")
@@ -1038,50 +1114,86 @@ cat("plot_top_n: ",      plot_top_n,      "\n", sep = "")
 cat("plot_sig_cutoff: ", plot_sig_cutoff, "\n", sep = "")
 
 # ============================================================
-# 14) Run variants
+# 15) Build the list of (stem, module_list_file, trait_list) combos to iterate
 # ============================================================
-common_args <- list(
-  module_list_file       = module_list_file,
-  trait_list             = trait_list,
-  p_thresh               = p_thresh,
-  do_kegg                = do_kegg,
-  do_go                  = do_go,
-  do_reactome            = do_reactome,
-  do_enrichr             = do_enrichr,
-  enrichr_dbs            = enrichr_dbs,
-  organism               = organism,
-  project_root           = project_root,
-  use_enrichr_background = use_enrichr_background,
-  min_bg_genes           = min_bg_genes,
-  enrichr_retries        = enrichr_retries,
-  enrichr_sleep          = enrichr_sleep,
-  plot_p_col             = plot_p_col,
-  plot_top_n             = plot_top_n,
-  plot_sig_cutoff        = plot_sig_cutoff,
-  plot_width             = plot_width,
-  plot_height            = plot_height
-)
+run_configs <- list()
 
-do.call(run_enrichment_for_variant,
-        c(list(annotation_dir  = annotation_dir_v1,
-               variant_label   = "v1_all_pcs",
-               stats_file      = stats_file_v1),
-          common_args))
-
-if (!is.null(annotation_dir_v2)) {
-  do.call(run_enrichment_for_variant,
-          c(list(annotation_dir  = annotation_dir_v2,
-                 variant_label   = "v2_exclude_protected_pcs",
-                 stats_file      = stats_file_v2),
-            common_args))
+if (!is.null(module_list_files)) {
+  for (i in seq_along(module_list_files)) {
+    stem <- names(module_list_files)[i]
+    run_configs[[length(run_configs) + 1]] <- list(
+      stem             = stem,
+      module_list_file = unname(module_list_files[i]),
+      trait_list       = NULL
+    )
+  }
+} else {
+  for (i in seq_along(trait_list_files)) {
+    stem        <- names(trait_list_files)[i]
+    trait_list  <- read_trait_list_file(unname(trait_list_files[i]))
+    run_configs[[length(run_configs) + 1]] <- list(
+      stem             = stem,
+      module_list_file = NULL,
+      trait_list       = trait_list
+    )
+  }
 }
 
-if (!is.null(annotation_dir_v3)) {
+# ============================================================
+# 16) Run all configs × variants
+# ============================================================
+for (cfg in run_configs) {
+
+  stem_label <- if (nzchar(cfg$stem))
+    paste0(" [list: ", cfg$stem, "]") else ""
+  message("\n======================================================")
+  message("Running config", stem_label)
+  message("======================================================")
+
+  common_args <- list(
+    module_list_file       = cfg$module_list_file,
+    trait_list             = cfg$trait_list,
+    p_thresh               = p_thresh,
+    do_kegg                = do_kegg,
+    do_go                  = do_go,
+    do_reactome            = do_reactome,
+    do_enrichr             = do_enrichr,
+    enrichr_dbs            = enrichr_dbs,
+    organism               = organism,
+    project_root           = project_root,
+    use_enrichr_background = use_enrichr_background,
+    min_bg_genes           = min_bg_genes,
+    enrichr_retries        = enrichr_retries,
+    enrichr_sleep          = enrichr_sleep,
+    plot_p_col             = plot_p_col,
+    plot_top_n             = plot_top_n,
+    plot_sig_cutoff        = plot_sig_cutoff,
+    plot_width             = plot_width,
+    plot_height            = plot_height,
+    list_stem              = cfg$stem
+  )
+
   do.call(run_enrichment_for_variant,
-          c(list(annotation_dir  = annotation_dir_v3,
-                 variant_label   = "v3_technical_pcs_only",
-                 stats_file      = stats_file_v3),
+          c(list(annotation_dir = annotation_dir_v1,
+                 variant_label  = "v1_all_pcs",
+                 stats_file     = stats_file_v1),
             common_args))
+
+  if (!is.null(annotation_dir_v2)) {
+    do.call(run_enrichment_for_variant,
+            c(list(annotation_dir = annotation_dir_v2,
+                   variant_label  = "v2_exclude_protected_pcs",
+                   stats_file     = stats_file_v2),
+              common_args))
+  }
+
+  if (!is.null(annotation_dir_v3)) {
+    do.call(run_enrichment_for_variant,
+            c(list(annotation_dir = annotation_dir_v3,
+                   variant_label  = "v3_technical_pcs_only",
+                   stats_file     = stats_file_v3),
+              common_args))
+  }
 }
 
 cat("\nScript 12b complete: Enrichment finished\n")
