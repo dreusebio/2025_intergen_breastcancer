@@ -6985,3 +6985,1859 @@ Running module detection for variant: v1_all_pcs
 [v1_all_pcs] using powerEstimate = 19
 [v1_all_pcs] module correlation = pearson
 [getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.bed
+✓ Finished variant: v1_all_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.bed
+
+==============================
+Running module detection for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] methylation dimensions: 173 regions x 465397 samples
+[v2_exclude_protected_pcs] using powerEstimate = 6
+[v2_exclude_protected_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.bed
+✓ Finished variant: v2_exclude_protected_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.bed
+Script 07 complete: module detection finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07
+Starting Script 08
+Loaded sample_info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+colData dimensions: 173 samples x 46 traits
+colData_num dimensions: 173 samples x 46 numeric traits
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07
+
+==============================
+Running module/sample diagnostics for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] No MEgrey column found (2 real MEs remaining)
+[v1_all_pcs] Sample alignment to metadata: 173 overlapping samples retained from 173 ME samples and 173 metadata samples
+[v1_all_pcs] MEs used: 173 samples x 2 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Module_ME_Dendrogram.pdf
+[v1_all_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Module_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Module_Correlation_Stats.tsv
+[v1_all_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Sample_ME_Dendrogram.pdf
+[v1_all_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Sample_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Sample_ME_Heatmap.pdf
+[v1_all_pcs] Saved sample x module eigengene heatmap
+Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+
+==============================
+Running module/sample diagnostics for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] No MEgrey column found (37 real MEs remaining)
+[v2_exclude_protected_pcs] Sample alignment to metadata: 173 overlapping samples retained from 173 ME samples and 173 metadata samples
+[v2_exclude_protected_pcs] MEs used: 173 samples x 37 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Module_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Module_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Module_Correlation_Stats.tsv
+[v2_exclude_protected_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Sample_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Sample_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Sample_ME_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample x module eigengene heatmap
+Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+Script 08 complete: module and sample diagnostics finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07
+Starting Script 09a
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+
+==============================
+Running ME-trait analysis for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] MEs dimensions: 173 samples x 2 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v1_all_pcs] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/Rtmp4amlOY/file11ca7f66e0cbe4.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+
+==============================
+Running ME-trait analysis for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] MEs dimensions: 173 samples x 37 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v2_exclude_protected_pcs] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/Rtmp4amlOY/file11ca7f77134ebd.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+Script 09a complete: core ME-trait finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07
+Starting Script 09b
+Variants to process: 2
+
+==============================
+Running 09b for variant: v1_all_pcs
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_dde/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_dde/ME_Trait_Heatmap_TOP.pdf
+Done set '03_dde' for variant 'v1_all_pcs'
+  Traits found: 8 / 8
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_dde
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_obesity_overweight/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_obesity_overweight/ME_Trait_Heatmap_TOP.pdf
+Done set '04_obesity_overweight' for variant 'v1_all_pcs'
+  Traits found: 2 / 2
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_obesity_overweight
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/09_incxrac/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/09_incxrac/ME_Trait_Heatmap_TOP.pdf
+Done set '09_incxrac' for variant 'v1_all_pcs'
+  Traits found: 4 / 4
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/09_incxrac
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/10_puberty_and_menarche_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/10_puberty_and_menarche_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '10_puberty_and_menarche_variables' for variant 'v1_all_pcs'
+  Traits found: 3 / 3
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/10_puberty_and_menarche_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/11_breast_cancer_outcomes/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/11_breast_cancer_outcomes/ME_Trait_Heatmap_TOP.pdf
+Done set '11_breast_cancer_outcomes' for variant 'v1_all_pcs'
+  Traits found: 2 / 2
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/11_breast_cancer_outcomes
+Finished variant: v1_all_pcs
+
+==============================
+Running 09b for variant: v2_exclude_protected_pcs
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_dde/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_dde/ME_Trait_Heatmap_TOP.pdf
+Done set '03_dde' for variant 'v2_exclude_protected_pcs'
+  Traits found: 8 / 8
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_dde
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_obesity_overweight/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_obesity_overweight/ME_Trait_Heatmap_TOP.pdf
+Done set '04_obesity_overweight' for variant 'v2_exclude_protected_pcs'
+  Traits found: 2 / 2
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_obesity_overweight
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/09_incxrac/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/09_incxrac/ME_Trait_Heatmap_TOP.pdf
+Done set '09_incxrac' for variant 'v2_exclude_protected_pcs'
+  Traits found: 4 / 4
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/09_incxrac
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/10_puberty_and_menarche_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/10_puberty_and_menarche_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '10_puberty_and_menarche_variables' for variant 'v2_exclude_protected_pcs'
+  Traits found: 3 / 3
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/10_puberty_and_menarche_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/11_breast_cancer_outcomes/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/11_breast_cancer_outcomes/ME_Trait_Heatmap_TOP.pdf
+Done set '11_breast_cancer_outcomes' for variant 'v2_exclude_protected_pcs'
+  Traits found: 2 / 2
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/11_breast_cancer_outcomes
+Finished variant: v2_exclude_protected_pcs
+Script 09a complete: Presentation ME-trait finished
+Outputs saved under: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation
+Starting Script 10
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin10_methSD0p07
+
+==============================
+Running circos/module summaries for variant: v1_all_pcs
+==============================
+
+Error in names(x) <- value : 
+  'names' attribute [2] must be the same length as the vector [1]
+Calls: colnames<- -> colnames<-
+In addition: Warning messages:
+1: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"chr"` instead of `.data$chr` 
+2: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"start"` instead of `.data$start` 
+3: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"end"` instead of `.data$end` 
+4: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"module"` instead of `.data$module` 
+Execution halted
+
+
+Starting Script 07
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07
+Loaded regions: 465397 rows
+
+==============================
+Running module detection for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] methylation dimensions: 173 regions x 465397 samples
+[v1_all_pcs] using powerEstimate = 19
+[v1_all_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.bed
+✓ Finished variant: v1_all_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.bed
+Script 07 complete: module detection finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07
+Starting Script 08
+Loaded sample_info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+colData dimensions: 173 samples x 46 traits
+colData_num dimensions: 173 samples x 46 numeric traits
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07
+
+==============================
+Running module/sample diagnostics for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] No MEgrey column found (69 real MEs remaining)
+[v1_all_pcs] Sample alignment to metadata: 173 overlapping samples retained from 173 ME samples and 173 metadata samples
+[v1_all_pcs] MEs used: 173 samples x 69 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Module_ME_Dendrogram.pdf
+[v1_all_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Module_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Module_Correlation_Stats.tsv
+[v1_all_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Sample_ME_Dendrogram.pdf
+[v1_all_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Sample_Correlation_Heatmap.pdf
+[v1_all_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Sample_ME_Heatmap.pdf
+[v1_all_pcs] Saved sample x module eigengene heatmap
+Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+
+==============================
+Running module/sample diagnostics for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] No MEgrey column found (37 real MEs remaining)
+[v2_exclude_protected_pcs] Sample alignment to metadata: 173 overlapping samples retained from 173 ME samples and 173 metadata samples
+[v2_exclude_protected_pcs] MEs used: 173 samples x 37 modules
+[getDendro] Clustering with pearson correlation as the distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Module_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved module ME dendrogram
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in row names for y-axis labels
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Module_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved module correlation heatmap
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Module_Correlation_Stats.tsv
+[v2_exclude_protected_pcs] Saved module correlation stats
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Sample_ME_Dendrogram.pdf
+[v2_exclude_protected_pcs] Saved sample ME dendrogram
+[getCor] Transposing data
+[getCor] Calculating correlations using pearson correlation
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Sample_Correlation_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample correlation heatmap
+[plotHeatmap] Plotting heatmap with dendrograms
+[plotHeatmap] Using colors in column names for x-axis labels
+[plotHeatmap] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Sample_ME_Heatmap.pdf
+[v2_exclude_protected_pcs] Saved sample x module eigengene heatmap
+Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+Script 08 complete: module and sample diagnostics finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07
+Starting Script 09a
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+
+==============================
+Running ME-trait analysis for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] MEs dimensions: 173 samples x 69 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v1_all_pcs] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/Rtmp3DHtW7/file28a865ff79bd1.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+
+==============================
+Running ME-trait analysis for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] MEs dimensions: 173 samples x 37 modules
+[getDendro] Clustering with bicor correlation as the distance
+[v2_exclude_protected_pcs] Running bicor ME-trait correlations
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /tmp/Rtmp3DHtW7/file28a8615b7a421.tsv
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/ME_Trait_Correlation_Heatmap_Bicor_TOP.pdf
+✓ Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+Script 09a complete: core ME-trait finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07
+Starting Script 09b
+Variants to process: 2
+
+==============================
+Running 09b for variant: v1_all_pcs
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_dde/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_dde/ME_Trait_Heatmap_TOP.pdf
+Done set '03_dde' for variant 'v1_all_pcs'
+  Traits found: 8 / 8
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_dde
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_obesity_overweight/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_obesity_overweight/ME_Trait_Heatmap_TOP.pdf
+Done set '04_obesity_overweight' for variant 'v1_all_pcs'
+  Traits found: 2 / 2
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_obesity_overweight
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/09_incxrac/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/09_incxrac/ME_Trait_Heatmap_TOP.pdf
+Done set '09_incxrac' for variant 'v1_all_pcs'
+  Traits found: 4 / 4
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/09_incxrac
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/10_puberty_and_menarche_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/10_puberty_and_menarche_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '10_puberty_and_menarche_variables' for variant 'v1_all_pcs'
+  Traits found: 3 / 3
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/10_puberty_and_menarche_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/11_breast_cancer_outcomes/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/11_breast_cancer_outcomes/ME_Trait_Heatmap_TOP.pdf
+Done set '11_breast_cancer_outcomes' for variant 'v1_all_pcs'
+  Traits found: 2 / 2
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/11_breast_cancer_outcomes
+Finished variant: v1_all_pcs
+
+==============================
+Running 09b for variant: v2_exclude_protected_pcs
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+==============================
+
+[getDendro] Clustering with bicor correlation as the distance
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_dde/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_dde/ME_Trait_Heatmap_TOP.pdf
+Done set '03_dde' for variant 'v2_exclude_protected_pcs'
+  Traits found: 8 / 8
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_dde
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_obesity_overweight/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_obesity_overweight/ME_Trait_Heatmap_TOP.pdf
+Done set '04_obesity_overweight' for variant 'v2_exclude_protected_pcs'
+  Traits found: 2 / 2
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_obesity_overweight
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/09_incxrac/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/09_incxrac/ME_Trait_Heatmap_TOP.pdf
+Done set '09_incxrac' for variant 'v2_exclude_protected_pcs'
+  Traits found: 4 / 4
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/09_incxrac
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/10_puberty_and_menarche_variables/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/10_puberty_and_menarche_variables/ME_Trait_Heatmap_TOP.pdf
+Done set '10_puberty_and_menarche_variables' for variant 'v2_exclude_protected_pcs'
+  Traits found: 3 / 3
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/10_puberty_and_menarche_variables
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/11_breast_cancer_outcomes/ME_Trait_Heatmap_FULL.pdf
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Drawing module color bar with labels
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/11_breast_cancer_outcomes/ME_Trait_Heatmap_TOP.pdf
+Done set '11_breast_cancer_outcomes' for variant 'v2_exclude_protected_pcs'
+  Traits found: 2 / 2
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/11_breast_cancer_outcomes
+Finished variant: v2_exclude_protected_pcs
+Script 09a complete: Presentation ME-trait finished
+Outputs saved under: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09b_me_trait_presentation
+Starting Script 10
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin10_methSD0p07
+
+==============================
+Running circos/module summaries for variant: v1_all_pcs
+==============================
+
+✓ Finished variant: v1_all_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+
+==============================
+Running circos/module summaries for variant: v2_exclude_protected_pcs
+==============================
+
+✓ Finished variant: v2_exclude_protected_pcs
+  Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+Warning messages:
+1: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"chr"` instead of `.data$chr` 
+2: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"start"` instead of `.data$start` 
+3: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"end"` instead of `.data$end` 
+4: Use of .data in tidyselect expressions was deprecated in tidyselect 1.2.0.
+ℹ Please use `"module"` instead of `.data$module` 
+Script 10 complete: Circos plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/10_circos_and_module_summaries/cov3_75pct/covMin10_methSD0p07
+Starting Script 11
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+Samples in common: 173
+Modules available: 69
+Traits available: 46
+[03_dde] Pairs to plot: 26
+✓ Done set: 03_dde
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_dde
+[04_obesity_overweight] Pairs to plot: 10
+✓ Done set: 04_obesity_overweight
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_obesity_overweight
+[09_incxrac] Pairs to plot: 15
+✓ Done set: 09_incxrac
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/09_incxrac
+[10_puberty_and_menarche_variables] Pairs to plot: 8
+✓ Done set: 10_puberty_and_menarche_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/10_puberty_and_menarche_variables
+[11_breast_cancer_outcomes] Pairs to plot: 6
+✓ Done set: 11_breast_cancer_outcomes
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/11_breast_cancer_outcomes
+There were 16 warnings (use warnings() to see them)
+Script 10 complete: ME-trait pair plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+Starting Script 11
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+Samples in common: 173
+Modules available: 37
+Traits available: 46
+[03_dde] Pairs to plot: 19
+✓ Done set: 03_dde
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_dde
+[04_obesity_overweight] Pairs to plot: 8
+✓ Done set: 04_obesity_overweight
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_obesity_overweight
+[09_incxrac] Pairs to plot: 28
+✓ Done set: 09_incxrac
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/09_incxrac
+[10_puberty_and_menarche_variables] Pairs to plot: 23
+✓ Done set: 10_puberty_and_menarche_variables
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/10_puberty_and_menarche_variables
+[11_breast_cancer_outcomes] Pairs to plot: 2
+✓ Done set: 11_breast_cancer_outcomes
+  Output: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/11_breast_cancer_outcomes
+There were 20 warnings (use warnings() to see them)
+Script 10 complete: ME-trait pair plots finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+Starting Script 12a
+[annotate] Trying comethyl::annotateModule()
+[annotateModule] Excluding regions in grey (unassigned) module
+[annotateModule] Using the hg38 genome assembly for annotations
+[annotateModule] Adding genes to regions using GREAT v4.0.4 with the basalPlusExt rule
+[annotate] GREAT-based annotation failed: error in evaluating the argument 'y' in selecting a method for function 'merge': error in evaluating the argument 'x' in selecting a method for function 'as.data.frame': unused argument (type = 1)
+[annotate] Falling back to offline nearest-gene annotation.
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+[annotate] Trying comethyl::annotateModule()
+[annotateModule] Excluding regions in grey (unassigned) module
+[annotateModule] Using the hg38 genome assembly for annotations
+[annotateModule] Adding genes to regions using GREAT v4.0.4 with the basalPlusExt rule
+[annotate] GREAT-based annotation failed: GREAT encountered a user error (message from GREAT web server):
+Line 136283: The second field (chromStart) must be a non-negative
+integer (not 1.3e+07). Input data: 'chr16 1.3e+07 13000205
+/chr16:1.3e+07-13000205'
+[annotate] Falling back to offline nearest-gene annotation.
+[offline] Using TxDb.Hsapiens.UCSC.hg38.knownGene
+  2135 genes were dropped because they have exons located on both strands
+  of the same reference sequence or on more than one reference sequence,
+  so cannot be represented by a single genomic range.
+  Use 'single.strand.genes.only=FALSE' to get all the genes in a
+  GRangesList object, or use suppressMessages() to suppress this message.
+'select()' returned 1:1 mapping between keys and columns
+Script 12a complete: Annotate Modules finished
+Starting Script 12b
+
+======================================================
+Running config [list: 03_dde]
+======================================================
+
+--- Enriching module: darkgreen (1 genes) ---
+[darkgreen] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkgreen
+[Enrichr] Saved: darkgreen_enrichr.xlsx
+[Enrichr] Plot saved: darkgreen_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: darkgreen_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: darkgreen_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: darkgreen_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: darkgreen_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: orangered4 (1 genes) ---
+[orangered4] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: orangered4
+[Enrichr] Saved: orangered4_enrichr.xlsx
+[Enrichr] Plot saved: orangered4_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: orangered4_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: cyan (4 genes) ---
+[cyan] Enrichr...
+[foreground] input n=4 -> cleaned unique n=4
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: cyan
+[Enrichr] Saved: cyan_enrichr.xlsx
+[Enrichr] Plot saved: cyan_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: cyan_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: cyan_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: cyan_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: cyan_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: cyan_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: darkseagreen4 (1 genes) ---
+[darkseagreen4] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkseagreen4
+[Enrichr] Saved: darkseagreen4_enrichr.xlsx
+[Enrichr] Plot saved: darkseagreen4_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: darkseagreen4_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: darkseagreen4_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: darkseagreen4_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: darkseagreen4_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: darkseagreen4_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: bisque4 (3 genes) ---
+[bisque4] Enrichr...
+[foreground] input n=3 -> cleaned unique n=3
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: bisque4
+[Enrichr] Saved: bisque4_enrichr.xlsx
+[Enrichr] Plot saved: bisque4_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: bisque4_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: bisque4_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: bisque4_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: darkolivegreen (2 genes) ---
+[darkolivegreen] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkolivegreen
+[Enrichr] Saved: darkolivegreen_enrichr.xlsx
+[Enrichr] Plot saved: darkolivegreen_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: darkolivegreen_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: darkolivegreen_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: darkolivegreen_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: darkolivegreen_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: plum2 (7 genes) ---
+[plum2] Enrichr...
+[foreground] input n=7 -> cleaned unique n=7
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: plum2
+[Enrichr] Saved: plum2_enrichr.xlsx
+[Enrichr] Plot saved: plum2_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: plum2_enrichr_GO_Molecular_Function_2025.pdf
+
+--- Enriching module: grey60 (1 genes) ---
+[grey60] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: grey60
+[Enrichr] Saved: grey60_enrichr.xlsx
+[Enrichr] Plot saved: grey60_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: grey60_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: lightyellow (2 genes) ---
+[lightyellow] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightyellow
+
+--- Enriching module: lavenderblush3 (2 genes) ---
+[lavenderblush3] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lavenderblush3
+[Enrichr] Saved: lavenderblush3_enrichr.xlsx
+[Enrichr] Plot saved: lavenderblush3_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: pink (1 genes) ---
+[pink] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: pink
+[Enrichr] Saved: pink_enrichr.xlsx
+[Enrichr] Plot saved: pink_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: pink_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: darkred (1 genes) ---
+[darkred] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkred
+
+--- Enriching module: darkorange (2 genes) ---
+[darkorange] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkorange
+[Enrichr] Saved: darkorange_enrichr.xlsx
+[Enrichr] Plot saved: darkorange_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: darkorange_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: darkorange_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: darkorange_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: darkorange_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: maroon (6 genes) ---
+[maroon] Enrichr...
+[foreground] input n=6 -> cleaned unique n=6
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: maroon
+[Enrichr] Saved: maroon_enrichr.xlsx
+[Enrichr] Plot saved: maroon_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: maroon_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: maroon_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: maroon_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: maroon_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: plum1 (1 genes) ---
+[plum1] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: plum1
+[Enrichr] Saved: plum1_enrichr.xlsx
+[Enrichr] Plot saved: plum1_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: plum1_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: plum1_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: plum1_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: plum1_enrichr_GWAS_Catalog_2025.pdf
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+--- Enriching module: grey60 (35 genes) ---
+[grey60] Enrichr...
+[foreground] input n=35 -> cleaned unique n=35
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: grey60
+[Enrichr] Saved: grey60_enrichr.xlsx
+[Enrichr] Plot saved: grey60_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: grey60_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: grey60_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: grey60_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: grey60_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: grey60_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: red (573 genes) ---
+[red] Enrichr...
+[foreground] input n=573 -> cleaned unique n=573
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: red
+[Enrichr] Saved: red_enrichr.xlsx
+[Enrichr] Plot saved: red_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: red_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: red_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: red_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: red_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: red_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: orange (13 genes) ---
+[orange] Enrichr...
+[foreground] input n=13 -> cleaned unique n=13
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: orange
+[Enrichr] Saved: orange_enrichr.xlsx
+[Enrichr] Plot saved: orange_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: orange_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: orange_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: orange_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: orange_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: orange_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: black (443 genes) ---
+[black] Enrichr...
+[foreground] input n=443 -> cleaned unique n=443
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: black
+[Enrichr] Saved: black_enrichr.xlsx
+[Enrichr] Plot saved: black_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: black_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: black_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: black_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: black_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: black_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: violet (20 genes) ---
+[violet] Enrichr...
+[foreground] input n=20 -> cleaned unique n=20
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: violet
+[Enrichr] Saved: violet_enrichr.xlsx
+[Enrichr] Plot saved: violet_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: violet_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: violet_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: violet_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: violet_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: violet_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: pink (234 genes) ---
+[pink] Enrichr...
+[foreground] input n=234 -> cleaned unique n=234
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: pink
+[Enrichr] Saved: pink_enrichr.xlsx
+[Enrichr] Plot saved: pink_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: pink_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: pink_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: pink_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: pink_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: pink_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: magenta (170 genes) ---
+[magenta] Enrichr...
+[foreground] input n=170 -> cleaned unique n=170
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+[Enrichr] Plot saved: magenta_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: magenta_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: magenta_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: magenta_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: magenta_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: magenta_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: turquoise (13421 genes) ---
+[turquoise] Enrichr...
+[foreground] input n=13421 -> cleaned unique n=13421
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+[Enrichr] Saved: turquoise_enrichr.xlsx
+[Enrichr] Plot saved: turquoise_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: turquoise_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: turquoise_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: turquoise_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: turquoise_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: turquoise_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: yellowgreen (1 genes) ---
+[yellowgreen] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellowgreen
+
+--- Enriching module: blue (9532 genes) ---
+[blue] Enrichr...
+[foreground] input n=9532 -> cleaned unique n=9532
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Saved: blue_enrichr.xlsx
+[Enrichr] Plot saved: blue_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: blue_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: sienna3 (1 genes) ---
+[sienna3] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: sienna3
+
+--- Enriching module: green (1641 genes) ---
+[green] Enrichr...
+[foreground] input n=1641 -> cleaned unique n=1641
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: green
+[Enrichr] Saved: green_enrichr.xlsx
+[Enrichr] Plot saved: green_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: green_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: green_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: green_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: green_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: green_enrichr_ClinVar_2025.pdf
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+======================================================
+Running config [list: 04_obesity_overweight]
+======================================================
+
+--- Enriching module: honeydew1 (1 genes) ---
+[honeydew1] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: honeydew1
+[Enrichr] Saved: honeydew1_enrichr.xlsx
+[Enrichr] Plot saved: honeydew1_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: honeydew1_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: honeydew1_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: honeydew1_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: honeydew1_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: lightcyan (2 genes) ---
+[lightcyan] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightcyan
+[Enrichr] Saved: lightcyan_enrichr.xlsx
+[Enrichr] Plot saved: lightcyan_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: lightcyan_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: lightcyan_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: lightcyan_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: lightcyan_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: darkorange2 (1 genes) ---
+[darkorange2] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkorange2
+[Enrichr] Saved: darkorange2_enrichr.xlsx
+[Enrichr] Plot saved: darkorange2_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: darkorange2_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: thistle2 (1 genes) ---
+[thistle2] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: thistle2
+
+--- Enriching module: yellow4 (2 genes) ---
+[yellow4] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellow4
+[Enrichr] Saved: yellow4_enrichr.xlsx
+[Enrichr] Plot saved: yellow4_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: yellow4_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: yellow4_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: yellow4_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: magenta (5 genes) ---
+[magenta] Enrichr...
+[foreground] input n=5 -> cleaned unique n=5
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+[Enrichr] Plot saved: magenta_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: magenta_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: magenta_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: magenta_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: magenta_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: magenta_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: darkgrey (2 genes) ---
+[darkgrey] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkgrey
+[Enrichr] Saved: darkgrey_enrichr.xlsx
+[Enrichr] Plot saved: darkgrey_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: darkgrey_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: darkgrey_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: maroon (6 genes) ---
+[maroon] Enrichr...
+[foreground] input n=6 -> cleaned unique n=6
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: maroon
+[Enrichr] Saved: maroon_enrichr.xlsx
+[Enrichr] Plot saved: maroon_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: maroon_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: maroon_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: maroon_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: maroon_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: plum1 (1 genes) ---
+[plum1] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: plum1
+[Enrichr] Saved: plum1_enrichr.xlsx
+[Enrichr] Plot saved: plum1_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: plum1_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: plum1_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: plum1_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: plum1_enrichr_GWAS_Catalog_2025.pdf
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+--- Enriching module: brown (8591 genes) ---
+[brown] Enrichr...
+[foreground] input n=8591 -> cleaned unique n=8591
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown
+[Enrichr] Saved: brown_enrichr.xlsx
+[Enrichr] Plot saved: brown_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: brown_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: tan (101 genes) ---
+[tan] Enrichr...
+[foreground] input n=101 -> cleaned unique n=101
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: tan
+[Enrichr] Saved: tan_enrichr.xlsx
+[Enrichr] Plot saved: tan_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: tan_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: tan_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: tan_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: tan_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: tan_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: darkgreen (26 genes) ---
+[darkgreen] Enrichr...
+[foreground] input n=26 -> cleaned unique n=26
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkgreen
+[Enrichr] Saved: darkgreen_enrichr.xlsx
+[Enrichr] Plot saved: darkgreen_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: darkgreen_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: darkgreen_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: darkgreen_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: darkgreen_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: darkgreen_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: cyan (55 genes) ---
+[cyan] Enrichr...
+[foreground] input n=55 -> cleaned unique n=55
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: cyan
+[Enrichr] Saved: cyan_enrichr.xlsx
+[Enrichr] Plot saved: cyan_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: cyan_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: cyan_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: cyan_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: cyan_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: cyan_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: darkolivegreen (1 genes) ---
+[darkolivegreen] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkolivegreen
+[Enrichr] Saved: darkolivegreen_enrichr.xlsx
+[Enrichr] Plot saved: darkolivegreen_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: darkolivegreen_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: darkolivegreen_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: darkmagenta (1 genes) ---
+[darkmagenta] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkmagenta
+
+--- Enriching module: darkgrey (47 genes) ---
+[darkgrey] Enrichr...
+[foreground] input n=47 -> cleaned unique n=47
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkgrey
+[Enrichr] Saved: darkgrey_enrichr.xlsx
+[Enrichr] Plot saved: darkgrey_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: darkgrey_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: darkgrey_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: darkgrey_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: darkgrey_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: darkgrey_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: yellow (6771 genes) ---
+[yellow] Enrichr...
+[foreground] input n=6771 -> cleaned unique n=6771
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellow
+[Enrichr] Saved: yellow_enrichr.xlsx
+[Enrichr] Plot saved: yellow_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: yellow_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: yellow_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: yellow_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: yellow_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: yellow_enrichr_ClinVar_2025.pdf
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+======================================================
+Running config [list: 09_incxrac]
+======================================================
+
+--- Enriching module: darkgreen (1 genes) ---
+[darkgreen] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkgreen
+[Enrichr] Saved: darkgreen_enrichr.xlsx
+[Enrichr] Plot saved: darkgreen_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: darkgreen_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: darkgreen_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: darkgreen_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: darkgreen_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: royalblue (3 genes) ---
+[royalblue] Enrichr...
+[foreground] input n=3 -> cleaned unique n=3
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: royalblue
+[Enrichr] Saved: royalblue_enrichr.xlsx
+[Enrichr] Plot saved: royalblue_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: royalblue_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: royalblue_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: royalblue_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: royalblue_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: royalblue_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: turquoise (9 genes) ---
+[turquoise] Enrichr...
+[foreground] input n=9 -> cleaned unique n=9
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: turquoise
+
+--- Enriching module: green (2 genes) ---
+[green] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: green
+[Enrichr] Saved: green_enrichr.xlsx
+[Enrichr] Plot saved: green_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: green_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: green_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: green_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: green_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: orangered3 (2 genes) ---
+[orangered3] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: orangered3
+[Enrichr] Saved: orangered3_enrichr.xlsx
+[Enrichr] Plot saved: orangered3_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: orangered3_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: orangered3_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: orangered3_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: darkseagreen4 (1 genes) ---
+[darkseagreen4] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkseagreen4
+[Enrichr] Saved: darkseagreen4_enrichr.xlsx
+[Enrichr] Plot saved: darkseagreen4_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: darkseagreen4_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: darkseagreen4_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: darkseagreen4_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: darkseagreen4_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: darkseagreen4_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: thistle2 (1 genes) ---
+[thistle2] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: thistle2
+
+--- Enriching module: skyblue (1 genes) ---
+[skyblue] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: skyblue
+[Enrichr] Saved: skyblue_enrichr.xlsx
+[Enrichr] Plot saved: skyblue_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: skyblue_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: skyblue_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: skyblue_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: skyblue_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: darkolivegreen (2 genes) ---
+[darkolivegreen] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkolivegreen
+[Enrichr] Saved: darkolivegreen_enrichr.xlsx
+[Enrichr] Plot saved: darkolivegreen_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: darkolivegreen_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: darkolivegreen_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: darkolivegreen_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: darkolivegreen_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: white (3 genes) ---
+[white] Enrichr...
+[foreground] input n=3 -> cleaned unique n=3
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: white
+[Enrichr] Saved: white_enrichr.xlsx
+[Enrichr] Plot saved: white_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: white_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: white_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: white_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: white_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: white_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: orange (1 genes) ---
+[orange] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: orange
+[Enrichr] Saved: orange_enrichr.xlsx
+[Enrichr] Plot saved: orange_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: orange_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: orange_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: orange_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: orange_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: brown (6 genes) ---
+[brown] Enrichr...
+[foreground] input n=6 -> cleaned unique n=6
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown
+[Enrichr] Saved: brown_enrichr.xlsx
+[Enrichr] Plot saved: brown_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: brown_enrichr_GWAS_Catalog_2025.pdf
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+--- Enriching module: magenta (170 genes) ---
+[magenta] Enrichr...
+[foreground] input n=170 -> cleaned unique n=170
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+[Enrichr] Plot saved: magenta_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: magenta_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: magenta_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: magenta_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: magenta_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: magenta_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: yellowgreen (1 genes) ---
+[yellowgreen] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellowgreen
+
+--- Enriching module: purple (123 genes) ---
+[purple] Enrichr...
+[foreground] input n=123 -> cleaned unique n=123
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: purple
+[Enrichr] Saved: purple_enrichr.xlsx
+[Enrichr] Plot saved: purple_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: purple_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: purple_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: purple_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: purple_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: purple_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: brown (8591 genes) ---
+[brown] Enrichr...
+[foreground] input n=8591 -> cleaned unique n=8591
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown
+[Enrichr] Saved: brown_enrichr.xlsx
+[Enrichr] Plot saved: brown_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: brown_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: tan (101 genes) ---
+[tan] Enrichr...
+[foreground] input n=101 -> cleaned unique n=101
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: tan
+[Enrichr] Saved: tan_enrichr.xlsx
+[Enrichr] Plot saved: tan_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: tan_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: tan_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: tan_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: tan_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: tan_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: steelblue (13 genes) ---
+[steelblue] Enrichr...
+[foreground] input n=13 -> cleaned unique n=13
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: steelblue
+[Enrichr] Saved: steelblue_enrichr.xlsx
+[Enrichr] Plot saved: steelblue_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: steelblue_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: steelblue_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: steelblue_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: steelblue_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: white (22 genes) ---
+[white] Enrichr...
+[foreground] input n=22 -> cleaned unique n=22
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: white
+[Enrichr] Saved: white_enrichr.xlsx
+[Enrichr] Plot saved: white_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: white_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: white_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: white_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: white_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: white_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: salmon (40 genes) ---
+[salmon] Enrichr...
+[foreground] input n=40 -> cleaned unique n=40
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: salmon
+[Enrichr] Saved: salmon_enrichr.xlsx
+[Enrichr] Plot saved: salmon_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: salmon_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: salmon_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: salmon_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: salmon_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: salmon_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: darkolivegreen (1 genes) ---
+[darkolivegreen] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkolivegreen
+[Enrichr] Saved: darkolivegreen_enrichr.xlsx
+[Enrichr] Plot saved: darkolivegreen_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: darkolivegreen_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: darkolivegreen_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: darkmagenta (1 genes) ---
+[darkmagenta] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkmagenta
+
+--- Enriching module: darkgrey (47 genes) ---
+[darkgrey] Enrichr...
+[foreground] input n=47 -> cleaned unique n=47
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkgrey
+[Enrichr] Saved: darkgrey_enrichr.xlsx
+[Enrichr] Plot saved: darkgrey_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: darkgrey_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: darkgrey_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: darkgrey_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: darkgrey_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: darkgrey_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: yellow (6771 genes) ---
+[yellow] Enrichr...
+[foreground] input n=6771 -> cleaned unique n=6771
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellow
+[Enrichr] Saved: yellow_enrichr.xlsx
+[Enrichr] Plot saved: yellow_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: yellow_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: yellow_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: yellow_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: yellow_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: yellow_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: lightgreen (29 genes) ---
+[lightgreen] Enrichr...
+[foreground] input n=29 -> cleaned unique n=29
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightgreen
+[Enrichr] Saved: lightgreen_enrichr.xlsx
+[Enrichr] Plot saved: lightgreen_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: lightgreen_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: lightgreen_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: lightgreen_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: lightgreen_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: lightgreen_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: sienna3 (1 genes) ---
+[sienna3] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: sienna3
+
+--- Enriching module: greenyellow (139 genes) ---
+[greenyellow] Enrichr...
+[foreground] input n=139 -> cleaned unique n=139
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: greenyellow
+[Enrichr] Saved: greenyellow_enrichr.xlsx
+[Enrichr] Plot saved: greenyellow_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: greenyellow_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: greenyellow_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: greenyellow_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: greenyellow_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: greenyellow_enrichr_ClinVar_2025.pdf
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+======================================================
+Running config [list: 10_puberty_and_menarche_variables]
+======================================================
+
+--- Enriching module: purple (2 genes) ---
+[purple] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: purple
+[Enrichr] Saved: purple_enrichr.xlsx
+[Enrichr] Plot saved: purple_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: purple_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: purple_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: purple_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: purple_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: purple_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: lightcyan (2 genes) ---
+[lightcyan] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightcyan
+[Enrichr] Saved: lightcyan_enrichr.xlsx
+[Enrichr] Plot saved: lightcyan_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: lightcyan_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: lightcyan_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: lightcyan_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: lightcyan_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: blue (2 genes) ---
+[blue] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: blue
+[Enrichr] Saved: blue_enrichr.xlsx
+[Enrichr] Plot saved: blue_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: blue_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: blue_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: darkslateblue (1 genes) ---
+[darkslateblue] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkslateblue
+
+--- Enriching module: brown4 (2 genes) ---
+[brown4] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown4
+[Enrichr] Saved: brown4_enrichr.xlsx
+[Enrichr] Plot saved: brown4_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: brown4_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: brown4_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: brown4_enrichr_KEGG_2021_Human.pdf
+
+--- Enriching module: navajowhite2 (1 genes) ---
+[navajowhite2] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: navajowhite2
+[Enrichr] Saved: navajowhite2_enrichr.xlsx
+[Enrichr] Plot saved: navajowhite2_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: navajowhite2_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: navajowhite2_enrichr_GWAS_Catalog_2025.pdf
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+--- Enriching module: magenta (170 genes) ---
+[magenta] Enrichr...
+[foreground] input n=170 -> cleaned unique n=170
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: magenta
+[Enrichr] Saved: magenta_enrichr.xlsx
+[Enrichr] Plot saved: magenta_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: magenta_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: magenta_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: magenta_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: magenta_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: magenta_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: purple (123 genes) ---
+[purple] Enrichr...
+[foreground] input n=123 -> cleaned unique n=123
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: purple
+[Enrichr] Saved: purple_enrichr.xlsx
+[Enrichr] Plot saved: purple_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: purple_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: purple_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: purple_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: purple_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: purple_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: brown (8591 genes) ---
+[brown] Enrichr...
+[foreground] input n=8591 -> cleaned unique n=8591
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: brown
+[Enrichr] Saved: brown_enrichr.xlsx
+[Enrichr] Plot saved: brown_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: brown_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: brown_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: tan (101 genes) ---
+[tan] Enrichr...
+[foreground] input n=101 -> cleaned unique n=101
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: tan
+[Enrichr] Saved: tan_enrichr.xlsx
+[Enrichr] Plot saved: tan_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: tan_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: tan_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: tan_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: tan_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: tan_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: darkorange (9 genes) ---
+[darkorange] Enrichr...
+[foreground] input n=9 -> cleaned unique n=9
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkorange
+[Enrichr] Saved: darkorange_enrichr.xlsx
+[Enrichr] Plot saved: darkorange_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: darkorange_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: darkorange_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: darkorange_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: darkorange_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: cyan (55 genes) ---
+[cyan] Enrichr...
+[foreground] input n=55 -> cleaned unique n=55
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: cyan
+[Enrichr] Saved: cyan_enrichr.xlsx
+[Enrichr] Plot saved: cyan_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: cyan_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: cyan_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: cyan_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: cyan_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: cyan_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: salmon (40 genes) ---
+[salmon] Enrichr...
+[foreground] input n=40 -> cleaned unique n=40
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: salmon
+[Enrichr] Saved: salmon_enrichr.xlsx
+[Enrichr] Plot saved: salmon_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: salmon_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: salmon_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: salmon_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: salmon_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: salmon_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: darkmagenta (1 genes) ---
+[darkmagenta] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkmagenta
+
+--- Enriching module: darkgrey (47 genes) ---
+[darkgrey] Enrichr...
+[foreground] input n=47 -> cleaned unique n=47
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: darkgrey
+[Enrichr] Saved: darkgrey_enrichr.xlsx
+[Enrichr] Plot saved: darkgrey_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: darkgrey_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: darkgrey_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: darkgrey_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: darkgrey_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: darkgrey_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: yellow (6771 genes) ---
+[yellow] Enrichr...
+[foreground] input n=6771 -> cleaned unique n=6771
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellow
+[Enrichr] Saved: yellow_enrichr.xlsx
+[Enrichr] Plot saved: yellow_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: yellow_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: yellow_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: yellow_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: yellow_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: yellow_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: greenyellow (139 genes) ---
+[greenyellow] Enrichr...
+[foreground] input n=139 -> cleaned unique n=139
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: greenyellow
+[Enrichr] Saved: greenyellow_enrichr.xlsx
+[Enrichr] Plot saved: greenyellow_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: greenyellow_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: greenyellow_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: greenyellow_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: greenyellow_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: greenyellow_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: saddlebrown (14 genes) ---
+[saddlebrown] Enrichr...
+[foreground] input n=14 -> cleaned unique n=14
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: saddlebrown
+[Enrichr] Saved: saddlebrown_enrichr.xlsx
+[Enrichr] Plot saved: saddlebrown_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: saddlebrown_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: saddlebrown_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: saddlebrown_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: saddlebrown_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: saddlebrown_enrichr_ClinVar_2025.pdf
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+
+======================================================
+Running config [list: 11_breast_cancer_outcomes]
+======================================================
+
+--- Enriching module: floralwhite (2 genes) ---
+[floralwhite] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: floralwhite
+[Enrichr] Saved: floralwhite_enrichr.xlsx
+[Enrichr] Plot saved: floralwhite_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: floralwhite_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: floralwhite_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: floralwhite_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: yellow4 (2 genes) ---
+[yellow4] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: yellow4
+[Enrichr] Saved: yellow4_enrichr.xlsx
+[Enrichr] Plot saved: yellow4_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: yellow4_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: yellow4_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: yellow4_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: navajowhite2 (1 genes) ---
+[navajowhite2] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: navajowhite2
+[Enrichr] Saved: navajowhite2_enrichr.xlsx
+[Enrichr] Plot saved: navajowhite2_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: navajowhite2_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: navajowhite2_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: orange (1 genes) ---
+[orange] Enrichr...
+[foreground] input n=1 -> cleaned unique n=1
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: orange
+[Enrichr] Saved: orange_enrichr.xlsx
+[Enrichr] Plot saved: orange_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: orange_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: orange_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: orange_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: orange_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: lavenderblush3 (2 genes) ---
+[lavenderblush3] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lavenderblush3
+[Enrichr] Saved: lavenderblush3_enrichr.xlsx
+[Enrichr] Plot saved: lavenderblush3_enrichr_GWAS_Catalog_2025.pdf
+
+--- Enriching module: lightsteelblue1 (2 genes) ---
+[lightsteelblue1] Enrichr...
+[foreground] input n=2 -> cleaned unique n=2
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: lightsteelblue1
+[Enrichr] Saved: lightsteelblue1_enrichr.xlsx
+[Enrichr] Plot saved: lightsteelblue1_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: lightsteelblue1_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: lightsteelblue1_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: lightsteelblue1_enrichr_GWAS_Catalog_2025.pdf
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot_enrichr] No data for DB: ClinVar_2025
+
+--- Enriching module: royalblue (31 genes) ---
+[royalblue] Enrichr...
+[foreground] input n=31 -> cleaned unique n=31
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: royalblue
+[Enrichr] Saved: royalblue_enrichr.xlsx
+[Enrichr] Plot saved: royalblue_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: royalblue_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: royalblue_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: royalblue_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: royalblue_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: royalblue_enrichr_ClinVar_2025.pdf
+
+--- Enriching module: salmon (40 genes) ---
+[salmon] Enrichr...
+[foreground] input n=40 -> cleaned unique n=40
+[foreground] invalid-format count=0
+[Enrichr] Attempt 1 of 5 for: salmon
+[Enrichr] Saved: salmon_enrichr.xlsx
+[Enrichr] Plot saved: salmon_enrichr_GO_Biological_Process_2025.pdf
+[Enrichr] Plot saved: salmon_enrichr_GO_Molecular_Function_2025.pdf
+[Enrichr] Plot saved: salmon_enrichr_GO_Cellular_Component_2025.pdf
+[Enrichr] Plot saved: salmon_enrichr_KEGG_2021_Human.pdf
+[Enrichr] Plot saved: salmon_enrichr_GWAS_Catalog_2025.pdf
+[Enrichr] Plot saved: salmon_enrichr_ClinVar_2025.pdf
+
+--- Summary plots (pvalue) ---
+[plot] Saved: Summary_Enrichr_GO_Biological_Process_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Molecular_Function_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GO_Cellular_Component_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_KEGG_2021_Human_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
+[plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
+There were 50 or more warnings (use warnings() to see the first 50)

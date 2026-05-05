@@ -4836,3 +4836,919 @@ Allowing parallel execution with up to 40 working processes.
  ....pre-clustering genes to determine blocks..
    Projective K-means:
    ..k-means clustering..
+   ..merging smaller clusters...
+Block sizes:
+gBlocks
+    1     2     3     4     5     6     7     8     9    10    11    12    13 
+39764 39220 38751 38737 38551 38036 34820 34720 34570 34443 32467 30884 30434 
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 1
+ ..Working on block 2 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 2
+ ..Working on block 3 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 3
+ ..Working on block 4 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 4
+ ..Working on block 5 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 5
+ ..Working on block 6 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 7 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 7
+ ..Working on block 8 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 8
+ ..Working on block 9 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 9
+ ..Working on block 10 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 10
+ ..Working on block 11 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 11
+ ..Working on block 12 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 12
+ ..Working on block 13 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 13
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.2
+     mergeCloseModules: less than two proper modules.
+      ..color levels are grey, turquoise
+      ..there is nothing to merge.
+       Calculating new MEs...
+ Calculating module eigengenes block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Projective K-means:
+   ..k-means clustering..
+   ..merging smaller clusters...
+Block sizes:
+gBlocks
+    1     2     3     4     5     6     7     8     9    10    11    12 
+39997 39991 39991 39981 39974 39955 39937 39888 39816 39798 34228 31841 
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ No significant modules detected in block 1
+ ..Working on block 2 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 9679 genes from module 1 because their KME is too low.
+     ..removing 1120 genes from module 2 because their KME is too low.
+ ..Working on block 3 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 2176 genes from module 1 because their KME is too low.
+     ..removing 376 genes from module 2 because their KME is too low.
+ ..Working on block 4 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 30294 genes from module 1 because their KME is too low.
+ ..Working on block 5 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 18766 genes from module 1 because their KME is too low.
+     ..removing 59 genes from module 2 because their KME is too low.
+ ..Working on block 6 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 24988 genes from module 1 because their KME is too low.
+ ..Working on block 7 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 15214 genes from module 1 because their KME is too low.
+ ..Working on block 8 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 20783 genes from module 1 because their KME is too low.
+     ..removing 8364 genes from module 2 because their KME is too low.
+ ..Working on block 9 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 2007 genes from module 3 because their KME is too low.
+     ..removing 51 genes from module 4 because their KME is too low.
+     ..removing 14 genes from module 5 because their KME is too low.
+ ..Working on block 10 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 6052 genes from module 1 because their KME is too low.
+     ..removing 2927 genes from module 2 because their KME is too low.
+ ..Working on block 11 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 17757 genes from module 1 because their KME is too low.
+     ..removing 155 genes from module 5 because their KME is too low.
+     ..removing 105 genes from module 6 because their KME is too low.
+     ..removing 111 genes from module 7 because their KME is too low.
+     ..removing 33 genes from module 8 because their KME is too low.
+     ..removing 11 genes from module 10 because their KME is too low.
+     ..removing 53 genes from module 11 because their KME is too low.
+     ..removing 37 genes from module 12 because their KME is too low.
+     ..removing 26 genes from module 13 because their KME is too low.
+     ..removing 15 genes from module 14 because their KME is too low.
+     ..removing 6 genes from module 15 because their KME is too low.
+     ..removing 38 genes from module 16 because their KME is too low.
+     ..removing 7 genes from module 17 because their KME is too low.
+     ..removing 5 genes from module 18 because their KME is too low.
+     ..removing 3 genes from module 20 because their KME is too low.
+     ..removing 9 genes from module 21 because their KME is too low.
+ ..Working on block 12 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 3485 genes from module 2 because their KME is too low.
+     ..removing 38 genes from module 5 because their KME is too low.
+     ..removing 68 genes from module 7 because their KME is too low.
+     ..removing 19 genes from module 12 because their KME is too low.
+     ..removing 16 genes from module 13 because their KME is too low.
+     ..removing 21 genes from module 15 because their KME is too low.
+     ..removing 28 genes from module 16 because their KME is too low.
+     ..removing 13 genes from module 18 because their KME is too low.
+     ..removing 11 genes from module 19 because their KME is too low.
+     ..removing 7 genes from module 22 because their KME is too low.
+     ..removing 7 genes from module 23 because their KME is too low.
+  ..reassigning 47 genes from module 1 to modules with higher KME.
+  ..reassigning 2 genes from module 4 to modules with higher KME.
+  ..reassigning 2 genes from module 5 to modules with higher KME.
+  ..reassigning 4 genes from module 7 to modules with higher KME.
+  ..reassigning 23 genes from module 9 to modules with higher KME.
+  ..reassigning 1 genes from module 11 to modules with higher KME.
+  ..reassigning 1 genes from module 12 to modules with higher KME.
+  ..reassigning 5 genes from module 13 to modules with higher KME.
+  ..reassigning 26 genes from module 17 to modules with higher KME.
+  ..reassigning 57 genes from module 18 to modules with higher KME.
+  ..reassigning 1 genes from module 20 to modules with higher KME.
+  ..reassigning 1 genes from module 36 to modules with higher KME.
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.2
+       Calculating new MEs...
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+[1] "4084" "4136" "4169" "4025" "4023" "4134"
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+
+############### Job 12267048 summary from hive-dc-7-10-42 ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-10-42
+Cores               : 59
+GPUs                : 0
+State               : FAILED
+ExitCode            : 1:0
+Submit              : 2026-04-15T19:18:20
+Start               : 2026-04-15T19:18:21
+End                 : 2026-04-16T00:20:12
+Reserved walltime   :   23:00:00
+Used walltime       :   05:01:51
+Used CPU time       : 7-20:51:48
+% User (Computation): 99.50%
+% System (I/O)      :  0.50%
+Mem reserved        : 700G
+Max Mem used        : 53.30G (hive-dc-7-10-42)
+Max Disk Write      : 178.34M (hive-dc-7-10-42)
+Max Disk Read       : 1.98G (hive-dc-7-10-42)
+
+############### Job 12267048 info ###############
+JobId=12267048 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8143 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0
+   RunTime=05:01:51 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-04-15T19:18:20 EligibleTime=2026-04-15T19:18:20
+   AccrueTime=2026-04-15T19:18:20
+   StartTime=2026-04-15T19:18:21 EndTime=2026-04-16T00:20:12 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-04-15T19:18:21 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-8-26:290066
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-10-42
+   BatchHost=hive-dc-7-10-42
+   NumNodes=1 NumCPUs=59 NumTasks=1 CPUs/Task=59 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=59,mem=700G,node=1,billing=59
+   AllocTRES=cpu=59,mem=700G,node=1,billing=59
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=59 MinMemoryNode=700G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=59
+   MailUser=gekuodza@ucdavis.edu,smholesinger@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 12542578 prolog ###############
+SLURM_NODELIST: hive-dc-7-8-26
+############### Job 12542578 prolog ###############
+hive-dc-7-8-26
+Sat Apr 18 04:22:27 PM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+Allowing parallel execution with up to 40 working processes.
+ Calculating module eigengenes block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Projective K-means:
+   ..k-means clustering..
+   ..merging smaller clusters...
+Block sizes:
+gBlocks
+    1     2     3     4     5     6     7     8     9    10    11    12    13 
+39764 39220 38751 38737 38551 38036 34820 34720 34570 34443 32467 30884 30434 
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 2 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 3 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 4 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 5 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 6 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 7 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 8 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 9 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 10 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 11 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 12 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 13 .
+    TOM calculation: adjacency..
+    ..will use 40 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.2
+       Calculating new MEs...
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+[1] "4084" "4136" "4169" "4025" "4023" "4134"
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+[1] "4084" "4136" "4169" "4025" "4023" "4134"
+Allowing parallel execution with up to 127 working processes.
+[1] "4084" "4136" "4169" "4025" "4023" "4134"
+Loaded sample_info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+sample_info dimensions: 173 x 47
+No sample_id_col provided.
+[2026-04-18 19:29:54] Starting annotation for variant: v1_all_pcs 
+[2026-04-18 19:29:54] modules_path: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.rds 
+[2026-04-18 19:29:54] pipeline_root: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output 
+[2026-04-18 19:29:54] step_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation 
+[2026-04-18 19:29:54] cpg_label: cov3_75pct 
+[2026-04-18 19:29:54] region_label: covMin10_methSD0p07 
+[2026-04-18 19:29:54] variant_name: v1_all_pcs 
+[2026-04-18 19:29:54] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-04-18 19:29:54] genome: hg38 
+[2026-04-18 19:29:54] annotation_mode: auto 
+[2026-04-18 19:29:54] sample_info rows: 173; cols: 47 
+[2026-04-18 19:29:54] sample_id_col: (not provided) 
+[2026-04-18 19:29:56] Loaded regions: 465397 
+[2026-04-18 19:29:56] Unique modules: 69 
+[2026-04-18 19:30:13] Annotated regions rows: 465397 
+[2026-04-18 19:30:48] Module gene list rows: 21337 
+[2026-04-18 19:30:48] Module summary rows: 69 
+[2026-04-18 19:30:48] Background genes: 21191 
+[2026-04-18 19:30:48] Finished annotation for variant: v1_all_pcs 
+[2026-04-18 19:30:48] Starting annotation for variant: v2_exclude_protected_pcs 
+[2026-04-18 19:30:48] modules_path: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.rds 
+[2026-04-18 19:30:48] pipeline_root: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output 
+[2026-04-18 19:30:48] step_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation 
+[2026-04-18 19:30:48] cpg_label: cov3_75pct 
+[2026-04-18 19:30:48] region_label: covMin10_methSD0p07 
+[2026-04-18 19:30:48] variant_name: v2_exclude_protected_pcs 
+[2026-04-18 19:30:48] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-04-18 19:30:48] genome: hg38 
+[2026-04-18 19:30:48] annotation_mode: auto 
+[2026-04-18 19:30:48] sample_info rows: 173; cols: 47 
+[2026-04-18 19:30:48] sample_id_col: (not provided) 
+[2026-04-18 19:30:49] Loaded regions: 465397 
+[2026-04-18 19:30:49] Unique modules: 37 
+[2026-04-18 19:30:59] Annotated regions rows: 465397 
+[2026-04-18 19:31:28] Module gene list rows: 62120 
+[2026-04-18 19:31:28] Module summary rows: 37 
+[2026-04-18 19:31:28] Background genes: 21191 
+[2026-04-18 19:31:29] Finished annotation for variant: v2_exclude_protected_pcs 
+project_root: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+annotation_dir_v1: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+annotation_dir_v2: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+do_kegg: FALSE
+do_go: FALSE
+do_reactome: FALSE
+do_enrichr: TRUE
+organism: hsa
+plot_p_col: pvalue
+plot_top_n: 8
+plot_sig_cutoff: 0.05
+[2026-04-18 19:31:57] Starting enrichment for variant: v1_all_pcs / list: 03_dde 
+[2026-04-18 19:31:57] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-04-18 19:31:57] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_dde 
+[2026-04-18 19:31:57] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-04-18 19:31:57] plot_p_col: pvalue 
+[2026-04-18 19:31:57] selection_mode: stats_file_plus_trait_list 
+[2026-04-18 19:31:57] selected modules count: 15 
+[2026-04-18 19:31:57] selected modules: darkgreen, orangered4, cyan, darkseagreen4, bisque4, darkolivegreen, plum2, grey60, lightyellow, lavenderblush3, pink, darkred, darkorange, maroon, plum1 
+[2026-04-18 19:31:57] Enrichr background mode disabled. 
+[2026-04-18 19:31:57] Module darkgreen: genes=1 
+[2026-04-18 19:32:03] Module orangered4: genes=1 
+[2026-04-18 19:32:08] Module cyan: genes=4 
+[2026-04-18 19:32:13] Module darkseagreen4: genes=1 
+[2026-04-18 19:32:20] Module bisque4: genes=3 
+[2026-04-18 19:32:25] Module darkolivegreen: genes=2 
+[2026-04-18 19:32:30] Module plum2: genes=7 
+[2026-04-18 19:32:34] Module grey60: genes=1 
+[2026-04-18 19:32:39] Module lightyellow: genes=2 
+[2026-04-18 19:32:44] Module lavenderblush3: genes=2 
+[2026-04-18 19:32:49] Module pink: genes=1 
+[2026-04-18 19:32:54] Module darkred: genes=1 
+[2026-04-18 19:32:59] Module darkorange: genes=2 
+[2026-04-18 19:33:04] Module maroon: genes=6 
+[2026-04-18 19:33:09] Module plum1: genes=1 
+[2026-04-18 19:33:16] Finished enrichment for variant: v1_all_pcs / list: 03_dde 
+[2026-04-18 19:33:23] Starting enrichment for variant: v2_exclude_protected_pcs / list: 03_dde 
+[2026-04-18 19:33:23] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-04-18 19:33:23] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_dde 
+[2026-04-18 19:33:23] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-04-18 19:33:23] plot_p_col: pvalue 
+[2026-04-18 19:33:23] selection_mode: stats_file_plus_trait_list 
+[2026-04-18 19:33:23] selected modules count: 12 
+[2026-04-18 19:33:23] selected modules: grey60, red, orange, black, violet, pink, magenta, turquoise, yellowgreen, blue, sienna3, green 
+[2026-04-18 19:33:23] Enrichr background mode disabled. 
+[2026-04-18 19:33:23] Module grey60: genes=35 
+[2026-04-18 19:33:28] Module red: genes=573 
+[2026-04-18 19:33:35] Module orange: genes=13 
+[2026-04-18 19:33:40] Module black: genes=443 
+[2026-04-18 19:33:47] Module violet: genes=20 
+[2026-04-18 19:33:52] Module pink: genes=234 
+[2026-04-18 19:33:58] Module magenta: genes=170 
+[2026-04-18 19:34:04] Module turquoise: genes=13421 
+[2026-04-18 19:34:52] Module yellowgreen: genes=1 
+[2026-04-18 19:34:57] Module blue: genes=9532 
+[2026-04-18 19:35:30] Module sienna3: genes=1 
+[2026-04-18 19:35:34] Module green: genes=1641 
+[2026-04-18 19:35:48] Finished enrichment for variant: v2_exclude_protected_pcs / list: 03_dde 
+[2026-04-18 19:35:55] Starting enrichment for variant: v1_all_pcs / list: 04_obesity_overweight 
+[2026-04-18 19:35:55] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-04-18 19:35:55] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_obesity_overweight 
+[2026-04-18 19:35:55] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-04-18 19:35:55] plot_p_col: pvalue 
+[2026-04-18 19:35:55] selection_mode: stats_file_plus_trait_list 
+[2026-04-18 19:35:55] selected modules count: 9 
+[2026-04-18 19:35:55] selected modules: honeydew1, lightcyan, darkorange2, thistle2, yellow4, magenta, darkgrey, maroon, plum1 
+[2026-04-18 19:35:55] Enrichr background mode disabled. 
+[2026-04-18 19:35:55] Module honeydew1: genes=1 
+[2026-04-18 19:36:00] Module lightcyan: genes=2 
+[2026-04-18 19:36:07] Module darkorange2: genes=1 
+[2026-04-18 19:36:17] Module thistle2: genes=1 
+[2026-04-18 19:36:21] Module yellow4: genes=2 
+[2026-04-18 19:36:26] Module magenta: genes=5 
+[2026-04-18 19:36:31] Module darkgrey: genes=2 
+[2026-04-18 19:36:36] Module maroon: genes=6 
+[2026-04-18 19:36:41] Module plum1: genes=1 
+[2026-04-18 19:36:47] Finished enrichment for variant: v1_all_pcs / list: 04_obesity_overweight 
+[2026-04-18 19:36:54] Starting enrichment for variant: v2_exclude_protected_pcs / list: 04_obesity_overweight 
+[2026-04-18 19:36:54] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-04-18 19:36:54] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_obesity_overweight 
+[2026-04-18 19:36:54] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-04-18 19:36:54] plot_p_col: pvalue 
+[2026-04-18 19:36:54] selection_mode: stats_file_plus_trait_list 
+[2026-04-18 19:36:54] selected modules count: 8 
+[2026-04-18 19:36:54] selected modules: brown, tan, darkgreen, cyan, darkolivegreen, darkmagenta, darkgrey, yellow 
+[2026-04-18 19:36:54] Enrichr background mode disabled. 
+[2026-04-18 19:36:54] Module brown: genes=8591 
+[2026-04-18 19:37:22] Module tan: genes=101 
+[2026-04-18 19:37:28] Module darkgreen: genes=26 
+[2026-04-18 19:37:33] Module cyan: genes=55 
+[2026-04-18 19:37:38] Module darkolivegreen: genes=1 
+[2026-04-18 19:37:43] Module darkmagenta: genes=1 
+[2026-04-18 19:37:48] Module darkgrey: genes=47 
+[2026-04-18 19:37:55] Module yellow: genes=6771 
+[2026-04-18 19:38:21] Finished enrichment for variant: v2_exclude_protected_pcs / list: 04_obesity_overweight 
+[2026-04-18 19:38:28] Starting enrichment for variant: v1_all_pcs / list: 09_incxrac 
+[2026-04-18 19:38:28] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-04-18 19:38:28] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/09_incxrac 
+[2026-04-18 19:38:28] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-04-18 19:38:28] plot_p_col: pvalue 
+[2026-04-18 19:38:28] selection_mode: stats_file_plus_trait_list 
+[2026-04-18 19:38:28] selected modules count: 12 
+[2026-04-18 19:38:28] selected modules: darkgreen, royalblue, turquoise, green, orangered3, darkseagreen4, thistle2, skyblue, darkolivegreen, white, orange, brown 
+[2026-04-18 19:38:28] Enrichr background mode disabled. 
+[2026-04-18 19:38:28] Module darkgreen: genes=1 
+[2026-04-18 19:38:33] Module royalblue: genes=3 
+[2026-04-18 19:38:39] Module turquoise: genes=9 
+[2026-04-18 19:38:43] Module green: genes=2 
+[2026-04-18 19:38:49] Module orangered3: genes=2 
+[2026-04-18 19:38:54] Module darkseagreen4: genes=1 
+[2026-04-18 19:38:59] Module thistle2: genes=1 
+[2026-04-18 19:39:04] Module skyblue: genes=1 
+[2026-04-18 19:39:09] Module darkolivegreen: genes=2 
+[2026-04-18 19:39:14] Module white: genes=3 
+[2026-04-18 19:39:19] Module orange: genes=1 
+[2026-04-18 19:39:24] Module brown: genes=6 
+[2026-04-18 19:39:30] Finished enrichment for variant: v1_all_pcs / list: 09_incxrac 
+[2026-04-18 19:39:37] Starting enrichment for variant: v2_exclude_protected_pcs / list: 09_incxrac 
+[2026-04-18 19:39:37] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-04-18 19:39:37] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/09_incxrac 
+[2026-04-18 19:39:37] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-04-18 19:39:37] plot_p_col: pvalue 
+[2026-04-18 19:39:37] selection_mode: stats_file_plus_trait_list 
+[2026-04-18 19:39:37] selected modules count: 15 
+[2026-04-18 19:39:37] selected modules: magenta, yellowgreen, purple, brown, tan, steelblue, white, salmon, darkolivegreen, darkmagenta, darkgrey, yellow, lightgreen, sienna3, greenyellow 
+[2026-04-18 19:39:37] Enrichr background mode disabled. 
+[2026-04-18 19:39:37] Module magenta: genes=170 
+[2026-04-18 19:39:42] Module yellowgreen: genes=1 
+[2026-04-18 19:39:46] Module purple: genes=123 
+[2026-04-18 19:39:52] Module brown: genes=8591 
+[2026-04-18 19:40:12] Module tan: genes=101 
+[2026-04-18 19:40:17] Module steelblue: genes=13 
+[2026-04-18 19:40:23] Module white: genes=22 
+[2026-04-18 19:40:28] Module salmon: genes=40 
+[2026-04-18 19:40:33] Module darkolivegreen: genes=1 
+[2026-04-18 19:40:38] Module darkmagenta: genes=1 
+[2026-04-18 19:40:42] Module darkgrey: genes=47 
+[2026-04-18 19:40:50] Module yellow: genes=6771 
+[2026-04-18 19:41:07] Module lightgreen: genes=29 
+[2026-04-18 19:41:12] Module sienna3: genes=1 
+[2026-04-18 19:41:16] Module greenyellow: genes=139 
+[2026-04-18 19:41:26] Finished enrichment for variant: v2_exclude_protected_pcs / list: 09_incxrac 
+[2026-04-18 19:41:32] Starting enrichment for variant: v1_all_pcs / list: 10_puberty_and_menarche_variables 
+[2026-04-18 19:41:32] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-04-18 19:41:32] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/10_puberty_and_menarche_variables 
+[2026-04-18 19:41:32] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-04-18 19:41:32] plot_p_col: pvalue 
+[2026-04-18 19:41:32] selection_mode: stats_file_plus_trait_list 
+[2026-04-18 19:41:32] selected modules count: 6 
+[2026-04-18 19:41:32] selected modules: purple, lightcyan, blue, darkslateblue, brown4, navajowhite2 
+[2026-04-18 19:41:32] Enrichr background mode disabled. 
+[2026-04-18 19:41:32] Module purple: genes=2 
+[2026-04-18 19:41:38] Module lightcyan: genes=2 
+[2026-04-18 19:41:44] Module blue: genes=2 
+[2026-04-18 19:41:49] Module darkslateblue: genes=1 
+[2026-04-18 19:41:54] Module brown4: genes=2 
+[2026-04-18 19:41:59] Module navajowhite2: genes=1 
+[2026-04-18 19:42:05] Finished enrichment for variant: v1_all_pcs / list: 10_puberty_and_menarche_variables 
+[2026-04-18 19:42:11] Starting enrichment for variant: v2_exclude_protected_pcs / list: 10_puberty_and_menarche_variables 
+[2026-04-18 19:42:11] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-04-18 19:42:11] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/10_puberty_and_menarche_variables 
+[2026-04-18 19:42:11] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-04-18 19:42:11] plot_p_col: pvalue 
+[2026-04-18 19:42:11] selection_mode: stats_file_plus_trait_list 
+[2026-04-18 19:42:11] selected modules count: 12 
+[2026-04-18 19:42:11] selected modules: magenta, purple, brown, tan, darkorange, cyan, salmon, darkmagenta, darkgrey, yellow, greenyellow, saddlebrown 
+[2026-04-18 19:42:11] Enrichr background mode disabled. 
+[2026-04-18 19:42:11] Module magenta: genes=170 
+[2026-04-18 19:42:16] Module purple: genes=123 
+[2026-04-18 19:42:22] Module brown: genes=8591 
+[2026-04-18 19:42:42] Module tan: genes=101 
+[2026-04-18 19:42:47] Module darkorange: genes=9 
+[2026-04-18 19:42:52] Module cyan: genes=55 
+[2026-04-18 19:42:58] Module salmon: genes=40 
+[2026-04-18 19:43:03] Module darkmagenta: genes=1 
+[2026-04-18 19:43:07] Module darkgrey: genes=47 
+[2026-04-18 19:43:15] Module yellow: genes=6771 
+[2026-04-18 19:43:31] Module greenyellow: genes=139 
+[2026-04-18 19:43:37] Module saddlebrown: genes=14 
+[2026-04-18 19:43:45] Finished enrichment for variant: v2_exclude_protected_pcs / list: 10_puberty_and_menarche_variables 
+[2026-04-18 19:43:52] Starting enrichment for variant: v1_all_pcs / list: 11_breast_cancer_outcomes 
+[2026-04-18 19:43:52] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-04-18 19:43:52] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/11_breast_cancer_outcomes 
+[2026-04-18 19:43:52] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-04-18 19:43:52] plot_p_col: pvalue 
+[2026-04-18 19:43:52] selection_mode: stats_file_plus_trait_list 
+[2026-04-18 19:43:52] selected modules count: 6 
+[2026-04-18 19:43:52] selected modules: floralwhite, yellow4, navajowhite2, orange, lavenderblush3, lightsteelblue1 
+[2026-04-18 19:43:52] Enrichr background mode disabled. 
+[2026-04-18 19:43:52] Module floralwhite: genes=2 
+[2026-04-18 19:43:57] Module yellow4: genes=2 
+[2026-04-18 19:44:02] Module navajowhite2: genes=1 
+[2026-04-18 19:44:07] Module orange: genes=1 
+[2026-04-18 19:44:13] Module lavenderblush3: genes=2 
+[2026-04-18 19:44:18] Module lightsteelblue1: genes=2 
+[2026-04-18 19:44:24] Finished enrichment for variant: v1_all_pcs / list: 11_breast_cancer_outcomes 
+[2026-04-18 19:44:30] Starting enrichment for variant: v2_exclude_protected_pcs / list: 11_breast_cancer_outcomes 
+[2026-04-18 19:44:30] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-04-18 19:44:30] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/11_breast_cancer_outcomes 
+[2026-04-18 19:44:30] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-04-18 19:44:30] plot_p_col: pvalue 
+[2026-04-18 19:44:30] selection_mode: stats_file_plus_trait_list 
+[2026-04-18 19:44:30] selected modules count: 2 
+[2026-04-18 19:44:30] selected modules: royalblue, salmon 
+[2026-04-18 19:44:30] Enrichr background mode disabled. 
+[2026-04-18 19:44:30] Module royalblue: genes=31 
+[2026-04-18 19:44:36] Module salmon: genes=40 
+[2026-04-18 19:44:42] Finished enrichment for variant: v2_exclude_protected_pcs / list: 11_breast_cancer_outcomes 
+
+Script 12b complete: Enrichment finished
+Fatal error: cannot open file '/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/comethyl_scripts/13A_core_regulatory_state_overlap.R': No such file or directory
+
+############### Job 12542578 summary from hive-dc-7-8-26 ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : genome-center-grp
+Partition           : high
+Nodes               : hive-dc-7-8-26
+Cores               : 59
+GPUs                : 0
+State               : FAILED
+ExitCode            : 2:0
+Submit              : 2026-04-18T16:22:26
+Start               : 2026-04-18T16:22:27
+End                 : 2026-04-18T19:44:44
+Reserved walltime   :   23:00:00
+Used walltime       :   03:22:17
+Used CPU time       : 4-00:21:27
+% User (Computation): 99.45%
+% System (I/O)      :  0.55%
+Mem reserved        : 700G
+Max Mem used        : 44.53G (hive-dc-7-8-26)
+Max Disk Write      : 1.72G (hive-dc-7-8-26)
+Max Disk Read       : 4.09G (hive-dc-7-8-26)
+
+############### Job 12542578 info ###############
+JobId=12542578 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=6517 Nice=0 Account=genome-center-grp QOS=genome-center-grp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=2:0
+   RunTime=03:22:17 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-04-18T16:22:26 EligibleTime=2026-04-18T16:22:26
+   AccrueTime=2026-04-18T16:22:26
+   StartTime=2026-04-18T16:22:27 EndTime=2026-04-18T19:44:44 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-04-18T16:22:27 Scheduler=Main
+   Partition=high AllocNode:Sid=hive-dc-7-7-30:4164968
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-8-26
+   BatchHost=hive-dc-7-8-26
+   NumNodes=1 NumCPUs=59 NumTasks=1 CPUs/Task=59 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=59,mem=700G,node=1,billing=59
+   AllocTRES=cpu=59,mem=700G,node=1,billing=59
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=59 MinMemoryNode=700G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=59
+   MailUser=gekuodza@ucdavis.edu,smholesinger@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT
