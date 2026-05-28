@@ -111,11 +111,27 @@ stop_if_missing <- function(x, label) {
 }
 
 validate_file_exists <- function(path, label) {
-  if (!file.exists(path)) stop(label, " not found: ", path, call. = FALSE)
+  if (is.null(path) || length(path) == 0 || is.na(path) || !nzchar(as.character(path))) {
+    stop(label, " is missing or invalid. Received: ",
+         paste(capture.output(str(path)), collapse = " "), call. = FALSE)
+  }
+  path <- as.character(path)
+  if (!file.exists(path) || dir.exists(path)) {
+    stop(label, " not found as a file: ", path, call. = FALSE)
+  }
+  invisible(normalizePath(path, mustWork = TRUE))
 }
 
 validate_dir_exists <- function(path, label) {
-  if (!dir.exists(path)) stop(label, " not found: ", path, call. = FALSE)
+  if (is.null(path) || length(path) == 0 || is.na(path) || !nzchar(as.character(path))) {
+    stop(label, " is missing or invalid. Received: ",
+         paste(capture.output(str(path)), collapse = " "), call. = FALSE)
+  }
+  path <- as.character(path)
+  if (!dir.exists(path)) {
+    stop(label, " not found as a directory: ", path, call. = FALSE)
+  }
+  invisible(normalizePath(path, mustWork = TRUE))
 }
 
 timestamp_now <- function() format(Sys.time(), "%Y-%m-%d %H:%M:%S")
@@ -155,18 +171,25 @@ qc_gene_list <- function(x, label = "genes") {
 #                                  named by tools::file_path_sans_ext(basename(...))
 # ============================================================
 resolve_list_input <- function(path) {
-  if (is.null(path)) return(NULL)
+  if (is.null(path) || length(path) == 0 || is.na(path) || !nzchar(as.character(path))) {
+    return(NULL)
+  }
+
+  path <- as.character(path)
 
   if (file.exists(path) && !dir.exists(path)) {
-    return(setNames(normalizePath(path), ""))
+    # Single-file mode: no additional output subfolder is created.
+    return(setNames(normalizePath(path, mustWork = TRUE), ""))
   }
 
   if (dir.exists(path)) {
+    # Directory mode: each .txt file is processed separately.
+    # Output is written to a subfolder named after the text-file stem.
     txts <- sort(list.files(path, pattern = "\\.txt$", full.names = TRUE))
     if (length(txts) == 0)
       stop("Directory provided for list file contains no .txt files: ", path, call. = FALSE)
     stems <- tools::file_path_sans_ext(basename(txts))
-    return(setNames(normalizePath(txts), stems))
+    return(setNames(normalizePath(txts, mustWork = TRUE), stems))
   }
 
   stop("Path does not exist as a file or directory: ", path, call. = FALSE)
@@ -175,14 +198,21 @@ resolve_list_input <- function(path) {
 # ============================================================
 # 2b) Input readers
 # ============================================================
-read_module_list_file <- function(path) {
+read_clean_txt_list <- function(path) {
+  validate_file_exists(path, basename(path))
   x <- readLines(path, warn = FALSE)
-  unique(trimws(x[nzchar(trimws(x))]))
+  x <- trimws(x)
+  x <- x[nzchar(x)]
+  x <- x[!grepl("^#", x)]   # allow comment lines in list files
+  unique(x)
+}
+
+read_module_list_file <- function(path) {
+  read_clean_txt_list(path)
 }
 
 read_trait_list_file <- function(path) {
-  x <- readLines(path, warn = FALSE)
-  unique(trimws(x[nzchar(trimws(x))]))
+  read_clean_txt_list(path)
 }
 
 load_annotation_files <- function(annotation_dir) {
@@ -1082,11 +1112,12 @@ if (!is.null(module_list_files)) {
 } else {
   if (is.null(trait_list_files))
     stop("Provide --module_list_file OR --trait_list_file with stats_file(s).", call. = FALSE)
+
+  # Trait-list mode requires a matching stats file for every annotation variant
+  # that will be run. This avoids vague file.exists(NULL) errors.
   validate_file_exists(stats_file_v1, "stats_file_v1")
-  if (!is.null(annotation_dir_v2) && is.null(stats_file_v2))
-    stop("annotation_dir_v2 provided but stats_file_v2 missing.", call. = FALSE)
-  if (!is.null(annotation_dir_v3) && is.null(stats_file_v3))
-    stop("annotation_dir_v3 provided but stats_file_v3 missing.", call. = FALSE)
+  if (!is.null(annotation_dir_v2)) validate_file_exists(stats_file_v2, "stats_file_v2")
+  if (!is.null(annotation_dir_v3)) validate_file_exists(stats_file_v3, "stats_file_v3")
 }
 
 if (do_enrichr) {
@@ -1112,6 +1143,12 @@ cat("organism: ",        organism,        "\n", sep = "")
 cat("plot_p_col: ",      plot_p_col,      "\n", sep = "")
 cat("plot_top_n: ",      plot_top_n,      "\n", sep = "")
 cat("plot_sig_cutoff: ", plot_sig_cutoff, "\n", sep = "")
+if (!is.null(module_list_files)) {
+  cat("module list inputs: ", paste(names(module_list_files), basename(module_list_files), sep = "=", collapse = "; "), "\n", sep = "")
+}
+if (!is.null(trait_list_files)) {
+  cat("trait list inputs: ", paste(names(trait_list_files), basename(trait_list_files), sep = "=", collapse = "; "), "\n", sep = "")
+}
 
 # ============================================================
 # 15) Build the list of (stem, module_list_file, trait_list) combos to iterate

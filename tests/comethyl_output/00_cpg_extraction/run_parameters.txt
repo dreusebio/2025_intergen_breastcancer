@@ -3,4 +3,4 @@ meta_file: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_Ge
 cyto_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/data/processed/cytosine_reports
 workers: 4
 output_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/comethyl_output/00_cpg_extraction
-date: 2026-04-06 16:52:30.96822
+date: 2026-05-05 16:29:16.828725

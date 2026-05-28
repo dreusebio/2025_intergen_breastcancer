@@ -581,8 +581,8 @@ plotMEtraitCor <- function(MEtraitCor,
                            label.type = c("star", "p"), label.size = 8,
                            label.nudge_y = -0.38,
                            colors = blueWhiteRed(100, gamma = 0.9), limit = NULL,
-                           axis.text.size = 12, legend.position = c(1.08, 0.915),
-                           legend.text.size = 12, legend.title.size = 16,
+                           axis.text.size = 18, legend.position = c(1.08, 0.915),
+                           legend.text.size = 18, legend.title.size = 18,
                            colColorMargins = c(-0.7,4.21,1.2,11.07),
                            save = TRUE,
                            file = "ME_Trait_Correlation_Heatmap.pdf",
@@ -591,7 +591,7 @@ plotMEtraitCor <- function(MEtraitCor,
                            showColorBar = TRUE,
                            showColorBarLabels = TRUE,             # add names on boxes
                            colorBarLabelPos = c("inside","below"),
-                           colorBarLabelSize = 3.2,
+                           colorBarLabelSize = 4,                 # font size of the names on the color boxes
                            colorBarLabelAngle = 90,                # 90 = vertical
                            colorBarRelHeight = 0.10,               # bar height rel to heatmap
                            syncWidths = TRUE,                      # force exact alignment

@@ -48,7 +48,7 @@ export VECLIB_MAXIMUM_THREADS=$SLURM_CPUS_PER_TASK
 export NUMEXPR_NUM_THREADS=$SLURM_CPUS_PER_TASK
 
 # Move into Pixi workspace
-cd /quobyte/lasallegrp/projects/bgw_wgbs_comethyl/reproducibility/pixi
+cd /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/reproducibility/pixi
 
 # Sanity check
 pixi run Rscript --vanilla -e 'cat("R version:", R.version.string, "\n"); library(comethyl); cat("comethyl OK\n")'
@@ -90,7 +90,9 @@ pixi run Rscript /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comet
   --input_bs /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/comethyl_output/01_filter_regions/cov3_75pct/Filtered_BSseq.rds \
   --input_regions /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/comethyl_output/02_filter_regions/cov3_75pct/covMin4_methSD0p08/Filtered_Regions.txt
 
-#sylvia run up to here
+
+
+
 # Script 04
 pixi run Rscript /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/scripts/comethyl_scripts/04_pcs_and_trait_diagnostics.R \
   --project_root /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests \
@@ -123,11 +125,12 @@ pixi run Rscript /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comet
   --project_root /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests \
   --input_v1 /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Adjusted_Region_Methylation_allPCs.rds \
   --input_v2 /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds \
-  --input_v3 /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Adjusted_Region_Methylation_technicalPCs_only.rds \
   --softpower_cor pearson \
   --power_min 1 \
   --power_max 20 \
   --threads 4
+  
+#  #--input_v3 /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin4_methSD0p08/v3_technical_pcs_only/Adjusted_Region_Methylation_technicalPCs_only.rds \
 
 # Script 07
 pixi run Rscript /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/scripts/comethyl_scripts/07_module_detection.R \
@@ -147,10 +150,11 @@ pixi run Rscript /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comet
 pixi run Rscript /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/scripts/comethyl_scripts/08_module__sample_diagnostics.R \
   --project_root /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests \
   --modules_v1 /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v1_all_pcs/Modules.rds \
-  --modules_v2 /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds \
   --module_cor pearson \
   --sample_dendro_distance euclidean \
   --sample_info /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/data/metadata/Intergen173.xlsx
+
+ #--modules_v2 /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/comethyl_output/07_module_detection/cov3_75pct/covMin4_methSD0p08/v2_exclude_protected_pcs/Modules.rds \
 
  
 #script 09a
@@ -246,15 +250,16 @@ pixi run Rscript /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comet
   --plot_top_n 10 \
   --plot_sig_cutoff 0.05
 
-# Script 13a
-pixi run Rscript /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/scripts/comethyl_scripts/13A_core_regulatory_state_overlap.R \
-  --project_root /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests \
-  --region_version covMin4_methSD0p08 \
-  --annotation_dir_v2 /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/comethyl_output/12_annotation/covMin4_methSD0p08/v2_exclude_protected_pcs \
-  --modules turquoise \
-  --source roadmap 
+#not working
+# # Script 13a
+# pixi run Rscript /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/scripts/comethyl_scripts/13A_core_regulatory_state_overlap.R \
+#   --project_root /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests \
+#   --region_version covMin4_methSD0p08 \
+#   --annotation_dir_v2 /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/comethyl_output/12_annotation/covMin4_methSD0p08/v2_exclude_protected_pcs \
+#   --modules turquoise \
+#   --source roadmap 
 
-  --annotation_dir_v1 /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/comethyl_output/12_annotation/covMin4_methSD0p08/v1_all_pcs \
+#   --annotation_dir_v1 /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/tests/comethyl_output/12_annotation/covMin4_methSD0p08/v1_all_pcs \
 
 # Script 14
 end=$(date +%s)

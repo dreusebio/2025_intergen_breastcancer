@@ -26,6 +26,12 @@
 #   --sample_dendro_distance: distance for sample dendrogram:
 #                             euclidean, pearson, or bicor [default = euclidean]
 #   --max_p_outliers        : maxPOutliers for bicor calls [default = 0.1]
+#   --enforce_min_module_size : TRUE/FALSE. If TRUE, Script 08 reads the
+#                              min_module_size recorded by Script 07 and
+#                              reassigns smaller non-grey modules to grey
+#                              [default = TRUE]
+#   --min_module_size_check  : optional manual override; otherwise auto-read
+#                              from Script 07 run_parameters.txt
 #
 # OUTPUTS
 #   project_root/comethyl_output/08_module_and_sample_diagnostics/<cpg_label>/<region_label>/<variant>/
@@ -35,15 +41,24 @@
 #       Sample_ME_Dendrogram.pdf
 #       Sample_Correlation_Heatmap.pdf
 #       Sample_ME_Heatmap.pdf
+#       Modules_minSizeQC.rds
+#       Modules_for_downstream.rds
+#       Module_Size_QC_before.tsv
+#       Module_Size_QC_after.tsv
+#       Module_Size_QC_summary.txt
+#       ME_Region_Consistency_QC.txt
 #       run_parameters.txt
 #
 # NOTES
-#   - Grey module (MEgrey) is removed before plotting.
-#   - All plot calls are wrapped in tryCatch() so one failure does
-#     not halt the rest of the script.
-#   - Sample-level plots use transpose = FALSE when computing
-#     dendrograms and correlations from the ME matrix because
-#     MEs are stored as samples x modules.
+#   - The post-detection minimum module-size threshold is read from Script 07
+#     run_parameters.txt. If Script 07 used min_module_size: 10, Script 08 uses 10.
+#   - Small non-grey modules are reassigned to grey before downstream use.
+#   - Orphan ME columns are removed. This handles both ME-prefixed columns
+#     such as MEdarkmagenta and unprefixed columns such as darkmagenta.
+#   - Grey module columns are removed before plotting, whether named grey or MEgrey.
+#   - All plot calls are wrapped in tryCatch() so one failure does not halt the script.
+#   - Sample-level plots use transpose = FALSE when computing dendrograms and
+#     correlations from the ME matrix because MEs are stored as samples x modules.
 # ================================================================
 message("Starting Script 08")
 
@@ -98,6 +113,255 @@ validate_modules_object <- function(x, label) {
   x
 }
 
+parse_run_parameters <- function(file) {
+  if (is.null(file) || is.na(file) || !file.exists(file)) return(list())
+  lines <- readLines(file, warn = FALSE)
+  lines <- lines[nzchar(trimws(lines))]
+
+  out <- list()
+  for (ln in lines) {
+    # Supports both "key: value" and "key\tvalue" formats.
+    if (grepl("\t", ln)) {
+      parts <- strsplit(ln, "\t", fixed = FALSE)[[1]]
+      key <- trimws(parts[1])
+      val <- trimws(paste(parts[-1], collapse = "\t"))
+    } else if (grepl(":", ln, fixed = TRUE)) {
+      key <- trimws(sub(":.*$", "", ln))
+      val <- trimws(sub("^[^:]*:", "", ln))
+    } else {
+      next
+    }
+    if (nzchar(key)) out[[key]] <- val
+  }
+  out
+}
+
+infer_script07_run_parameters_file <- function(modules_file, explicit_file = NULL) {
+  if (!is.null(explicit_file) && nzchar(explicit_file)) {
+    if (!file.exists(explicit_file)) stop("script07_run_parameters_file not found: ", explicit_file)
+    return(explicit_file)
+  }
+
+  variant_dir <- dirname(modules_file)
+  step_dir <- dirname(variant_dir)
+
+  candidates <- c(
+    file.path(variant_dir, "run_parameters.txt"),
+    file.path(step_dir, "run_parameters.txt")
+  )
+  candidates[file.exists(candidates)][1]
+}
+
+get_script07_min_module_size <- function(modules_file,
+                                         explicit_params_file = NULL,
+                                         fallback = NA_integer_) {
+  params_file <- infer_script07_run_parameters_file(modules_file, explicit_params_file)
+
+  if (is.na(params_file) || is.null(params_file) || !nzchar(params_file)) {
+    return(list(min_module_size = fallback, params_file = NA_character_))
+  }
+
+  params <- parse_run_parameters(params_file)
+  val <- suppressWarnings(as.integer(params$min_module_size))
+
+  if (is.na(val)) {
+    return(list(min_module_size = fallback, params_file = params_file))
+  }
+
+  list(min_module_size = val, params_file = params_file)
+}
+
+get_module_column <- function(modules) {
+  if (is.null(modules$regions) || !is.data.frame(modules$regions)) {
+    stop("Modules object is missing $regions as a data.frame; cannot enforce module-size QC.")
+  }
+
+  candidate_cols <- c("module", "Module", "color", "colour", "module_color", "moduleColor")
+  hit <- candidate_cols[candidate_cols %in% colnames(modules$regions)][1]
+
+  if (is.na(hit)) {
+    stop("modules$regions does not contain a recognizable module/color column. Expected one of: ",
+         paste(candidate_cols, collapse = ", "))
+  }
+
+  hit
+}
+
+write_module_size_table <- function(counts, file) {
+  df <- data.frame(
+    module = names(counts),
+    n_regions = as.integer(counts),
+    stringsAsFactors = FALSE
+  )
+  df <- df[order(df$n_regions, df$module), , drop = FALSE]
+  write.table(df, file, sep = "\t", quote = FALSE, row.names = FALSE)
+  invisible(df)
+}
+
+me_col_to_module <- function(me_cols) {
+  # Handles both common formats:
+  #   WGCNA-style: MEblue, MEgrey
+  #   comethyl-style in this pipeline: blue, grey
+  sub("^ME", "", as.character(me_cols))
+}
+
+synchronize_me_columns_with_regions <- function(modules,
+                                                variant_name,
+                                                variant_out_dir,
+                                                modules_file = NA_character_) {
+  module_col <- get_module_column(modules)
+
+  valid_modules <- unique(as.character(modules$regions[[module_col]]))
+  valid_modules <- valid_modules[!is.na(valid_modules) & valid_modules != ""]
+
+  me_cols <- colnames(modules$MEs)
+  me_modules <- me_col_to_module(me_cols)
+
+  keep_cols <- me_modules %in% valid_modules
+  orphan_me_cols <- me_cols[!keep_cols]
+  orphan_me_modules <- me_modules[!keep_cols]
+
+  missing_me_modules <- setdiff(valid_modules, me_modules[keep_cols])
+
+  if (length(orphan_me_cols) > 0) {
+    message("[", variant_name, "] Dropping orphan ME columns not present in modules$regions$", module_col, ": ",
+            paste(orphan_me_cols, collapse = ", "))
+    modules$MEs <- as.matrix(modules$MEs[, keep_cols, drop = FALSE])
+  } else {
+    message("[", variant_name, "] No orphan ME columns found; MEs and region modules are consistent.")
+  }
+
+  writeLines(
+    c(
+      paste("variant_name:", variant_name),
+      paste("modules_file_input:", modules_file),
+      paste("module_column_used:", module_col),
+      paste("n_region_modules:", length(valid_modules)),
+      paste("n_ME_columns_before_sync:", length(me_cols)),
+      paste("n_ME_columns_after_sync:", ncol(modules$MEs)),
+      paste("orphan_ME_columns_dropped:",
+            ifelse(length(orphan_me_cols) == 0, "NONE", paste(orphan_me_cols, collapse = ", "))),
+      paste("orphan_ME_modules_dropped:",
+            ifelse(length(orphan_me_modules) == 0, "NONE", paste(orphan_me_modules, collapse = ", "))),
+      paste("region_modules_without_ME_column:",
+            ifelse(length(missing_me_modules) == 0, "NONE", paste(missing_me_modules, collapse = ", "))),
+      paste("date:", as.character(Sys.time()))
+    ),
+    con = file.path(variant_out_dir, "ME_Region_Consistency_QC.txt")
+  )
+
+  list(
+    modules = modules,
+    module_col = module_col,
+    orphan_me_cols = orphan_me_cols,
+    orphan_me_modules = orphan_me_modules,
+    missing_me_modules = missing_me_modules
+  )
+}
+
+enforce_modules_min_size <- function(modules,
+                                     min_module_size,
+                                     variant_name,
+                                     variant_out_dir,
+                                     modules_file,
+                                     overwrite_modules_rds = FALSE) {
+  if (is.na(min_module_size) || !is.finite(min_module_size)) {
+    stop("Cannot enforce minimum module size because min_module_size is NA. Check Script 07 run_parameters.txt.")
+  }
+  min_module_size <- as.integer(min_module_size)
+  if (min_module_size < 2) stop("min_module_size must be >= 2 for module-size QC.")
+
+  module_col <- get_module_column(modules)
+  module_vec <- as.character(modules$regions[[module_col]])
+  module_vec[is.na(module_vec) | module_vec == ""] <- "grey"
+
+  counts_before <- sort(table(module_vec), decreasing = TRUE)
+  write_module_size_table(counts_before,
+                          file.path(variant_out_dir, "Module_Size_QC_before.tsv"))
+
+  non_grey <- names(counts_before)[!tolower(names(counts_before)) %in% "grey"]
+  small_modules <- non_grey[as.integer(counts_before[non_grey]) < min_module_size]
+
+  if (length(small_modules) > 0) {
+    message("[", variant_name, "] Reassigning ", length(small_modules),
+            " module(s) smaller than Script 07 min_module_size=", min_module_size,
+            " to grey: ", paste(small_modules, collapse = ", "))
+
+    module_vec[module_vec %in% small_modules] <- "grey"
+    modules$regions[[module_col]] <- module_vec
+
+    # If a separate color vector exists and has the same length as regions, keep it consistent.
+    if (!is.null(modules$colors) && length(modules$colors) == length(module_vec)) {
+      colors_vec <- as.character(modules$colors)
+      colors_vec[colors_vec %in% small_modules] <- "grey"
+      modules$colors <- colors_vec
+    }
+
+    # If another common region-level color column exists, keep it consistent too.
+    extra_cols <- intersect(c("color", "colour", "module_color", "moduleColor"), colnames(modules$regions))
+    for (ec in extra_cols) {
+      ec_vec <- as.character(modules$regions[[ec]])
+      ec_vec[ec_vec %in% small_modules] <- "grey"
+      modules$regions[[ec]] <- ec_vec
+    }
+  } else {
+    message("[", variant_name, "] No non-grey modules below Script 07 min_module_size=", min_module_size)
+  }
+
+  counts_after <- sort(table(as.character(modules$regions[[module_col]])), decreasing = TRUE)
+  write_module_size_table(counts_after,
+                          file.path(variant_out_dir, "Module_Size_QC_after.tsv"))
+
+  # Final consistency guard: remove any ME columns whose module no longer exists
+  # in modules$regions after small modules have been reassigned. This catches both
+  # ME-prefixed columns (e.g., MEdarkmagenta) and unprefixed columns (e.g., darkmagenta).
+  sync_res <- synchronize_me_columns_with_regions(
+    modules = modules,
+    variant_name = variant_name,
+    variant_out_dir = variant_out_dir,
+    modules_file = modules_file
+  )
+  modules <- sync_res$modules
+
+  writeLines(
+    c(
+      paste("script07_min_module_size:", min_module_size),
+      paste("module_column_used:", module_col),
+      paste("small_modules_reassigned_to_grey:",
+            ifelse(length(small_modules) == 0, "NONE", paste(small_modules, collapse = ", "))),
+      paste("n_small_modules_reassigned:", length(small_modules)),
+      paste("orphan_ME_columns_dropped:",
+            ifelse(length(sync_res$orphan_me_cols) == 0, "NONE", paste(sync_res$orphan_me_cols, collapse = ", "))),
+      paste("n_orphan_ME_columns_dropped:", length(sync_res$orphan_me_cols)),
+      paste("modules_file_input:", modules_file),
+      paste("overwrite_modules_rds:", overwrite_modules_rds),
+      paste("date:", as.character(Sys.time()))
+    ),
+    con = file.path(variant_out_dir, "Module_Size_QC_summary.txt")
+  )
+
+  corrected_rds <- file.path(variant_out_dir, "Modules_minSizeQC.rds")
+  downstream_rds <- file.path(variant_out_dir, "Modules_for_downstream.rds")
+
+  saveRDS(modules, corrected_rds)
+  saveRDS(modules, downstream_rds)
+
+  if (isTRUE(overwrite_modules_rds)) {
+    backup_file <- paste0(modules_file, ".pre_minSizeQC_backup")
+    if (!file.exists(backup_file)) file.copy(modules_file, backup_file)
+    saveRDS(modules, modules_file)
+  }
+
+  list(
+    modules = modules,
+    min_module_size = min_module_size,
+    module_col = module_col,
+    small_modules = small_modules,
+    corrected_rds = corrected_rds,
+    downstream_rds = downstream_rds
+  )
+}
+
 # ------------------------------------------------------------
 # Parse command-line arguments
 # ------------------------------------------------------------
@@ -124,7 +388,19 @@ option_list <- list(
               help = "Distance for sample dendrogram: euclidean, pearson, or bicor [default = euclidean]"),
 
   make_option("--max_p_outliers", type = "double", default = 0.1,
-              help = "maxPOutliers for bicor calls [default = 0.1]")
+              help = "maxPOutliers for bicor calls [default = 0.1]"),
+
+  make_option("--enforce_min_module_size", type = "logical", default = TRUE,
+              help = "After loading Script 07 Modules.rds, reassign non-grey modules smaller than the min_module_size recorded in Script 07 run_parameters.txt to grey [default = TRUE]"),
+
+  make_option("--min_module_size_check", type = "integer", default = NA,
+              help = "Optional override for post-detection minimum module-size QC. If not provided, Script 08 reads min_module_size from Script 07 run_parameters.txt [default = auto]"),
+
+  make_option("--script07_run_parameters_file", type = "character", default = NULL,
+              help = "Optional explicit path to Script 07 run_parameters.txt. Usually not needed because Script 08 searches next to Modules.rds and one folder above."),
+
+  make_option("--overwrite_modules_rds", type = "logical", default = FALSE,
+              help = "If TRUE, overwrite the input Modules.rds after saving a .pre_minSizeQC_backup. Recommended: FALSE [default = FALSE]")
 )
 
 opt <- parse_args(OptionParser(option_list = option_list))
@@ -160,6 +436,14 @@ if (!sample_dendro_distance %in% c("euclidean", "pearson", "bicor")) {
 
 if (!is.numeric(opt$max_p_outliers) || opt$max_p_outliers < 0 || opt$max_p_outliers > 1) {
   stop("--max_p_outliers must be between 0 and 1")
+}
+
+if (!is.na(opt$min_module_size_check) && opt$min_module_size_check < 2) {
+  stop("--min_module_size_check must be >= 2 when provided")
+}
+
+if (!is.null(opt$script07_run_parameters_file) && !file.exists(opt$script07_run_parameters_file)) {
+  stop("script07_run_parameters_file not found: ", opt$script07_run_parameters_file)
 }
 
 # ------------------------------------------------------------
@@ -230,26 +514,70 @@ for (variant_name in names(variant_inputs)) {
   message("Running module/sample diagnostics for variant: ", variant_name)
   message("==============================\n")
 
+  modules_file <- variant_inputs[[variant_name]]
+
   modules <- validate_modules_object(
-    readRDS(variant_inputs[[variant_name]]),
+    readRDS(modules_file),
     paste0(variant_name, " modules object")
   )
+
+  variant_out_dir <- file.path(out_dir, variant_name)
+  dir.create(variant_out_dir, recursive = TRUE, showWarnings = FALSE)
+
+  script07_min_info <- get_script07_min_module_size(
+    modules_file,
+    explicit_params_file = opt$script07_run_parameters_file,
+    fallback = opt$min_module_size_check
+  )
+
+  min_module_size_used_for_qc <- script07_min_info$min_module_size
+  script07_params_file_used <- script07_min_info$params_file
+
+  if (isTRUE(opt$enforce_min_module_size)) {
+    if (is.na(min_module_size_used_for_qc)) {
+      stop("[", variant_name, "] Could not determine min_module_size for QC. ",
+           "Provide --min_module_size_check or ensure Script 07 run_parameters.txt exists next to Modules.rds.")
+    }
+
+    qc_res <- enforce_modules_min_size(
+      modules = modules,
+      min_module_size = min_module_size_used_for_qc,
+      variant_name = variant_name,
+      variant_out_dir = variant_out_dir,
+      modules_file = modules_file,
+      overwrite_modules_rds = opt$overwrite_modules_rds
+    )
+
+    modules <- validate_modules_object(qc_res$modules, paste0(variant_name, " modules object after min-size QC"))
+  } else {
+    message("[", variant_name, "] Module-size QC disabled by --enforce_min_module_size false")
+
+    # Even when minimum-size reassignment is disabled, still enforce internal
+    # consistency so downstream scripts do not analyze ME columns that are not
+    # represented in modules$regions.
+    sync_res <- synchronize_me_columns_with_regions(
+      modules = modules,
+      variant_name = variant_name,
+      variant_out_dir = variant_out_dir,
+      modules_file = modules_file
+    )
+    modules <- validate_modules_object(sync_res$modules, paste0(variant_name, " modules object after ME-region sync"))
+    saveRDS(modules, file.path(variant_out_dir, "Modules_for_downstream.rds"))
+  }
 
   MEs <- as.data.frame(modules$MEs)
 
   # ----------------------------------------------------------
   # Remove grey module before all plotting
   # ----------------------------------------------------------
-  grey_col <- grep("^MEgrey$", colnames(MEs), value = TRUE)
+  grey_col <- colnames(MEs)[tolower(me_col_to_module(colnames(MEs))) == "grey"]
   if (length(grey_col) > 0) {
     MEs <- MEs[, !colnames(MEs) %in% grey_col, drop = FALSE]
-    message("[", variant_name, "] MEgrey removed (", ncol(MEs), " real MEs remaining)")
+    message("[", variant_name, "] Grey ME column removed: ", paste(grey_col, collapse = ", "),
+            " (", ncol(MEs), " real MEs remaining)")
   } else {
-    message("[", variant_name, "] No MEgrey column found (", ncol(MEs), " real MEs remaining)")
+    message("[", variant_name, "] No grey ME column found (", ncol(MEs), " real MEs remaining)")
   }
-
-  variant_out_dir <- file.path(out_dir, variant_name)
-  dir.create(variant_out_dir, recursive = TRUE, showWarnings = FALSE)
 
   if (ncol(MEs) < 2) {
     message("[", variant_name, "] Only ", ncol(MEs), " real ME(s) after grey removal — skipping all plots")
@@ -429,10 +757,15 @@ for (variant_name in names(variant_inputs)) {
     c(
       paste("variant_name:", variant_name),
       paste("modules_file:", variant_inputs[[variant_name]]),
+      paste("modules_for_downstream:", file.path(variant_out_dir, "Modules_for_downstream.rds")),
       paste("sample_info:", ifelse(is.null(opt$sample_info), "NULL", opt$sample_info)),
       paste("module_cor:", module_cor),
       paste("sample_dendro_distance:", sample_dendro_distance),
       paste("max_p_outliers:", opt$max_p_outliers),
+      paste("enforce_min_module_size:", opt$enforce_min_module_size),
+      paste("script07_run_parameters_file_used:", ifelse(is.na(script07_params_file_used), "NA", script07_params_file_used)),
+      paste("script07_min_module_size_used_for_qc:", ifelse(is.na(min_module_size_used_for_qc), "NA", min_module_size_used_for_qc)),
+      paste("overwrite_modules_rds:", opt$overwrite_modules_rds),
       paste("n_samples_before_metadata_alignment:", nrow(MEs)),
       paste("n_samples_after_metadata_alignment:", nrow(MEs_use)),
       paste("n_traits_numeric:", ifelse(is.null(colData_use), 0, ncol(colData_use))),
@@ -465,6 +798,10 @@ write_log_lines(
     paste("module_cor:", module_cor),
     paste("sample_dendro_distance:", sample_dendro_distance),
     paste("max_p_outliers:", opt$max_p_outliers),
+    paste("enforce_min_module_size:", opt$enforce_min_module_size),
+    paste("min_module_size_check_override:", ifelse(is.na(opt$min_module_size_check), "auto_from_script07", opt$min_module_size_check)),
+    paste("script07_run_parameters_file:", ifelse(is.null(opt$script07_run_parameters_file), "auto", opt$script07_run_parameters_file)),
+    paste("overwrite_modules_rds:", opt$overwrite_modules_rds),
     paste("cpg_label:", cpg_label),
     paste("region_label:", region_label),
     paste("variants_run:", paste(names(variant_inputs), collapse = ", ")),
