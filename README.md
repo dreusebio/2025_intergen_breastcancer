@@ -171,7 +171,7 @@ This project uses Pixi for reproducible software environments.
 ### 1. Clone repository
 
 ```bash
-git clone https://github.com/dreusebio/2025_intergen_breastcancer.git
+git clone [https://github.com/dreusebio/2025_intergen_breastcancer.git](https://github.com/dreusebio/intergen_BrCa_wgbs_comethyl.git)
 cd 2025_intergen_breastcancer
 ```
 
