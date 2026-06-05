@@ -1,5 +1,6 @@
 brown
 tan
+magenta
 yellow
-cyan
+salmon
 darkgrey

@@ -8841,3 +8841,200 @@ Running config [list: 11_breast_cancer_outcomes]
 [plot] Saved: Summary_Enrichr_GWAS_Catalog_2025_top8_pvalue0.05.pdf
 [plot] Saved: Summary_Enrichr_ClinVar_2025_top8_pvalue0.05.pdf
 There were 50 or more warnings (use warnings() to see the first 50)
+
+
+Starting Script 04
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin10_methSD0p07
+Loaded methylation matrix: 465397 regions x 173 samples
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+After alignment: 465397 regions x 173 samples
+Numeric trait columns retained for diagnostics: 45
+[readTraitFile] Loaded 1 traits from: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 1, found = 1, missing = 0
+[resolveTraits] technical_traits: requested = 3, found = 0, missing = 3
+Using protected traits in SVA model matrix: black_race
+[getPCs_generic] Determining number of PCs using sva::num.sv
+[2026-06-04T16:28:58.158] error: *** JOB 14934780 ON hive-dc-7-7-30 CANCELLED AT 2026-06-04T16:28:58 DUE TO PREEMPTION ***
+
+
+Starting Script 04
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin10_methSD0p07
+Loaded methylation matrix: 465397 regions x 173 samples
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+After alignment: 465397 regions x 173 samples
+Numeric trait columns retained for diagnostics: 45
+[readTraitFile] Loaded 1 traits from: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 1, found = 1, missing = 0
+[resolveTraits] technical_traits: requested = 3, found = 0, missing = 3
+Using protected traits in SVA model matrix: black_race
+[getPCs_generic] Determining number of PCs using sva::num.sv
+[getPCs_generic] num.sv selected 33 PCs as surrogate variables
+PC matrix dimensions: 173 samples x 33 PCs
+Surrogate variables (num.sv): PC_1 through PC_33
+Saved variance explained plot: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin10_methSD0p07/Variance_Explained_Top20_PCs.pdf
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using pearson correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin10_methSD0p07/PC_Trait_Correlation_Stats_Pearson.tsv
+[getMEtraitCor] Testing associations between module eigennodes and sample traits using bicor correlation
+[getMEtraitCor] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin10_methSD0p07/PC_Trait_Correlation_Stats_Bicor.tsv
+[plotMEtraitCor_pub] corType = bicor
+[plotMEtraitCor_pub] autoSize -> width=7.78, height=5.00 (nX=33,nY=1)
+[plotMEtraitCor_pub] corType = bicor
+[plotMEtraitCor_pub] autoSize -> width=7.78, height=9.70 (nX=33,nY=45)
+[plotMEtraitCor_pub] corType = bicor
+[plotMEtraitCor_pub] autoSize -> width=7.78, height=9.70 (nX=33,nY=45)
+[plotTraitDendrogramFromPC] Saved: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin10_methSD0p07/Trait_Dendrogram_From_PC_Associations.pdf
+Surrogate variables identified by num.sv: 33 (PC_1 through PC_33)
+Consensus Script 04 complete: PC derivation and diagnostics finished
+Output folder: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/04_pc_diagnostics/cov3_75pct/covMin10_methSD0p07
+------------------------------------------------------------
+[LATENT STRUCTURE SUMMARY]
+------------------------------------------------------------
+Samples: 173
+Selected latent factors for adjustment (num.sv): 33
+
+Returned adjustment matrix: 173 x 33 (samples x selected PCs)
+
+Variance captured by selected PCs: 29.76%
+
+Starting Script 05
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin10_methSD0p07
+After alignment: meth = 465397 regions x 173 samples; PCs = 173 samples x 33 PCs
+[readTraitFile] Loaded 1 traits from: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 1, found = 1, missing = 0
+[resolveTraits] technical_traits: requested = 3, found = 0, missing = 3
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Adjusted_Region_Methylation_allPCs.rds
+✓ v1 complete: adjusted using all PCs (n = 33)
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds
+✓ v2 complete: removed 8 protected-associated PCs; used 25 PCs
+Warning message:
+Skipping v3: no technical traits were found. 
+Script 05 complete: methylation adjustment finished
+Starting Script 06
+Error: input_v3 not found: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin10_methSD0p07/v3_technical_pcs_only/Adjusted_Region_Methylation_technicalPCs_only.rds
+Execution halted
+
+
+Starting Script 05
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin10_methSD0p07
+After alignment: meth = 465397 regions x 173 samples; PCs = 173 samples x 33 PCs
+[readTraitFile] Loaded 1 traits from: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/config/protected_traits.txt
+[readTraitFile] Loaded 3 traits from: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/config/technical_traits.txt
+[resolveTraits] protected_traits: requested = 1, found = 1, missing = 0
+[resolveTraits] technical_traits: requested = 3, found = 0, missing = 3
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Adjusted_Region_Methylation_allPCs.rds
+✓ v1 complete: adjusted using all PCs (n = 33)
+[adjustRegionMeth] Adjusting region methylation for the top principal components
+[adjustRegionMeth] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/05_methylation_adjustment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Adjusted_Region_Methylation_excluding_protected_PCs_bicor.rds
+✓ v2 complete: removed 8 protected-associated PCs; used 25 PCs
+Skipping v3 (run_v3 = FALSE)
+Script 05 complete: methylation adjustment finished
+Starting Script 06
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07
+
+==============================
+Running soft power for variant: v1_all_pcs
+Correlation method: pearson
+==============================
+
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 19, fit = 0.913 and mean connectivity = 2.7
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/SoftPower_pearson.rds
+[plotSoftPower] Plotting scale-free topology fit and mean connectivity by soft power threshold
+[plotSoftPower] Saving plots as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/SoftPower_pearson_Plots.pdf
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Sample_Dendrogram_pearson.pdf
+✓ Sample dendrogram saved: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Sample_Dendrogram_pearson.pdf
+✓ Finished soft-power run for: v1_all_pcs
+  RDS: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/SoftPower_pearson.rds
+  PDF: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/SoftPower_pearson_Plots.pdf
+
+==============================
+Running soft power for variant: v2_exclude_protected_pcs
+Correlation method: pearson
+==============================
+
+[getSoftPower] Analyzing scale-free topology with pearson correlation to estimate best soft-thresholding power
+[getSoftPower] At soft power threshold = 6, fit = 0.829 and mean connectivity = 9450
+[getSoftPower] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/SoftPower_pearson.rds
+[plotSoftPower] Plotting scale-free topology fit and mean connectivity by soft power threshold
+[plotSoftPower] Saving plots as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/SoftPower_pearson_Plots.pdf
+[getDendro] Clustering by euclidean distance
+[plotDendro] Plotting dendrogram
+[plotDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Sample_Dendrogram_pearson.pdf
+✓ Sample dendrogram saved: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Sample_Dendrogram_pearson.pdf
+✓ Finished soft-power run for: v2_exclude_protected_pcs
+  RDS: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/SoftPower_pearson.rds
+  PDF: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/SoftPower_pearson_Plots.pdf
+Script 06 complete: soft power finished
+Outputs saved under:
+  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/06_soft_power/cov3_75pct/covMin10_methSD0p07
+Starting Script 07
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07
+Loaded regions: 465397 rows
+
+==============================
+Running module detection for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] methylation dimensions: 173 regions x 465397 samples
+[v1_all_pcs] using powerEstimate = 19
+[v1_all_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Region_Dendrograms.pdf
+[getModuleBED] Creating bed file of regions annotated with identified modules
+[getModuleBED] Excluding regions in grey (unassigned) module
+[getModuleBED] Saving file as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.bed
+✓ Finished variant: v1_all_pcs
+  Modules RDS: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.rds
+  Dendrogram:  /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Region_Dendrograms.pdf
+  BED:         /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules.bed
+
+==============================
+Running module detection for variant: v2_exclude_protected_pcs
+==============================
+
+[v2_exclude_protected_pcs] methylation dimensions: 173 regions x 465397 samples
+[v2_exclude_protected_pcs] using powerEstimate = 6
+[v2_exclude_protected_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation
+[getModules] Assigning modules and calculating module membership using pearson correlation
+[getModules] Saving modules as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules.rds
+[plotRegionDendro] Plotting region dendrograms and modules for each block
+[plotRegionDendro] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Region_Dendrograms.pdf
+Error in rect(trafo1$x, trafo1$y, trafo2$x, trafo2$y, col = as.character(C[,  : 
+  invalid color name 'lightsalmon.1'
+Calls: plotRegionDendro ... plotOrderedColors -> .plotOrderedColorSubplot -> rect
+In addition: Warning messages:
+1: In labels2colors(allLabels) :
+  labels2colors: Number of labels exceeds number of avilable colors. Some colors will be repeated 3 times.
+2: In labels2colors(c(1:nNewColors)) :
+  labels2colors: Number of labels exceeds number of avilable colors. Some colors will be repeated 3 times.
+Execution halted
+
+
+Starting Script 07
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/07_module_detection/cov3_75pct/covMin10_methSD0p07
+Loaded regions: 465397 rows
+
+==============================
+Running module detection for variant: v1_all_pcs
+==============================
+
+[v1_all_pcs] methylation dimensions: 173 regions x 465397 samples
+[v1_all_pcs] using powerEstimate = 19
+[v1_all_pcs] module correlation = pearson
+[getModules] Constructing network and detecting modules in blocks using pearson correlation

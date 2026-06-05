@@ -103,6 +103,27 @@ parse_optional_int <- function(x, arg_name) {
   out
 }
 
+increase_plot_font <- function(p,
+                               axis_text_size = 24,
+                               axis_title_size = 28,
+                               title_size = 30,
+                               subtitle_size = 22,
+                               x_angle = 45) {
+  p +
+    ggplot2::theme(
+      axis.text.x = ggplot2::element_text(
+        size = axis_text_size,
+        angle = x_angle,
+        hjust = 1
+      ),
+      axis.text.y = ggplot2::element_text(size = axis_text_size),
+      axis.title.x = ggplot2::element_text(size = axis_title_size),
+      axis.title.y = ggplot2::element_text(size = axis_title_size),
+      plot.title = ggplot2::element_text(size = title_size, face = "bold"),
+      plot.subtitle = ggplot2::element_text(size = subtitle_size)
+    )
+}
+
 # ------------------------------------------------------------
 # Parse arguments
 # ------------------------------------------------------------
@@ -393,10 +414,11 @@ for (set_file in set_files) {
         xlab = tr,
         ylab = paste0(mod, " Module Eigengene"),
         save = FALSE,
-        axis.text.size = 16,
+        axis.text.size = 25,
         verbose = FALSE
       )
       p <- add_plot_subtitle(p, subtitle_text)
+      p <- increase_plot_font(p)
 
       ggplot2::ggsave(
         pdf_file,
@@ -416,10 +438,11 @@ for (set_file in set_files) {
           xlab = tr,
           ylab = paste0(mod, " Module Eigengene"),
           save = FALSE,
-          axis.text.size = 16,
+          axis.text.size = 25,
           verbose = FALSE
         )
         p_dot <- add_plot_subtitle(p_dot, subtitle_text)
+        p_dot <- increase_plot_font(p_dot)
 
         ggplot2::ggsave(
           pdf_file,
@@ -439,6 +462,7 @@ for (set_file in set_files) {
           ylim = yl
         )
         p_v <- add_plot_subtitle(p_v, subtitle_text)
+        p_v <- increase_plot_font(p_v)
 
         if (!is.null(p_v)) {
           ggplot2::ggsave(
@@ -461,10 +485,11 @@ for (set_file in set_files) {
           xlab = tr,
           ylab = paste0(mod, " Module Eigengene"),
           save = FALSE,
-          axis.text.size = 16,
+          axis.text.size = 25,
           verbose = FALSE
         )
         p_dot <- add_plot_subtitle(p_dot, subtitle_text)
+        p_dot <- increase_plot_font(p_dot)
         print(p_dot)
 
         p_v <- plotMEtraitViolin(
@@ -475,6 +500,7 @@ for (set_file in set_files) {
           ylim = yl
         )
         p_v <- add_plot_subtitle(p_v, subtitle_text)
+        p_v <- increase_plot_font(p_v)
         if (!is.null(p_v)) print(p_v)
 
         dev.off()
