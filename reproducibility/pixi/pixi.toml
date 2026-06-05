@@ -1,5 +1,5 @@
 [workspace]
-name = "bgw-wgbs-comethyl"
+name = "intergen_BrCa_wgbs_comethyl"
 version = "0.1.0"
 authors = ["George Eusebio Kuodza <gekuodza@health.ucdavis.edu>"]
 channels = ["conda-forge", "bioconda"]
