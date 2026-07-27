@@ -1,0 +1,19 @@
+Allostatic load score
+Allostatic load: high CRP
+Allostatic load: low DHEA-S
+Allostatic load: high total/HDL ratio
+Allostatic load: low HDL
+Allostatic load: high IL-6
+Allostatic load: high HbA1c
+Allostatic load: high DBP
+Allostatic load: high SBP
+Allostatic load: high body fat
+Allostatic load: high waist circumference
+F1 obesity
+F1 overweight
+F1 age at menarche (years)
+F1 early menarche
+F1 late menarche
+Breast cancer: F1
+Breast cancer: F0
+Black race

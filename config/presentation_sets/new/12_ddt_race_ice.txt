@@ -1,0 +1,22 @@
+DDE (ng/mL)
+DDT (ng/mL)
+o,p'-DDT (ng/mL)
+ICE education: Q1
+ICE education: Q2
+ICE education: Q3
+ICE education: Q4
+ICE race: Q1
+ICE race: Q2
+ICE race: Q3
+ICE race: Q4
+ICE income: Q1
+ICE income: Q2
+ICE income: Q3
+ICE income: Q4
+ICE income-race: Q1
+ICE income-race: Q2
+ICE income-race: Q3
+ICE income-race: Q4
+Black race
+
+

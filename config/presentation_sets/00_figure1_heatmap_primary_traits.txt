@@ -1,6 +1,13 @@
-ddt
-dde
-op_ddt
+# Figure 1 Panel B — primary trait set
+# Names must exactly match renamed metadata column names
+# produced by rename_map in the metadata preparation script.
+# Ordered: exposures first (chemicals, ICE), then outcomes.
+# Duplicate "F1 Black race" removed (was line 34 in old version).
+
+# ── Chemical exposures ─────────────────────────────────────────
+DDT
+DDE
+op_DDT
 PCB101
 PCB118
 PCB138
@@ -13,34 +20,37 @@ PCB201
 PCB203
 pcb15
 pcb56
-ICE60edu1_q1
-ICE60edu1_q2
-ICE60edu1_q3
-ICE60edu1_q4
-ICE60rac1_q1
-ICE60rac1_q2
-ICE60rac1_q3
-ICE60rac1_q4
-ICE60inc1_q1
-ICE60inc1_q2
-ICE60inc1_q3
-ICE60inc1_q4
-ICE60incxrac1_q1
-ICE60incxrac1_q2
-ICE60incxrac1_q3
-ICE60incxrac1_q4
-black_race
-AL_SUM10
-breastcaF1
-breastcaF0
-black_race
-agemenarche_adol
-youngmen_adol
-oldmen_adol
-HVobeseF1
-HVoverwtF1
-Ab42_Ab40_ratio
-ALZ_pTau_217__pg_mL_
-ALZ_pTau_217__total_tau_ratio
-ALZ_pTau_217__A_42_ratio
-APOe4ext
+
+# ── Neighborhood stressors (ICE) ──────────────────────────────
+ICE education: Q1
+ICE education: Q2
+ICE education: Q3
+ICE education: Q4
+ICE race: Q1
+ICE race: Q2
+ICE race: Q3
+ICE race: Q4
+ICE income: Q1
+ICE income: Q2
+ICE income: Q3
+ICE income: Q4
+ICE income-race: Q1
+ICE income-race: Q2
+ICE income-race: Q3
+ICE income-race: Q4
+
+# ── Outcomes ──────────────────────────────────────────────────
+F1 Black race
+F1 Allostatic load score
+F1 age at menarche (years)
+F1 early menarche
+F1 late menarche
+F1 obesity
+F1 overweight
+
+# ── Neurodegenerative biomarkers ──────────────────────────────
+F1 AB42/AB40 ratio
+F1 p-tau217, ALZpath
+F1 p-tau217/total tau, ALZpath
+F1 p-tau217/AB42, ALZpath
+F1 APOE e4 carrier

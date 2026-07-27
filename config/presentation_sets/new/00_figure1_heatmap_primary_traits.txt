@@ -1,0 +1,43 @@
+DDT 
+DDE 
+op_DDT 
+PCB101 
+PCB118 
+PCB138 
+PCB153 
+PCB180 
+PCB183 
+PCB187 
+PCB194 
+PCB201 
+PCB203 
+PCB15 
+PCB56 
+ICE education: Q1
+ICE education: Q2
+ICE education: Q3
+ICE education: Q4
+ICE race: Q1
+ICE race: Q2
+ICE race: Q3
+ICE race: Q4
+ICE income: Q1
+ICE income: Q2
+ICE income: Q3
+ICE income: Q4
+ICE income-race: Q1
+ICE income-race: Q2
+ICE income-race: Q3
+ICE income-race: Q4
+F1 Black race
+F1 Allostatic load score
+F1 age at menarche (years)
+F1 early menarche
+F1 late menarche
+F1 obesity
+F1 overweight
+F1 Aβ42/Aβ40 ratio
+F1 p-tau217, ALZpath (pg/mL)
+F1 p-tau217/total tau, ALZpath
+F1 p-tau217/Aβ42, ALZpath
+F1 APOE ε4 carrier

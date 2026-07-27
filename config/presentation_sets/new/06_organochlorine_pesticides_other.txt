@@ -1,0 +1,11 @@
+HCB (ng/mL)
+Oxychlordane (ng/mL)
+β-BHC (ng/mL)
+F1 obesity
+F1 overweight
+F1 age at menarche (years)
+F1 early menarche
+F1 late menarche
+Breast cancer: F1
+Breast cancer: F0
+Black race

@@ -15,7 +15,7 @@ suppressPackageStartupMessages({
 # -----------------------------
 # Input / output paths
 # -----------------------------
-infile <- "/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173_05222026.xlsx"
+infile <- "/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173_05222026_publication_labels.xlsx"
 
 outdir <- "/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/numeric_conversion_check"
 dir.create(outdir, recursive = TRUE, showWarnings = FALSE)
@@ -29,13 +29,13 @@ outfile_missing      <- file.path(outdir, "Intergen173_05222026_priority_variabl
 # -----------------------------
 priority_vars <- unique(c(
   "pcb82", "pcb174", "pcb177", "pcb178", "pcb199",
-  "PFHxA", "ddt", "dde", "op_ddt", "MePFOSAAcOH",
-  "PCB201", "PFDeA", "bBHC", "APOE_Genotype",
-  "F1sex", "PFDoA", "PFNA"
+  "PFHxA", "DDT", "DDE", "op_DDT", "MePFOSAAcOH",
+  "PCB201", "PFDeA", "F1 bBHC", "F1 APOE genotype",
+  "F1 sex", "PFDoA", "PFNA"
 ))
 
 # Keep genotype categorical unless manually recoded later
-categorical_vars <- c("APOE_Genotype")
+categorical_vars <- c("F1 APOE genotype")
 
 # -----------------------------
 # Read Excel and use first column as rownames

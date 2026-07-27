@@ -1,0 +1,20 @@
+hsCRP (mg/L)
+DHEA-S (µg/dL)
+Total/HDL cholesterol ratio
+HDL cholesterol (mg/dL)
+IL-6 (pg/mL)
+HbA1c (%)
+Diastolic blood pressure (mmHg)
+Systolic blood pressure (mmHg)
+Body fat (%)
+BMI (kg/m²)
+Waist circumference (cm)
+Weight (kg)
+F1 obesity
+F1 overweight
+F1 age at menarche (years)
+F1 early menarche
+F1 late menarche
+Breast cancer: F1
+Breast cancer: F0
+Black race

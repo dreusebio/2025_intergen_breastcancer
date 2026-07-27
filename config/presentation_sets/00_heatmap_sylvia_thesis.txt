@@ -1,28 +1,35 @@
-ddt
-dde
-op_ddt
-ICE60edu1_q1
-ICE60edu1_q2
-ICE60edu1_q3
-ICE60edu1_q4
-ICE60rac1_q1
-ICE60rac1_q2
-ICE60rac1_q3
-ICE60rac1_q4
-ICE60inc1_q1
-ICE60inc1_q2
-ICE60inc1_q3
-ICE60inc1_q4
-ICE60incxrac1_q1
-ICE60incxrac1_q2
-ICE60incxrac1_q3
-ICE60incxrac1_q4
-black_race
-HVobeseF1
-HVoverwtF1
-AL_SUM10
-agemenarche_adol
-youngmen_adol
-oldmen_adol
-breastcaF1
-breastcaF0
+# Sylvia thesis heatmap trait set
+# Subset of primary traits — no PCBs, no neuro biomarkers.
+# Names aligned to rename_map output.
+
+# ── Chemical exposures ─────────────────────────────────────────
+DDT
+DDE
+op_DDT
+
+# ── Neighborhood stressors (ICE) ──────────────────────────────
+ICE education: Q1
+ICE education: Q2
+ICE education: Q3
+ICE education: Q4
+ICE race: Q1
+ICE race: Q2
+ICE race: Q3
+ICE race: Q4
+ICE income: Q1
+ICE income: Q2
+ICE income: Q3
+ICE income: Q4
+ICE income-race: Q1
+ICE income-race: Q2
+ICE income-race: Q3
+ICE income-race: Q4
+
+# ── Outcomes ──────────────────────────────────────────────────
+F1 Black race
+F1 obesity
+F1 overweight
+F1 Allostatic load score
+F1 age at menarche (years)
+F1 early menarche
+F1 late menarche

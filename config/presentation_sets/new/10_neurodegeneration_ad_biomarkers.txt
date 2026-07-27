@@ -1,0 +1,23 @@
+GFAP (pg/mL)
+NfL (pg/mL)
+Aβ40 (pg/mL)
+Aβ42 (pg/mL)
+Aβ42/Aβ40 ratio
+Total tau (pg/mL)
+p-tau217, Lilly (pg/mL)
+p-tau217/total tau, Lilly
+p-tau217/Aβ42, Lilly
+Total tau/Aβ42 ratio
+p-tau217, ALZpath (pg/mL)
+p-tau217/total tau, ALZpath
+p-tau217/Aβ42, ALZpath
+APOE genotype
+APOE ε4 carrier
+F1 obesity
+F1 overweight
+F1 age at menarche (years)
+F1 early menarche
+F1 late menarche
+Breast cancer: F1
+Breast cancer: F0
+Black race

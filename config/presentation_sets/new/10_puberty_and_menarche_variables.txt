@@ -1,0 +1,3 @@
+F1 age at menarche (years)
+F1 early menarche
+F1 late menarche

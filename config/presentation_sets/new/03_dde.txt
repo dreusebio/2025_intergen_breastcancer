@@ -1,0 +1,10 @@
+DDE (ng/mL)
+DDE: Q1
+DDE: Q2
+DDE: Q3
+DDE: Q4
+DDE: T1
+DDE: T2
+DDE: T3
+
+

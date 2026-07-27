@@ -1,48 +1,45 @@
 category	trait
-# Replace the example names below with exact trait names from ME_Trait_Correlation_Stats_Bicor.tsv
-# Valid categories are: exposure, outcome
-exposure	ddt
-exposure	ddtq1
-exposure	ddtq2
-exposure	ddtq3
-exposure	ddtq4
-exposure	ddtT1
-exposure	ddtT2
-exposure	ddtT3
-exposure	dde
-exposure	ddeq1
-exposure	ddeq2
-exposure	ddeq3
-exposure	ddeq4
-exposure	ddeT1
-exposure	ddeT2
-exposure	ddeT3
-exposure	op_ddt
-exposure	ICE60edu1_q1
-exposure	ICE60edu1_q2
-exposure	ICE60edu1_q3
-exposure	ICE60edu1_q4
-exposure	ICE60rac1_q1
-exposure	ICE60rac1_q2
-exposure	ICE60rac1_q3
-exposure	ICE60rac1_q4
-exposure	ICE60inc1_q1
-exposure	ICE60inc1_q2
-exposure	ICE60inc1_q3
-exposure	ICE60inc1_q4
-exposure	ICE60incxrac1_q1
-exposure	ICE60incxrac1_q2
-exposure	ICE60incxrac1_q3
-exposure	ICE60incxrac1_q4
-outcome	black_race
-outcome	HVobeseF1
-outcome	HVoverwtF1
-outcome	AL_SUM10
-outcome	breastcaF1
-outcome	breastcaF0
-outcome	agemenarche_adol
-outcome	youngmen_adol
-outcome	oldmen_adol
-
-
-
+# Trait names must exactly match the renamed metadata column names.	
+# Valid categories are: exposure, outcome	
+exposure	DDT
+exposure	DDT: Q1
+exposure	DDT: Q2
+exposure	DDT: Q3
+exposure	DDT: Q4
+exposure	DDT: T1
+exposure	DDT: T2
+exposure	DDT: T3
+exposure	DDE
+exposure	DDE: Q1
+exposure	DDE: Q2
+exposure	DDE: Q3
+exposure	DDE: Q4
+exposure	DDE: T1
+exposure	DDE: T2
+exposure	DDE: T3
+exposure	o,p'-DDT
+exposure	ICE education: Q1
+exposure	ICE education: Q2
+exposure	ICE education: Q3
+exposure	ICE education: Q4
+exposure	ICE race: Q1
+exposure	ICE race: Q2
+exposure	ICE race: Q3
+exposure	ICE race: Q4
+exposure	ICE income: Q1
+exposure	ICE income: Q2
+exposure	ICE income: Q3
+exposure	ICE income: Q4
+exposure	ICE income-race: Q1
+exposure	ICE income-race: Q2
+exposure	ICE income-race: Q3
+exposure	ICE income-race: Q4
+outcome	F1 Black race
+outcome	F1 obesity
+outcome	F1 overweight
+outcome	F1 Allostatic load score
+outcome	Breast cancer: F1
+outcome	Breast cancer: F0
+outcome	F1 age at menarche (years)
+outcome	F1 early menarche
+outcome	F1 late menarche

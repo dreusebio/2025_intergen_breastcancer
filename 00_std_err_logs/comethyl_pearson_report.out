@@ -6703,3 +6703,2616 @@ Allowing parallel execution with up to 4 working processes.
  ....pre-clustering genes to determine blocks..
    Projective K-means:
    ..k-means clustering..
+
+############### Job 14986355 summary from  ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : publicgrp
+Partition           : low
+Nodes               : hive-dc-7-8-42
+Cores               : 50
+GPUs                : 0
+State               : CANCELLED,PREEMPTED
+ExitCode            : 0:0
+Submit              : 2026-06-05T10:46:01
+Start               : 2026-06-05T10:46:19
+End                 : 2026-06-05T15:13:05
+Reserved walltime   :   23:00:00
+Used walltime       :   04:26:46
+Used CPU time       : 3-21:06:22
+% User (Computation): 99.26%
+% System (I/O)      :  0.74%
+Mem reserved        : 500G
+Max Mem used        : 47.70G (hive-dc-7-8-42)
+Max Disk Write      : 1.59G (hive-dc-7-8-42)
+Max Disk Read       : 3.72G (hive-dc-7-8-42)
+
+############### Job 14986355 info ###############
+JobId=14986355 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=98 Nice=0 Account=publicgrp QOS=publicgrp-low-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=1 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:00:00 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-06-05T10:46:01 EligibleTime=2026-06-05T10:46:02
+   AccrueTime=2026-06-05T10:46:02
+   StartTime=2026-06-05T15:13:05 EndTime=2026-06-06T14:13:05 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-06-05T10:46:19 Scheduler=Main
+   Partition=low AllocNode:Sid=hive-dc-7-9-51:2904569
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-8-42
+   BatchHost=hive-dc-7-8-42
+   NumNodes=1 NumCPUs=50 NumTasks=1 CPUs/Task=50 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=50,mem=500G,node=1,billing=50
+   AllocTRES=cpu=50,mem=500G,node=1,billing=50
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=50 MinMemoryNode=500G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=50
+   MailUser=gekuodza@ucdavis.edu,smholesinger@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT############### Job 14986355 prolog ###############
+SLURM_NODELIST: hive-dc-7-8-54
+############### Job 14986355 prolog ###############
+hive-dc-7-8-54
+Fri Jun  5 04:34:52 PM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+Allowing parallel execution with up to 4 working processes.
+ Calculating module eigengenes block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Projective K-means:
+   ..k-means clustering..
+   ..merging smaller clusters...
+Block sizes:
+gBlocks
+    1     2     3     4     5     6     7     8     9    10    11    12    13 
+39959 38591 37614 37454 35949 35426 35203 34643 32970 32391 32108 31504 22171 
+   14 
+19414 
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 1
+ ..Working on block 2 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 2
+ ..Working on block 3 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 3
+ ..Working on block 4 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 4
+ ..Working on block 5 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 5
+ ..Working on block 6 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 6
+ ..Working on block 7 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 7
+ ..Working on block 8 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 8
+ ..Working on block 9 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 9
+ ..Working on block 10 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 10
+ ..Working on block 11 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..Working on block 12 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 12
+ ..Working on block 13 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ No modules detected in block 13
+ ..Working on block 14 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+       Calculating new MEs...
+ Calculating module eigengenes block-wise from all genes
+ ....pre-clustering genes to determine blocks..
+   Projective K-means:
+   ..k-means clustering..
+   ..merging smaller clusters...
+Block sizes:
+gBlocks
+    1     2     3     4     5     6     7     8     9    10    11    12 
+40000 39994 39988 39988 39988 39985 39945 39792 39784 39738 35398 30797 
+ ..Working on block 1 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 6008 genes from module 2 because their KME is too low.
+     ..removing 2836 genes from module 3 because their KME is too low.
+     ..removing 2558 genes from module 4 because their KME is too low.
+     ..removing 1891 genes from module 5 because their KME is too low.
+     ..removing 284 genes from module 7 because their KME is too low.
+     ..removing 14 genes from module 13 because their KME is too low.
+     ..removing 3 genes from module 16 because their KME is too low.
+     ..removing 1 genes from module 20 because their KME is too low.
+ ..Working on block 2 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 17772 genes from module 1 because their KME is too low.
+     ..removing 41 genes from module 2 because their KME is too low.
+ ..Working on block 3 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 19479 genes from module 1 because their KME is too low.
+     ..removing 7233 genes from module 2 because their KME is too low.
+     ..removing 353 genes from module 3 because their KME is too low.
+ ..Working on block 4 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 8561 genes from module 1 because their KME is too low.
+     ..removing 993 genes from module 2 because their KME is too low.
+ ..Working on block 5 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 32930 genes from module 1 because their KME is too low.
+ ..Working on block 6 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 4776 genes from module 1 because their KME is too low.
+     ..removing 2625 genes from module 2 because their KME is too low.
+ ..Working on block 7 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 23821 genes from module 1 because their KME is too low.
+ ..Working on block 8 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 28753 genes from module 1 because their KME is too low.
+ ..Working on block 9 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 1732 genes from module 1 because their KME is too low.
+     ..removing 293 genes from module 2 because their KME is too low.
+ ..Working on block 10 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 35588 genes from module 1 because their KME is too low.
+ ..Working on block 11 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 31 genes from module 4 because their KME is too low.
+     ..removing 33 genes from module 5 because their KME is too low.
+     ..removing 13 genes from module 6 because their KME is too low.
+     ..removing 23 genes from module 7 because their KME is too low.
+     ..removing 37 genes from module 9 because their KME is too low.
+     ..removing 34 genes from module 10 because their KME is too low.
+     ..removing 25 genes from module 13 because their KME is too low.
+     ..removing 43 genes from module 14 because their KME is too low.
+     ..removing 15 genes from module 20 because their KME is too low.
+     ..removing 13 genes from module 22 because their KME is too low.
+     ..removing 15 genes from module 27 because their KME is too low.
+     ..removing 11 genes from module 29 because their KME is too low.
+     ..removing 10 genes from module 30 because their KME is too low.
+     ..removing 4 genes from module 31 because their KME is too low.
+     ..removing 9 genes from module 32 because their KME is too low.
+     ..removing 2 genes from module 37 because their KME is too low.
+     ..removing 8 genes from module 40 because their KME is too low.
+     ..removing 11 genes from module 41 because their KME is too low.
+     ..removing 1 genes from module 43 because their KME is too low.
+ ..Working on block 12 .
+    TOM calculation: adjacency..
+    ..will use 4 parallel threads.
+     Fraction of slow calculations: 0.000000
+    ..connectivity..
+    ..matrix multiplication (system BLAS)..
+    ..normalization..
+    ..done.
+ ....clustering..
+ ....detecting modules..
+ ....calculating module eigengenes..
+ ....checking kME in modules..
+     ..removing 23659 genes from module 1 because their KME is too low.
+     ..removing 395 genes from module 4 because their KME is too low.
+     ..removing 132 genes from module 5 because their KME is too low.
+     ..removing 113 genes from module 6 because their KME is too low.
+     ..removing 96 genes from module 7 because their KME is too low.
+     ..removing 43 genes from module 12 because their KME is too low.
+     ..removing 51 genes from module 13 because their KME is too low.
+     ..removing 13 genes from module 14 because their KME is too low.
+     ..removing 22 genes from module 15 because their KME is too low.
+     ..removing 18 genes from module 16 because their KME is too low.
+     ..removing 3 genes from module 20 because their KME is too low.
+     ..removing 8 genes from module 24 because their KME is too low.
+  ..reassigning 23 genes from module 10 to modules with higher KME.
+  ..reassigning 3 genes from module 12 to modules with higher KME.
+  ..reassigning 17 genes from module 13 to modules with higher KME.
+  ..reassigning 15 genes from module 15 to modules with higher KME.
+  ..reassigning 13 genes from module 17 to modules with higher KME.
+  ..reassigning 215 genes from module 19 to modules with higher KME.
+  ..reassigning 288 genes from module 20 to modules with higher KME.
+  ..reassigning 52 genes from module 21 to modules with higher KME.
+  ..reassigning 3 genes from module 22 to modules with higher KME.
+  ..reassigning 4 genes from module 23 to modules with higher KME.
+  ..reassigning 2 genes from module 25 to modules with higher KME.
+  ..reassigning 1 genes from module 27 to modules with higher KME.
+  ..reassigning 2 genes from module 44 to modules with higher KME.
+ ..merging modules that are too close..
+     mergeCloseModules: Merging modules whose distance is less than 0.1
+       Calculating new MEs...
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+[1] "4069" "4113" "4132" "4127" "4029" "4063"
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+Allowing parallel execution with up to 127 working processes.
+[1] "4084" "4136" "4169" "4025" "4023" "4134"
+Allowing parallel execution with up to 127 working processes.
+[1] "4084" "4136" "4169" "4025" "4023" "4134"
+Loaded sample_info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173.xlsx
+sample_info dimensions: 173 x 47
+No sample_id_col provided.
+[2026-06-05 22:59:11] Starting annotation for variant: v1_all_pcs 
+[2026-06-05 22:59:11] modules_path: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/Modules_for_downstream.rds 
+[2026-06-05 22:59:11] pipeline_root: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output 
+[2026-06-05 22:59:11] step_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation 
+[2026-06-05 22:59:11] cpg_label: cov3_75pct 
+[2026-06-05 22:59:11] region_label: covMin10_methSD0p07 
+[2026-06-05 22:59:11] variant_name: v1_all_pcs 
+[2026-06-05 22:59:11] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-05 22:59:11] genome: hg38 
+[2026-06-05 22:59:11] annotation_mode: auto 
+[2026-06-05 22:59:11] sample_info rows: 173; cols: 47 
+[2026-06-05 22:59:11] sample_id_col: (not provided) 
+[2026-06-05 22:59:15] Loaded regions: 465397 
+[2026-06-05 22:59:15] Unique modules: 3 
+[2026-06-05 22:59:32] Annotated regions rows: 465397 
+[2026-06-05 23:00:11] Module gene list rows: 21202 
+[2026-06-05 23:00:11] Module summary rows: 3 
+[2026-06-05 23:00:11] Background genes: 21191 
+[2026-06-05 23:00:11] Finished annotation for variant: v1_all_pcs 
+[2026-06-05 23:00:11] Starting annotation for variant: v2_exclude_protected_pcs 
+[2026-06-05 23:00:12] modules_path: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/08_module_and_sample_diagnostics/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/Modules_for_downstream.rds 
+[2026-06-05 23:00:12] pipeline_root: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output 
+[2026-06-05 23:00:12] step_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation 
+[2026-06-05 23:00:12] cpg_label: cov3_75pct 
+[2026-06-05 23:00:12] region_label: covMin10_methSD0p07 
+[2026-06-05 23:00:12] variant_name: v2_exclude_protected_pcs 
+[2026-06-05 23:00:12] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-05 23:00:12] genome: hg38 
+[2026-06-05 23:00:12] annotation_mode: auto 
+[2026-06-05 23:00:12] sample_info rows: 173; cols: 47 
+[2026-06-05 23:00:12] sample_id_col: (not provided) 
+[2026-06-05 23:00:13] Loaded regions: 465397 
+[2026-06-05 23:00:13] Unique modules: 42 
+[2026-06-05 23:00:25] Annotated regions rows: 465397 
+[2026-06-05 23:00:56] Module gene list rows: 64412 
+[2026-06-05 23:00:56] Module summary rows: 42 
+[2026-06-05 23:00:56] Background genes: 21191 
+[2026-06-05 23:00:56] Finished annotation for variant: v2_exclude_protected_pcs 
+project_root: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+annotation_dir_v1: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+annotation_dir_v2: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+do_kegg: FALSE
+do_go: FALSE
+do_reactome: FALSE
+do_enrichr: TRUE
+organism: hsa
+plot_p_col: pvalue
+plot_top_n: 10
+plot_sig_cutoff: 0.05
+trait list inputs: 00_figure1_heatmap_primary_traits=00_figure1_heatmap_primary_traits.txt; 00_heatmap_sylvia_thesis=00_heatmap_sylvia_thesis.txt; 01_ddt=01_ddt.txt; 02_op_ddt=02_op_ddt.txt; 03_breast_cancer_risk_outcomes=03_breast_cancer_risk_outcomes.txt; 03_dde=03_dde.txt; 04_ddt_dde_exposures=04_ddt_dde_exposures.txt; 05_ICE_edu=05_ICE_edu.txt; 05_ice_neighborhood_indices=05_ice_neighborhood_indices.txt; 06_ICE_rac=06_ICE_rac.txt; 06_organochlorine_pesticides_other=06_organochlorine_pesticides_other.txt; 07_pcb_exposures=07_pcb_exposures.txt; 08_ICE_Inc1=08_ICE_Inc1.txt; 08_pfas_exposures=08_pfas_exposures.txt; 09_incxrac=09_incxrac.txt; 09_lipid_clinical_markers=09_lipid_clinical_markers.txt; 10_neurodegeneration_ad_biomarkers=10_neurodegeneration_ad_biomarkers.txt; 10_puberty_and_menarche_variables=10_puberty_and_menarche_variables.txt; 11_breast_cancer_outcomes=11_breast_cancer_outcomes.txt; 11_kidney_function_markers=11_kidney_function_markers.txt; 12_ddt_breastcancer=12_ddt_breastcancer.txt; 12_ddt_obesity=12_ddt_obesity.txt; 12_ddt_race_ice=12_ddt_race_ice.txt; 12_outcome_only=12_outcome_only.txt; 13_allostatic_load_summary_components=13_allostatic_load_summary_components.txt; 14_cardiometabolic_inflammation_raw=14_cardiometabolic_inflammation_raw.txt; heatmap_primary_traits_quartiles=heatmap_primary_traits_quartiles.txt
+[2026-06-05 23:01:26] Starting enrichment for variant: v1_all_pcs / list: 00_figure1_heatmap_primary_traits 
+[2026-06-05 23:01:26] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-05 23:01:26] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/00_figure1_heatmap_primary_traits 
+[2026-06-05 23:01:26] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:01:26] plot_p_col: pvalue 
+[2026-06-05 23:01:27] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:01:27] selected modules count: 2 
+[2026-06-05 23:01:27] selected modules: blue, turquoise 
+[2026-06-05 23:01:27] Enrichr background mode disabled. 
+[2026-06-05 23:01:27] Module blue: genes=2 
+[2026-06-05 23:01:35] Module turquoise: genes=9 
+[2026-06-05 23:01:44] Finished enrichment for variant: v1_all_pcs / list: 00_figure1_heatmap_primary_traits 
+[2026-06-05 23:01:50] Starting enrichment for variant: v2_exclude_protected_pcs / list: 00_figure1_heatmap_primary_traits 
+[2026-06-05 23:01:51] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-05 23:01:51] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/00_figure1_heatmap_primary_traits 
+[2026-06-05 23:01:51] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:01:51] plot_p_col: pvalue 
+[2026-06-05 23:01:51] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:01:51] selected modules count: 36 
+[2026-06-05 23:01:51] selected modules: paleturquoise, orange, midnightblue, steelblue, yellow, royalblue, blue, yellowgreen, lightgreen, violet, darkgrey, lightsteelblue1, skyblue3, orangered4, darkorange, white, darkolivegreen, green, red, grey60, black, purple, greenyellow, darkmagenta, lightcyan, salmon, tan, pink, darkred, sienna3, saddlebrown, brown, skyblue, turquoise, darkgreen, magenta 
+[2026-06-05 23:01:51] Enrichr background mode disabled. 
+[2026-06-05 23:01:51] Module paleturquoise: genes=9 
+[2026-06-05 23:01:58] Module orange: genes=20 
+[2026-06-05 23:02:05] Module midnightblue: genes=60 
+[2026-06-05 23:02:16] Module steelblue: genes=36 
+[2026-06-05 23:02:26] Module yellow: genes=7076 
+[2026-06-05 23:02:45] Module royalblue: genes=44 
+[2026-06-05 23:02:53] Module blue: genes=9620 
+[2026-06-05 23:03:16] Module yellowgreen: genes=22 
+[2026-06-05 23:03:22] Module lightgreen: genes=22 
+[2026-06-05 23:03:31] Module violet: genes=23 
+[2026-06-05 23:03:38] Module darkgrey: genes=13 
+[2026-06-05 23:03:45] Module lightsteelblue1: genes=17 
+[2026-06-05 23:03:53] Module skyblue3: genes=16 
+[2026-06-05 23:04:00] Module orangered4: genes=27 
+[2026-06-05 23:04:07] Module darkorange: genes=15 
+[2026-06-05 23:04:14] Module white: genes=33 
+[2026-06-05 23:04:21] Module darkolivegreen: genes=17 
+[2026-06-05 23:04:29] Module green: genes=1542 
+[2026-06-05 23:04:37] Module red: genes=484 
+[2026-06-05 23:04:45] Module grey60: genes=40 
+[2026-06-05 23:04:52] Module black: genes=481 
+[2026-06-05 23:05:00] Module purple: genes=305 
+[2026-06-05 23:05:09] Module greenyellow: genes=272 
+[2026-06-05 23:05:17] Module darkmagenta: genes=45 
+[2026-06-05 23:05:23] Module lightcyan: genes=145 
+[2026-06-05 23:05:30] Module salmon: genes=174 
+[2026-06-05 23:05:38] Module tan: genes=196 
+[2026-06-05 23:05:48] Module pink: genes=448 
+[2026-06-05 23:05:56] Module darkred: genes=54 
+[2026-06-05 23:06:03] Module sienna3: genes=45 
+[2026-06-05 23:06:09] Module saddlebrown: genes=57 
+[2026-06-05 23:06:17] Module brown: genes=8892 
+[2026-06-05 23:06:39] Module skyblue: genes=59 
+[2026-06-05 23:06:46] Module turquoise: genes=13787 
+[2026-06-05 23:07:17] Module darkgreen: genes=78 
+[2026-06-05 23:07:24] Module magenta: genes=352 
+[2026-06-05 23:08:53] Finished enrichment for variant: v2_exclude_protected_pcs / list: 00_figure1_heatmap_primary_traits 
+[2026-06-05 23:09:00] Starting enrichment for variant: v1_all_pcs / list: 00_heatmap_sylvia_thesis 
+[2026-06-05 23:09:04] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-05 23:09:04] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/00_heatmap_sylvia_thesis 
+[2026-06-05 23:09:04] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:09:04] plot_p_col: pvalue 
+[2026-06-05 23:09:04] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:09:04] selected modules count: 2 
+[2026-06-05 23:09:04] selected modules: blue, turquoise 
+[2026-06-05 23:09:04] Enrichr background mode disabled. 
+[2026-06-05 23:09:04] Module blue: genes=2 
+[2026-06-05 23:09:10] Module turquoise: genes=9 
+[2026-06-05 23:09:15] Finished enrichment for variant: v1_all_pcs / list: 00_heatmap_sylvia_thesis 
+[2026-06-05 23:09:21] Starting enrichment for variant: v2_exclude_protected_pcs / list: 00_heatmap_sylvia_thesis 
+[2026-06-05 23:09:21] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-05 23:09:21] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/00_heatmap_sylvia_thesis 
+[2026-06-05 23:09:21] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:09:21] plot_p_col: pvalue 
+[2026-06-05 23:09:22] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:09:22] selected modules count: 35 
+[2026-06-05 23:09:22] selected modules: paleturquoise, orange, midnightblue, steelblue, yellow, royalblue, blue, yellowgreen, lightgreen, violet, darkgrey, lightsteelblue1, skyblue3, darkorange, white, darkolivegreen, green, red, grey60, black, purple, greenyellow, darkmagenta, lightcyan, salmon, tan, pink, darkred, sienna3, saddlebrown, brown, skyblue, turquoise, darkgreen, magenta 
+[2026-06-05 23:09:22] Enrichr background mode disabled. 
+[2026-06-05 23:09:22] Module paleturquoise: genes=9 
+[2026-06-05 23:09:27] Module orange: genes=20 
+[2026-06-05 23:09:33] Module midnightblue: genes=60 
+[2026-06-05 23:09:39] Module steelblue: genes=36 
+[2026-06-05 23:09:45] Module yellow: genes=7076 
+[2026-06-05 23:10:02] Module royalblue: genes=44 
+[2026-06-05 23:10:08] Module blue: genes=9620 
+[2026-06-05 23:10:30] Module yellowgreen: genes=22 
+[2026-06-05 23:10:36] Module lightgreen: genes=22 
+[2026-06-05 23:10:43] Module violet: genes=23 
+[2026-06-05 23:10:50] Module darkgrey: genes=13 
+[2026-06-05 23:10:55] Module lightsteelblue1: genes=17 
+[2026-06-05 23:11:01] Module skyblue3: genes=16 
+[2026-06-05 23:11:07] Module darkorange: genes=15 
+[2026-06-05 23:11:13] Module white: genes=33 
+[2026-06-05 23:11:19] Module darkolivegreen: genes=17 
+[2026-06-05 23:11:25] Module green: genes=1542 
+[2026-06-05 23:11:34] Module red: genes=484 
+[2026-06-05 23:11:41] Module grey60: genes=40 
+[2026-06-05 23:11:47] Module black: genes=481 
+[2026-06-05 23:11:54] Module purple: genes=305 
+[2026-06-05 23:12:01] Module greenyellow: genes=272 
+[2026-06-05 23:12:09] Module darkmagenta: genes=45 
+[2026-06-05 23:12:16] Module lightcyan: genes=145 
+[2026-06-05 23:12:22] Module salmon: genes=174 
+[2026-06-05 23:12:29] Module tan: genes=196 
+[2026-06-05 23:12:37] Module pink: genes=448 
+[2026-06-05 23:12:43] Module darkred: genes=54 
+[2026-06-05 23:12:49] Module sienna3: genes=45 
+[2026-06-05 23:12:55] Module saddlebrown: genes=57 
+[2026-06-05 23:13:02] Module brown: genes=8892 
+[2026-06-05 23:13:23] Module skyblue: genes=59 
+[2026-06-05 23:13:29] Module turquoise: genes=13787 
+[2026-06-05 23:14:02] Module darkgreen: genes=78 
+[2026-06-05 23:14:08] Module magenta: genes=352 
+[2026-06-05 23:14:25] Finished enrichment for variant: v2_exclude_protected_pcs / list: 00_heatmap_sylvia_thesis 
+[2026-06-05 23:14:31] Starting enrichment for variant: v1_all_pcs / list: 01_ddt 
+[2026-06-05 23:14:31] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-05 23:14:31] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/01_ddt 
+[2026-06-05 23:14:31] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:14:31] plot_p_col: pvalue 
+[2026-06-05 23:14:31] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:14:31] selected modules count: 0 
+[2026-06-05 23:14:31] selected modules: (none) 
+[2026-06-05 23:14:31] Enrichr background mode disabled. 
+[2026-06-05 23:14:31] No modules selected — skipping enrichment. 
+[2026-06-05 23:14:37] Starting enrichment for variant: v2_exclude_protected_pcs / list: 01_ddt 
+[2026-06-05 23:14:37] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-05 23:14:37] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/01_ddt 
+[2026-06-05 23:14:37] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:14:37] plot_p_col: pvalue 
+[2026-06-05 23:14:37] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:14:37] selected modules count: 11 
+[2026-06-05 23:14:37] selected modules: orange, yellow, violet, lightsteelblue1, darkorange, green, red, greenyellow, sienna3, brown, skyblue 
+[2026-06-05 23:14:38] Enrichr background mode disabled. 
+[2026-06-05 23:14:38] Module orange: genes=20 
+[2026-06-05 23:14:43] Module yellow: genes=7076 
+[2026-06-05 23:15:00] Module violet: genes=23 
+[2026-06-05 23:15:06] Module lightsteelblue1: genes=17 
+[2026-06-05 23:15:12] Module darkorange: genes=15 
+[2026-06-05 23:15:18] Module green: genes=1542 
+[2026-06-05 23:15:27] Module red: genes=484 
+[2026-06-05 23:15:33] Module greenyellow: genes=272 
+[2026-06-05 23:15:40] Module sienna3: genes=45 
+[2026-06-05 23:15:46] Module brown: genes=8892 
+[2026-06-05 23:16:07] Module skyblue: genes=59 
+[2026-06-05 23:16:19] Finished enrichment for variant: v2_exclude_protected_pcs / list: 01_ddt 
+[2026-06-05 23:16:27] Starting enrichment for variant: v1_all_pcs / list: 02_op_ddt 
+[2026-06-05 23:16:27] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-05 23:16:27] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/02_op_ddt 
+[2026-06-05 23:16:27] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:16:27] plot_p_col: pvalue 
+[2026-06-05 23:16:27] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:16:27] selected modules count: 0 
+[2026-06-05 23:16:27] selected modules: (none) 
+[2026-06-05 23:16:27] Enrichr background mode disabled. 
+[2026-06-05 23:16:27] No modules selected — skipping enrichment. 
+[2026-06-05 23:16:35] Starting enrichment for variant: v2_exclude_protected_pcs / list: 02_op_ddt 
+[2026-06-05 23:16:35] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-05 23:16:35] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/02_op_ddt 
+[2026-06-05 23:16:35] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:16:35] plot_p_col: pvalue 
+[2026-06-05 23:16:35] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:16:35] selected modules count: 4 
+[2026-06-05 23:16:35] selected modules: yellow, lightsteelblue1, red, brown 
+[2026-06-05 23:16:35] Enrichr background mode disabled. 
+[2026-06-05 23:16:35] Module yellow: genes=7076 
+[2026-06-05 23:16:52] Module lightsteelblue1: genes=17 
+[2026-06-05 23:16:58] Module red: genes=484 
+[2026-06-05 23:17:05] Module brown: genes=8892 
+[2026-06-05 23:17:29] Finished enrichment for variant: v2_exclude_protected_pcs / list: 02_op_ddt 
+[2026-06-05 23:17:34] Starting enrichment for variant: v1_all_pcs / list: 03_breast_cancer_risk_outcomes 
+[2026-06-05 23:17:34] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-05 23:17:34] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_breast_cancer_risk_outcomes 
+[2026-06-05 23:17:34] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:17:34] plot_p_col: pvalue 
+[2026-06-05 23:17:34] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:17:34] selected modules count: 1 
+[2026-06-05 23:17:34] selected modules: blue 
+[2026-06-05 23:17:34] Enrichr background mode disabled. 
+[2026-06-05 23:17:34] Module blue: genes=2 
+[2026-06-05 23:17:42] Finished enrichment for variant: v1_all_pcs / list: 03_breast_cancer_risk_outcomes 
+[2026-06-05 23:17:49] Starting enrichment for variant: v2_exclude_protected_pcs / list: 03_breast_cancer_risk_outcomes 
+[2026-06-05 23:17:49] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-05 23:17:49] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_breast_cancer_risk_outcomes 
+[2026-06-05 23:17:49] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:17:49] plot_p_col: pvalue 
+[2026-06-05 23:17:49] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:17:49] selected modules count: 32 
+[2026-06-05 23:17:49] selected modules: paleturquoise, orange, midnightblue, steelblue, yellow, royalblue, blue, yellowgreen, lightgreen, darkgrey, skyblue3, darkorange, white, darkolivegreen, red, grey60, black, purple, greenyellow, darkmagenta, lightcyan, salmon, tan, pink, darkred, sienna3, saddlebrown, brown, skyblue, turquoise, darkgreen, magenta 
+[2026-06-05 23:17:49] Enrichr background mode disabled. 
+[2026-06-05 23:17:49] Module paleturquoise: genes=9 
+[2026-06-05 23:17:55] Module orange: genes=20 
+[2026-06-05 23:18:01] Module midnightblue: genes=60 
+[2026-06-05 23:18:07] Module steelblue: genes=36 
+[2026-06-05 23:18:14] Module yellow: genes=7076 
+[2026-06-05 23:18:31] Module royalblue: genes=44 
+[2026-06-05 23:18:37] Module blue: genes=9620 
+[2026-06-05 23:18:59] Module yellowgreen: genes=22 
+[2026-06-05 23:19:05] Module lightgreen: genes=22 
+[2026-06-05 23:19:12] Module darkgrey: genes=13 
+[2026-06-05 23:19:18] Module skyblue3: genes=16 
+[2026-06-05 23:19:24] Module darkorange: genes=15 
+[2026-06-05 23:19:31] Module white: genes=33 
+[2026-06-05 23:19:37] Module darkolivegreen: genes=17 
+[2026-06-05 23:19:42] Module red: genes=484 
+[2026-06-05 23:19:49] Module grey60: genes=40 
+[2026-06-05 23:19:56] Module black: genes=481 
+[2026-06-05 23:20:03] Module purple: genes=305 
+[2026-06-05 23:20:10] Module greenyellow: genes=272 
+[2026-06-05 23:20:16] Module darkmagenta: genes=45 
+[2026-06-05 23:20:23] Module lightcyan: genes=145 
+[2026-06-05 23:20:29] Module salmon: genes=174 
+[2026-06-05 23:20:36] Module tan: genes=196 
+[2026-06-05 23:20:42] Module pink: genes=448 
+[2026-06-05 23:20:49] Module darkred: genes=54 
+[2026-06-05 23:20:55] Module sienna3: genes=45 
+[2026-06-05 23:21:02] Module saddlebrown: genes=57 
+[2026-06-05 23:21:08] Module brown: genes=8892 
+[2026-06-05 23:21:28] Module skyblue: genes=59 
+[2026-06-05 23:21:36] Module turquoise: genes=13787 
+[2026-06-05 23:22:07] Module darkgreen: genes=78 
+[2026-06-05 23:22:13] Module magenta: genes=352 
+[2026-06-05 23:22:29] Finished enrichment for variant: v2_exclude_protected_pcs / list: 03_breast_cancer_risk_outcomes 
+[2026-06-05 23:22:36] Starting enrichment for variant: v1_all_pcs / list: 03_dde 
+[2026-06-05 23:22:36] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-05 23:22:36] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/03_dde 
+[2026-06-05 23:22:36] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:22:36] plot_p_col: pvalue 
+[2026-06-05 23:22:36] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:22:36] selected modules count: 0 
+[2026-06-05 23:22:36] selected modules: (none) 
+[2026-06-05 23:22:36] Enrichr background mode disabled. 
+[2026-06-05 23:22:36] No modules selected — skipping enrichment. 
+[2026-06-05 23:22:45] Starting enrichment for variant: v2_exclude_protected_pcs / list: 03_dde 
+[2026-06-05 23:22:45] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-05 23:22:45] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/03_dde 
+[2026-06-05 23:22:45] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:22:45] plot_p_col: pvalue 
+[2026-06-05 23:22:45] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:22:45] selected modules count: 19 
+[2026-06-05 23:22:45] selected modules: blue, yellowgreen, lightsteelblue1, lightyellow, mediumpurple3, cyan, darkorange, green, black, purple, greenyellow, lightcyan, salmon, tan, pink, sienna3, saddlebrown, skyblue, turquoise 
+[2026-06-05 23:22:45] Enrichr background mode disabled. 
+[2026-06-05 23:22:45] Module blue: genes=9620 
+[2026-06-05 23:23:07] Module yellowgreen: genes=22 
+[2026-06-05 23:23:13] Module lightsteelblue1: genes=17 
+[2026-06-05 23:23:19] Module lightyellow: genes=51 
+[2026-06-05 23:23:26] Module mediumpurple3: genes=21 
+[2026-06-05 23:23:32] Module cyan: genes=170 
+[2026-06-05 23:23:38] Module darkorange: genes=15 
+[2026-06-05 23:23:44] Module green: genes=1542 
+[2026-06-05 23:23:52] Module black: genes=481 
+[2026-06-05 23:23:59] Module purple: genes=305 
+[2026-06-05 23:24:06] Module greenyellow: genes=272 
+[2026-06-05 23:24:12] Module lightcyan: genes=145 
+[2026-06-05 23:24:19] Module salmon: genes=174 
+[2026-06-05 23:24:25] Module tan: genes=196 
+[2026-06-05 23:24:32] Module pink: genes=448 
+[2026-06-05 23:24:38] Module sienna3: genes=45 
+[2026-06-05 23:24:45] Module saddlebrown: genes=57 
+[2026-06-05 23:24:51] Module skyblue: genes=59 
+[2026-06-05 23:24:57] Module turquoise: genes=13787 
+[2026-06-05 23:25:36] Finished enrichment for variant: v2_exclude_protected_pcs / list: 03_dde 
+[2026-06-05 23:25:45] Starting enrichment for variant: v1_all_pcs / list: 04_ddt_dde_exposures 
+[2026-06-05 23:25:45] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-05 23:25:45] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/04_ddt_dde_exposures 
+[2026-06-05 23:25:45] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:25:45] plot_p_col: pvalue 
+[2026-06-05 23:25:45] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:25:45] selected modules count: 0 
+[2026-06-05 23:25:45] selected modules: (none) 
+[2026-06-05 23:25:45] Enrichr background mode disabled. 
+[2026-06-05 23:25:45] No modules selected — skipping enrichment. 
+[2026-06-05 23:25:51] Starting enrichment for variant: v2_exclude_protected_pcs / list: 04_ddt_dde_exposures 
+[2026-06-05 23:25:51] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-05 23:25:51] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/04_ddt_dde_exposures 
+[2026-06-05 23:25:51] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:25:51] plot_p_col: pvalue 
+[2026-06-05 23:25:51] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:25:51] selected modules count: 24 
+[2026-06-05 23:25:51] selected modules: orange, yellow, blue, yellowgreen, violet, lightsteelblue1, lightyellow, mediumpurple3, cyan, darkorange, green, red, black, purple, greenyellow, lightcyan, salmon, tan, pink, sienna3, saddlebrown, brown, skyblue, turquoise 
+[2026-06-05 23:25:51] Enrichr background mode disabled. 
+[2026-06-05 23:25:51] Module orange: genes=20 
+[2026-06-05 23:25:57] Module yellow: genes=7076 
+[2026-06-05 23:26:14] Module blue: genes=9620 
+[2026-06-05 23:26:35] Module yellowgreen: genes=22 
+[2026-06-05 23:26:42] Module violet: genes=23 
+[2026-06-05 23:26:48] Module lightsteelblue1: genes=17 
+[2026-06-05 23:26:54] Module lightyellow: genes=51 
+[2026-06-05 23:27:00] Module mediumpurple3: genes=21 
+[2026-06-05 23:27:06] Module cyan: genes=170 
+[2026-06-05 23:27:12] Module darkorange: genes=15 
+[2026-06-05 23:27:18] Module green: genes=1542 
+[2026-06-05 23:27:26] Module red: genes=484 
+[2026-06-05 23:27:32] Module black: genes=481 
+[2026-06-05 23:27:39] Module purple: genes=305 
+[2026-06-05 23:27:46] Module greenyellow: genes=272 
+[2026-06-05 23:27:53] Module lightcyan: genes=145 
+[2026-06-05 23:27:59] Module salmon: genes=174 
+[2026-06-05 23:28:05] Module tan: genes=196 
+[2026-06-05 23:28:12] Module pink: genes=448 
+[2026-06-05 23:28:18] Module sienna3: genes=45 
+[2026-06-05 23:28:25] Module saddlebrown: genes=57 
+[2026-06-05 23:28:31] Module brown: genes=8892 
+[2026-06-05 23:28:51] Module skyblue: genes=59 
+[2026-06-05 23:28:58] Module turquoise: genes=13787 
+[2026-06-05 23:29:40] Finished enrichment for variant: v2_exclude_protected_pcs / list: 04_ddt_dde_exposures 
+[2026-06-05 23:29:45] Starting enrichment for variant: v1_all_pcs / list: 05_ICE_edu 
+[2026-06-05 23:29:45] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-05 23:29:46] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/05_ICE_edu 
+[2026-06-05 23:29:46] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:29:46] plot_p_col: pvalue 
+[2026-06-05 23:29:46] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:29:46] selected modules count: 0 
+[2026-06-05 23:29:46] selected modules: (none) 
+[2026-06-05 23:29:46] Enrichr background mode disabled. 
+[2026-06-05 23:29:46] No modules selected — skipping enrichment. 
+[2026-06-05 23:29:51] Starting enrichment for variant: v2_exclude_protected_pcs / list: 05_ICE_edu 
+[2026-06-05 23:29:51] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-05 23:29:51] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/05_ICE_edu 
+[2026-06-05 23:29:51] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:29:51] plot_p_col: pvalue 
+[2026-06-05 23:29:51] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:29:51] selected modules count: 11 
+[2026-06-05 23:29:51] selected modules: midnightblue, steelblue, yellow, darkorange, red, greenyellow, sienna3, saddlebrown, brown, skyblue, turquoise 
+[2026-06-05 23:29:52] Enrichr background mode disabled. 
+[2026-06-05 23:29:52] Module midnightblue: genes=60 
+[2026-06-05 23:29:57] Module steelblue: genes=36 
+[2026-06-05 23:30:03] Module yellow: genes=7076 
+[2026-06-05 23:30:20] Module darkorange: genes=15 
+[2026-06-05 23:30:26] Module red: genes=484 
+[2026-06-05 23:30:33] Module greenyellow: genes=272 
+[2026-06-05 23:30:40] Module sienna3: genes=45 
+[2026-06-05 23:30:46] Module saddlebrown: genes=57 
+[2026-06-05 23:30:53] Module brown: genes=8892 
+[2026-06-05 23:32:51] Module skyblue: genes=59 
+[2026-06-05 23:33:00] Module turquoise: genes=13787 
+[2026-06-05 23:33:37] Finished enrichment for variant: v2_exclude_protected_pcs / list: 05_ICE_edu 
+[2026-06-05 23:33:42] Starting enrichment for variant: v1_all_pcs / list: 05_ice_neighborhood_indices 
+[2026-06-05 23:33:42] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-05 23:33:42] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/05_ice_neighborhood_indices 
+[2026-06-05 23:33:42] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:33:42] plot_p_col: pvalue 
+[2026-06-05 23:33:42] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:33:42] selected modules count: 1 
+[2026-06-05 23:33:42] selected modules: turquoise 
+[2026-06-05 23:33:42] Enrichr background mode disabled. 
+[2026-06-05 23:33:42] Module turquoise: genes=9 
+[2026-06-05 23:33:46] Finished enrichment for variant: v1_all_pcs / list: 05_ice_neighborhood_indices 
+[2026-06-05 23:33:52] Starting enrichment for variant: v2_exclude_protected_pcs / list: 05_ice_neighborhood_indices 
+[2026-06-05 23:33:52] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-05 23:33:52] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/05_ice_neighborhood_indices 
+[2026-06-05 23:33:52] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:33:52] plot_p_col: pvalue 
+[2026-06-05 23:33:53] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:33:53] selected modules count: 22 
+[2026-06-05 23:33:53] selected modules: paleturquoise, midnightblue, steelblue, yellow, royalblue, violet, darkgrey, skyblue3, darkorange, white, darkolivegreen, green, red, grey60, greenyellow, darkred, sienna3, saddlebrown, brown, skyblue, turquoise, darkgreen 
+[2026-06-05 23:33:53] Enrichr background mode disabled. 
+[2026-06-05 23:33:53] Module paleturquoise: genes=9 
+[2026-06-05 23:33:58] Module midnightblue: genes=60 
+[2026-06-05 23:34:07] Module steelblue: genes=36 
+[2026-06-05 23:34:14] Module yellow: genes=7076 
+[2026-06-05 23:34:30] Module royalblue: genes=44 
+[2026-06-05 23:34:36] Module violet: genes=23 
+[2026-06-05 23:34:42] Module darkgrey: genes=13 
+[2026-06-05 23:34:48] Module skyblue3: genes=16 
+[2026-06-05 23:34:54] Module darkorange: genes=15 
+[2026-06-05 23:35:00] Module white: genes=33 
+[2026-06-05 23:35:06] Module darkolivegreen: genes=17 
+[2026-06-05 23:35:12] Module green: genes=1542 
+[2026-06-05 23:35:20] Module red: genes=484 
+[2026-06-05 23:35:27] Module grey60: genes=40 
+[2026-06-05 23:35:33] Module greenyellow: genes=272 
+[2026-06-05 23:35:39] Module darkred: genes=54 
+[2026-06-05 23:35:45] Module sienna3: genes=45 
+[2026-06-05 23:35:51] Module saddlebrown: genes=57 
+[2026-06-05 23:35:57] Module brown: genes=8892 
+[2026-06-05 23:36:17] Module skyblue: genes=59 
+[2026-06-05 23:36:23] Module turquoise: genes=13787 
+[2026-06-05 23:36:54] Module darkgreen: genes=78 
+[2026-06-05 23:37:08] Finished enrichment for variant: v2_exclude_protected_pcs / list: 05_ice_neighborhood_indices 
+[2026-06-05 23:37:13] Starting enrichment for variant: v1_all_pcs / list: 06_ICE_rac 
+[2026-06-05 23:37:13] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-05 23:37:13] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/06_ICE_rac 
+[2026-06-05 23:37:13] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:37:13] plot_p_col: pvalue 
+[2026-06-05 23:37:13] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:37:13] selected modules count: 1 
+[2026-06-05 23:37:13] selected modules: turquoise 
+[2026-06-05 23:37:13] Enrichr background mode disabled. 
+[2026-06-05 23:37:13] Module turquoise: genes=9 
+[2026-06-05 23:37:18] Finished enrichment for variant: v1_all_pcs / list: 06_ICE_rac 
+[2026-06-05 23:37:24] Starting enrichment for variant: v2_exclude_protected_pcs / list: 06_ICE_rac 
+[2026-06-05 23:37:24] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-05 23:37:24] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/06_ICE_rac 
+[2026-06-05 23:37:24] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:37:24] plot_p_col: pvalue 
+[2026-06-05 23:37:24] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:37:24] selected modules count: 16 
+[2026-06-05 23:37:24] selected modules: paleturquoise, midnightblue, steelblue, yellow, royalblue, darkgrey, white, darkolivegreen, green, red, grey60, darkred, sienna3, saddlebrown, brown, skyblue 
+[2026-06-05 23:37:24] Enrichr background mode disabled. 
+[2026-06-05 23:37:24] Module paleturquoise: genes=9 
+[2026-06-05 23:37:29] Module midnightblue: genes=60 
+[2026-06-05 23:37:35] Module steelblue: genes=36 
+[2026-06-05 23:37:41] Module yellow: genes=7076 
+[2026-06-05 23:37:57] Module royalblue: genes=44 
+[2026-06-05 23:38:03] Module darkgrey: genes=13 
+[2026-06-05 23:38:08] Module white: genes=33 
+[2026-06-05 23:38:15] Module darkolivegreen: genes=17 
+[2026-06-05 23:38:20] Module green: genes=1542 
+[2026-06-05 23:38:28] Module red: genes=484 
+[2026-06-05 23:38:35] Module grey60: genes=40 
+[2026-06-05 23:38:41] Module darkred: genes=54 
+[2026-06-05 23:38:47] Module sienna3: genes=45 
+[2026-06-05 23:38:53] Module saddlebrown: genes=57 
+[2026-06-05 23:38:59] Module brown: genes=8892 
+[2026-06-05 23:39:19] Module skyblue: genes=59 
+[2026-06-05 23:39:31] Finished enrichment for variant: v2_exclude_protected_pcs / list: 06_ICE_rac 
+[2026-06-05 23:39:36] Starting enrichment for variant: v1_all_pcs / list: 06_organochlorine_pesticides_other 
+[2026-06-05 23:39:36] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-05 23:39:36] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/06_organochlorine_pesticides_other 
+[2026-06-05 23:39:36] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:39:36] plot_p_col: pvalue 
+[2026-06-05 23:39:36] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:39:36] selected modules count: 1 
+[2026-06-05 23:39:36] selected modules: blue 
+[2026-06-05 23:39:36] Enrichr background mode disabled. 
+[2026-06-05 23:39:36] Module blue: genes=2 
+[2026-06-05 23:39:43] Finished enrichment for variant: v1_all_pcs / list: 06_organochlorine_pesticides_other 
+[2026-06-05 23:39:49] Starting enrichment for variant: v2_exclude_protected_pcs / list: 06_organochlorine_pesticides_other 
+[2026-06-05 23:39:49] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-05 23:39:49] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/06_organochlorine_pesticides_other 
+[2026-06-05 23:39:49] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:39:49] plot_p_col: pvalue 
+[2026-06-05 23:39:49] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:39:49] selected modules count: 34 
+[2026-06-05 23:39:49] selected modules: paleturquoise, orange, midnightblue, steelblue, yellow, royalblue, blue, yellowgreen, lightgreen, violet, darkgrey, skyblue3, darkorange, white, darkolivegreen, green, red, grey60, black, purple, greenyellow, darkmagenta, lightcyan, salmon, tan, pink, darkred, sienna3, saddlebrown, brown, skyblue, turquoise, darkgreen, magenta 
+[2026-06-05 23:39:49] Enrichr background mode disabled. 
+[2026-06-05 23:39:49] Module paleturquoise: genes=9 
+[2026-06-05 23:39:55] Module orange: genes=20 
+[2026-06-05 23:40:01] Module midnightblue: genes=60 
+[2026-06-05 23:40:07] Module steelblue: genes=36 
+[2026-06-05 23:40:13] Module yellow: genes=7076 
+[2026-06-05 23:40:30] Module royalblue: genes=44 
+[2026-06-05 23:40:36] Module blue: genes=9620 
+[2026-06-05 23:40:58] Module yellowgreen: genes=22 
+[2026-06-05 23:41:04] Module lightgreen: genes=22 
+[2026-06-05 23:41:12] Module violet: genes=23 
+[2026-06-05 23:41:20] Module darkgrey: genes=13 
+[2026-06-05 23:41:25] Module skyblue3: genes=16 
+[2026-06-05 23:41:31] Module darkorange: genes=15 
+[2026-06-05 23:41:37] Module white: genes=33 
+[2026-06-05 23:41:43] Module darkolivegreen: genes=17 
+[2026-06-05 23:41:48] Module green: genes=1542 
+[2026-06-05 23:41:56] Module red: genes=484 
+[2026-06-05 23:42:03] Module grey60: genes=40 
+[2026-06-05 23:42:09] Module black: genes=481 
+[2026-06-05 23:42:15] Module purple: genes=305 
+[2026-06-05 23:42:21] Module greenyellow: genes=272 
+[2026-06-05 23:42:28] Module darkmagenta: genes=45 
+[2026-06-05 23:42:34] Module lightcyan: genes=145 
+[2026-06-05 23:42:40] Module salmon: genes=174 
+[2026-06-05 23:42:46] Module tan: genes=196 
+[2026-06-05 23:42:52] Module pink: genes=448 
+[2026-06-05 23:42:59] Module darkred: genes=54 
+[2026-06-05 23:43:05] Module sienna3: genes=45 
+[2026-06-05 23:43:11] Module saddlebrown: genes=57 
+[2026-06-05 23:43:16] Module brown: genes=8892 
+[2026-06-05 23:43:35] Module skyblue: genes=59 
+[2026-06-05 23:43:41] Module turquoise: genes=13787 
+[2026-06-05 23:44:11] Module darkgreen: genes=78 
+[2026-06-05 23:44:17] Module magenta: genes=352 
+[2026-06-05 23:44:36] Finished enrichment for variant: v2_exclude_protected_pcs / list: 06_organochlorine_pesticides_other 
+[2026-06-05 23:44:43] Starting enrichment for variant: v1_all_pcs / list: 07_pcb_exposures 
+[2026-06-05 23:44:43] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-05 23:44:43] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/07_pcb_exposures 
+[2026-06-05 23:44:43] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:44:43] plot_p_col: pvalue 
+[2026-06-05 23:44:43] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:44:43] selected modules count: 2 
+[2026-06-05 23:44:43] selected modules: blue, turquoise 
+[2026-06-05 23:44:43] Enrichr background mode disabled. 
+[2026-06-05 23:44:44] Module blue: genes=2 
+[2026-06-05 23:44:50] Module turquoise: genes=9 
+[2026-06-05 23:44:55] Finished enrichment for variant: v1_all_pcs / list: 07_pcb_exposures 
+[2026-06-05 23:45:00] Starting enrichment for variant: v2_exclude_protected_pcs / list: 07_pcb_exposures 
+[2026-06-05 23:45:00] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-05 23:45:00] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/07_pcb_exposures 
+[2026-06-05 23:45:00] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:45:00] plot_p_col: pvalue 
+[2026-06-05 23:45:00] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:45:00] selected modules count: 38 
+[2026-06-05 23:45:00] selected modules: paleturquoise, orange, midnightblue, steelblue, yellow, royalblue, blue, yellowgreen, lightgreen, violet, darkgrey, lightsteelblue1, plum1, skyblue3, cyan, orangered4, darkorange, white, darkolivegreen, green, red, grey60, black, purple, greenyellow, darkmagenta, lightcyan, salmon, tan, pink, darkred, sienna3, saddlebrown, brown, skyblue, turquoise, darkgreen, magenta 
+[2026-06-05 23:45:00] Enrichr background mode disabled. 
+[2026-06-05 23:45:00] Module paleturquoise: genes=9 
+[2026-06-05 23:45:06] Module orange: genes=20 
+[2026-06-05 23:45:14] Module midnightblue: genes=60 
+[2026-06-05 23:45:20] Module steelblue: genes=36 
+[2026-06-05 23:45:26] Module yellow: genes=7076 
+[2026-06-05 23:45:43] Module royalblue: genes=44 
+[2026-06-05 23:45:49] Module blue: genes=9620 
+[2026-06-05 23:46:10] Module yellowgreen: genes=22 
+[2026-06-05 23:46:16] Module lightgreen: genes=22 
+[2026-06-05 23:46:24] Module violet: genes=23 
+[2026-06-05 23:46:31] Module darkgrey: genes=13 
+[2026-06-05 23:46:36] Module lightsteelblue1: genes=17 
+[2026-06-05 23:46:42] Module plum1: genes=3 
+[2026-06-05 23:46:48] Module skyblue3: genes=16 
+[2026-06-05 23:46:54] Module cyan: genes=170 
+[2026-06-05 23:47:00] Module orangered4: genes=27 
+[2026-06-05 23:47:06] Module darkorange: genes=15 
+[2026-06-05 23:47:12] Module white: genes=33 
+[2026-06-05 23:47:18] Module darkolivegreen: genes=17 
+[2026-06-05 23:47:24] Module green: genes=1542 
+[2026-06-05 23:47:32] Module red: genes=484 
+[2026-06-05 23:47:39] Module grey60: genes=40 
+[2026-06-05 23:47:46] Module black: genes=481 
+[2026-06-05 23:47:53] Module purple: genes=305 
+[2026-06-05 23:47:59] Module greenyellow: genes=272 
+[2026-06-05 23:48:05] Module darkmagenta: genes=45 
+[2026-06-05 23:48:11] Module lightcyan: genes=145 
+[2026-06-05 23:48:17] Module salmon: genes=174 
+[2026-06-05 23:48:24] Module tan: genes=196 
+[2026-06-05 23:48:30] Module pink: genes=448 
+[2026-06-05 23:48:37] Module darkred: genes=54 
+[2026-06-05 23:48:43] Module sienna3: genes=45 
+[2026-06-05 23:48:49] Module saddlebrown: genes=57 
+[2026-06-05 23:48:55] Module brown: genes=8892 
+[2026-06-05 23:49:14] Module skyblue: genes=59 
+[2026-06-05 23:49:20] Module turquoise: genes=13787 
+[2026-06-05 23:49:50] Module darkgreen: genes=78 
+[2026-06-05 23:49:56] Module magenta: genes=352 
+[2026-06-05 23:50:16] Finished enrichment for variant: v2_exclude_protected_pcs / list: 07_pcb_exposures 
+[2026-06-05 23:50:20] Starting enrichment for variant: v1_all_pcs / list: 08_ICE_Inc1 
+[2026-06-05 23:50:20] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-05 23:50:20] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/08_ICE_Inc1 
+[2026-06-05 23:50:20] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:50:20] plot_p_col: pvalue 
+[2026-06-05 23:50:20] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:50:20] selected modules count: 1 
+[2026-06-05 23:50:20] selected modules: turquoise 
+[2026-06-05 23:50:20] Enrichr background mode disabled. 
+[2026-06-05 23:50:20] Module turquoise: genes=9 
+[2026-06-05 23:50:25] Finished enrichment for variant: v1_all_pcs / list: 08_ICE_Inc1 
+[2026-06-05 23:50:33] Starting enrichment for variant: v2_exclude_protected_pcs / list: 08_ICE_Inc1 
+[2026-06-05 23:50:33] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-05 23:50:33] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/08_ICE_Inc1 
+[2026-06-05 23:50:33] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:50:33] plot_p_col: pvalue 
+[2026-06-05 23:50:33] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:50:33] selected modules count: 13 
+[2026-06-05 23:50:33] selected modules: paleturquoise, midnightblue, steelblue, yellow, royalblue, violet, skyblue3, red, grey60, sienna3, saddlebrown, brown, darkgreen 
+[2026-06-05 23:50:33] Enrichr background mode disabled. 
+[2026-06-05 23:50:33] Module paleturquoise: genes=9 
+[2026-06-05 23:50:39] Module midnightblue: genes=60 
+[2026-06-05 23:50:45] Module steelblue: genes=36 
+[2026-06-05 23:50:51] Module yellow: genes=7076 
+[2026-06-05 23:51:08] Module royalblue: genes=44 
+[2026-06-05 23:51:15] Module violet: genes=23 
+[2026-06-05 23:51:21] Module skyblue3: genes=16 
+[2026-06-05 23:51:27] Module red: genes=484 
+[2026-06-05 23:51:34] Module grey60: genes=40 
+[2026-06-05 23:51:40] Module sienna3: genes=45 
+[2026-06-05 23:51:47] Module saddlebrown: genes=57 
+[2026-06-05 23:51:53] Module brown: genes=8892 
+[2026-06-05 23:52:14] Module darkgreen: genes=78 
+[2026-06-05 23:52:26] Finished enrichment for variant: v2_exclude_protected_pcs / list: 08_ICE_Inc1 
+[2026-06-05 23:52:32] Starting enrichment for variant: v1_all_pcs / list: 08_pfas_exposures 
+[2026-06-05 23:52:32] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-05 23:52:32] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/08_pfas_exposures 
+[2026-06-05 23:52:32] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:52:32] plot_p_col: pvalue 
+[2026-06-05 23:52:32] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:52:32] selected modules count: 1 
+[2026-06-05 23:52:32] selected modules: blue 
+[2026-06-05 23:52:32] Enrichr background mode disabled. 
+[2026-06-05 23:52:32] Module blue: genes=2 
+[2026-06-05 23:52:40] Finished enrichment for variant: v1_all_pcs / list: 08_pfas_exposures 
+[2026-06-05 23:52:45] Starting enrichment for variant: v2_exclude_protected_pcs / list: 08_pfas_exposures 
+[2026-06-05 23:52:45] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-05 23:52:45] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/08_pfas_exposures 
+[2026-06-05 23:52:45] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:52:45] plot_p_col: pvalue 
+[2026-06-05 23:52:45] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:52:45] selected modules count: 32 
+[2026-06-05 23:52:45] selected modules: paleturquoise, orange, midnightblue, steelblue, yellow, royalblue, blue, yellowgreen, lightgreen, darkgrey, skyblue3, darkorange, white, darkolivegreen, red, grey60, black, purple, greenyellow, darkmagenta, lightcyan, salmon, tan, pink, darkred, sienna3, saddlebrown, brown, skyblue, turquoise, darkgreen, magenta 
+[2026-06-05 23:52:45] Enrichr background mode disabled. 
+[2026-06-05 23:52:45] Module paleturquoise: genes=9 
+[2026-06-05 23:52:52] Module orange: genes=20 
+[2026-06-05 23:52:58] Module midnightblue: genes=60 
+[2026-06-05 23:53:04] Module steelblue: genes=36 
+[2026-06-05 23:53:10] Module yellow: genes=7076 
+[2026-06-05 23:53:26] Module royalblue: genes=44 
+[2026-06-05 23:53:33] Module blue: genes=9620 
+[2026-06-05 23:53:53] Module yellowgreen: genes=22 
+[2026-06-05 23:53:59] Module lightgreen: genes=22 
+[2026-06-05 23:54:07] Module darkgrey: genes=13 
+[2026-06-05 23:54:13] Module skyblue3: genes=16 
+[2026-06-05 23:54:19] Module darkorange: genes=15 
+[2026-06-05 23:54:25] Module white: genes=33 
+[2026-06-05 23:54:31] Module darkolivegreen: genes=17 
+[2026-06-05 23:54:37] Module red: genes=484 
+[2026-06-05 23:54:44] Module grey60: genes=40 
+[2026-06-05 23:54:50] Module black: genes=481 
+[2026-06-05 23:54:57] Module purple: genes=305 
+[2026-06-05 23:55:03] Module greenyellow: genes=272 
+[2026-06-05 23:55:10] Module darkmagenta: genes=45 
+[2026-06-05 23:55:16] Module lightcyan: genes=145 
+[2026-06-05 23:55:22] Module salmon: genes=174 
+[2026-06-05 23:55:28] Module tan: genes=196 
+[2026-06-05 23:55:35] Module pink: genes=448 
+[2026-06-05 23:55:41] Module darkred: genes=54 
+[2026-06-05 23:55:48] Module sienna3: genes=45 
+[2026-06-05 23:55:54] Module saddlebrown: genes=57 
+[2026-06-05 23:56:00] Module brown: genes=8892 
+[2026-06-05 23:56:19] Module skyblue: genes=59 
+[2026-06-05 23:56:26] Module turquoise: genes=13787 
+[2026-06-05 23:56:57] Module darkgreen: genes=78 
+[2026-06-05 23:57:03] Module magenta: genes=352 
+[2026-06-05 23:57:21] Finished enrichment for variant: v2_exclude_protected_pcs / list: 08_pfas_exposures 
+[2026-06-05 23:57:30] Starting enrichment for variant: v1_all_pcs / list: 09_incxrac 
+[2026-06-05 23:57:30] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-05 23:57:31] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/09_incxrac 
+[2026-06-05 23:57:31] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:57:31] plot_p_col: pvalue 
+[2026-06-05 23:57:31] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:57:31] selected modules count: 0 
+[2026-06-05 23:57:31] selected modules: (none) 
+[2026-06-05 23:57:31] Enrichr background mode disabled. 
+[2026-06-05 23:57:31] No modules selected — skipping enrichment. 
+[2026-06-05 23:57:38] Starting enrichment for variant: v2_exclude_protected_pcs / list: 09_incxrac 
+[2026-06-05 23:57:39] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-05 23:57:39] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/09_incxrac 
+[2026-06-05 23:57:39] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:57:39] plot_p_col: pvalue 
+[2026-06-05 23:57:39] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:57:39] selected modules count: 14 
+[2026-06-05 23:57:39] selected modules: midnightblue, steelblue, yellow, royalblue, violet, skyblue3, white, red, grey60, darkred, sienna3, saddlebrown, brown, skyblue 
+[2026-06-05 23:57:39] Enrichr background mode disabled. 
+[2026-06-05 23:57:39] Module midnightblue: genes=60 
+[2026-06-05 23:57:45] Module steelblue: genes=36 
+[2026-06-05 23:57:51] Module yellow: genes=7076 
+[2026-06-05 23:58:10] Module royalblue: genes=44 
+[2026-06-05 23:58:16] Module violet: genes=23 
+[2026-06-05 23:58:23] Module skyblue3: genes=16 
+[2026-06-05 23:58:31] Module white: genes=33 
+[2026-06-05 23:58:37] Module red: genes=484 
+[2026-06-05 23:58:44] Module grey60: genes=40 
+[2026-06-05 23:58:52] Module darkred: genes=54 
+[2026-06-05 23:58:59] Module sienna3: genes=45 
+[2026-06-05 23:59:05] Module saddlebrown: genes=57 
+[2026-06-05 23:59:11] Module brown: genes=8892 
+[2026-06-05 23:59:31] Module skyblue: genes=59 
+[2026-06-05 23:59:41] Finished enrichment for variant: v2_exclude_protected_pcs / list: 09_incxrac 
+[2026-06-05 23:59:47] Starting enrichment for variant: v1_all_pcs / list: 09_lipid_clinical_markers 
+[2026-06-05 23:59:47] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-05 23:59:47] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/09_lipid_clinical_markers 
+[2026-06-05 23:59:47] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-05 23:59:47] plot_p_col: pvalue 
+[2026-06-05 23:59:47] selection_mode: stats_file_plus_trait_list 
+[2026-06-05 23:59:47] selected modules count: 1 
+[2026-06-05 23:59:47] selected modules: blue 
+[2026-06-05 23:59:47] Enrichr background mode disabled. 
+[2026-06-05 23:59:47] Module blue: genes=2 
+[2026-06-05 23:59:53] Finished enrichment for variant: v1_all_pcs / list: 09_lipid_clinical_markers 
+[2026-06-06 00:00:00] Starting enrichment for variant: v2_exclude_protected_pcs / list: 09_lipid_clinical_markers 
+[2026-06-06 00:00:00] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-06 00:00:00] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/09_lipid_clinical_markers 
+[2026-06-06 00:00:00] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:00:00] plot_p_col: pvalue 
+[2026-06-06 00:00:00] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:00:00] selected modules count: 35 
+[2026-06-06 00:00:00] selected modules: paleturquoise, orange, midnightblue, steelblue, yellow, royalblue, blue, yellowgreen, lightgreen, darkgrey, skyblue3, lightyellow, mediumpurple3, cyan, darkorange, white, darkolivegreen, red, grey60, black, purple, greenyellow, darkmagenta, lightcyan, salmon, tan, pink, darkred, sienna3, saddlebrown, brown, skyblue, turquoise, darkgreen, magenta 
+[2026-06-06 00:00:00] Enrichr background mode disabled. 
+[2026-06-06 00:00:00] Module paleturquoise: genes=9 
+[2026-06-06 00:00:05] Module orange: genes=20 
+[2026-06-06 00:00:12] Module midnightblue: genes=60 
+[2026-06-06 00:00:18] Module steelblue: genes=36 
+[2026-06-06 00:00:25] Module yellow: genes=7076 
+[2026-06-06 00:00:42] Module royalblue: genes=44 
+[2026-06-06 00:00:50] Module blue: genes=9620 
+[2026-06-06 00:01:11] Module yellowgreen: genes=22 
+[2026-06-06 00:01:18] Module lightgreen: genes=22 
+[2026-06-06 00:01:26] Module darkgrey: genes=13 
+[2026-06-06 00:01:32] Module skyblue3: genes=16 
+[2026-06-06 00:01:40] Module lightyellow: genes=51 
+[2026-06-06 00:01:47] Module mediumpurple3: genes=21 
+[2026-06-06 00:01:53] Module cyan: genes=170 
+[2026-06-06 00:02:01] Module darkorange: genes=15 
+[2026-06-06 00:02:08] Module white: genes=33 
+[2026-06-06 00:02:15] Module darkolivegreen: genes=17 
+[2026-06-06 00:02:21] Module red: genes=484 
+[2026-06-06 00:02:28] Module grey60: genes=40 
+[2026-06-06 00:02:35] Module black: genes=481 
+[2026-06-06 00:02:42] Module purple: genes=305 
+[2026-06-06 00:02:50] Module greenyellow: genes=272 
+[2026-06-06 00:02:57] Module darkmagenta: genes=45 
+[2026-06-06 00:03:03] Module lightcyan: genes=145 
+[2026-06-06 00:03:09] Module salmon: genes=174 
+[2026-06-06 00:03:15] Module tan: genes=196 
+[2026-06-06 00:03:22] Module pink: genes=448 
+[2026-06-06 00:03:28] Module darkred: genes=54 
+[2026-06-06 00:03:34] Module sienna3: genes=45 
+[2026-06-06 00:03:40] Module saddlebrown: genes=57 
+[2026-06-06 00:03:47] Module brown: genes=8892 
+[2026-06-06 00:04:08] Module skyblue: genes=59 
+[2026-06-06 00:04:14] Module turquoise: genes=13787 
+[2026-06-06 00:04:46] Module darkgreen: genes=78 
+[2026-06-06 00:04:53] Module magenta: genes=352 
+[2026-06-06 00:05:11] Finished enrichment for variant: v2_exclude_protected_pcs / list: 09_lipid_clinical_markers 
+[2026-06-06 00:05:18] Starting enrichment for variant: v1_all_pcs / list: 10_neurodegeneration_ad_biomarkers 
+[2026-06-06 00:05:18] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-06 00:05:18] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/10_neurodegeneration_ad_biomarkers 
+[2026-06-06 00:05:18] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:05:18] plot_p_col: pvalue 
+[2026-06-06 00:05:18] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:05:18] selected modules count: 1 
+[2026-06-06 00:05:18] selected modules: blue 
+[2026-06-06 00:05:18] Enrichr background mode disabled. 
+[2026-06-06 00:05:18] Module blue: genes=2 
+[2026-06-06 00:05:25] Finished enrichment for variant: v1_all_pcs / list: 10_neurodegeneration_ad_biomarkers 
+[2026-06-06 00:05:31] Starting enrichment for variant: v2_exclude_protected_pcs / list: 10_neurodegeneration_ad_biomarkers 
+[2026-06-06 00:05:31] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-06 00:05:31] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/10_neurodegeneration_ad_biomarkers 
+[2026-06-06 00:05:31] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:05:31] plot_p_col: pvalue 
+[2026-06-06 00:05:31] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:05:31] selected modules count: 35 
+[2026-06-06 00:05:31] selected modules: paleturquoise, orange, midnightblue, steelblue, yellow, royalblue, blue, yellowgreen, lightgreen, darkgrey, lightsteelblue1, darkturquoise, skyblue3, mediumpurple3, darkorange, white, darkolivegreen, red, grey60, black, purple, greenyellow, darkmagenta, lightcyan, salmon, tan, pink, darkred, sienna3, saddlebrown, brown, skyblue, turquoise, darkgreen, magenta 
+[2026-06-06 00:05:31] Enrichr background mode disabled. 
+[2026-06-06 00:05:31] Module paleturquoise: genes=9 
+[2026-06-06 00:05:37] Module orange: genes=20 
+[2026-06-06 00:05:43] Module midnightblue: genes=60 
+[2026-06-06 00:05:49] Module steelblue: genes=36 
+[2026-06-06 00:05:55] Module yellow: genes=7076 
+[2026-06-06 00:06:12] Module royalblue: genes=44 
+[2026-06-06 00:06:19] Module blue: genes=9620 
+[2026-06-06 00:06:41] Module yellowgreen: genes=22 
+[2026-06-06 00:06:47] Module lightgreen: genes=22 
+[2026-06-06 00:06:56] Module darkgrey: genes=13 
+[2026-06-06 00:07:02] Module lightsteelblue1: genes=17 
+[2026-06-06 00:07:09] Module darkturquoise: genes=9 
+[2026-06-06 00:07:16] Module skyblue3: genes=16 
+[2026-06-06 00:07:22] Module mediumpurple3: genes=21 
+[2026-06-06 00:07:27] Module darkorange: genes=15 
+[2026-06-06 00:07:33] Module white: genes=33 
+[2026-06-06 00:07:40] Module darkolivegreen: genes=17 
+[2026-06-06 00:07:46] Module red: genes=484 
+[2026-06-06 00:07:54] Module grey60: genes=40 
+[2026-06-06 00:08:00] Module black: genes=481 
+[2026-06-06 00:08:07] Module purple: genes=305 
+[2026-06-06 00:08:13] Module greenyellow: genes=272 
+[2026-06-06 00:08:20] Module darkmagenta: genes=45 
+[2026-06-06 00:08:27] Module lightcyan: genes=145 
+[2026-06-06 00:08:33] Module salmon: genes=174 
+[2026-06-06 00:08:40] Module tan: genes=196 
+[2026-06-06 00:08:47] Module pink: genes=448 
+[2026-06-06 00:08:53] Module darkred: genes=54 
+[2026-06-06 00:09:00] Module sienna3: genes=45 
+[2026-06-06 00:09:06] Module saddlebrown: genes=57 
+[2026-06-06 00:09:12] Module brown: genes=8892 
+[2026-06-06 00:09:32] Module skyblue: genes=59 
+[2026-06-06 00:09:38] Module turquoise: genes=13787 
+[2026-06-06 00:10:08] Module darkgreen: genes=78 
+[2026-06-06 00:10:14] Module magenta: genes=352 
+[2026-06-06 00:10:31] Finished enrichment for variant: v2_exclude_protected_pcs / list: 10_neurodegeneration_ad_biomarkers 
+[2026-06-06 00:10:38] Starting enrichment for variant: v1_all_pcs / list: 10_puberty_and_menarche_variables 
+[2026-06-06 00:10:38] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-06 00:10:38] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/10_puberty_and_menarche_variables 
+[2026-06-06 00:10:38] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:10:38] plot_p_col: pvalue 
+[2026-06-06 00:10:38] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:10:38] selected modules count: 1 
+[2026-06-06 00:10:38] selected modules: blue 
+[2026-06-06 00:10:38] Enrichr background mode disabled. 
+[2026-06-06 00:10:38] Module blue: genes=2 
+[2026-06-06 00:10:44] Finished enrichment for variant: v1_all_pcs / list: 10_puberty_and_menarche_variables 
+[2026-06-06 00:10:50] Starting enrichment for variant: v2_exclude_protected_pcs / list: 10_puberty_and_menarche_variables 
+[2026-06-06 00:10:50] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-06 00:10:50] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/10_puberty_and_menarche_variables 
+[2026-06-06 00:10:50] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:10:50] plot_p_col: pvalue 
+[2026-06-06 00:10:50] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:10:50] selected modules count: 9 
+[2026-06-06 00:10:50] selected modules: midnightblue, yellow, lightgreen, darkgrey, white, red, darkred, saddlebrown, brown 
+[2026-06-06 00:10:50] Enrichr background mode disabled. 
+[2026-06-06 00:10:50] Module midnightblue: genes=60 
+[2026-06-06 00:10:56] Module yellow: genes=7076 
+[2026-06-06 00:11:12] Module lightgreen: genes=22 
+[2026-06-06 00:11:20] Module darkgrey: genes=13 
+[2026-06-06 00:11:26] Module white: genes=33 
+[2026-06-06 00:11:32] Module red: genes=484 
+[2026-06-06 00:11:39] Module darkred: genes=54 
+[2026-06-06 00:11:46] Module saddlebrown: genes=57 
+[2026-06-06 00:11:52] Module brown: genes=8892 
+[2026-06-06 00:12:17] Finished enrichment for variant: v2_exclude_protected_pcs / list: 10_puberty_and_menarche_variables 
+[2026-06-06 00:12:22] Starting enrichment for variant: v1_all_pcs / list: 11_breast_cancer_outcomes 
+[2026-06-06 00:12:22] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-06 00:12:22] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/11_breast_cancer_outcomes 
+[2026-06-06 00:12:22] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:12:22] plot_p_col: pvalue 
+[2026-06-06 00:12:22] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:12:22] selected modules count: 0 
+[2026-06-06 00:12:23] selected modules: (none) 
+[2026-06-06 00:12:23] Enrichr background mode disabled. 
+[2026-06-06 00:12:23] No modules selected — skipping enrichment. 
+[2026-06-06 00:12:28] Starting enrichment for variant: v2_exclude_protected_pcs / list: 11_breast_cancer_outcomes 
+[2026-06-06 00:12:28] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-06 00:12:29] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/11_breast_cancer_outcomes 
+[2026-06-06 00:12:29] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:12:29] plot_p_col: pvalue 
+[2026-06-06 00:12:29] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:12:29] selected modules count: 4 
+[2026-06-06 00:12:29] selected modules: midnightblue, steelblue, darkred, darkgreen 
+[2026-06-06 00:12:29] Enrichr background mode disabled. 
+[2026-06-06 00:12:29] Module midnightblue: genes=60 
+[2026-06-06 00:12:34] Module steelblue: genes=36 
+[2026-06-06 00:12:40] Module darkred: genes=54 
+[2026-06-06 00:12:47] Module darkgreen: genes=78 
+[2026-06-06 00:12:54] Finished enrichment for variant: v2_exclude_protected_pcs / list: 11_breast_cancer_outcomes 
+[2026-06-06 00:13:00] Starting enrichment for variant: v1_all_pcs / list: 11_kidney_function_markers 
+[2026-06-06 00:13:00] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-06 00:13:00] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/11_kidney_function_markers 
+[2026-06-06 00:13:00] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:13:00] plot_p_col: pvalue 
+[2026-06-06 00:13:00] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:13:00] selected modules count: 1 
+[2026-06-06 00:13:00] selected modules: blue 
+[2026-06-06 00:13:00] Enrichr background mode disabled. 
+[2026-06-06 00:13:00] Module blue: genes=2 
+[2026-06-06 00:13:07] Finished enrichment for variant: v1_all_pcs / list: 11_kidney_function_markers 
+[2026-06-06 00:13:11] Starting enrichment for variant: v2_exclude_protected_pcs / list: 11_kidney_function_markers 
+[2026-06-06 00:13:11] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-06 00:13:11] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/11_kidney_function_markers 
+[2026-06-06 00:13:11] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:13:11] plot_p_col: pvalue 
+[2026-06-06 00:13:11] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:13:11] selected modules count: 36 
+[2026-06-06 00:13:11] selected modules: paleturquoise, orange, midnightblue, steelblue, yellow, royalblue, blue, yellowgreen, lightgreen, darkgrey, darkturquoise, plum1, skyblue3, orangered4, darkorange, white, darkolivegreen, green, red, grey60, black, purple, greenyellow, darkmagenta, lightcyan, salmon, tan, pink, darkred, sienna3, saddlebrown, brown, skyblue, turquoise, darkgreen, magenta 
+[2026-06-06 00:13:11] Enrichr background mode disabled. 
+[2026-06-06 00:13:11] Module paleturquoise: genes=9 
+[2026-06-06 00:13:17] Module orange: genes=20 
+[2026-06-06 00:13:23] Module midnightblue: genes=60 
+[2026-06-06 00:13:29] Module steelblue: genes=36 
+[2026-06-06 00:13:35] Module yellow: genes=7076 
+[2026-06-06 00:13:51] Module royalblue: genes=44 
+[2026-06-06 00:13:57] Module blue: genes=9620 
+[2026-06-06 00:14:19] Module yellowgreen: genes=22 
+[2026-06-06 00:14:25] Module lightgreen: genes=22 
+[2026-06-06 00:14:34] Module darkgrey: genes=13 
+[2026-06-06 00:14:40] Module darkturquoise: genes=9 
+[2026-06-06 00:14:45] Module plum1: genes=3 
+[2026-06-06 00:14:51] Module skyblue3: genes=16 
+[2026-06-06 00:14:57] Module orangered4: genes=27 
+[2026-06-06 00:15:03] Module darkorange: genes=15 
+[2026-06-06 00:15:10] Module white: genes=33 
+[2026-06-06 00:15:16] Module darkolivegreen: genes=17 
+[2026-06-06 00:15:22] Module green: genes=1542 
+[2026-06-06 00:15:30] Module red: genes=484 
+[2026-06-06 00:15:37] Module grey60: genes=40 
+[2026-06-06 00:15:43] Module black: genes=481 
+[2026-06-06 00:15:49] Module purple: genes=305 
+[2026-06-06 00:15:55] Module greenyellow: genes=272 
+[2026-06-06 00:16:01] Module darkmagenta: genes=45 
+[2026-06-06 00:16:07] Module lightcyan: genes=145 
+[2026-06-06 00:16:14] Module salmon: genes=174 
+[2026-06-06 00:16:21] Module tan: genes=196 
+[2026-06-06 00:16:26] Module pink: genes=448 
+[2026-06-06 00:16:32] Module darkred: genes=54 
+[2026-06-06 00:16:38] Module sienna3: genes=45 
+[2026-06-06 00:16:44] Module saddlebrown: genes=57 
+[2026-06-06 00:16:49] Module brown: genes=8892 
+[2026-06-06 00:17:09] Module skyblue: genes=59 
+[2026-06-06 00:17:15] Module turquoise: genes=13787 
+[2026-06-06 00:17:45] Module darkgreen: genes=78 
+[2026-06-06 00:17:51] Module magenta: genes=352 
+[2026-06-06 00:18:10] Finished enrichment for variant: v2_exclude_protected_pcs / list: 11_kidney_function_markers 
+[2026-06-06 00:18:15] Starting enrichment for variant: v1_all_pcs / list: 12_ddt_breastcancer 
+[2026-06-06 00:18:15] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-06 00:18:15] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/12_ddt_breastcancer 
+[2026-06-06 00:18:15] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:18:15] plot_p_col: pvalue 
+[2026-06-06 00:18:15] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:18:15] selected modules count: 1 
+[2026-06-06 00:18:15] selected modules: blue 
+[2026-06-06 00:18:15] Enrichr background mode disabled. 
+[2026-06-06 00:18:15] Module blue: genes=2 
+[2026-06-06 00:18:31] Finished enrichment for variant: v1_all_pcs / list: 12_ddt_breastcancer 
+[2026-06-06 00:18:38] Starting enrichment for variant: v2_exclude_protected_pcs / list: 12_ddt_breastcancer 
+[2026-06-06 00:18:38] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-06 00:18:38] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/12_ddt_breastcancer 
+[2026-06-06 00:18:38] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:18:38] plot_p_col: pvalue 
+[2026-06-06 00:18:38] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:18:38] selected modules count: 31 
+[2026-06-06 00:18:38] selected modules: orange, midnightblue, steelblue, yellow, blue, yellowgreen, lightgreen, violet, darkgrey, lightsteelblue1, lightyellow, mediumpurple3, cyan, darkorange, white, green, red, black, purple, greenyellow, lightcyan, salmon, tan, pink, darkred, sienna3, saddlebrown, brown, skyblue, turquoise, darkgreen 
+[2026-06-06 00:18:38] Enrichr background mode disabled. 
+[2026-06-06 00:18:38] Module orange: genes=20 
+[2026-06-06 00:18:44] Module midnightblue: genes=60 
+[2026-06-06 00:18:50] Module steelblue: genes=36 
+[2026-06-06 00:18:56] Module yellow: genes=7076 
+[2026-06-06 00:19:13] Module blue: genes=9620 
+[2026-06-06 00:19:35] Module yellowgreen: genes=22 
+[2026-06-06 00:19:42] Module lightgreen: genes=22 
+[2026-06-06 00:19:50] Module violet: genes=23 
+[2026-06-06 00:19:56] Module darkgrey: genes=13 
+[2026-06-06 00:20:02] Module lightsteelblue1: genes=17 
+[2026-06-06 00:20:08] Module lightyellow: genes=51 
+[2026-06-06 00:20:14] Module mediumpurple3: genes=21 
+[2026-06-06 00:20:22] Module cyan: genes=170 
+[2026-06-06 00:20:28] Module darkorange: genes=15 
+[2026-06-06 00:20:34] Module white: genes=33 
+[2026-06-06 00:20:41] Module green: genes=1542 
+[2026-06-06 00:20:49] Module red: genes=484 
+[2026-06-06 00:20:55] Module black: genes=481 
+[2026-06-06 00:21:02] Module purple: genes=305 
+[2026-06-06 00:21:08] Module greenyellow: genes=272 
+[2026-06-06 00:21:15] Module lightcyan: genes=145 
+[2026-06-06 00:21:22] Module salmon: genes=174 
+[2026-06-06 00:21:29] Module tan: genes=196 
+[2026-06-06 00:21:35] Module pink: genes=448 
+[2026-06-06 00:21:42] Module darkred: genes=54 
+[2026-06-06 00:21:51] Module sienna3: genes=45 
+[2026-06-06 00:21:58] Module saddlebrown: genes=57 
+[2026-06-06 00:22:04] Module brown: genes=8892 
+[2026-06-06 00:22:25] Module skyblue: genes=59 
+[2026-06-06 00:22:31] Module turquoise: genes=13787 
+[2026-06-06 00:23:04] Module darkgreen: genes=78 
+[2026-06-06 00:23:25] Finished enrichment for variant: v2_exclude_protected_pcs / list: 12_ddt_breastcancer 
+[2026-06-06 00:23:32] Starting enrichment for variant: v1_all_pcs / list: 12_ddt_obesity 
+[2026-06-06 00:23:35] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-06 00:23:35] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/12_ddt_obesity 
+[2026-06-06 00:23:35] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:23:35] plot_p_col: pvalue 
+[2026-06-06 00:23:35] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:23:35] selected modules count: 0 
+[2026-06-06 00:23:35] selected modules: (none) 
+[2026-06-06 00:23:35] Enrichr background mode disabled. 
+[2026-06-06 00:23:35] No modules selected — skipping enrichment. 
+[2026-06-06 00:23:41] Starting enrichment for variant: v2_exclude_protected_pcs / list: 12_ddt_obesity 
+[2026-06-06 00:23:41] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-06 00:23:41] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/12_ddt_obesity 
+[2026-06-06 00:23:41] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:23:41] plot_p_col: pvalue 
+[2026-06-06 00:23:42] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:23:42] selected modules count: 24 
+[2026-06-06 00:23:42] selected modules: orange, yellow, blue, yellowgreen, violet, lightsteelblue1, lightyellow, mediumpurple3, cyan, darkorange, green, red, black, purple, greenyellow, lightcyan, salmon, tan, pink, sienna3, saddlebrown, brown, skyblue, turquoise 
+[2026-06-06 00:23:42] Enrichr background mode disabled. 
+[2026-06-06 00:23:42] Module orange: genes=20 
+[2026-06-06 00:23:48] Module yellow: genes=7076 
+[2026-06-06 00:24:05] Module blue: genes=9620 
+[2026-06-06 00:24:29] Module yellowgreen: genes=22 
+[2026-06-06 00:24:46] Module violet: genes=23 
+[2026-06-06 00:24:52] Module lightsteelblue1: genes=17 
+[2026-06-06 00:24:58] Module lightyellow: genes=51 
+[2026-06-06 00:25:05] Module mediumpurple3: genes=21 
+[2026-06-06 00:25:11] Module cyan: genes=170 
+[2026-06-06 00:25:18] Module darkorange: genes=15 
+[2026-06-06 00:25:26] Module green: genes=1542 
+[2026-06-06 00:25:34] Module red: genes=484 
+[2026-06-06 00:25:41] Module black: genes=481 
+[2026-06-06 00:25:48] Module purple: genes=305 
+[2026-06-06 00:25:57] Module greenyellow: genes=272 
+[2026-06-06 00:26:03] Module lightcyan: genes=145 
+[2026-06-06 00:26:12] Module salmon: genes=174 
+[2026-06-06 00:26:18] Module tan: genes=196 
+[2026-06-06 00:26:25] Module pink: genes=448 
+[2026-06-06 00:26:33] Module sienna3: genes=45 
+[2026-06-06 00:26:40] Module saddlebrown: genes=57 
+[2026-06-06 00:26:46] Module brown: genes=8892 
+[2026-06-06 00:27:08] Module skyblue: genes=59 
+[2026-06-06 00:27:14] Module turquoise: genes=13787 
+[2026-06-06 00:27:57] Finished enrichment for variant: v2_exclude_protected_pcs / list: 12_ddt_obesity 
+[2026-06-06 00:28:04] Starting enrichment for variant: v1_all_pcs / list: 12_ddt_race_ice 
+[2026-06-06 00:28:05] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-06 00:28:05] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/12_ddt_race_ice 
+[2026-06-06 00:28:05] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:28:05] plot_p_col: pvalue 
+[2026-06-06 00:28:05] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:28:05] selected modules count: 1 
+[2026-06-06 00:28:05] selected modules: turquoise 
+[2026-06-06 00:28:05] Enrichr background mode disabled. 
+[2026-06-06 00:28:05] Module turquoise: genes=9 
+[2026-06-06 00:28:09] Finished enrichment for variant: v1_all_pcs / list: 12_ddt_race_ice 
+[2026-06-06 00:28:17] Starting enrichment for variant: v2_exclude_protected_pcs / list: 12_ddt_race_ice 
+[2026-06-06 00:28:17] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-06 00:28:17] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/12_ddt_race_ice 
+[2026-06-06 00:28:17] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:28:17] plot_p_col: pvalue 
+[2026-06-06 00:28:17] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:28:17] selected modules count: 34 
+[2026-06-06 00:28:17] selected modules: paleturquoise, orange, midnightblue, steelblue, yellow, royalblue, blue, yellowgreen, violet, darkgrey, lightsteelblue1, skyblue3, darkorange, white, darkolivegreen, green, red, grey60, black, purple, greenyellow, darkmagenta, lightcyan, salmon, tan, pink, darkred, sienna3, saddlebrown, brown, skyblue, turquoise, darkgreen, magenta 
+[2026-06-06 00:28:17] Enrichr background mode disabled. 
+[2026-06-06 00:28:17] Module paleturquoise: genes=9 
+[2026-06-06 00:28:23] Module orange: genes=20 
+[2026-06-06 00:28:30] Module midnightblue: genes=60 
+[2026-06-06 00:28:36] Module steelblue: genes=36 
+[2026-06-06 00:28:42] Module yellow: genes=7076 
+[2026-06-06 00:28:58] Module royalblue: genes=44 
+[2026-06-06 00:29:04] Module blue: genes=9620 
+[2026-06-06 00:29:27] Module yellowgreen: genes=22 
+[2026-06-06 00:29:33] Module violet: genes=23 
+[2026-06-06 00:29:39] Module darkgrey: genes=13 
+[2026-06-06 00:29:45] Module lightsteelblue1: genes=17 
+[2026-06-06 00:29:51] Module skyblue3: genes=16 
+[2026-06-06 00:29:57] Module darkorange: genes=15 
+[2026-06-06 00:30:03] Module white: genes=33 
+[2026-06-06 00:30:09] Module darkolivegreen: genes=17 
+[2026-06-06 00:30:15] Module green: genes=1542 
+[2026-06-06 00:30:23] Module red: genes=484 
+[2026-06-06 00:30:30] Module grey60: genes=40 
+[2026-06-06 00:30:36] Module black: genes=481 
+[2026-06-06 00:30:43] Module purple: genes=305 
+[2026-06-06 00:30:49] Module greenyellow: genes=272 
+[2026-06-06 00:30:56] Module darkmagenta: genes=45 
+[2026-06-06 00:31:03] Module lightcyan: genes=145 
+[2026-06-06 00:31:09] Module salmon: genes=174 
+[2026-06-06 00:31:16] Module tan: genes=196 
+[2026-06-06 00:31:22] Module pink: genes=448 
+[2026-06-06 00:31:29] Module darkred: genes=54 
+[2026-06-06 00:31:35] Module sienna3: genes=45 
+[2026-06-06 00:31:42] Module saddlebrown: genes=57 
+[2026-06-06 00:31:48] Module brown: genes=8892 
+[2026-06-06 00:32:08] Module skyblue: genes=59 
+[2026-06-06 00:32:14] Module turquoise: genes=13787 
+[2026-06-06 00:32:46] Module darkgreen: genes=78 
+[2026-06-06 00:32:52] Module magenta: genes=352 
+[2026-06-06 00:33:11] Finished enrichment for variant: v2_exclude_protected_pcs / list: 12_ddt_race_ice 
+[2026-06-06 00:33:17] Starting enrichment for variant: v1_all_pcs / list: 12_outcome_only 
+[2026-06-06 00:33:17] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-06 00:33:17] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/12_outcome_only 
+[2026-06-06 00:33:17] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:33:17] plot_p_col: pvalue 
+[2026-06-06 00:33:18] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:33:18] selected modules count: 1 
+[2026-06-06 00:33:18] selected modules: blue 
+[2026-06-06 00:33:18] Enrichr background mode disabled. 
+[2026-06-06 00:33:18] Module blue: genes=2 
+[2026-06-06 00:33:24] Finished enrichment for variant: v1_all_pcs / list: 12_outcome_only 
+[2026-06-06 00:33:30] Starting enrichment for variant: v2_exclude_protected_pcs / list: 12_outcome_only 
+[2026-06-06 00:33:30] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-06 00:33:30] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/12_outcome_only 
+[2026-06-06 00:33:30] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:33:30] plot_p_col: pvalue 
+[2026-06-06 00:33:31] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:33:31] selected modules count: 32 
+[2026-06-06 00:33:31] selected modules: paleturquoise, orange, midnightblue, steelblue, yellow, royalblue, blue, yellowgreen, lightgreen, darkgrey, skyblue3, darkorange, white, darkolivegreen, red, grey60, black, purple, greenyellow, darkmagenta, lightcyan, salmon, tan, pink, darkred, sienna3, saddlebrown, brown, skyblue, turquoise, darkgreen, magenta 
+[2026-06-06 00:33:31] Enrichr background mode disabled. 
+[2026-06-06 00:33:31] Module paleturquoise: genes=9 
+[2026-06-06 00:33:36] Module orange: genes=20 
+[2026-06-06 00:33:43] Module midnightblue: genes=60 
+[2026-06-06 00:33:49] Module steelblue: genes=36 
+[2026-06-06 00:33:55] Module yellow: genes=7076 
+[2026-06-06 00:34:12] Module royalblue: genes=44 
+[2026-06-06 00:34:18] Module blue: genes=9620 
+[2026-06-06 00:34:40] Module yellowgreen: genes=22 
+[2026-06-06 00:34:46] Module lightgreen: genes=22 
+[2026-06-06 00:34:54] Module darkgrey: genes=13 
+[2026-06-06 00:35:00] Module skyblue3: genes=16 
+[2026-06-06 00:35:06] Module darkorange: genes=15 
+[2026-06-06 00:35:11] Module white: genes=33 
+[2026-06-06 00:35:17] Module darkolivegreen: genes=17 
+[2026-06-06 00:35:23] Module red: genes=484 
+[2026-06-06 00:35:30] Module grey60: genes=40 
+[2026-06-06 00:35:36] Module black: genes=481 
+[2026-06-06 00:35:42] Module purple: genes=305 
+[2026-06-06 00:35:49] Module greenyellow: genes=272 
+[2026-06-06 00:35:55] Module darkmagenta: genes=45 
+[2026-06-06 00:36:01] Module lightcyan: genes=145 
+[2026-06-06 00:36:08] Module salmon: genes=174 
+[2026-06-06 00:36:14] Module tan: genes=196 
+[2026-06-06 00:36:20] Module pink: genes=448 
+[2026-06-06 00:36:27] Module darkred: genes=54 
+[2026-06-06 00:36:32] Module sienna3: genes=45 
+[2026-06-06 00:36:38] Module saddlebrown: genes=57 
+[2026-06-06 00:36:44] Module brown: genes=8892 
+[2026-06-06 00:37:04] Module skyblue: genes=59 
+[2026-06-06 00:37:10] Module turquoise: genes=13787 
+[2026-06-06 00:37:42] Module darkgreen: genes=78 
+[2026-06-06 00:37:48] Module magenta: genes=352 
+[2026-06-06 00:38:04] Finished enrichment for variant: v2_exclude_protected_pcs / list: 12_outcome_only 
+[2026-06-06 00:38:09] Starting enrichment for variant: v1_all_pcs / list: 13_allostatic_load_summary_components 
+[2026-06-06 00:38:09] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-06 00:38:09] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/13_allostatic_load_summary_components 
+[2026-06-06 00:38:09] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:38:09] plot_p_col: pvalue 
+[2026-06-06 00:38:09] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:38:09] selected modules count: 1 
+[2026-06-06 00:38:09] selected modules: blue 
+[2026-06-06 00:38:09] Enrichr background mode disabled. 
+[2026-06-06 00:38:09] Module blue: genes=2 
+[2026-06-06 00:38:16] Finished enrichment for variant: v1_all_pcs / list: 13_allostatic_load_summary_components 
+[2026-06-06 00:38:21] Starting enrichment for variant: v2_exclude_protected_pcs / list: 13_allostatic_load_summary_components 
+[2026-06-06 00:38:21] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-06 00:38:21] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/13_allostatic_load_summary_components 
+[2026-06-06 00:38:21] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:38:21] plot_p_col: pvalue 
+[2026-06-06 00:38:21] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:38:21] selected modules count: 34 
+[2026-06-06 00:38:21] selected modules: paleturquoise, orange, midnightblue, steelblue, yellow, royalblue, blue, yellowgreen, lightgreen, darkgrey, skyblue3, mediumpurple3, darkorange, white, darkolivegreen, green, red, grey60, black, purple, greenyellow, darkmagenta, lightcyan, salmon, tan, pink, darkred, sienna3, saddlebrown, brown, skyblue, turquoise, darkgreen, magenta 
+[2026-06-06 00:38:21] Enrichr background mode disabled. 
+[2026-06-06 00:38:21] Module paleturquoise: genes=9 
+[2026-06-06 00:38:27] Module orange: genes=20 
+[2026-06-06 00:38:34] Module midnightblue: genes=60 
+[2026-06-06 00:38:40] Module steelblue: genes=36 
+[2026-06-06 00:38:45] Module yellow: genes=7076 
+[2026-06-06 00:39:03] Module royalblue: genes=44 
+[2026-06-06 00:39:09] Module blue: genes=9620 
+[2026-06-06 00:39:30] Module yellowgreen: genes=22 
+[2026-06-06 00:39:36] Module lightgreen: genes=22 
+[2026-06-06 00:39:43] Module darkgrey: genes=13 
+[2026-06-06 00:39:49] Module skyblue3: genes=16 
+[2026-06-06 00:39:55] Module mediumpurple3: genes=21 
+[2026-06-06 00:40:00] Module darkorange: genes=15 
+[2026-06-06 00:40:06] Module white: genes=33 
+[2026-06-06 00:40:12] Module darkolivegreen: genes=17 
+[2026-06-06 00:40:18] Module green: genes=1542 
+[2026-06-06 00:40:27] Module red: genes=484 
+[2026-06-06 00:40:34] Module grey60: genes=40 
+[2026-06-06 00:40:40] Module black: genes=481 
+[2026-06-06 00:40:46] Module purple: genes=305 
+[2026-06-06 00:40:53] Module greenyellow: genes=272 
+[2026-06-06 00:40:59] Module darkmagenta: genes=45 
+[2026-06-06 00:41:05] Module lightcyan: genes=145 
+[2026-06-06 00:41:12] Module salmon: genes=174 
+[2026-06-06 00:41:18] Module tan: genes=196 
+[2026-06-06 00:41:25] Module pink: genes=448 
+[2026-06-06 00:41:32] Module darkred: genes=54 
+[2026-06-06 00:41:38] Module sienna3: genes=45 
+[2026-06-06 00:41:45] Module saddlebrown: genes=57 
+[2026-06-06 00:41:51] Module brown: genes=8892 
+[2026-06-06 00:42:12] Module skyblue: genes=59 
+[2026-06-06 00:42:18] Module turquoise: genes=13787 
+[2026-06-06 00:42:47] Module darkgreen: genes=78 
+[2026-06-06 00:42:55] Module magenta: genes=352 
+[2026-06-06 00:43:15] Finished enrichment for variant: v2_exclude_protected_pcs / list: 13_allostatic_load_summary_components 
+[2026-06-06 00:43:20] Starting enrichment for variant: v1_all_pcs / list: 14_cardiometabolic_inflammation_raw 
+[2026-06-06 00:43:20] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-06 00:43:20] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/14_cardiometabolic_inflammation_raw 
+[2026-06-06 00:43:20] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:43:20] plot_p_col: pvalue 
+[2026-06-06 00:43:20] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:43:20] selected modules count: 1 
+[2026-06-06 00:43:20] selected modules: blue 
+[2026-06-06 00:43:20] Enrichr background mode disabled. 
+[2026-06-06 00:43:20] Module blue: genes=2 
+[2026-06-06 00:43:27] Finished enrichment for variant: v1_all_pcs / list: 14_cardiometabolic_inflammation_raw 
+[2026-06-06 00:43:34] Starting enrichment for variant: v2_exclude_protected_pcs / list: 14_cardiometabolic_inflammation_raw 
+[2026-06-06 00:43:34] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-06 00:43:34] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/14_cardiometabolic_inflammation_raw 
+[2026-06-06 00:43:34] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:43:34] plot_p_col: pvalue 
+[2026-06-06 00:43:34] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:43:34] selected modules count: 34 
+[2026-06-06 00:43:34] selected modules: paleturquoise, orange, midnightblue, steelblue, yellow, royalblue, blue, yellowgreen, lightgreen, darkgrey, skyblue3, mediumpurple3, darkorange, white, darkolivegreen, green, red, grey60, black, purple, greenyellow, darkmagenta, lightcyan, salmon, tan, pink, darkred, sienna3, saddlebrown, brown, skyblue, turquoise, darkgreen, magenta 
+[2026-06-06 00:43:34] Enrichr background mode disabled. 
+[2026-06-06 00:43:34] Module paleturquoise: genes=9 
+[2026-06-06 00:43:40] Module orange: genes=20 
+[2026-06-06 00:43:46] Module midnightblue: genes=60 
+[2026-06-06 00:43:52] Module steelblue: genes=36 
+[2026-06-06 00:43:58] Module yellow: genes=7076 
+[2026-06-06 00:44:15] Module royalblue: genes=44 
+[2026-06-06 00:44:20] Module blue: genes=9620 
+[2026-06-06 00:44:42] Module yellowgreen: genes=22 
+[2026-06-06 00:44:47] Module lightgreen: genes=22 
+[2026-06-06 00:44:55] Module darkgrey: genes=13 
+[2026-06-06 00:45:01] Module skyblue3: genes=16 
+[2026-06-06 00:45:07] Module mediumpurple3: genes=21 
+[2026-06-06 00:45:12] Module darkorange: genes=15 
+[2026-06-06 00:45:18] Module white: genes=33 
+[2026-06-06 00:45:24] Module darkolivegreen: genes=17 
+[2026-06-06 00:45:30] Module green: genes=1542 
+[2026-06-06 00:45:38] Module red: genes=484 
+[2026-06-06 00:45:44] Module grey60: genes=40 
+[2026-06-06 00:45:51] Module black: genes=481 
+[2026-06-06 00:45:58] Module purple: genes=305 
+[2026-06-06 00:46:04] Module greenyellow: genes=272 
+[2026-06-06 00:46:10] Module darkmagenta: genes=45 
+[2026-06-06 00:46:16] Module lightcyan: genes=145 
+[2026-06-06 00:46:22] Module salmon: genes=174 
+[2026-06-06 00:46:28] Module tan: genes=196 
+[2026-06-06 00:46:33] Module pink: genes=448 
+[2026-06-06 00:46:40] Module darkred: genes=54 
+[2026-06-06 00:46:46] Module sienna3: genes=45 
+[2026-06-06 00:46:52] Module saddlebrown: genes=57 
+[2026-06-06 00:46:57] Module brown: genes=8892 
+[2026-06-06 00:47:16] Module skyblue: genes=59 
+[2026-06-06 00:47:22] Module turquoise: genes=13787 
+[2026-06-06 00:47:53] Module darkgreen: genes=78 
+[2026-06-06 00:47:59] Module magenta: genes=352 
+[2026-06-06 00:48:16] Finished enrichment for variant: v2_exclude_protected_pcs / list: 14_cardiometabolic_inflammation_raw 
+[2026-06-06 00:48:22] Starting enrichment for variant: v1_all_pcs / list: heatmap_primary_traits_quartiles 
+[2026-06-06 00:48:22] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-06 00:48:22] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/heatmap_primary_traits_quartiles 
+[2026-06-06 00:48:22] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:48:22] plot_p_col: pvalue 
+[2026-06-06 00:48:22] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:48:22] selected modules count: 2 
+[2026-06-06 00:48:22] selected modules: blue, turquoise 
+[2026-06-06 00:48:22] Enrichr background mode disabled. 
+[2026-06-06 00:48:22] Module blue: genes=2 
+[2026-06-06 00:48:28] Module turquoise: genes=9 
+[2026-06-06 00:48:34] Finished enrichment for variant: v1_all_pcs / list: heatmap_primary_traits_quartiles 
+[2026-06-06 00:48:38] Starting enrichment for variant: v2_exclude_protected_pcs / list: heatmap_primary_traits_quartiles 
+[2026-06-06 00:48:38] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-06 00:48:38] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/heatmap_primary_traits_quartiles 
+[2026-06-06 00:48:38] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:48:38] plot_p_col: pvalue 
+[2026-06-06 00:48:38] selection_mode: stats_file_plus_trait_list 
+[2026-06-06 00:48:38] selected modules count: 38 
+[2026-06-06 00:48:38] selected modules: paleturquoise, orange, midnightblue, steelblue, yellow, royalblue, blue, yellowgreen, lightgreen, violet, darkgrey, lightsteelblue1, skyblue3, lightyellow, mediumpurple3, cyan, darkorange, white, darkolivegreen, green, red, grey60, black, purple, greenyellow, darkmagenta, lightcyan, salmon, tan, pink, darkred, sienna3, saddlebrown, brown, skyblue, turquoise, darkgreen, magenta 
+[2026-06-06 00:48:38] Enrichr background mode disabled. 
+[2026-06-06 00:48:38] Module paleturquoise: genes=9 
+[2026-06-06 00:48:45] Module orange: genes=20 
+[2026-06-06 00:48:51] Module midnightblue: genes=60 
+[2026-06-06 00:48:57] Module steelblue: genes=36 
+[2026-06-06 00:49:03] Module yellow: genes=7076 
+[2026-06-06 00:49:20] Module royalblue: genes=44 
+[2026-06-06 00:49:26] Module blue: genes=9620 
+[2026-06-06 00:49:48] Module yellowgreen: genes=22 
+[2026-06-06 00:49:55] Module lightgreen: genes=22 
+[2026-06-06 00:50:03] Module violet: genes=23 
+[2026-06-06 00:50:09] Module darkgrey: genes=13 
+[2026-06-06 00:50:15] Module lightsteelblue1: genes=17 
+[2026-06-06 00:50:21] Module skyblue3: genes=16 
+[2026-06-06 00:50:27] Module lightyellow: genes=51 
+[2026-06-06 00:50:33] Module mediumpurple3: genes=21 
+[2026-06-06 00:50:39] Module cyan: genes=170 
+[2026-06-06 00:50:45] Module darkorange: genes=15 
+[2026-06-06 00:50:51] Module white: genes=33 
+[2026-06-06 00:50:57] Module darkolivegreen: genes=17 
+[2026-06-06 00:51:03] Module green: genes=1542 
+[2026-06-06 00:51:11] Module red: genes=484 
+[2026-06-06 00:51:17] Module grey60: genes=40 
+[2026-06-06 00:51:23] Module black: genes=481 
+[2026-06-06 00:51:30] Module purple: genes=305 
+[2026-06-06 00:51:36] Module greenyellow: genes=272 
+[2026-06-06 00:51:42] Module darkmagenta: genes=45 
+[2026-06-06 00:51:48] Module lightcyan: genes=145 
+[2026-06-06 00:51:54] Module salmon: genes=174 
+[2026-06-06 00:52:00] Module tan: genes=196 
+[2026-06-06 00:52:06] Module pink: genes=448 
+[2026-06-06 00:52:13] Module darkred: genes=54 
+[2026-06-06 00:52:19] Module sienna3: genes=45 
+[2026-06-06 00:52:25] Module saddlebrown: genes=57 
+[2026-06-06 00:52:32] Module brown: genes=8892 
+[2026-06-06 00:52:52] Module skyblue: genes=59 
+[2026-06-06 00:52:58] Module turquoise: genes=13787 
+[2026-06-06 00:53:30] Module darkgreen: genes=78 
+[2026-06-06 00:53:36] Module magenta: genes=352 
+[2026-06-06 00:53:59] Finished enrichment for variant: v2_exclude_protected_pcs / list: heatmap_primary_traits_quartiles 
+
+Script 12b complete: Enrichment finished
+project_root: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+annotation_dir_v1: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+annotation_dir_v2: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+do_kegg: FALSE
+do_go: FALSE
+do_reactome: FALSE
+do_enrichr: TRUE
+organism: hsa
+plot_p_col: pvalue
+plot_top_n: 10
+plot_sig_cutoff: 0.05
+module list inputs: =modules.txt
+[2026-06-06 00:54:25] Starting enrichment for variant: v1_all_pcs 
+[2026-06-06 00:54:25] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-06 00:54:25] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-06 00:54:25] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:54:25] plot_p_col: pvalue 
+[2026-06-06 00:54:25] selection_mode: module_list_file 
+[2026-06-06 00:54:25] selected modules count: 0 
+[2026-06-06 00:54:25] selected modules: (none) 
+[2026-06-06 00:54:25] Enrichr background mode disabled. 
+[2026-06-06 00:54:25] No modules selected — skipping enrichment. 
+[2026-06-06 00:54:33] Starting enrichment for variant: v2_exclude_protected_pcs 
+[2026-06-06 00:54:33] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-06 00:54:33] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-06 00:54:33] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:54:33] plot_p_col: pvalue 
+[2026-06-06 00:54:33] selection_mode: module_list_file 
+[2026-06-06 00:54:33] selected modules count: 6 
+[2026-06-06 00:54:33] selected modules: brown, tan, magenta, yellow, salmon, darkgrey 
+[2026-06-06 00:54:33] Enrichr background mode disabled. 
+[2026-06-06 00:54:33] Module brown: genes=8892 
+[2026-06-06 00:55:00] Module tan: genes=196 
+[2026-06-06 00:55:08] Module magenta: genes=352 
+[2026-06-06 00:55:17] Module yellow: genes=7076 
+[2026-06-06 00:55:37] Module salmon: genes=174 
+[2026-06-06 00:55:45] Module darkgrey: genes=13 
+[2026-06-06 00:56:16] Finished enrichment for variant: v2_exclude_protected_pcs 
+
+Script 12b complete: Enrichment finished
+project_root: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+annotation_dir_v1: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs
+annotation_dir_v2: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+do_kegg: FALSE
+do_go: FALSE
+do_reactome: FALSE
+do_enrichr: TRUE
+organism: hsa
+plot_p_col: pvalue
+plot_top_n: 8
+plot_sig_cutoff: 0.05
+module list inputs: =modules.txt
+[2026-06-06 00:56:39] Starting enrichment for variant: v1_all_pcs 
+[2026-06-06 00:56:39] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-06 00:56:39] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v1_all_pcs 
+[2026-06-06 00:56:39] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:56:39] plot_p_col: pvalue 
+[2026-06-06 00:56:39] selection_mode: module_list_file 
+[2026-06-06 00:56:39] selected modules count: 0 
+[2026-06-06 00:56:39] selected modules: (none) 
+[2026-06-06 00:56:39] Enrichr background mode disabled. 
+[2026-06-06 00:56:39] No modules selected — skipping enrichment. 
+[2026-06-06 00:56:45] Starting enrichment for variant: v2_exclude_protected_pcs 
+[2026-06-06 00:56:45] annotation_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-06 00:56:45] out_dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12b_enrichment/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs 
+[2026-06-06 00:56:45] do_kegg: FALSE | do_go: FALSE | do_reactome: FALSE | do_enrichr: TRUE 
+[2026-06-06 00:56:45] plot_p_col: pvalue 
+[2026-06-06 00:56:45] selection_mode: module_list_file 
+[2026-06-06 00:56:45] selected modules count: 6 
+[2026-06-06 00:56:46] selected modules: brown, tan, magenta, yellow, salmon, darkgrey 
+[2026-06-06 00:56:46] Enrichr background mode disabled. 
+[2026-06-06 00:56:46] Module brown: genes=8892 
+[2026-06-06 00:57:07] Module tan: genes=196 
+[2026-06-06 00:57:13] Module magenta: genes=352 
+[2026-06-06 00:57:20] Module yellow: genes=7076 
+[2026-06-06 00:57:36] Module salmon: genes=174 
+[2026-06-06 00:57:42] Module darkgrey: genes=13 
+[2026-06-06 00:57:52] Finished enrichment for variant: v2_exclude_protected_pcs 
+
+Script 12b complete: Enrichment finished
+Fatal error: cannot open file '/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/comethyl_scripts/13A_core_regulatory_state_overlap.R': No such file or directory
+
+############### Job 14986355 summary from  ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : publicgrp
+Partition           : low
+Nodes               : hive-dc-7-8-54
+Cores               : 50
+GPUs                : 0
+State               : FAILED
+ExitCode            : 2:0
+Submit              : 2026-06-05T15:13:06
+Start               : 2026-06-05T16:34:52
+End                 : 2026-06-06T00:59:01
+Reserved walltime   :   23:00:00
+Used walltime       :   08:24:09
+Used CPU time       : 7-17:20:51
+% User (Computation): 99.57%
+% System (I/O)      :  0.43%
+Mem reserved        : 500G
+Max Mem used        : 49.29G (hive-dc-7-8-54)
+Max Disk Write      : 9.45G (hive-dc-7-8-54)
+Max Disk Read       : 16.48G (hive-dc-7-8-54)
+
+############### Job 14986355 info ###############
+JobId=14986355 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=106 Nice=0 Account=publicgrp QOS=publicgrp-low-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=1 BatchFlag=1 Reboot=0 ExitCode=2:0
+   RunTime=08:24:09 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-06-05T15:13:06 EligibleTime=2026-06-05T15:15:07
+   AccrueTime=2026-06-05T15:15:07
+   StartTime=2026-06-05T16:34:52 EndTime=2026-06-06T00:59:01 Deadline=N/A
+   PreemptEligibleTime=2026-06-05T16:34:52 PreemptTime=None
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-06-05T16:34:52 Scheduler=Backfill
+   Partition=low AllocNode:Sid=hive-dc-7-9-51:2904569
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-8-54
+   BatchHost=hive-dc-7-8-54
+   NumNodes=1 NumCPUs=50 NumTasks=1 CPUs/Task=50 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=50,mem=500G,node=1,billing=50
+   AllocTRES=cpu=50,mem=500G,node=1,billing=50
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=50 MinMemoryNode=500G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=50
+   MailUser=gekuodza@ucdavis.edu,smholesinger@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUThive-dc-7-4-30
+Thu Jun 25 12:30:45 AM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+
+############### Job 16570089 summary from  ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : genome-center-grp
+Partition           : high
+Nodes               : hive-dc-7-4-30
+Cores               : 14
+GPUs                : 0
+State               : CANCELLED by 2224567,CANCELLED
+ExitCode            : 0:0
+Submit              : 2026-06-25T00:30:19
+Start               : 2026-06-25T00:30:42
+End                 : 2026-06-25T01:10:05
+Reserved walltime   : 23:00:00
+Used walltime       : 00:39:23
+Used CPU time       : 00:00:12
+% User (Computation): 89.89%
+% System (I/O)      : 10.10%
+Mem reserved        : 250G
+Max Mem used        : 946.88M (hive-dc-7-4-30)
+Max Disk Write      : 61.44K (hive-dc-7-4-30)
+Max Disk Read       : 79.62M (hive-dc-7-4-30)
+
+############### Job 16570089 info ###############
+JobId=16570089 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=6618 Nice=0 Account=genome-center-grp QOS=genome-center-grp-high-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:15
+   RunTime=00:39:02 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-06-25T00:30:19 EligibleTime=2026-06-25T00:30:19
+   AccrueTime=2026-06-25T00:30:19
+   StartTime=2026-06-25T00:30:42 EndTime=2026-06-25T01:09:44 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-06-25T00:30:42 Scheduler=Backfill
+   Partition=high AllocNode:Sid=hive-dc-7-6-14:1802486
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-4-30
+   BatchHost=hive-dc-7-4-30
+   NumNodes=1 NumCPUs=14 NumTasks=1 CPUs/Task=14 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=14,mem=250G,node=1,billing=14
+   AllocTRES=cpu=14,mem=250G,node=1,billing=14
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=14 MinMemoryNode=250G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=14
+   MailUser=gekuodza@ucdavis.edu,smholesinger@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUThive-dc-7-4-30
+Thu Jun 25 01:10:23 AM PDT 2026
+R version: R version 4.3.3 (2024-02-29) 
+comethyl OK
+Allowing parallel execution with up to 223 working processes.
+[1] "4069" "4113" "4132" "4127" "4029" "4063"
+
+############### Job 16572334 summary from  ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : genome-center-grp
+Partition           : high
+Nodes               : hive-dc-7-4-30
+Cores               : 14
+GPUs                : 0
+State               : CANCELLED,CANCELLED by 2224567
+ExitCode            : 0:0
+Submit              : 2026-06-25T00:58:04
+Start               : 2026-06-25T01:10:22
+End                 : 2026-06-25T14:32:20
+Reserved walltime   : 23:00:00
+Used walltime       : 13:21:58
+Used CPU time       : 00:00:54
+% User (Computation): 89.56%
+% System (I/O)      : 10.44%
+Mem reserved        : 250G
+Max Mem used        : 1.41G (hive-dc-7-4-30)
+Max Disk Write      : 5.02M (hive-dc-7-4-30)
+Max Disk Read       : 342.78M (hive-dc-7-4-30)
+
+############### Job 16572334 info ###############
+JobId=16572334 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=6619 Nice=0 Account=genome-center-grp QOS=genome-center-grp-high-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:15
+   RunTime=13:21:56 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-06-25T00:58:04 EligibleTime=2026-06-25T00:58:04
+   AccrueTime=2026-06-25T00:58:04
+   StartTime=2026-06-25T01:10:22 EndTime=2026-06-25T14:32:18 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-06-25T01:10:22 Scheduler=Backfill
+   Partition=high AllocNode:Sid=hive-dc-7-6-14:1786378
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-4-30
+   BatchHost=hive-dc-7-4-30
+   NumNodes=1 NumCPUs=14 NumTasks=1 CPUs/Task=14 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=14,mem=250G,node=1,billing=14
+   AllocTRES=cpu=14,mem=250G,node=1,billing=14
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=14 MinMemoryNode=250G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=14
+   MailUser=gekuodza@ucdavis.edu,smholesinger@ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUThive-dc-7-4-46
+Thu Jun 25 02:32:42 PM PDT 2026
+Allowing parallel execution with up to 223 working processes.
+[1] "4069" "4113" "4132" "4127" "4029" "4063"
+
+############### Job 16623976 summary from  ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : genome-center-grp
+Partition           : high
+Nodes               : hive-dc-7-4-46
+Cores               : 14
+GPUs                : 0
+State               : FAILED
+ExitCode            : 1:0
+Submit              : 2026-06-25T14:30:23
+Start               : 2026-06-25T14:32:42
+End                 : 2026-06-25T14:37:47
+Reserved walltime   : 23:00:00
+Used walltime       : 00:05:05
+Used CPU time       : 00:00:39
+% User (Computation): 88.77%
+% System (I/O)      : 11.23%
+Mem reserved        : 250G
+Max Mem used        : 1.60G (hive-dc-7-4-46)
+Max Disk Write      : 4.89M (hive-dc-7-4-46)
+Max Disk Read       : 272.32M (hive-dc-7-4-46)
+
+############### Job 16623976 info ###############
+JobId=16623976 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=6621 Nice=0 Account=genome-center-grp QOS=genome-center-grp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0
+   RunTime=00:05:05 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-06-25T14:30:23 EligibleTime=2026-06-25T14:30:23
+   AccrueTime=2026-06-25T14:30:23
+   StartTime=2026-06-25T14:32:42 EndTime=2026-06-25T14:37:47 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-06-25T14:32:42 Scheduler=Backfill
+   Partition=high AllocNode:Sid=hive-dc-7-6-14:1786378
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-4-46
+   BatchHost=hive-dc-7-4-46
+   NumNodes=1 NumCPUs=14 NumTasks=1 CPUs/Task=14 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=14,mem=250G,node=1,billing=14
+   AllocTRES=cpu=14,mem=250G,node=1,billing=14
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=14 MinMemoryNode=250G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=14
+   MailUser=gekuodza@health.ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUThive-dc-7-6-62
+Thu Jun 25 02:39:32 PM PDT 2026
+hive-dc-7-4-22
+Thu Jun 25 03:55:42 PM PDT 2026
+
+############### Job 16625028 summary from  ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : genome-center-grp
+Partition           : high
+Nodes               : hive-dc-7-6-62
+Cores               : 14
+GPUs                : 0
+State               : CANCELLED by 2224567,CANCELLED
+ExitCode            : 0:0
+Submit              : 2026-06-25T14:39:04
+Start               : 2026-06-25T14:39:31
+End                 : 2026-06-25T15:55:45
+Reserved walltime   : 23:00:00
+Used walltime       : 01:16:14
+Used CPU time       : 00:00:15
+% User (Computation): 90.72%
+% System (I/O)      :  9.28%
+Mem reserved        : 250G
+Max Mem used        : 985.94M (hive-dc-7-6-62)
+Max Disk Write      : 61.44K (hive-dc-7-6-62)
+Max Disk Read       : 81.89M (hive-dc-7-6-62)
+
+############### Job 16625028 info ###############
+JobId=16625028 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=6621 Nice=0 Account=genome-center-grp QOS=genome-center-grp-high-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:15
+   RunTime=01:15:53 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-06-25T14:39:04 EligibleTime=2026-06-25T14:39:04
+   AccrueTime=2026-06-25T14:39:04
+   StartTime=2026-06-25T14:39:31 EndTime=2026-06-25T15:55:24 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-06-25T14:39:31 Scheduler=Backfill
+   Partition=high AllocNode:Sid=hive-dc-7-6-14:1786378
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-6-62
+   BatchHost=hive-dc-7-6-62
+   NumNodes=1 NumCPUs=14 NumTasks=1 CPUs/Task=14 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=14,mem=250G,node=1,billing=14
+   AllocTRES=cpu=14,mem=250G,node=1,billing=14
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=14 MinMemoryNode=250G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=14
+   MailUser=gekuodza@health.ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT
+############### Job 16631598 summary from  ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : genome-center-grp
+Partition           : high
+Nodes               : hive-dc-7-4-22
+Cores               : 14
+GPUs                : 0
+State               : CANCELLED,CANCELLED by 2224567
+ExitCode            : 0:0
+Submit              : 2026-06-25T15:55:36
+Start               : 2026-06-25T15:55:41
+End                 : 2026-06-25T16:09:43
+Reserved walltime   : 23:00:00
+Used walltime       : 00:14:02
+Used CPU time       : 00:00:12
+% User (Computation): 89.98%
+% System (I/O)      : 10.02%
+Mem reserved        : 250G
+Max Mem used        : 941.54M (hive-dc-7-4-22)
+Max Disk Write      : 61.44K (hive-dc-7-4-22)
+Max Disk Read       : 80.95M (hive-dc-7-4-22)
+
+############### Job 16631598 info ###############
+JobId=16631598 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=6621 Nice=0 Account=genome-center-grp QOS=genome-center-grp-high-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:15
+   RunTime=00:13:42 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-06-25T15:55:36 EligibleTime=2026-06-25T15:55:36
+   AccrueTime=2026-06-25T15:55:36
+   StartTime=2026-06-25T15:55:41 EndTime=2026-06-25T16:09:23 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-06-25T15:55:41 Scheduler=Backfill
+   Partition=high AllocNode:Sid=hive-dc-7-5-42:701813
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-4-22
+   BatchHost=hive-dc-7-4-22
+   NumNodes=1 NumCPUs=14 NumTasks=1 CPUs/Task=14 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=14,mem=250G,node=1,billing=14
+   AllocTRES=cpu=14,mem=250G,node=1,billing=14
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=14 MinMemoryNode=250G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=14
+   MailUser=gekuodza@health.ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUThive-dc-7-4-22
+Thu Jun 25 04:10:11 PM PDT 2026
+hive-dc-7-5-38
+Thu Jun 25 05:01:38 PM PDT 2026
+
+############### Job 16632686 summary from  ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : genome-center-grp
+Partition           : high
+Nodes               : hive-dc-7-4-22
+Cores               : 14
+GPUs                : 0
+State               : CANCELLED by 2224567,CANCELLED
+ExitCode            : 0:0
+Submit              : 2026-06-25T16:09:57
+Start               : 2026-06-25T16:10:10
+End                 : 2026-06-25T17:01:49
+Reserved walltime   : 23:00:00
+Used walltime       : 00:51:39
+Used CPU time       : 00:00:13
+% User (Computation): 90.83%
+% System (I/O)      :  9.17%
+Mem reserved        : 250G
+Max Mem used        : 780.99M (hive-dc-7-4-22)
+Max Disk Write      : 61.44K (hive-dc-7-4-22)
+Max Disk Read       : 81.26M (hive-dc-7-4-22)
+
+############### Job 16632686 info ###############
+JobId=16632686 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=6621 Nice=0 Account=genome-center-grp QOS=genome-center-grp-high-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:15
+   RunTime=00:50:59 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-06-25T16:09:57 EligibleTime=2026-06-25T16:09:57
+   AccrueTime=2026-06-25T16:09:57
+   StartTime=2026-06-25T16:10:10 EndTime=2026-06-25T17:01:09 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-06-25T16:10:10 Scheduler=Backfill
+   Partition=high AllocNode:Sid=hive-dc-7-5-42:701813
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-4-22
+   BatchHost=hive-dc-7-4-22
+   NumNodes=1 NumCPUs=14 NumTasks=1 CPUs/Task=14 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=14,mem=250G,node=1,billing=14
+   AllocTRES=cpu=14,mem=250G,node=1,billing=14
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=14 MinMemoryNode=250G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=14
+   MailUser=gekuodza@health.ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUTAllowing parallel execution with up to 14 working processes.
+[1] "4069" "4113" "4132" "4127" "4029" "4063"
+Allowing parallel execution with up to 14 working processes.
+Allowing parallel execution with up to 127 working processes.
+[1] "4069" "4113" "4132" "4127" "4029" "4063"
+Allowing parallel execution with up to 127 working processes.
+[1] "4069" "4113" "4132" "4127" "4029" "4063"
+Run completed in 1030 seconds
+Thu Jun 25 05:18:48 PM PDT 2026
+
+############### Job 16637542 summary from  ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : genome-center-grp
+Partition           : high
+Nodes               : hive-dc-7-5-38
+Cores               : 14
+GPUs                : 0
+State               : COMPLETED
+ExitCode            : 0:0
+Submit              : 2026-06-25T17:01:34
+Start               : 2026-06-25T17:01:36
+End                 : 2026-06-25T17:18:49
+Reserved walltime   : 23:00:00
+Used walltime       : 00:17:13
+Used CPU time       : 00:01:50
+% User (Computation): 91.72%
+% System (I/O)      :  8.28%
+Mem reserved        : 250G
+Max Mem used        : 1.75G (hive-dc-7-5-38)
+Max Disk Write      : 15.05M (hive-dc-7-5-38)
+Max Disk Read       : 634.02M (hive-dc-7-5-38)
+
+############### Job 16637542 info ###############
+JobId=16637542 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=6621 Nice=0 Account=genome-center-grp QOS=genome-center-grp-high-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:17:13 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-06-25T17:01:34 EligibleTime=2026-06-25T17:01:34
+   AccrueTime=2026-06-25T17:01:34
+   StartTime=2026-06-25T17:01:36 EndTime=2026-06-25T17:18:49 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-06-25T17:01:36 Scheduler=Backfill
+   Partition=high AllocNode:Sid=hive-dc-7-5-42:820093
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-5-38
+   BatchHost=hive-dc-7-5-38
+   NumNodes=1 NumCPUs=14 NumTasks=1 CPUs/Task=14 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=14,mem=250G,node=1,billing=14
+   AllocTRES=cpu=14,mem=250G,node=1,billing=14
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=14 MinMemoryNode=250G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/run_pixi.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=14
+   MailUser=gekuodza@health.ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUThive-dc-7-4-38
+Thu Jul  2 08:17:04 AM PDT 2026
+Allowing parallel execution with up to 4 working processes.
+[1] "4069" "4113" "4132" "4127" "4029" "4063"
+Allowing parallel execution with up to 14 working processes.
+[1] "4069" "4113" "4132" "4127" "4029" "4063"
+Allowing parallel execution with up to 14 working processes.
+Allowing parallel execution with up to 223 working processes.
+[1] "4069" "4113" "4132" "4127" "4029" "4063"
+Allowing parallel execution with up to 223 working processes.
+[1] "4069" "4113" "4132" "4127" "4029" "4063"
+Run completed in 964 seconds
+Thu Jul  2 08:33:08 AM PDT 2026
+
+############### Job 17018938 summary from  ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : publicgrp
+Partition           : low
+Nodes               : hive-dc-7-4-38
+Cores               : 14
+GPUs                : 0
+State               : COMPLETED
+ExitCode            : 0:0
+Submit              : 2026-07-02T08:16:45
+Start               : 2026-07-02T08:17:03
+End                 : 2026-07-02T08:33:08
+Reserved walltime   : 23:00:00
+Used walltime       : 00:16:05
+Used CPU time       : 00:27:47
+% User (Computation): 90.04%
+% System (I/O)      :  9.96%
+Mem reserved        : 250G
+Max Mem used        : 12.45G (hive-dc-7-4-38)
+Max Disk Write      : 15.79M (hive-dc-7-4-38)
+Max Disk Read       : 1.04G (hive-dc-7-4-38)
+
+############### Job 17018938 info ###############
+JobId=17018938 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=90 Nice=0 Account=publicgrp QOS=publicgrp-low-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:16:05 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-07-02T08:16:45 EligibleTime=2026-07-02T08:16:45
+   AccrueTime=2026-07-02T08:16:45
+   StartTime=2026-07-02T08:17:03 EndTime=2026-07-02T08:33:08 Deadline=N/A
+   PreemptEligibleTime=2026-07-02T08:17:03 PreemptTime=None
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-07-02T08:17:03 Scheduler=Backfill
+   Partition=low AllocNode:Sid=hive-dc-7-4-54:1639300
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-4-38
+   BatchHost=hive-dc-7-4-38
+   NumNodes=1 NumCPUs=14 NumTasks=1 CPUs/Task=14 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=14,mem=250G,node=1,billing=14
+   AllocTRES=cpu=14,mem=250G,node=1,billing=14
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=14 MinMemoryNode=250G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/slurm/co/run_conda.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/slurm/co/run_conda.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=14
+   MailUser=gekuodza@health.ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUThive-dc-7-4-38
+Thu Jul  2 08:59:07 AM PDT 2026
+Allowing parallel execution with up to 4 working processes.
+[1] "4069" "4113" "4132" "4127" "4029" "4063"
+
+############### Job 17019113 summary from  ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : publicgrp
+Partition           : low
+Nodes               : hive-dc-7-4-38
+Cores               : 14
+GPUs                : 0
+State               : FAILED
+ExitCode            : 1:0
+Submit              : 2026-07-02T08:58:51
+Start               : 2026-07-02T08:59:07
+End                 : 2026-07-02T09:00:26
+Reserved walltime   : 23:00:00
+Used walltime       : 00:01:19
+Used CPU time       : 00:00:24
+% User (Computation): 88.18%
+% System (I/O)      : 11.81%
+Mem reserved        : 250G
+Max Mem used        : 2.67G (hive-dc-7-4-38)
+Max Disk Write      : 30.72K (hive-dc-7-4-38)
+Max Disk Read       : 118.56M (hive-dc-7-4-38)
+
+############### Job 17019113 info ###############
+JobId=17019113 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=90 Nice=0 Account=publicgrp QOS=publicgrp-low-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0
+   RunTime=00:01:19 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-07-02T08:58:51 EligibleTime=2026-07-02T08:58:51
+   AccrueTime=2026-07-02T08:58:51
+   StartTime=2026-07-02T08:59:07 EndTime=2026-07-02T09:00:26 Deadline=N/A
+   PreemptEligibleTime=2026-07-02T08:59:07 PreemptTime=None
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-07-02T08:59:07 Scheduler=Backfill
+   Partition=low AllocNode:Sid=hive-dc-7-4-54:1639300
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-4-38
+   BatchHost=hive-dc-7-4-38
+   NumNodes=1 NumCPUs=14 NumTasks=1 CPUs/Task=14 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=14,mem=250G,node=1,billing=14
+   AllocTRES=cpu=14,mem=250G,node=1,billing=14
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=14 MinMemoryNode=250G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/slurm/co/run_conda.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/slurm/co/run_conda.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=14
+   MailUser=gekuodza@health.ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUThive-dc-7-4-34
+Thu Jul  2 09:10:39 AM PDT 2026
+Allowing parallel execution with up to 4 working processes.
+[1] "4069" "4113" "4132" "4127" "4029" "4063"
+Allowing parallel execution with up to 14 working processes.
+[1] "4069" "4113" "4132" "4127" "4029" "4063"
+Allowing parallel execution with up to 14 working processes.
+Allowing parallel execution with up to 223 working processes.
+[1] "4069" "4113" "4132" "4127" "4029" "4063"
+hive-dc-7-4-34
+Thu Jul  2 09:28:10 AM PDT 2026
+
+############### Job 17019302 summary from  ###############
+Name                : Figures_Intergen_CHDS
+User                : gekuodza
+Account             : publicgrp
+Partition           : low
+Nodes               : hive-dc-7-4-34
+Cores               : 14
+GPUs                : 0
+State               : FAILED
+ExitCode            : 1:0
+Submit              : 2026-07-02T09:27:55
+Start               : 2026-07-02T09:28:10
+End                 : 2026-07-02T09:28:26
+Reserved walltime   : 23:00:00
+Used walltime       : 00:00:16
+Used CPU time       : 00:00:05
+% User (Computation): 85.38%
+% System (I/O)      :  0.00%
+Mem reserved        : 250G
+Max Mem used        : 125.89M (hive-dc-7-4-34)
+Max Disk Write      : 0.00  (hive-dc-7-4-34)
+Max Disk Read       : 0.00  (hive-dc-7-4-34)
+
+############### Job 17019302 info ###############
+JobId=17019302 JobName=Figures_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=90 Nice=0 Account=publicgrp QOS=publicgrp-low-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0
+   RunTime=00:00:16 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-07-02T09:27:55 EligibleTime=2026-07-02T09:27:55
+   AccrueTime=2026-07-02T09:27:55
+   StartTime=2026-07-02T09:28:10 EndTime=2026-07-02T09:28:26 Deadline=N/A
+   PreemptEligibleTime=2026-07-02T09:28:10 PreemptTime=None
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-07-02T09:28:10 Scheduler=Backfill
+   Partition=low AllocNode:Sid=hive-dc-7-4-54:1639300
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-4-34
+   BatchHost=hive-dc-7-4-34
+   NumNodes=1 NumCPUs=14 NumTasks=1 CPUs/Task=14 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=14,mem=250G,node=1,billing=14
+   AllocTRES=cpu=14,mem=250G,node=1,billing=14
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=14 MinMemoryNode=250G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/slurm/lo/run_conda.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/slurm/lo/run_conda.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=14
+   MailUser=gekuodza@health.ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUTAllowing parallel execution with up to 223 working processes.
+[1] "4069" "4113" "4132" "4127" "4029" "4063"
+Run completed in 1188 seconds
+Thu Jul  2 09:30:26 AM PDT 2026
+
+############### Job 17019155 summary from  ###############
+Name                : Cometh_Intergen_CHDS
+User                : gekuodza
+Account             : publicgrp
+Partition           : low
+Nodes               : hive-dc-7-4-34
+Cores               : 14
+GPUs                : 0
+State               : COMPLETED
+ExitCode            : 0:0
+Submit              : 2026-07-02T09:10:14
+Start               : 2026-07-02T09:10:38
+End                 : 2026-07-02T09:30:26
+Reserved walltime   : 23:00:00
+Used walltime       : 00:19:48
+Used CPU time       : 00:29:48
+% User (Computation): 91.36%
+% System (I/O)      :  8.64%
+Mem reserved        : 250G
+Max Mem used        : 12.49G (hive-dc-7-4-34)
+Max Disk Write      : 14.24M (hive-dc-7-4-34)
+Max Disk Read       : 1.03G (hive-dc-7-4-34)
+
+############### Job 17019155 info ###############
+JobId=17019155 JobName=Cometh_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=90 Nice=0 Account=publicgrp QOS=publicgrp-low-qos
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:19:48 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-07-02T09:10:14 EligibleTime=2026-07-02T09:10:14
+   AccrueTime=2026-07-02T09:10:14
+   StartTime=2026-07-02T09:10:38 EndTime=2026-07-02T09:30:26 Deadline=N/A
+   PreemptEligibleTime=2026-07-02T09:10:38 PreemptTime=None
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-07-02T09:10:38 Scheduler=Backfill
+   Partition=low AllocNode:Sid=hive-dc-7-4-54:1639300
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-4-34
+   BatchHost=hive-dc-7-4-34
+   NumNodes=1 NumCPUs=14 NumTasks=1 CPUs/Task=14 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=14,mem=250G,node=1,billing=14
+   AllocTRES=cpu=14,mem=250G,node=1,billing=14
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=14 MinMemoryNode=250G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/slurm/co/run_conda.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/slurm/co/run_conda.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=14
+   MailUser=gekuodza@health.ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUThive-dc-7-5-30
+Thu Jul  2 02:23:18 PM PDT 2026
+null device 
+          1 
+null device 
+          1 
+
+############### Job 17021315 summary from  ###############
+Name                : Figures_Intergen_CHDS
+User                : gekuodza
+Account             : publicgrp
+Partition           : low
+Nodes               : hive-dc-7-5-30
+Cores               : 14
+GPUs                : 0
+State               : FAILED
+ExitCode            : 1:0
+Submit              : 2026-07-02T14:22:50
+Start               : 2026-07-02T14:23:17
+End                 : 2026-07-02T14:27:34
+Reserved walltime   : 23:00:00
+Used walltime       : 00:04:17
+Used CPU time       : 00:00:23
+% User (Computation): 88.21%
+% System (I/O)      : 11.79%
+Mem reserved        : 250G
+Max Mem used        : 1.27G (hive-dc-7-5-30)
+Max Disk Write      : 3.10M (hive-dc-7-5-30)
+Max Disk Read       : 149.58M (hive-dc-7-5-30)
+
+############### Job 17021315 info ###############
+JobId=17021315 JobName=Figures_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=94 Nice=0 Account=publicgrp QOS=publicgrp-low-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0
+   RunTime=00:04:17 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-07-02T14:22:50 EligibleTime=2026-07-02T14:22:50
+   AccrueTime=2026-07-02T14:22:50
+   StartTime=2026-07-02T14:23:17 EndTime=2026-07-02T14:27:34 Deadline=N/A
+   PreemptEligibleTime=2026-07-02T14:23:17 PreemptTime=None
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-07-02T14:23:17 Scheduler=Backfill
+   Partition=low AllocNode:Sid=hive-dc-7-4-54:1958870
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-5-30
+   BatchHost=hive-dc-7-5-30
+   NumNodes=1 NumCPUs=14 NumTasks=1 CPUs/Task=14 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=14,mem=250G,node=1,billing=14
+   AllocTRES=cpu=14,mem=250G,node=1,billing=14
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=14 MinMemoryNode=250G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/slurm/lo/run_conda.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/slurm/lo/run_conda.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report.out
+   TresPerTask=cpu=14
+   MailUser=gekuodza@health.ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT

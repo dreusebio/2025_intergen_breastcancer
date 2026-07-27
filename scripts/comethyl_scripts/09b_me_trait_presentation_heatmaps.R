@@ -108,17 +108,50 @@
 
 message("Starting Script 09b")
 
-suppressPackageStartupMessages({
-  library(optparse)
-  library(readr)
-  library(dplyr)
-  library(comethyl)
-  library(WGCNA)
-  library(AnnotationHub)
-  library(ggplot2)
-  library(gridExtra)
-  library(cowplot)
-})
+# suppressPackageStartupMessages({
+#   library(optparse)
+#   library(readr)
+#   library(dplyr)
+#   library(comethyl)
+#   library(WGCNA)
+#   library(AnnotationHub)
+#   library(ggplot2)
+#   library(gridExtra)
+#   library(cowplot)
+# })
+
+
+message("Loading optparse...")
+library(optparse)
+
+message("Loading comethyl...")
+library(comethyl)
+
+message("Loading WGCNA...")
+library(WGCNA)
+
+message("Loading openxlsx...")
+library(openxlsx)
+
+message("Loading AnnotationHub...")
+library(AnnotationHub)
+
+message("Loading readr...")
+library(readr)
+
+message("Loading dplyr...")
+library(dplyr)
+
+message("Loading ggplot2...")
+library(ggplot2)
+
+message("Loading gridExtra...")
+library(gridExtra)
+
+message("Loading cowplot...")
+library(cowplot)
+
+message("All packages loaded.")
 
 # ------------------------------------------------------------
 # Load helper.R if present next to this script
@@ -1149,7 +1182,12 @@ AnnotationHub::setAnnotationHubOption(
   "CACHE",
   value = file.path(opt$project_root, ".cache")
 )
-WGCNA::enableWGCNAThreads()
+# WGCNA::enableWGCNAThreads()
+n_threads <- as.integer(Sys.getenv("SLURM_CPUS_PER_TASK", "8"))
+n_threads <- max(1L, n_threads)
+
+message("Using WGCNA threads: ", n_threads)
+WGCNA::enableWGCNAThreads(nThreads = n_threads)
 
 pipeline_root <- file.path(opt$project_root, "comethyl_output")
 

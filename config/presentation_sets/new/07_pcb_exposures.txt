@@ -1,0 +1,34 @@
+PCB-28 (ng/mL)
+PCB-66 (ng/mL)
+PCB-74 (ng/mL)
+PCB-99 (ng/mL)
+PCB-101 (ng/mL)
+PCB-105 (ng/mL)
+PCB-118 (ng/mL)
+PCB-138 (ng/mL)
+PCB-153 (ng/mL)
+PCB-156 (ng/mL)
+PCB-167 (ng/mL)
+PCB-170 (ng/mL)
+PCB-180 (ng/mL)
+PCB-183 (ng/mL)
+PCB-187 (ng/mL)
+PCB-194 (ng/mL)
+PCB-201 (ng/mL)
+PCB-203 (ng/mL)
+PCB-15 (ng/mL)
+PCB-56 (ng/mL)
+PCB-82 (ng/mL)
+PCB-146 (ng/mL)
+PCB-174 (ng/mL)
+PCB-177 (ng/mL)
+PCB-178 (ng/mL)
+PCB-199 (ng/mL)
+F1 obesity
+F1 overweight
+F1 age at menarche (years)
+F1 early menarche
+F1 late menarche
+Breast cancer: F1
+Breast cancer: F0
+Black race

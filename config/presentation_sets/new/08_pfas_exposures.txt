@@ -1,0 +1,21 @@
+EtPFOSAA (ng/mL)
+MePFOSAA (ng/mL)
+PFBS (ng/mL)
+PFDeA (ng/mL)
+PFDoA (ng/mL)
+PFHpA (ng/mL)
+PFHxA (ng/mL)
+PFHxS (ng/mL)
+PFNA (ng/mL)
+PFOA (ng/mL)
+PFOS (ng/mL)
+PFOSA (ng/mL)
+PFUdA (ng/mL)
+F1 obesity
+F1 overweight
+F1 age at menarche (years)
+F1 early menarche
+F1 late menarche
+Breast cancer: F1
+Breast cancer: F0
+Black race

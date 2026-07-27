@@ -1,0 +1,4 @@
+ICE income: Q1
+ICE income: Q2
+ICE income: Q3
+ICE income: Q4

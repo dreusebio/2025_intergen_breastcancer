@@ -1,0 +1,17 @@
+DDT (ng/mL)
+DDT: Q1
+DDT: Q2
+DDT: Q3
+DDT: Q4
+DDT: T1
+DDT: T2
+DDT: T3
+DDE (ng/mL)
+DDE: Q1
+DDE: Q2
+DDE: Q3
+DDE: Q4
+DDE: T1
+DDE: T2
+DDE: T3
+o,p'-DDT (ng/mL)

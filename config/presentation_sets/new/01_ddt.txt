@@ -1,0 +1,8 @@
+DDT (ng/mL)
+DDT: Q1
+DDT: Q2
+DDT: Q3
+DDT: Q4
+DDT: T1
+DDT: T2
+DDT: T3

@@ -19,6 +19,7 @@
 
 suppressPackageStartupMessages({
   library(openxlsx)
+  library(readxl)
   library(readr)
   library(dplyr)
   library(ggplot2)
@@ -85,8 +86,35 @@ readSampleInfo <- function(file,
   }
 
   if (ext %in% c("xlsx", "xls")) {
-    df <- openxlsx::read.xlsx(file, rowNames = TRUE)
-    df <- as.data.frame(df, stringsAsFactors = FALSE, check.names = FALSE)
+  raw_df <- readxl::read_excel(
+    path = file,
+    sheet = 1,
+    .name_repair = "minimal"
+  )
+
+  raw_df <- as.data.frame(
+    raw_df,
+    stringsAsFactors = FALSE,
+    check.names = FALSE
+  )
+
+  # First Excel column contains your sample IDs / original rownames
+  sample_ids <- trimws(as.character(raw_df[[1]]))
+
+  if (any(is.na(sample_ids) | sample_ids == "")) {
+    stop("First Excel column contains missing or blank sample IDs.")
+  }
+
+  if (anyDuplicated(sample_ids)) {
+    dup_ids <- unique(sample_ids[duplicated(sample_ids)])
+    stop(
+      "Duplicate sample IDs found in first Excel column. Examples: ",
+      paste(head(dup_ids, 10), collapse = ", ")
+    )
+  }
+
+  df <- raw_df[, -1, drop = FALSE]
+  rownames(df) <- sample_ids
 
   } else if (ext == "csv") {
     df <- read.csv(file, stringsAsFactors = FALSE, check.names = FALSE)
@@ -165,10 +193,43 @@ readSampleInfo <- function(file,
 #   found
 #   missing
 # ------------------------------------------------------------
+#old before trait files with dots and spaces
+# resolveTraits <- function(requested_traits,
+#                           available_traits,
+#                           label = "traits",
+#                           verbose = TRUE) {
+#   if (is.null(requested_traits)) {
+#     return(list(
+#       requested = character(0),
+#       found = character(0),
+#       missing = character(0)
+#     ))
+#   }
+
+#   requested_traits <- unique(trimws(requested_traits))
+#   requested_traits <- requested_traits[requested_traits != ""]
+
+#   found <- intersect(requested_traits, available_traits)
+#   missing <- setdiff(requested_traits, available_traits)
+
+#   if (verbose) {
+#     message("[resolveTraits] ", label, ": requested = ", length(requested_traits),
+#             ", found = ", length(found),
+#             ", missing = ", length(missing))
+#   }
+
+#   return(list(
+#     requested = requested_traits,
+#     found = found,
+#     missing = missing
+#   ))
+# }
+
 resolveTraits <- function(requested_traits,
                           available_traits,
                           label = "traits",
                           verbose = TRUE) {
+
   if (is.null(requested_traits)) {
     return(list(
       requested = character(0),
@@ -177,25 +238,81 @@ resolveTraits <- function(requested_traits,
     ))
   }
 
-  requested_traits <- unique(trimws(requested_traits))
-  requested_traits <- requested_traits[requested_traits != ""]
+  requested_traits <- unique(trimws(as.character(requested_traits)))
+  requested_traits <- requested_traits[nzchar(requested_traits)]
 
-  found <- intersect(requested_traits, available_traits)
-  missing <- setdiff(requested_traits, available_traits)
+  available_traits <- as.character(available_traits)
 
-  if (verbose) {
-    message("[resolveTraits] ", label, ": requested = ", length(requested_traits),
-            ", found = ", length(found),
-            ", missing = ", length(missing))
+  # Create a comparison key that ignores differences such as:
+  # spaces vs dots, parentheses, colon, slash, hyphen, etc.
+  trait_key <- function(x) {
+    x <- trimws(tolower(as.character(x)))
+    gsub("[[:space:][:punct:]]+", "", x)
   }
 
-  return(list(
+  requested_keys <- trait_key(requested_traits)
+  available_keys <- trait_key(available_traits)
+
+  # Stop if two available columns collapse to the same matching key.
+  duplicated_available <- unique(available_keys[duplicated(available_keys)])
+  if (length(duplicated_available) > 0) {
+    ambiguous <- lapply(duplicated_available, function(k) {
+      available_traits[available_keys == k]
+    })
+
+    stop(
+      "Ambiguous trait-name matching after punctuation normalization. ",
+      "Examples:\n",
+      paste(
+        vapply(
+          ambiguous,
+          function(x) paste("  ", paste(x, collapse = " | ")),
+          character(1)
+        ),
+        collapse = "\n"
+      )
+    )
+  }
+
+  found <- character(0)
+  missing <- character(0)
+
+  for (i in seq_along(requested_traits)) {
+    hit <- which(available_keys == requested_keys[i])
+
+    if (length(hit) == 1) {
+      # Return the ACTUAL name in the stats/sample-info table.
+      found <- c(found, available_traits[hit])
+    } else {
+      missing <- c(missing, requested_traits[i])
+    }
+  }
+
+  found <- unique(found)
+  missing <- unique(missing)
+
+  if (verbose) {
+    message(
+      "[resolveTraits] ", label,
+      ": requested = ", length(requested_traits),
+      ", found = ", length(found),
+      ", missing = ", length(missing)
+    )
+
+    if (length(missing) > 0) {
+      message(
+        "[resolveTraits] Missing ", label, ": ",
+        paste(head(missing, 10), collapse = ", ")
+      )
+    }
+  }
+
+  list(
     requested = requested_traits,
     found = found,
     missing = missing
-  ))
+  )
 }
-
 # ------------------------------------------------------------
 # .standardize_pc_trait_table
 # ------------------------------------------------------------
@@ -700,8 +817,8 @@ plotMEtraitCor <- function(MEtraitCor,
         label = "*", color = "black", size = label.size, nudge_y = label.nudge_y
       )
   }
-  # Hide axis labels if we’re labeling the color bar (to avoid duplicates)
-  if (showColorBar && showColorBarLabels) {
+  # Hide axis labels if we’re labeling the color bar (to avoid duplicates) #i changed this if (showColorBar && showColorBarLabels) to if (showColorBar) to show the color bar even if the labels are not shown
+  if (showColorBar) {
     heatmap <- heatmap +
       ggplot2::theme(
         axis.text.x  = ggplot2::element_blank(),
