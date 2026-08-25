@@ -334,28 +334,29 @@ Rscript /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_Georg
 #  #full list
 #   #  --enrichr_dbs ClinVar_2025,WikiPathways_2024_Human,DisGeNET,GTEx_Tissue_Expression_Up,Human_Phenotype_Ontology \
 # #  --trait_list_file /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/config/presentation_sets/12_heatmap_primary_traits.txt \
-# #script 12b just one text file only
-# Rscript /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/comethyl_scripts/12b_enrichment.R \
-#   --project_root /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George \
-#   --annotation_dir_v1 /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs \
-#   --annotation_dir_v2 /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs \
-#   --stats_file_v1 /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/ME_Trait_Correlation_Stats_Bicor.tsv \
-#   --stats_file_v2 /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/ME_Trait_Correlation_Stats_Bicor.tsv \
-#   --module_list_file /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/config/enrichrment_modules/modules.txt \
-#   --p_thresh 0.05 \
-#   --do_kegg false \
-#   --do_go false \
-#   --do_reactome false \
-#   --do_enrichr true \
-#   --enrichr_dbs GO_Biological_Process_2025,GO_Molecular_Function_2025,GO_Cellular_Component_2025,KEGG_2021_Human,MSigDB_Hallmark_2020,MSigDB_Oncogenic_Signatures,ClinVar_2025,WikiPathways_2024_Human,GTEx_Tissue_Expression_Up,Reactome_Pathways_2024,Human_Phenotype_Ontology,Epigenomics_Roadmap_HM_ChIP-seq,Elsevier_Pathway_Collection,Panther_2016,UK_Biobank_GWAS_v1,GWAS_Catalog_2025 \
-#   --use_enrichr_background false \
-#   --enrichr_retries 5 \
-#   --enrichr_sleep 2 \
-#   --plot_p_col pvalue \
-#   --plot_top_n 10 \
-#   --plot_sig_cutoff 0.05 \
-#   --plot_width 10 \
-#   --plot_height 7
+
+#script 12b just one text file only
+Rscript /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/comethyl_scripts/12b_enrichment.R \
+  --project_root /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George \
+  --annotation_dir_v1 /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v1_all_pcs \
+  --annotation_dir_v2 /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/12_annotation/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs \
+  --stats_file_v1 /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v1_all_pcs/ME_Trait_Correlation_Stats_Bicor.tsv \
+  --stats_file_v2 /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/09a_me_trait_analysis/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs/ME_Trait_Correlation_Stats_Bicor.tsv \
+  --module_list_file /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/config/enrichrment_modules/modules.txt \
+  --p_thresh 0.05 \
+  --do_kegg true \
+  --do_go false \
+  --do_reactome false \
+  --do_enrichr true \
+  --enrichr_dbs GO_Biological_Process_2025,GO_Molecular_Function_2025,GO_Cellular_Component_2025,KEGG_2021_Human,MSigDB_Hallmark_2020,MSigDB_Oncogenic_Signatures,ClinVar_2025,WikiPathways_2024_Human,GTEx_Tissue_Expression_Up,Reactome_Pathways_2024,Human_Phenotype_Ontology,Epigenomics_Roadmap_HM_ChIP-seq,Elsevier_Pathway_Collection,Panther_2016,UK_Biobank_GWAS_v1,GWAS_Catalog_2025 \
+  --use_enrichr_background false \
+  --enrichr_retries 5 \
+  --enrichr_sleep 2 \
+  --plot_p_col pvalue \
+  --plot_top_n 10 \
+  --plot_sig_cutoff 0.05 \
+  --plot_width 10 \
+  --plot_height 7
 
 
 # #script 12b just one text file only(Sylvia thesis)
@@ -441,12 +442,12 @@ Rscript /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_Georg
 #   --output_pdf /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/results/00_table1/table1_intergen.pdf \
 #   --verify
 
-# #random script to rename metadata for publication
-# Rscript /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/clean_metadata/rename_metadata_publication_labels.R \
-#   --input_path /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173_05222026.xlsx \
-#   --output_path /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173_05222026_publication_labels.xlsx \
-#   --dictionary_path "/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Data Dictionary for Intergen Class File (3).xlsx" \
-#   --dictionary_output_path /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173_05222026_DataDictionary_publication_labels.xlsx
+#random script to rename metadata for publication
+Rscript /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/clean_metadata/rename_metadata_publication_labels.R \
+  --input_path /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173_05222026.xlsx \
+  --output_path /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173_05222026_publication_labels.xlsx \
+  --dictionary_path "/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Data Dictionary for Intergen Class File (3).xlsx" \
+  --dictionary_output_path /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173_05222026_DataDictionary_publication_labels.xlsx
 
 end=$(date +%s)
 echo "Run completed in $((end - start)) seconds"

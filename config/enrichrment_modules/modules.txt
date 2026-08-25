@@ -1,6 +1,4 @@
 brown
-tan
-magenta
+red
 yellow
-salmon
-darkgrey
+saddlebrown

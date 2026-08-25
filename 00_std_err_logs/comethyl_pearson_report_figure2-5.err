@@ -1,0 +1,89 @@
+Starting Figure 1 Panel A
+Font: showtext not available, using Helvetica
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1A
+Loading PC metadata...
+  Surrogate variable PCs found: 33
+Loading bicor stats...
+  Black race bicor rows found: 33
+Protected SVs (p < 0.05): 8  |  Adjusted: 25
+Cumulative variance — protected: 13.3%  |  adjusted: 16.5%
+Saved PDF: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1A/figure1_panelA.pdf
+Saved PNG: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1A/figure1_panelA.png
+Figure 1 Panel A complete.
+Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1A
+Starting Figure 1 Panel B
+Warning messages:
+1: multiple methods tables found for ‘sort’ 
+2: multiple methods tables found for ‘sort’ 
+3: multiple methods tables found for ‘sort’ 
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1B
+Loading stats file...
+Loading trait file...
+  Traits requested: 43
+  Traits found in stats: 43
+  Modules: 41  |  Traits: 43
+Orientation: modules_as_rows (transposing module/trait axes)
+Generating heatmap (modules_as_rows)...
+[plotMEtraitCor] Plotting ME trait correlation heatmap
+[plotMEtraitCor] Saving plot as /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1B/figure1_panelB.pdf
+Warning messages:
+1: The `size` argument of `element_line()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+2: The `size` argument of `element_rect()` is deprecated as of ggplot2 3.4.0.
+ℹ Please use the `linewidth` argument instead.
+ℹ The deprecated feature was likely used in the comethyl package.
+  Please report the issue at <https://github.com/cemordaunt/comethyl/issues>. 
+Saved PDF: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1B/figure1_panelB.pdf
+Generating module color key...
+Warning messages:
+1: In `[<-.factor`(`*tmp*`, is.na(match(pal_names, limits)), value = "grey50") :
+  invalid factor level, NA generated
+2: In `[<-.factor`(`*tmp*`, is.na(match(pal_names, limits)), value = "grey50") :
+  invalid factor level, NA generated
+Saved color key: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1B/figure1_panelB_colorkey.pdf
+Figure 1 Panel B complete.
+Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1B
+Starting Figure 1 Panel C
+Color overrides in effect: yellow=goldenrod
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1C
+Loading Annotated_Regions...
+  Total regions: 465397
+Aggregating kME to gene level (max across regions per gene)...
+Hub genes per module:
+Building panel for module: yellow (10 genes)
+Building panel for module: red (10 genes)
+Building panel for module: saddlebrown (10 genes)
+Building panel for module: brown (10 genes)
+Assembling panels with patchwork...
+Saved PDF: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1C/figure1_panelC.pdf
+Saved PNG: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1C/figure1_panelC.png
+Figure 1 Panel C complete.
+Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1C
+Starting figure2-5
+Warning messages:
+1: multiple methods tables found for ‘sort’ 
+2: multiple methods tables found for ‘sort’ 
+3: multiple methods tables found for ‘sort’ 
+Pipeline output dir: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/11_me_trait_pair_plots/cov3_75pct/covMin10_methSD0p07/v2_exclude_protected_pcs
+[readSampleInfo] Reading sample info: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/data/metadata/Intergen173_05222026_full_dataset_priority_numeric.xlsx
+[readSampleInfo] No sample_id_col provided; using existing rownames.
+[readSampleInfo] First 6 rownames used as sample IDs:
+Samples in common: 173
+Modules available: 50
+Traits available:  131
+
+── Trait set: 00_figure1_heatmap_primary_traits ──
+  Missing traits: # Figure 1 Panel B — primary trait set, # Names must exactly match renamed metadata column names, # produced by rename_map in the metadata preparation script., # Ordered: exposures first (chemicals, ICE), then outcomes., # Duplicate "F1 Black race" removed (was line 34 in old version)., # ── Chemical exposures ─────────────────────────────────────────, # ── Neighborhood stressors (ICE) ──────────────────────────────, # ── Outcomes ──────────────────────────────────────────────────, # ── Neurodegenerative biomarkers ──────────────────────────────
+  Pairs to plot: 186
+Error in increase_plot_font(p_v) : 
+  could not find function "increase_plot_font"
+Execution halted
+Starting Figure 1 Panel B
+Warning messages:
+1: multiple methods tables found for ‘sort’ 
+2: multiple methods tables found for ‘sort’ 
+3: multiple methods tables found for ‘sort’ 
+Error: Package 'pdftools' is required to convert the PDF to PNG. Install with: pixi add r-pdftools  (or install.packages('pdftools') from a login node with internet access)
+Execution halted

@@ -23058,3 +23058,33 @@ Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_G
 Error:   × could not find pixi.toml or pyproject.toml with tool.pixi at directory /
   │ quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
 
+Starting Figure 1 Panel A
+Font: showtext not available, using Helvetica
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1A
+Loading PC metadata...
+  Surrogate variable PCs found: 33
+Loading bicor stats...
+  Black race bicor rows found: 33
+Protected SVs (p < 0.05): 8  |  Adjusted: 25
+Cumulative variance — protected: 13.3%  |  adjusted: 16.5%
+Saved PDF: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1A/figure1_panelA.pdf
+Saved PNG: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1A/figure1_panelA.png
+Figure 1 Panel A complete.
+Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1A
+Starting Figure 1 Panel B
+[2026-07-30T14:46:58.001] error: *** JOB 19597159 ON hive-dc-7-5-42 CANCELLED AT 2026-07-30T14:46:58 DUE to SIGNAL Terminated ***
+Starting Figure 1 Panel A
+Font: showtext not available, using Helvetica
+Output directory: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1A
+Loading PC metadata...
+  Surrogate variable PCs found: 33
+Loading bicor stats...
+  Black race bicor rows found: 33
+Protected SVs (p < 0.05): 8  |  Adjusted: 25
+Cumulative variance — protected: 13.3%  |  adjusted: 16.5%
+Saved PDF: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1A/figure1_panelA.pdf
+Saved PNG: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1A/figure1_panelA.png
+Figure 1 Panel A complete.
+Outputs in: /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/comethyl_output/figures/panels/1A
+Starting Figure 1 Panel B
+[2026-07-30T15:02:29.829] error: *** JOB 19597483 ON hive-dc-7-6-26 CANCELLED AT 2026-07-30T15:02:29 DUE to SIGNAL Terminated ***

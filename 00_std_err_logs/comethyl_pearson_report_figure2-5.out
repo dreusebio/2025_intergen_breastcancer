@@ -1,0 +1,116 @@
+hive-dc-7-6-26
+Thu Jul 30 03:02:34 PM PDT 2026
+
+      brown         red saddlebrown      yellow 
+         10          10          10          10 
+hive-dc-7-6-46
+Thu Jul 30 03:07:37 PM PDT 2026
+Allowing parallel execution with up to 20 working processes.
+[1] "4069" "4113" "4132" "4127" "4029" "4063"
+
+############### Job 19597539 summary from  ###############
+Name                : Figures_Intergen_CHDS
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-6-26
+Cores               : 20
+GPUs                : 0
+State               : FAILED
+ExitCode            : 1:0
+Submit              : 2026-07-30T15:02:19
+Start               : 2026-07-30T15:02:34
+End                 : 2026-07-30T15:08:09
+Reserved walltime   : 23:00:00
+Used walltime       : 00:05:35
+Used CPU time       : 00:01:00
+% User (Computation): 91.69%
+% System (I/O)      :  8.31%
+Mem reserved        : 250G
+Max Mem used        : 4.01G (hive-dc-7-6-26)
+Max Disk Write      : 3.66M (hive-dc-7-6-26)
+Max Disk Read       : 325.75M (hive-dc-7-6-26)
+
+############### Job 19597539 info ###############
+JobId=19597539 JobName=Figures_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8005 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0
+   RunTime=00:05:34 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-07-30T15:02:19 EligibleTime=2026-07-30T15:02:19
+   AccrueTime=2026-07-30T15:02:19
+   StartTime=2026-07-30T15:02:34 EndTime=2026-07-30T15:08:08 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-07-30T15:02:34 Scheduler=Backfill
+   Partition=high AllocNode:Sid=hive-dc-7-8-30:926488
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-6-26
+   BatchHost=hive-dc-7-6-26
+   NumNodes=1 NumCPUs=20 NumTasks=1 CPUs/Task=20 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=20,mem=250G,node=1,billing=20
+   AllocTRES=cpu=20,mem=250G,node=1,billing=20
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=20 MinMemoryNode=250G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/slurm/figures/run_conda.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/slurm/figures/run_conda.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report_figure2-5.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report_figure2-5.out
+   TresPerTask=cpu=20
+   MailUser=gekuodza@health.ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT
+############### Job 19597742 summary from  ###############
+Name                : Figures_Intergen_CHDS
+User                : gekuodza
+Account             : lasallegrp
+Partition           : high
+Nodes               : hive-dc-7-6-46
+Cores               : 20
+GPUs                : 0
+State               : FAILED
+ExitCode            : 1:0
+Submit              : 2026-07-30T15:07:29
+Start               : 2026-07-30T15:07:37
+End                 : 2026-07-30T15:10:33
+Reserved walltime   : 23:00:00
+Used walltime       : 00:02:56
+Used CPU time       : 00:00:20
+% User (Computation): 89.69%
+% System (I/O)      : 10.30%
+Mem reserved        : 250G
+Max Mem used        : 1.23G (hive-dc-7-6-46)
+Max Disk Write      : 1.65M (hive-dc-7-6-46)
+Max Disk Read       : 126.92M (hive-dc-7-6-46)
+
+############### Job 19597742 info ###############
+JobId=19597742 JobName=Figures_Intergen_CHDS
+   UserId=gekuodza(2224567) GroupId=gekuodza(2224567) MCS_label=N/A
+   Priority=8005 Nice=0 Account=lasallegrp QOS=lasallegrp-high-qos
+   JobState=COMPLETING Reason=NonZeroExitCode Dependency=(null)
+   Requeue=1 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=1:0
+   RunTime=00:02:56 TimeLimit=23:00:00 TimeMin=N/A
+   SubmitTime=2026-07-30T15:07:29 EligibleTime=2026-07-30T15:07:29
+   AccrueTime=2026-07-30T15:07:29
+   StartTime=2026-07-30T15:07:37 EndTime=2026-07-30T15:10:33 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-07-30T15:07:37 Scheduler=Backfill
+   Partition=high AllocNode:Sid=hive-dc-7-8-30:926488
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=hive-dc-7-6-46
+   BatchHost=hive-dc-7-6-46
+   NumNodes=1 NumCPUs=20 NumTasks=1 CPUs/Task=20 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=20,mem=250G,node=1,billing=20
+   AllocTRES=cpu=20,mem=250G,node=1,billing=20
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=20 MinMemoryNode=250G MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=OK Exclusive=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/slurm/figures/run_conda.slurm
+   SubmitLine=sbatch /quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/scripts/slurm/figures/run_conda.slurm
+   WorkDir=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George
+   StdErr=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report_figure2-5.err
+   StdIn=/dev/null
+   StdOut=/quobyte/lasallegrp/projects/CHDS/WGBS/2025_intergen_BrCa_comethyl_George/00_std_err_logs/comethyl_pearson_report_figure2-5.out
+   TresPerTask=cpu=20
+   MailUser=gekuodza@health.ucdavis.edu MailType=INVALID_DEPEND,BEGIN,END,FAIL,REQUEUE,STAGE_OUT

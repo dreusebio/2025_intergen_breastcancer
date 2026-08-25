@@ -101,7 +101,7 @@ rename_map <- c(
   "ICE60incxrac1_q4" = "ICE income-race: Q4",
 
   # Reproductive / breast cancer risk factors
-  "agemenarche_adol" = "F1 age at menarche (years)",
+  "agemenarche_adol" = "F1 age at menarche",
   "youngmen_adol" = "F1 early menarche",
   "oldmen_adol" = "F1 late menarche",
   "breastcaF1" = "Breast cancer: F1",
@@ -132,14 +132,14 @@ rename_map <- c(
   "PCB194" = "PCB194",
   "PCB201" = "PCB201",
   "PCB203" = "PCB203",
-  "pcb15" = "pcb15",
-  "pcb56" = "pcb56",
-  "pcb82" = "pcb82",
-  "pcb146" = "pcb146",
-  "pcb174" = "pcb174",
-  "pcb177" = "pcb177",
-  "pcb178" = "pcb178",
-  "pcb199" = "pcb199",
+  "pcb15" = "PCB15",
+  "pcb56" = "PCB56",
+  "pcb82" = "PCB82",
+  "pcb146" = "PCB146",
+  "pcb174" = "PCB174",
+  "pcb177" = "PCB177",
+  "pcb178" = "PCB178",
+  "pcb199" = "PCB199",
 
   # Perinatal PFAS
   "PFBS" = "PFBS",
@@ -161,6 +161,8 @@ rename_map <- c(
   "bBHC" = "F1 bBHC",
 
   # Neurodegeneration biomarkers
+  #the variables measure by ALZ path are the same as those measured by MSD, but the ALZ path assay is more sensitive and specific for p-tau217. 
+  #The ALZ path assay is used in the main analyses, but the MSD assay is included here for completeness.
   "GFAP__pg_mL_" = "F1 GFAP",
   "NFL__pg_mL_" = "F1 NfL",
   "Ab40__pg_mL_" = "F1 AB40",
@@ -171,9 +173,9 @@ rename_map <- c(
   "MSD_pTau_217__total_tau_ratio" = "F1 p-tau217/total tau, MSD",
   "MSD_pTau_217__A_42_ratio" = "F1 p-tau217/AB42, MSD",
   "Total_Tau__A_42_ratio" = "F1 Total tau/AB42 ratio",
-  "ALZ_pTau_217__pg_mL_" = "F1 p-tau217, ALZpath",
-  "ALZ_pTau_217__total_tau_ratio" = "F1 p-tau217/total tau, ALZpath",
-  "ALZ_pTau_217__A_42_ratio" = "F1 p-tau217/AB42, ALZpath",
+  "ALZ_pTau_217__pg_mL_" = "F1 p-tau217",
+  "ALZ_pTau_217__total_tau_ratio" = "F1 p-tau217/total tau",
+  "ALZ_pTau_217__A_42_ratio" = "F1 p-tau217/AB42",
 
   # Kidney function
   "Creatinine__cr__mg_dL_" = "F1 Creatinine (mg/dL)",
